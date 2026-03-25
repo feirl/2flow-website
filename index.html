@@ -220,7 +220,11 @@
       .cta-btns { flex-direction: column; align-items: center; }
       footer { padding: 40px 20px 24px; }
       .footer-top { grid-template-columns: 1fr 1fr; gap: 24px; }
+      .footer-brand { grid-column: 1 / -1; }
       .footer-bottom { flex-direction: column; gap: 12px; }
+      /* Shopify strip mobile */
+      .shopify-strip-outer { padding: 28px 20px !important; }
+      .shopify-strip { flex-direction: column; align-items: flex-start !important; gap: 20px !important; }
     }
   </style>
 </head>
@@ -399,7 +403,7 @@
   <div class="stats-strip-inner">
     <div style="text-align:center; max-width:640px; margin:0 auto;">
       <div class="section-label" style="color:rgba(133,176,32,0.9);">The Commercial Reality</div>
-      <h2 style="color:white;">Your fulfilment partner is part of your brand experience.</h2>
+      <h2 style="color:white;">Your fulfilment partner delivers on your brand promise. Or not.</h2>
       <p style="color:rgba(255,255,255,0.65); margin-top:14px; font-size:16px;">Delivery failures don't just cost you a shipment. They cost you the customer.</p>
     </div>
     <div class="stat-grid">
@@ -551,8 +555,8 @@
 </section>
 
 <!-- SHOPIFY INTEGRATION CALLOUT -->
-<section style="padding:36px 40px; background:#85B020;">
-  <div style="max-width:1080px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; gap:32px; flex-wrap:wrap;">
+<section style="padding:36px 40px; background:#85B020;" class="shopify-strip-outer">
+  <div class="shopify-strip" style="max-width:1080px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; gap:32px; flex-wrap:wrap;">
     <div style="display:flex; align-items:center; gap:24px;">
       <img src="Images/shopify-white.png" alt="Shopify" style="height:32px; display:block; flex-shrink:0;">
       <div style="width:1px; height:36px; background:rgba(255,255,255,0.3);"></div>
