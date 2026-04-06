@@ -17,6 +17,7 @@
   <meta http-equiv="X-Frame-Options" content="SAMEORIGIN" />
   <meta name="referrer" content="strict-origin-when-cross-origin" />
   <meta name="ai-content-declaration" content="This page describes 2Flow's eCommerce fulfilment services in Ireland. Key topics: fulfilment, logistics, 3PL, pick and pack, kitting, returns, Shopify integration." />
+  <meta name="robots" content="index, follow" />
   <title>2Flow | Ireland's eCommerce Fulfilment Partner</title>
   <style>
     :root {
@@ -273,17 +274,51 @@
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "2Flow",
-  "url": "https://2flow.ie",
-  "description": "Ireland's specialist eCommerce fulfilment partner. Full ownership from inbound stock to delivered order.",
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Dublin",
-    "addressCountry": "IE"
-  },
-  "areaServed": "IE",
-  "serviceType": "eCommerce Fulfilment"
+  "@graph": [
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://2flow.ie/#organization",
+      "name": "2Flow",
+      "url": "https://2flow.ie",
+      "logo": "https://2flow.ie/Images/2flow-logo.png",
+      "description": "Ireland's specialist eCommerce fulfilment partner. Full ownership from inbound stock to delivered order — pick and pack, kitting, returns processing and same-day Dublin delivery.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Dublin",
+        "addressCountry": "IE"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "Ireland"
+      },
+      "knowsAbout": ["eCommerce fulfilment", "3PL logistics", "pick and pack", "kitting", "returns processing", "Shopify fulfilment", "DTC fulfilment"],
+      "sameAs": []
+    },
+    {
+      "@type": "Service",
+      "@id": "https://2flow.ie/#service",
+      "name": "eCommerce Fulfilment",
+      "provider": {"@id": "https://2flow.ie/#organization"},
+      "serviceType": "Third-Party Logistics (3PL)",
+      "description": "End-to-end eCommerce fulfilment including pick and pack, kitting, returns processing, inbound management and same-day Dublin delivery.",
+      "areaServed": {
+        "@type": "Country",
+        "name": "Ireland"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Fulfilment Services",
+        "itemListElement": [
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Pick and Pack Fulfilment"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Kitting and Assembly"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Returns Processing"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Same-Day Dublin Delivery"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Amazon FBA Prep"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Shopify Fulfilment"}}
+        ]
+      }
+    }
+  ]
 }
   </script>
 </head>
@@ -320,14 +355,14 @@
   <div class="nav-cta-wrap">
     <a href="/book-a-call" class="nav-cta">Book a Call</a>
   </div>
-  <button id="hamburgerBtn" class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" onclick="document.getElementById(\'navLinks\').classList.toggle(\'open\'); const btn = document.getElementById(\'hamburgerBtn\'); if (btn) btn.setAttribute(\'aria-expanded\', document.getElementById(\'navLinks\').classList.contains(\'open\') ? \'true\' : \'false\');">
+  <button id="hamburgerBtn" class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
     <span></span><span></span><span></span>
   </button>
 </nav>
 
 <main id="main-content">
 <!-- MEGA: WHAT WE DELIVER -->
-<div class="mega-menu" id="menu-deliver">
+<div class="mega-menu" id="menu-deliver" aria-hidden="true">
   <div class="mega-inner deliver-grid">
     <div class="mega-col">
       <div class="mega-col-label green">eCommerce Fulfilment</div>
@@ -414,7 +449,7 @@
 </div>
 
 <!-- MEGA: SOLUTIONS FOR -->
-<div class="mega-menu" id="menu-solutions">
+<div class="mega-menu" id="menu-solutions" aria-hidden="true">
   <div class="mega-inner solutions-grid">
     <div>
       <div class="mega-group-title">By Sector</div>
@@ -760,18 +795,42 @@
 </footer>
 
 <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var btn = document.getElementById('hamburgerBtn');
+    if (btn) {
+      btn.addEventListener('click', function() {
+        var navLinks = document.getElementById('navLinks');
+        if (navLinks) {
+          navLinks.classList.toggle('open');
+          btn.setAttribute('aria-expanded', navLinks.classList.contains('open') ? 'true' : 'false');
+        }
+      });
+    }
+  });
+
   const menuTriggers = document.querySelectorAll('[data-menu]');
   const menus = document.querySelectorAll('.mega-menu');
   let closeTimeout;
 
   function openMenu(id) {
     clearTimeout(closeTimeout);
-    menus.forEach(m => m.classList.remove('active'));
+    menus.forEach(m => {
+      m.classList.remove('active');
+      m.setAttribute('aria-hidden', 'true');
+    });
     const m = document.getElementById('menu-' + id);
-    if (m) m.classList.add('active');
+    if (m) {
+      m.classList.add('active');
+      m.setAttribute('aria-hidden', 'false');
+    }
   }
   function scheduleClose() {
-    closeTimeout = setTimeout(() => menus.forEach(m => m.classList.remove('active')), 180);
+    closeTimeout = setTimeout(() => {
+      menus.forEach(m => {
+        m.classList.remove('active');
+        m.setAttribute('aria-hidden', 'true');
+      });
+    }, 180);
   }
 
   menuTriggers.forEach(t => {
@@ -784,7 +843,10 @@
   });
   document.addEventListener('click', e => {
     if (!e.target.closest('[data-menu]') && !e.target.closest('.mega-menu')) {
-      menus.forEach(m => m.classList.remove('active'));
+      menus.forEach(m => {
+        m.classList.remove('active');
+        m.setAttribute('aria-hidden', 'true');
+      });
     }
   });
 </script>
