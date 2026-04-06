@@ -165,13 +165,15 @@
     .hero-overlay {
       position: absolute;
       inset: 0;
-      background: linear-gradient(
-        100deg,
-        rgba(5, 15, 25, 0.90) 0%,
-        rgba(5, 15, 25, 0.75) 35%,
-        rgba(5, 15, 25, 0.30) 58%,
-        rgba(5, 15, 25, 0.05) 100%
-      );
+      background:
+        linear-gradient(to bottom, transparent 55%, rgba(5,15,25,0.85) 80%, rgba(5,15,25,0.97) 100%),
+        linear-gradient(
+          100deg,
+          rgba(5, 15, 25, 0.90) 0%,
+          rgba(5, 15, 25, 0.75) 35%,
+          rgba(5, 15, 25, 0.30) 58%,
+          rgba(5, 15, 25, 0.05) 100%
+        );
     }
     .hero-content-wrap {
       position: relative;
@@ -196,7 +198,7 @@
     .trust-badge svg { flex-shrink: 0; }
 
     /* ── LOGO BAR ── */
-    .logo-bar { padding: 36px 40px; background: linear-gradient(to bottom, rgba(5,15,25,0.98) 0%, #0D1A2E 100%); border-top: none; border-bottom: none; }
+    .logo-bar { position: relative; z-index: 2; margin-top: -180px; padding: 60px 40px 48px; background: linear-gradient(to bottom, transparent 0%, rgba(5,15,25,0.88) 35%, #0D1A2E 70%); border-top: none; border-bottom: none; }
     .logo-bar-inner { max-width: 1080px; margin: 0 auto; text-align: center; }
     .logo-bar-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: rgba(255,255,255,0.45); margin-bottom: 18px; }
     .logo-items { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
@@ -317,7 +319,7 @@
       .hero-btns { flex-direction: column; }
       .hero-btns a { text-align: center; }
       h2 { font-size: 22px; }
-      .logo-bar { padding: 24px 20px; }
+      .logo-bar { position: relative; z-index: 2; margin-top: -120px; padding: 40px 20px 36px; }
       .stats-strip { padding: 48px 20px; }
       .stat-grid { grid-template-columns: 1fr; gap: 32px; }
       .stat-num { font-size: 40px; }
