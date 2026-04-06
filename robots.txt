@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://2flow.ie/sitemap.xml
+
+# Block admin or private paths if added in future
+# Disallow: /admin/
