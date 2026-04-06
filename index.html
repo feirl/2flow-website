@@ -196,21 +196,21 @@
     .trust-badge svg { flex-shrink: 0; }
 
     /* ── LOGO BAR ── */
-    .logo-bar { padding: 32px 40px; background: var(--bg-white); border-top: 1px solid var(--border-light); border-bottom: 1px solid var(--border-light); }
+    .logo-bar { padding: 36px 40px; background: linear-gradient(to bottom, rgba(5,15,25,0.98) 0%, #0D1A2E 100%); border-top: none; border-bottom: none; }
     .logo-bar-inner { max-width: 1080px; margin: 0 auto; text-align: center; }
-    .logo-bar-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-tertiary); margin-bottom: 18px; }
+    .logo-bar-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: rgba(255,255,255,0.45); margin-bottom: 18px; }
     .logo-items { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
-    .logo-item { padding: 8px 20px; border: 1px solid var(--border-light); border-radius: 6px; font-size: 14px; color: var(--text-secondary); font-weight: 500; }
+    .logo-item { padding: 8px 20px; border: 1px solid rgba(255,255,255,0.15); border-radius: 6px; font-size: 14px; color: rgba(255,255,255,0.6); font-weight: 500; }
 
     /* ── STATS STRIP ── */
-    .stats-strip { background: var(--bg-dark); padding: 64px 40px; }
+    .stats-strip { background: var(--bg-white); padding: 80px 40px; border-bottom: 1px solid var(--border-light); }
     .stats-strip-inner { max-width: 1080px; margin: 0 auto; }
     .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; text-align: center; margin-top: 48px; }
     .stat-num { font-size: 52px; font-weight: 700; color: var(--brand-primary); line-height: 1; margin-bottom: 12px; }
-    .stat-desc { font-size: 15px; color: rgba(255,255,255,0.75); line-height: 1.6; }
+    .stat-desc { font-size: 15px; color: var(--text-secondary); line-height: 1.6; }
 
     /* ── PROCESS ── */
-    .process-strip { padding: 72px 40px; background: var(--bg-white); }
+    .process-strip { padding: 72px 40px; background: var(--bg-light); }
     .process-inner { max-width: 1080px; margin: 0 auto; }
     .process-flow { display: flex; align-items: center; gap: 0; margin-top: 40px; overflow-x: auto; padding-bottom: 8px; }
     .process-step { flex: 1; min-width: 130px; text-align: center; padding: 16px 10px; background: var(--brand-primary); border-radius: 8px; color: white; font-size: 13px; font-weight: 600; line-height: 1.4; }
@@ -595,13 +595,27 @@
 </section>
 
 
+<!-- LOGO BAR -->
+<div class="logo-bar">
+  <div class="logo-bar-inner">
+    <div class="logo-bar-label">Trusted by Ireland's fastest-growing brands</div>
+    <div class="logo-items">
+      <span class="logo-item">Spotlight Oral Care</span>
+      <span class="logo-item">Skin Shop</span>
+      <span class="logo-item">Poco Loco Beauty</span>
+      <span class="logo-item">Probiotics.ie</span>
+      <span class="logo-item">Cecilia New York</span>
+      <span class="logo-item">Ormonde Jayne</span>
+    </div>
+  </div>
+</div>
 <!-- STATS STRIP -->
 <div class="stats-strip">
   <div class="stats-strip-inner">
     <div style="text-align:center; max-width:640px; margin:0 auto;">
-      <div class="section-label" style="color:rgba(133,176,32,0.9);">The Commercial Reality</div>
-      <h2 style="color:white;">Your fulfilment partner delivers on your brand promise. Or not.</h2>
-      <p style="color:rgba(255,255,255,0.65); margin-top:14px; font-size:16px;">Delivery failures don't just cost you a shipment. They cost you the customer.</p>
+      <div class="section-label">The Commercial Reality</div>
+      <h2>Your fulfilment partner delivers on your brand promise. Or not.</h2>
+      <p style="color:var(--text-secondary); margin-top:14px; font-size:16px;">Delivery failures don't just cost you a shipment. They cost you the customer.</p>
     </div>
     <div class="stat-grid">
       <div>
@@ -620,20 +634,6 @@
   </div>
 </div>
 
-<!-- LOGO BAR -->
-<div class="logo-bar">
-  <div class="logo-bar-inner">
-    <div class="logo-bar-label">Trusted by Ireland's fastest-growing brands</div>
-    <div class="logo-items">
-      <span class="logo-item">Spotlight Oral Care</span>
-      <span class="logo-item">Skin Shop</span>
-      <span class="logo-item">Poco Loco Beauty</span>
-      <span class="logo-item">Probiotics.ie</span>
-      <span class="logo-item">Cecilia New York</span>
-      <span class="logo-item">Ormonde Jayne</span>
-    </div>
-  </div>
-</div>
 
 <!-- PROCESS: FROM PALLET TO UNBOXED -->
 <section class="process-strip">
@@ -754,29 +754,6 @@
   </div>
 </section>
 
-<!-- SHOPIFY INTEGRATION CALLOUT -->
-<section style="padding:36px 40px; background:var(--bg-light); border-top:3px solid var(--brand-primary);" class="shopify-strip-outer">
-  <div class="shopify-strip" style="max-width:1080px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; gap:32px; flex-wrap:wrap;">
-    <div style="display:flex; align-items:center; gap:24px;">
-      <img loading="lazy" src="Images/shopify-white.png" alt="Shopify" style="height:32px; display:block; flex-shrink:0; filter:brightness(0) opacity(0.65);">
-      <div style="width:1px; height:36px; background:var(--border-medium);"></div>
-      <div>
-        <div style="font-size:14px; font-weight:700; color:var(--text-primary);">Shopify Specialists</div>
-        <div style="font-size:13px; color:var(--text-secondary); margin-top:3px;">Native integration with real-time order sync, inventory updates and tracking.</div>
-      </div>
-    </div>
-    <div style="display:flex; align-items:center; gap:24px; flex-wrap:wrap;">
-      <span style="font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:0.08em; color:var(--text-tertiary);">Also integrates with</span>
-      <div style="display:flex; gap:8px; flex-wrap:wrap;">
-        <span style="padding:5px 14px; border:1px solid var(--border-medium); border-radius:6px; font-size:13px; color:var(--text-secondary); font-weight:500;">WooCommerce</span>
-        <span style="padding:5px 14px; border:1px solid var(--border-medium); border-radius:6px; font-size:13px; color:var(--text-secondary); font-weight:500;">Amazon</span>
-        <span style="padding:5px 14px; border:1px solid var(--border-medium); border-radius:6px; font-size:13px; color:var(--text-secondary); font-weight:500;">Etsy</span>
-        <span style="padding:5px 14px; border:1px solid var(--border-medium); border-radius:6px; font-size:13px; color:var(--text-secondary); font-weight:500;">TikTok Shop</span>
-      </div>
-    </div>
-    <a href="/why-2flow/integrations" style="font-size:13px; padding:9px 18px; border-radius:6px; border:1px solid var(--border-medium); color:var(--text-primary); font-weight:600; text-decoration:none; white-space:nowrap; transition:all 0.15s;">View all integrations &#8594;</a>
-  </div>
-</section>
 
 <!-- SOLUTIONS FOR -->
 <section class="solutions-section">
@@ -815,6 +792,30 @@
     <div style="text-align:center; margin-top:32px;">
       <a href="/solutions" class="btn-ghost">View all solutions &#8594;</a>
     </div>
+  </div>
+</section>
+
+<!-- SHOPIFY INTEGRATION CALLOUT -->
+<section style="padding:36px 40px; background:var(--bg-white); border-top:1px solid var(--border-light);" class="shopify-strip-outer">
+  <div class="shopify-strip" style="max-width:1080px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; gap:32px; flex-wrap:wrap;">
+    <div style="display:flex; align-items:center; gap:24px;">
+      <img loading="lazy" src="Images/shopify-white.png" alt="Shopify" style="height:32px; display:block; flex-shrink:0; filter:brightness(0) opacity(0.65);">
+      <div style="width:1px; height:36px; background:var(--border-medium);"></div>
+      <div>
+        <div style="font-size:14px; font-weight:700; color:var(--text-primary);">Shopify Specialists</div>
+        <div style="font-size:13px; color:var(--text-secondary); margin-top:3px;">Native integration with real-time order sync, inventory updates and tracking.</div>
+      </div>
+    </div>
+    <div style="display:flex; align-items:center; gap:24px; flex-wrap:wrap;">
+      <span style="font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:0.08em; color:var(--text-tertiary);">Also integrates with</span>
+      <div style="display:flex; gap:8px; flex-wrap:wrap;">
+        <span style="padding:5px 14px; border:1px solid var(--border-medium); border-radius:6px; font-size:13px; color:var(--text-secondary); font-weight:500;">WooCommerce</span>
+        <span style="padding:5px 14px; border:1px solid var(--border-medium); border-radius:6px; font-size:13px; color:var(--text-secondary); font-weight:500;">Amazon</span>
+        <span style="padding:5px 14px; border:1px solid var(--border-medium); border-radius:6px; font-size:13px; color:var(--text-secondary); font-weight:500;">Etsy</span>
+        <span style="padding:5px 14px; border:1px solid var(--border-medium); border-radius:6px; font-size:13px; color:var(--text-secondary); font-weight:500;">TikTok Shop</span>
+      </div>
+    </div>
+    <a href="/why-2flow/integrations" style="font-size:13px; padding:9px 18px; border-radius:6px; border:1px solid var(--border-medium); color:var(--text-primary); font-weight:600; text-decoration:none; white-space:nowrap; transition:all 0.15s;">View all integrations &#8594;</a>
   </div>
 </section>
 
