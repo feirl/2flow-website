@@ -370,7 +370,7 @@
     /* ── WHO THIS IS FOR ── */
     .fit-section { background: var(--bg-white); padding: 80px 40px; }
     .fit-header { max-width: 640px; margin-bottom: 56px; }
-    .fit-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+    .fit-grid { display: grid; grid-template-columns: 1fr; gap: 24px; max-width: 680px; }
     .fit-panel {
       border-radius: 12px;
       padding: 36px;
@@ -507,33 +507,33 @@
 
 <!-- NAV -->
 <nav id="mainNav" role="navigation" aria-label="Main navigation">
-  <a href="../../" class="nav-logo" aria-label="2Flow home">
-    <img src="../../Images/2flow-logo.png" alt="2Flow" id="navLogo">
+  <a href="/" class="nav-logo" aria-label="2Flow home">
+    <img src="/Images/2flow-logo.png" alt="2Flow" id="navLogo">
   </a>
   <div class="nav-links" id="navLinks">
     <div class="nav-item" data-menu="deliver">
-      <a href="../../deliver">What We Deliver <span class="nav-chevron">&#9660;</span></a>
+      <a href="/deliver">What We Deliver <span class="nav-chevron">&#9660;</span></a>
     </div>
     <div class="nav-item" data-menu="solutions">
-      <a href="../../solutions">Solutions For <span class="nav-chevron">&#9660;</span></a>
+      <a href="/solutions">Solutions For <span class="nav-chevron">&#9660;</span></a>
     </div>
     <div class="nav-item has-dropdown">
-      <a href="../../why-2flow">Why 2Flow <span class="nav-chevron">&#9660;</span></a>
+      <a href="/why-2flow">Why 2Flow <span class="nav-chevron">&#9660;</span></a>
       <div class="dropdown">
-        <a href="../../why-2flow/our-difference">Our Difference</a>
-        <a href="../../why-2flow/customer-stories">Customer Stories</a>
-        <a href="../../why-2flow/platform">Our Platform</a>
-        <a href="../../why-2flow/integrations">Integrations</a>
-        <a href="../../why-2flow/shopify">Shopify Specialists</a>
-        <a href="../../why-2flow/meet-the-team">Meet the Team</a>
-        <a href="../../why-2flow/virtual-tour">Visit our Dublin Hub</a>
-        <a href="../../why-2flow/faqs">FAQs</a>
+        <a href="/why-2flow/our-difference">Our Difference</a>
+        <a href="/why-2flow/customer-stories">Customer Stories</a>
+        <a href="/why-2flow/platform">Our Platform</a>
+        <a href="/why-2flow/integrations">Integrations</a>
+        <a href="/why-2flow/shopify">Shopify Specialists</a>
+        <a href="/why-2flow/meet-the-team">Meet the Team</a>
+        <a href="/why-2flow/virtual-tour">Visit our Dublin Hub</a>
+        <a href="/why-2flow/faqs">FAQs</a>
       </div>
     </div>
-    <div class="nav-item"><a href="../../pricing">Pricing</a></div>
+    <div class="nav-item"><a href="/pricing">Pricing</a></div>
   </div>
   <div class="nav-cta-wrap">
-    <a href="../../book-a-call" class="nav-cta">Book a Call</a>
+    <a href="/book-a-call" class="nav-cta">Book a Call</a>
   </div>
   <button class="hamburger" id="hamburgerBtn" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navLinks">
     <span></span><span></span><span></span>
@@ -545,31 +545,31 @@
   <div class="mega-inner deliver-grid">
     <div class="mega-col">
       <div class="mega-col-label green">eCommerce Fulfilment</div>
-      <a href="../../deliver/pick-and-pack" class="mega-item">
+      <a href="/deliver/pick-and-pack" class="mega-item">
         <div class="mega-item-icon green-bg">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/></svg>
         </div>
         <div class="mega-item-text"><h4>Pick &amp; Pack</h4><p>Accurate, brand-aligned fulfilment at speed</p></div>
       </a>
-      <a href="../../deliver/kitting-bundles" class="mega-item">
+      <a href="/deliver/kitting-bundles" class="mega-item">
         <div class="mega-item-icon green-bg">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
         </div>
         <div class="mega-item-text"><h4>Kitting &amp; Bundles</h4><p>Gift sets, subscriptions, multi-SKU assembly</p></div>
       </a>
-      <a href="../../deliver/returns-refurbishment" class="mega-item">
+      <a href="/deliver/returns-refurbishment" class="mega-item">
         <div class="mega-item-icon green-bg">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg>
         </div>
         <div class="mega-item-text"><h4>Returns &amp; Refurbishment</h4><p>Fast, clean returns processing and restocking</p></div>
       </a>
-      <a href="../../deliver/finishing-personalisation" class="mega-item">
+      <a href="/deliver/finishing-personalisation" class="mega-item">
         <div class="mega-item-icon green-bg">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
         </div>
         <div class="mega-item-text"><h4>Finishing &amp; Personalisation</h4><p>Engraving, inserts, gift messaging, branded packaging</p></div>
       </a>
-      <a href="../../deliver/compliance-preparation" class="mega-item">
+      <a href="/deliver/compliance-preparation" class="mega-item">
         <div class="mega-item-icon green-bg">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
         </div>
@@ -578,25 +578,25 @@
     </div>
     <div class="mega-col">
       <div class="mega-col-label navy">OmniChannel Specialists</div>
-      <a href="../../deliver/retail-b2b-distribution" class="mega-item">
+      <a href="/deliver/retail-b2b-distribution" class="mega-item">
         <div class="mega-item-icon navy-bg">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
         </div>
         <div class="mega-item-text"><h4>Retail &amp; B2B Distribution</h4><p>Compliance-ready wholesale and retail prep</p></div>
       </a>
-      <a href="../../deliver/amazon-fulfilment" class="mega-item">
+      <a href="/deliver/amazon-fulfilment" class="mega-item">
         <div class="mega-item-icon navy-bg">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
         </div>
         <div class="mega-item-text"><h4>Amazon Fulfilment</h4><p>FBA prep, FBM dispatch, seller compliance</p></div>
       </a>
-      <a href="../../deliver/tiktok-shop" class="mega-item">
+      <a href="/deliver/tiktok-shop" class="mega-item">
         <div class="mega-item-icon navy-bg">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
         </div>
         <div class="mega-item-text"><h4>TikTok Shop</h4><p>Integrated fulfilment for TikTok Shop sellers</p></div>
       </a>
-      <a href="../../deliver/pop-up-shops" class="mega-item">
+      <a href="/deliver/pop-up-shops" class="mega-item">
         <div class="mega-item-icon navy-bg">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
         </div>
@@ -605,19 +605,19 @@
     </div>
     <div class="mega-col">
       <div class="mega-col-label slate">Beyond Fulfilment</div>
-      <a href="../../deliver/live-commerce" class="mega-item">
+      <a href="/deliver/live-commerce" class="mega-item">
         <div class="mega-item-icon slate-bg">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg>
         </div>
         <div class="mega-item-text"><h4>Live Commerce Fulfilment</h4><p>Rapid dispatch for live selling events and flash campaigns</p></div>
       </a>
-      <a href="../../deliver/same-day-dublin" class="mega-item">
+      <a href="/deliver/same-day-dublin" class="mega-item">
         <div class="mega-item-icon slate-bg">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
         </div>
         <div class="mega-item-text"><h4>Same-Day Dublin Delivery</h4><p>Cut-off noon, delivered same afternoon</p></div>
       </a>
-      <a href="../../deliver/customer-service" class="mega-item">
+      <a href="/deliver/customer-service" class="mega-item">
         <div class="mega-item-icon slate-bg">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
         </div>
@@ -632,23 +632,23 @@
   <div class="mega-inner solutions-grid">
     <div>
       <div class="mega-group-title">By Sector</div>
-      <a href="../../solutions/beauty-personal-care" class="mega-link"><strong>Beauty &amp; Personal Care</strong></a>
-      <a href="../../solutions/health-supplements" class="mega-link"><strong>Health &amp; Supplements</strong></a>
-      <a href="../../solutions/medical-healthcare" class="mega-link"><strong>Medical &amp; Healthcare</strong></a>
-      <a href="../../solutions/home-lifestyle" class="mega-link"><strong>Home &amp; Lifestyle</strong></a>
-      <a href="../../solutions/consumer-electronics" class="mega-link"><strong>Consumer Electronics</strong></a>
-      <a href="../../solutions/office-products" class="mega-link"><strong>Office Products</strong></a>
-      <a href="../../solutions/industrial-scientific" class="mega-link"><strong>Industrial &amp; Scientific</strong></a>
+      <a href="/solutions/beauty-personal-care" class="mega-link"><strong>Beauty &amp; Personal Care</strong></a>
+      <a href="/solutions/health-supplements" class="mega-link"><strong>Health &amp; Supplements</strong></a>
+      <a href="/solutions/medical-healthcare" class="mega-link"><strong>Medical &amp; Healthcare</strong></a>
+      <a href="/solutions/home-lifestyle" class="mega-link"><strong>Home &amp; Lifestyle</strong></a>
+      <a href="/solutions/consumer-electronics" class="mega-link"><strong>Consumer Electronics</strong></a>
+      <a href="/solutions/office-products" class="mega-link"><strong>Office Products</strong></a>
+      <a href="/solutions/industrial-scientific" class="mega-link"><strong>Industrial &amp; Scientific</strong></a>
     </div>
     <div>
       <div class="mega-group-title">By Need</div>
-      <a href="../../solutions/subscription-brands" class="mega-link"><strong>Subscription Brands</strong></a>
-      <a href="../../solutions/dtc-brands-scaling" class="mega-link"><strong>DTC Brands Scaling</strong></a>
-      <a href="../../solutions/brand-product-launch" class="mega-link"><strong>Brand / Product Launch</strong></a>
-      <a href="../../solutions/ireland-domestic" class="mega-link"><strong>Ireland Domestic</strong></a>
-      <a href="../../solutions/dublin-same-day" class="mega-link"><strong>Dublin Same-Day</strong></a>
-      <a href="../../solutions/eu-delivery" class="mega-link"><strong>EU Delivery</strong></a>
-      <a href="../../solutions/uk-rest-of-world" class="mega-link"><strong>UK &amp; Rest of World</strong></a>
+      <a href="/solutions/subscription-brands" class="mega-link"><strong>Subscription Brands</strong></a>
+      <a href="/solutions/dtc-brands-scaling" class="mega-link"><strong>DTC Brands Scaling</strong></a>
+      <a href="/solutions/brand-product-launch" class="mega-link"><strong>Brand / Product Launch</strong></a>
+      <a href="/solutions/ireland-domestic" class="mega-link"><strong>Ireland Domestic</strong></a>
+      <a href="/solutions/dublin-same-day" class="mega-link"><strong>Dublin Same-Day</strong></a>
+      <a href="/solutions/eu-delivery" class="mega-link"><strong>EU Delivery</strong></a>
+      <a href="/solutions/uk-rest-of-world" class="mega-link"><strong>UK &amp; Rest of World</strong></a>
     </div>
   </div>
 </div>
@@ -660,9 +660,9 @@
   <div class="hero-feature-inner">
     <div class="hero-text-col">
       <nav class="hero-breadcrumb" aria-label="Breadcrumb">
-        <a href="../../">Home</a>
+        <a href="/">Home</a>
         <span aria-hidden="true">›</span>
-        <a href="../../deliver">What We Deliver</a>
+        <a href="/deliver">What We Deliver</a>
         <span aria-hidden="true">›</span>
         <span aria-current="page">Pick &amp; Pack</span>
       </nav>
@@ -670,8 +670,8 @@
       <h1 id="hero-heading">Every order, packed to your standard.<br><em>Dispatched the same day.</em></h1>
       <p class="hero-feature-sub" style="margin-top:18px;">2Flow's pick &amp; pack service is built for brands where accuracy and presentation aren't optional. We take full ownership of every order from warehouse pick to carrier scan — so your customers receive exactly what your brand promised.</p>
       <div class="hero-btns">
-        <a href="../../book-a-call" class="btn-primary">Book a Call</a>
-        <a href="../../pricing" class="btn-ghost btn-ghost-light">View Pricing</a>
+        <a href="/book-a-call" class="btn-primary">Book a Call</a>
+        <a href="/pricing" class="btn-ghost btn-ghost-light">View Pricing</a>
       </div>
       <div class="hero-badges">
         <span class="trust-badge">
@@ -1042,7 +1042,7 @@
         <ul class="fit-list">
           <li>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="14" height="14" style="color:var(--brand-primary);margin-top:2px;"><polyline points="20 6 9 17 4 12"/></svg>
-            DTC and multichannel brands where unboxing is part of the brand experience
+            DTC and multichannel brands for whom the delivery experience is as important as the product itself
           </li>
           <li>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="14" height="14" style="color:var(--brand-primary);margin-top:2px;"><polyline points="20 6 9 17 4 12"/></svg>
@@ -1059,31 +1059,6 @@
           <li>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="14" height="14" style="color:var(--brand-primary);margin-top:2px;"><polyline points="20 6 9 17 4 12"/></svg>
             Brands selling across Ireland, EU, and international markets from one hub
-          </li>
-        </ul>
-      </div>
-      <div class="fit-panel not">
-        <div class="fit-panel-label">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-          Less suited to
-        </div>
-        <h3>Categories we don't serve well</h3>
-        <ul class="fit-list">
-          <li>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14" style="color:#B05050;margin-top:2px;"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-            Fashion brands with high return rates and large size/colour variant matrices
-          </li>
-          <li>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14" style="color:#B05050;margin-top:2px;"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-            Bulky or oversized products where throughput economics don't stack up
-          </li>
-          <li>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14" style="color:#B05050;margin-top:2px;"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-            Low-value, high-volume commodity products where margin leaves no room for quality handling
-          </li>
-          <li>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14" style="color:#B05050;margin-top:2px;"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-            Businesses primarily looking for long-term static storage rather than fulfilment throughput
           </li>
         </ul>
       </div>
@@ -1160,7 +1135,7 @@
       <h2 id="related-heading">Other ways 2Flow can help</h2>
     </div>
     <div class="related-grid">
-      <a href="../../deliver/kitting-bundles" class="related-card">
+      <a href="/deliver/kitting-bundles" class="related-card">
         <div class="related-card-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
         </div>
@@ -1171,7 +1146,7 @@
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </div>
       </a>
-      <a href="../../deliver/returns-refurbishment" class="related-card">
+      <a href="/deliver/returns-refurbishment" class="related-card">
         <div class="related-card-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg>
         </div>
@@ -1182,7 +1157,7 @@
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </div>
       </a>
-      <a href="../../deliver/finishing-personalisation" class="related-card">
+      <a href="/deliver/finishing-personalisation" class="related-card">
         <div class="related-card-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
         </div>
@@ -1204,8 +1179,8 @@
     <h2 id="cta-heading">Ready to talk about your orders?</h2>
     <p>Most brands take 3 to 6 months to make the switch. Start the conversation now — so you're ready when the time is right, and your next busy period doesn't catch you unprepared.</p>
     <div class="cta-btns">
-      <a href="../../book-a-call" class="btn-primary">Book a Call</a>
-      <a href="../../pricing" class="btn-ghost">View Pricing</a>
+      <a href="/book-a-call" class="btn-primary">Book a Call</a>
+      <a href="/pricing" class="btn-ghost">View Pricing</a>
     </div>
     <p class="cta-note">No commitment required &nbsp;·&nbsp; Tailored to your order volume and category</p>
   </div>
@@ -1218,44 +1193,44 @@
   <div class="footer-inner">
     <div class="footer-top">
       <div class="footer-brand">
-        <img src="../../Images/2flow-logo.png" alt="2Flow" height="28" style="filter:brightness(0) invert(1) opacity(0.75);">
+        <img src="/Images/2flow-logo.png" alt="2Flow" height="28" style="filter:brightness(0) invert(1) opacity(0.75);">
         <p>Ireland's specialist eCommerce fulfilment partner. Full ownership from inbound stock receipt to delivered order, so your brand can scale without breaking.</p>
         <p style="margin-top:8px; font-size:13px; color:rgba(255,255,255,0.4);">Dublin, Ireland</p>
       </div>
       <div class="footer-col">
         <h5>What We Deliver</h5>
-        <a href="../../deliver/pick-and-pack">Pick &amp; Pack</a>
-        <a href="../../deliver/kitting-bundles">Kitting &amp; Bundles</a>
-        <a href="../../deliver/returns-refurbishment">Returns &amp; Refurbishment</a>
-        <a href="../../deliver/amazon-fulfilment">Amazon Fulfilment</a>
-        <a href="../../deliver/tiktok-shop">TikTok Shop</a>
-        <a href="../../deliver/same-day-dublin">Same-Day Dublin</a>
-        <a href="../../deliver/customer-service">Customer Service</a>
+        <a href="/deliver/pick-and-pack">Pick &amp; Pack</a>
+        <a href="/deliver/kitting-bundles">Kitting &amp; Bundles</a>
+        <a href="/deliver/returns-refurbishment">Returns &amp; Refurbishment</a>
+        <a href="/deliver/amazon-fulfilment">Amazon Fulfilment</a>
+        <a href="/deliver/tiktok-shop">TikTok Shop</a>
+        <a href="/deliver/same-day-dublin">Same-Day Dublin</a>
+        <a href="/deliver/customer-service">Customer Service</a>
       </div>
       <div class="footer-col">
         <h5>Solutions For</h5>
-        <a href="../../solutions/health-beauty">Health &amp; Beauty</a>
-        <a href="../../solutions/health-supplements">Health Supplements</a>
-        <a href="../../solutions/medical-healthcare">Medical &amp; Healthcare</a>
-        <a href="../../solutions/dtc-brands-scaling">DTC Brands Scaling</a>
-        <a href="../../solutions/eu-delivery">EU Delivery</a>
-        <a href="../../solutions/brand-product-launch">Brand / Product Launch</a>
+        <a href="/solutions/health-beauty">Health &amp; Beauty</a>
+        <a href="/solutions/health-supplements">Health Supplements</a>
+        <a href="/solutions/medical-healthcare">Medical &amp; Healthcare</a>
+        <a href="/solutions/dtc-brands-scaling">DTC Brands Scaling</a>
+        <a href="/solutions/eu-delivery">EU Delivery</a>
+        <a href="/solutions/brand-product-launch">Brand / Product Launch</a>
       </div>
       <div class="footer-col">
         <h5>Company</h5>
-        <a href="../../why-2flow/our-difference">Our Difference</a>
-        <a href="../../why-2flow/customer-stories">Customer Stories</a>
-        <a href="../../why-2flow/meet-the-team">Meet the Team</a>
-        <a href="../../why-2flow/virtual-tour">Visit our Centre</a>
-        <a href="../../pricing">Pricing</a>
-        <a href="../../book-a-call">Book a Call</a>
+        <a href="/why-2flow/our-difference">Our Difference</a>
+        <a href="/why-2flow/customer-stories">Customer Stories</a>
+        <a href="/why-2flow/meet-the-team">Meet the Team</a>
+        <a href="/why-2flow/virtual-tour">Visit our Centre</a>
+        <a href="/pricing">Pricing</a>
+        <a href="/book-a-call">Book a Call</a>
       </div>
     </div>
     <div class="footer-bottom">
       <span>&copy; 2026 2Flow Fulfilment Ltd. All rights reserved.</span>
       <div class="footer-bottom-links">
-        <a href="../../privacy">Privacy Policy</a>
-        <a href="../../terms">Terms of Service</a>
+        <a href="/privacy">Privacy Policy</a>
+        <a href="/terms">Terms of Service</a>
       </div>
     </div>
   </div>
