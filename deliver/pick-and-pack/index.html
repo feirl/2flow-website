@@ -1,0 +1,1326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pick &amp; Pack Fulfilment | Accurate, Brand-Aligned Fulfilment at Speed | 2Flow</title>
+  <meta name="description" content="2Flow's pick &amp; pack service delivers same-day dispatch, per-SKU packaging standards, and real-time order visibility for Irish eCommerce brands. Accurate. Brand-aligned. At speed.">
+  <meta name="keywords" content="pick and pack Ireland, ecommerce fulfilment Dublin, 3PL pick and pack, same day dispatch Ireland, brand-aligned fulfilment, Shopify fulfilment Ireland, order fulfilment Dublin">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://2flow.ie/deliver/pick-and-pack/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Pick &amp; Pack Fulfilment | 2Flow">
+  <meta property="og:description" content="Accurate, brand-aligned pick &amp; pack fulfilment with same-day dispatch from Dublin. Built for growing Irish eCommerce brands.">
+  <meta property="og:url" content="https://2flow.ie/deliver/pick-and-pack/">
+  <meta property="og:site_name" content="2Flow">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Pick &amp; Pack Fulfilment | 2Flow">
+  <meta name="twitter:description" content="Accurate, brand-aligned pick &amp; pack fulfilment with same-day dispatch from Dublin.">
+  <!-- Security -->
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <!-- AI / AEO -->
+  <meta name="ai-content-declaration" content="This page describes 2Flow's pick and pack fulfilment service. Key topics: pick and pack, same-day dispatch, brand-aligned packaging, eCommerce fulfilment Ireland, Shopify integration.">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Service",
+        "@id": "https://2flow.ie/deliver/pick-and-pack/#service",
+        "name": "Pick &amp; Pack Fulfilment",
+        "description": "Accurate, brand-aligned eCommerce pick and pack fulfilment with same-day dispatch from Dublin. Full ownership from order receipt to carrier scan.",
+        "provider": {
+          "@type": "LocalBusiness",
+          "name": "2Flow",
+          "url": "https://2flow.ie"
+        },
+        "areaServed": ["Ireland", "European Union", "United Kingdom"],
+        "serviceType": "eCommerce Fulfilment"
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://2flow.ie/deliver/pick-and-pack/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is the cut-off time for same-day dispatch?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Orders received and confirmed before our daily cut-off are picked, packed, and handed to carriers the same day. Contact us for specific cut-off times based on your carrier requirements."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I set custom packaging instructions per SKU?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. 2Flow's Mintsoft WMS supports per-SKU pack instructions including tissue, inserts, outer packaging selection, and presentation standards. These are set during onboarding and applied automatically to every order."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How does 2Flow integrate with Shopify?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "2Flow syncs with your Shopify store every 15 minutes. New orders are pulled automatically, processed to your pack spec, and tracking information is pushed back to Shopify so your customers receive updates without any manual intervention."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you handle Amazon FBA and FBM orders?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. 2Flow handles both Amazon FBA preparation (labelling, bundling, compliance) and FBM dispatch from our Dublin warehouse, keeping your Amazon seller metrics healthy."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    :root {
+      --brand-primary: #85B020;
+      --brand-primary-hover: #6d9219;
+      --brand-navy: #252525;
+      --brand-charcoal: #383838;
+      --text-primary: #111111;
+      --text-secondary: #555555;
+      --text-tertiary: #737373;
+      --bg-white: #ffffff;
+      --bg-light: #F7F9F3;
+      --bg-dark: #252525;
+      --border-light: #E4EBD6;
+      --border-medium: #d1d5db;
+      --nav-height: 64px;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg-white); color: var(--text-primary); line-height: 1.6; font-size: 15px; }
+
+    /* ── NAV ── */
+    nav {
+      background: transparent;
+      padding: 0 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: var(--nav-height);
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 300;
+      border-bottom: 1px solid transparent;
+      transition: background 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+    }
+    nav.nav-scrolled {
+      background: var(--bg-white);
+      border-bottom-color: var(--border-light);
+      box-shadow: 0 2px 16px rgba(0,0,0,0.06);
+    }
+    .nav-logo img { height: 34px; display: block; filter: brightness(0) invert(1); transition: filter 0.25s ease; }
+    nav.nav-scrolled .nav-logo img { filter: none; }
+    .nav-logo { text-decoration: none; }
+    .nav-links { display: flex; align-items: stretch; height: var(--nav-height); }
+    .nav-item { display: flex; align-items: center; position: static; }
+    .nav-item > a {
+      color: rgba(255,255,255,0.9);
+      text-decoration: none; font-size: 14px; font-weight: 500;
+      padding: 0 16px; height: var(--nav-height);
+      display: flex; align-items: center; gap: 4px;
+      transition: color 0.15s; white-space: nowrap;
+    }
+    .nav-item > a:hover { color: white; }
+    nav.nav-scrolled .nav-item > a { color: var(--text-secondary); }
+    nav.nav-scrolled .nav-item > a:hover { color: var(--text-primary); }
+    .nav-chevron { font-size: 9px; opacity: 0.6; }
+    .nav-cta-wrap { display: flex; align-items: center; }
+    .nav-cta { background: var(--brand-primary); color: white !important; padding: 9px 20px; border-radius: 6px; font-weight: 600; font-size: 14px; text-decoration: none; transition: background 0.15s; }
+    .nav-cta:hover { background: var(--brand-primary-hover); }
+    .hamburger { display: none; background: none; border: none; cursor: pointer; padding: 8px; }
+    .hamburger span { display: block; width: 22px; height: 2px; background: white; margin: 5px 0; transition: background 0.25s; }
+    nav.nav-scrolled .hamburger span { background: var(--text-primary); }
+
+    /* ── MEGA MENUS ── */
+    .mega-menu { display: none; position: fixed; left: 0; right: 0; top: var(--nav-height); background: white; border-bottom: 1px solid var(--border-light); box-shadow: 0 8px 32px rgba(0,0,0,0.08); z-index: 200; }
+    .mega-menu.active { display: block; }
+    .mega-inner { max-width: 1080px; margin: 0 auto; display: grid; padding: 28px 40px; }
+    .mega-inner.deliver-grid { grid-template-columns: repeat(3, 1fr); gap: 0; }
+    .mega-inner.solutions-grid { grid-template-columns: repeat(2, 1fr); gap: 48px; }
+    .mega-col { padding: 0 32px 0 0; }
+    .mega-col:last-child { padding-right: 0; }
+    .mega-col-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 14px; padding-bottom: 8px; border-bottom: 2px solid currentColor; }
+    .mega-col-label.green { color: #85B020; }
+    .mega-col-label.navy  { color: #1A1A1A; }
+    .mega-col-label.slate { color: #5C6673; }
+    .mega-item { display: flex; align-items: flex-start; gap: 10px; padding: 7px 6px; border-radius: 6px; text-decoration: none; transition: background 0.15s; }
+    .mega-item:hover { background: var(--bg-light); }
+    .mega-item-icon { width: 32px; height: 32px; border-radius: 6px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: white; }
+    .mega-item-icon.green-bg { background: #85B020; }
+    .mega-item-icon.navy-bg  { background: #1A1A1A; }
+    .mega-item-icon.slate-bg { background: #5C6673; }
+    .mega-item-text h4 { font-size: 13px; font-weight: 600; color: var(--text-primary); margin: 0 0 2px 0; line-height: 1.3; }
+    .mega-item-text p { font-size: 11px; color: var(--text-tertiary); margin: 0; line-height: 1.4; }
+    .mega-item:hover .mega-item-text h4 { color: var(--brand-primary); }
+    .mega-group-title { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-tertiary); margin-bottom: 14px; padding-bottom: 8px; border-bottom: 1px solid var(--border-light); }
+    .mega-link { display: block; padding: 8px 0; text-decoration: none; border-bottom: 1px solid var(--border-light); }
+    .mega-link strong { display: block; font-size: 14px; color: var(--text-primary); font-weight: 500; }
+    .mega-link:hover strong { color: var(--brand-primary); }
+    .mega-link:last-child { border-bottom: none; }
+
+    /* ── COMPACT DROPDOWN ── */
+    .nav-item.has-dropdown { position: relative; }
+    .dropdown { display: none; position: absolute; top: var(--nav-height); left: 0; background: white; border: 1px solid var(--border-light); border-radius: 8px; box-shadow: 0 8px 32px rgba(0,0,0,0.08); padding: 8px 0; min-width: 230px; z-index: 200; }
+    .nav-item.has-dropdown:hover .dropdown { display: block; }
+    .dropdown a { display: block; padding: 10px 20px; font-size: 14px; color: var(--text-secondary); text-decoration: none; }
+    .dropdown a:hover { background: var(--bg-light); color: var(--brand-primary); }
+
+    /* ── BUTTONS ── */
+    .btn-primary { background: var(--brand-primary); color: white; padding: 13px 28px; border-radius: 6px; font-weight: 600; font-size: 15px; text-decoration: none; display: inline-block; transition: background 0.15s; }
+    .btn-primary:hover { background: var(--brand-primary-hover); }
+    .btn-ghost { background: transparent; color: var(--text-primary); padding: 12px 28px; border-radius: 6px; font-weight: 600; font-size: 15px; text-decoration: none; border: 1px solid var(--border-medium); display: inline-block; transition: all 0.15s; }
+    .btn-ghost:hover { border-color: var(--text-primary); }
+    .btn-ghost-light { color: white !important; border-color: rgba(255,255,255,0.45) !important; }
+    .btn-ghost-light:hover { border-color: white !important; }
+
+    /* ── TYPE ── */
+    h1 { font-size: 44px; font-weight: 700; line-height: 1.12; color: var(--text-primary); }
+    h2 { font-size: 30px; font-weight: 700; line-height: 1.25; color: var(--text-primary); }
+    h3 { font-size: 20px; font-weight: 700; line-height: 1.3; color: var(--text-primary); }
+    h4 { font-size: 16px; font-weight: 700; line-height: 1.4; color: var(--text-primary); }
+    .section-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--brand-primary); margin-bottom: 14px; }
+    .section-intro { font-size: 17px; color: var(--text-secondary); line-height: 1.7; margin-top: 14px; max-width: 600px; }
+    .container { max-width: 1080px; margin: 0 auto; }
+
+    /* ── SKIP LINK ── */
+    .skip-link { position: absolute; top: -48px; left: 0; background: #85B020; color: #fff; padding: 8px 16px; font-weight: 600; font-size: 14px; z-index: 10000; text-decoration: none; border-radius: 0 0 4px 0; transition: top 0.15s; }
+    .skip-link:focus { top: 0; }
+    :focus-visible { outline: 3px solid #85B020; outline-offset: 2px; }
+
+    /* ── HERO (FEATURE PAGE — DARK 2-COL) ── */
+    .hero-feature {
+      background: #0D1A2E;
+      padding: calc(var(--nav-height) + 80px) 40px 80px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-feature::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 70% 60% at 80% 50%, rgba(133,176,32,0.07) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero-feature-inner {
+      max-width: 1080px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+    }
+    .hero-breadcrumb {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 12px;
+      color: rgba(255,255,255,0.45);
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+    }
+    .hero-breadcrumb a { color: rgba(255,255,255,0.45); text-decoration: none; transition: color 0.15s; }
+    .hero-breadcrumb a:hover { color: var(--brand-primary); }
+    .hero-breadcrumb span { color: rgba(255,255,255,0.25); }
+    .hero-feature h1 { color: white; margin-bottom: 20px; }
+    .hero-feature h1 em { font-style: normal; color: var(--brand-primary); }
+    .hero-feature-sub { font-size: 17px; line-height: 1.7; color: rgba(255,255,255,0.7); }
+    .hero-btns { display: flex; gap: 12px; margin-top: 32px; flex-wrap: wrap; }
+    .hero-badges { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 24px; }
+    .trust-badge {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 99px; padding: 5px 14px;
+      font-size: 12px; color: rgba(255,255,255,0.75); font-weight: 500;
+    }
+    .trust-badge svg { flex-shrink: 0; }
+    .hero-visual {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .hero-stat-card {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.10);
+      border-radius: 12px;
+      padding: 24px 28px;
+    }
+    .hero-stat-card .stat-big { font-size: 40px; font-weight: 700; color: var(--brand-primary); line-height: 1; margin-bottom: 6px; }
+    .hero-stat-card .stat-label { font-size: 14px; color: rgba(255,255,255,0.65); line-height: 1.5; }
+    .hero-stat-card.small { padding: 18px 24px; }
+    .hero-stat-card.small .stat-big { font-size: 28px; }
+    .hero-stats-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+
+    /* ── PROBLEM STATS ── */
+    .problem-section { background: var(--bg-white); padding: 80px 40px; border-bottom: 1px solid var(--border-light); }
+    .problem-header { text-align: center; max-width: 640px; margin: 0 auto 56px; }
+    .problem-header h2 { color: var(--text-primary); }
+    .problem-header p { font-size: 16px; color: var(--text-secondary); line-height: 1.7; margin-top: 14px; }
+    .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
+    .stat-item { text-align: center; padding: 32px 24px; border: 1px solid var(--border-light); border-radius: 12px; }
+    .stat-num { font-size: 52px; font-weight: 700; color: var(--brand-primary); line-height: 1; margin-bottom: 14px; }
+    .stat-desc { font-size: 15px; color: var(--text-secondary); line-height: 1.65; }
+
+    /* ── PILLARS SECTION ── */
+    .pillars-section { background: var(--bg-light); padding: 80px 40px; }
+    .pillars-header { max-width: 640px; margin-bottom: 56px; }
+    .pillars-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+    .pillar-card {
+      background: var(--bg-white);
+      border: 1px solid var(--border-light);
+      border-radius: 12px;
+      padding: 32px;
+      transition: all 0.2s;
+    }
+    .pillar-card:hover { border-color: var(--brand-primary); box-shadow: 0 4px 24px rgba(133,176,32,0.12); transform: translateY(-2px); }
+    .pillar-icon {
+      width: 48px; height: 48px;
+      background: rgba(133,176,32,0.1);
+      border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      color: var(--brand-primary);
+      margin-bottom: 20px;
+    }
+    .pillar-card h3 { font-size: 18px; margin-bottom: 12px; }
+    .pillar-card p { font-size: 14px; color: var(--text-secondary); line-height: 1.7; }
+    .pillar-detail { margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--border-light); }
+    .pillar-detail-item { display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--text-secondary); padding: 5px 0; }
+    .pillar-detail-item svg { color: var(--brand-primary); flex-shrink: 0; }
+
+    /* ── HOW IT WORKS ── */
+    .process-section { background: var(--bg-white); padding: 80px 40px; }
+    .process-header { max-width: 640px; margin-bottom: 56px; }
+    .steps-list { display: grid; grid-template-columns: repeat(5, 1fr); gap: 0; position: relative; }
+    .steps-list::before {
+      content: '';
+      position: absolute;
+      top: 32px;
+      left: calc(10% + 16px);
+      right: calc(10% + 16px);
+      height: 2px;
+      background: var(--border-light);
+      z-index: 0;
+    }
+    .step-item { text-align: center; padding: 0 12px; position: relative; z-index: 1; }
+    .step-num {
+      width: 64px; height: 64px;
+      border-radius: 50%;
+      background: var(--brand-primary);
+      color: white;
+      font-weight: 700; font-size: 20px;
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 16px;
+    }
+    .step-title { font-size: 14px; font-weight: 700; color: var(--text-primary); margin-bottom: 6px; line-height: 1.3; }
+    .step-desc { font-size: 12px; color: var(--text-secondary); line-height: 1.5; }
+
+    /* ── CAPABILITIES ── */
+    .capabilities-section { background: var(--bg-light); padding: 80px 40px; }
+    .capabilities-header { max-width: 640px; margin-bottom: 56px; }
+    .capabilities-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .capability-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      background: var(--bg-white);
+      border: 1px solid var(--border-light);
+      border-radius: 10px;
+      padding: 20px;
+      transition: all 0.2s;
+    }
+    .capability-item:hover { border-color: var(--brand-primary); box-shadow: 0 2px 12px rgba(133,176,32,0.10); }
+    .capability-icon {
+      width: 36px; height: 36px; flex-shrink: 0;
+      background: rgba(133,176,32,0.1);
+      border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+      color: var(--brand-primary);
+    }
+    .capability-text h4 { font-size: 14px; font-weight: 600; margin-bottom: 4px; }
+    .capability-text p { font-size: 13px; color: var(--text-secondary); line-height: 1.5; }
+
+    /* ── SOCIAL PROOF ── */
+    .proof-section { background: #0D1A2E; padding: 80px 40px; }
+    .proof-header { text-align: center; max-width: 560px; margin: 0 auto 56px; }
+    .proof-header .section-label { color: rgba(133,176,32,0.9); }
+    .proof-header h2 { color: white; }
+    .quotes-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .quote-card {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.10);
+      border-radius: 12px;
+      padding: 32px;
+    }
+    .quote-mark { font-size: 40px; color: var(--brand-primary); line-height: 1; margin-bottom: 16px; font-family: Georgia, serif; }
+    .quote-text { font-size: 15px; color: rgba(255,255,255,0.80); line-height: 1.75; font-style: italic; margin-bottom: 20px; }
+    .quote-source { font-size: 12px; color: rgba(255,255,255,0.40); text-transform: uppercase; letter-spacing: 0.08em; font-weight: 600; }
+
+    /* ── WHO THIS IS FOR ── */
+    .fit-section { background: var(--bg-white); padding: 80px 40px; }
+    .fit-header { max-width: 640px; margin-bottom: 56px; }
+    .fit-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+    .fit-panel {
+      border-radius: 12px;
+      padding: 36px;
+    }
+    .fit-panel.good { background: var(--bg-light); border: 1px solid var(--border-light); }
+    .fit-panel.not { background: #FDF8F8; border: 1px solid #F0E0E0; }
+    .fit-panel-label { display: flex; align-items: center; gap: 8px; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 20px; }
+    .fit-panel.good .fit-panel-label { color: var(--brand-primary); }
+    .fit-panel.not .fit-panel-label { color: #B05050; }
+    .fit-panel h3 { font-size: 18px; margin-bottom: 20px; }
+    .fit-list { list-style: none; }
+    .fit-list li { display: flex; align-items: flex-start; gap: 10px; padding: 9px 0; font-size: 14px; border-bottom: 1px solid rgba(0,0,0,0.06); line-height: 1.5; }
+    .fit-list li:last-child { border-bottom: none; }
+    .fit-list li svg { flex-shrink: 0; margin-top: 1px; }
+
+    /* ── FAQ ── */
+    .faq-section { background: var(--bg-light); padding: 80px 40px; }
+    .faq-section .container { max-width: 760px; }
+    .faq-header { margin-bottom: 48px; }
+    .faq-list { display: flex; flex-direction: column; gap: 2px; }
+    .faq-item { background: var(--bg-white); border: 1px solid var(--border-light); border-radius: 10px; overflow: hidden; }
+    .faq-q {
+      width: 100%; background: none; border: none; text-align: left; cursor: pointer;
+      padding: 20px 24px; display: flex; justify-content: space-between; align-items: center;
+      font-size: 15px; font-weight: 600; color: var(--text-primary);
+      transition: color 0.15s;
+    }
+    .faq-q:hover { color: var(--brand-primary); }
+    .faq-q-icon { flex-shrink: 0; color: var(--brand-primary); transition: transform 0.2s; }
+    .faq-q[aria-expanded="true"] .faq-q-icon { transform: rotate(45deg); }
+    .faq-a { padding: 0 24px 20px; font-size: 14px; color: var(--text-secondary); line-height: 1.75; }
+
+    /* ── RELATED SERVICES ── */
+    .related-section { background: var(--bg-white); padding: 80px 40px; }
+    .related-header { max-width: 560px; margin-bottom: 48px; }
+    .related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .related-card {
+      background: var(--bg-white);
+      border: 1px solid var(--border-light);
+      border-radius: 12px;
+      padding: 32px;
+      text-decoration: none;
+      display: block;
+      transition: all 0.2s;
+    }
+    .related-card:hover { border-color: var(--brand-primary); box-shadow: 0 4px 24px rgba(133,176,32,0.12); transform: translateY(-2px); }
+    .related-card-icon {
+      width: 44px; height: 44px;
+      background: rgba(133,176,32,0.1);
+      border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      color: var(--brand-primary);
+      margin-bottom: 18px;
+    }
+    .related-card h3 { font-size: 17px; margin-bottom: 8px; color: var(--text-primary); }
+    .related-card p { font-size: 14px; color: var(--text-secondary); line-height: 1.6; }
+    .related-card-link { display: inline-flex; align-items: center; gap: 4px; color: var(--brand-primary); font-size: 13px; font-weight: 600; margin-top: 16px; }
+
+    /* ── CTA ── */
+    .cta-section { background: #0D1A2E; padding: 80px 40px; text-align: center; }
+    .cta-section h2 { color: white; margin-bottom: 16px; }
+    .cta-section p { color: rgba(255,255,255,0.65); font-size: 17px; margin-bottom: 36px; max-width: 520px; margin-left: auto; margin-right: auto; }
+    .cta-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+    .cta-note { margin-top: 20px; font-size: 13px; color: rgba(255,255,255,0.35); }
+    .cta-section .btn-ghost { color: white; border-color: rgba(255,255,255,0.3); }
+    .cta-section .btn-ghost:hover { border-color: white; }
+
+    /* ── FOOTER ── */
+    footer { background: #0D0D0D; padding: 56px 40px 32px; }
+    .footer-inner { max-width: 1080px; margin: 0 auto; }
+    .footer-top { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 48px; }
+    .footer-brand p { font-size: 14px; line-height: 1.7; margin-top: 16px; max-width: 280px; color: rgba(255,255,255,0.55); }
+    .footer-col h5 { font-size: 12px; font-weight: 700; color: white; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 16px; }
+    .footer-col a { display: block; font-size: 14px; color: rgba(255,255,255,0.5); text-decoration: none; padding: 5px 0; transition: color 0.15s; }
+    .footer-col a:hover { color: var(--brand-primary); }
+    .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 24px; display: flex; justify-content: space-between; font-size: 13px; color: rgba(255,255,255,0.4); }
+    .footer-bottom a { color: rgba(255,255,255,0.35); text-decoration: none; }
+    .footer-bottom a:hover { color: white; }
+    .footer-bottom-links { display: flex; gap: 24px; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 1024px) {
+      h1 { font-size: 36px; }
+      .hero-feature-inner { grid-template-columns: 1fr; gap: 40px; }
+      .hero-visual { display: none; }
+      .pillars-grid { grid-template-columns: 1fr 1fr; }
+      .steps-list { grid-template-columns: 1fr 1fr; gap: 24px; }
+      .steps-list::before { display: none; }
+      .capabilities-grid { grid-template-columns: 1fr 1fr; }
+      .quotes-grid { grid-template-columns: 1fr 1fr; }
+      .footer-top { grid-template-columns: 1fr 1fr; gap: 32px; }
+    }
+    @media (max-width: 768px) {
+      nav { padding: 0 20px; }
+      .hamburger { display: block; }
+      .nav-links {
+        display: none; position: fixed;
+        top: var(--nav-height); left: 0; right: 0; bottom: 0;
+        background: #111111; flex-direction: column;
+        padding: 20px; height: auto; overflow-y: auto; z-index: 250;
+        align-items: flex-start;
+      }
+      .nav-links.open { display: flex; }
+      .nav-item { width: 100%; }
+      .nav-item > a { color: white !important; height: auto; padding: 14px 0; border-bottom: 1px solid rgba(255,255,255,0.1); width: 100%; }
+      .mega-menu { display: none !important; }
+      .dropdown { display: none !important; }
+      .hero-feature { padding: calc(var(--nav-height) + 48px) 20px 56px; }
+      .hero-feature-inner { grid-template-columns: 1fr; }
+      .hero-visual { display: none; }
+      h1 { font-size: 28px; }
+      h2 { font-size: 22px; }
+      .hero-btns { flex-direction: column; }
+      .hero-btns a { text-align: center; }
+      .problem-section, .pillars-section, .process-section, .capabilities-section, .proof-section, .fit-section, .faq-section, .related-section, .cta-section { padding: 56px 20px; }
+      .stat-grid { grid-template-columns: 1fr; gap: 16px; }
+      .pillars-grid { grid-template-columns: 1fr; }
+      .steps-list { grid-template-columns: 1fr; gap: 20px; }
+      .capabilities-grid { grid-template-columns: 1fr; }
+      .quotes-grid { grid-template-columns: 1fr; }
+      .fit-grid { grid-template-columns: 1fr; }
+      .related-grid { grid-template-columns: 1fr; }
+      .cta-btns { flex-direction: column; align-items: center; }
+      footer { padding: 40px 20px 24px; }
+      .footer-top { grid-template-columns: 1fr 1fr; gap: 24px; }
+      .footer-brand { grid-column: 1 / -1; }
+      .footer-bottom { flex-direction: column; gap: 12px; }
+    }
+  </style>
+</head>
+<body>
+
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<!-- NAV -->
+<nav id="mainNav" role="navigation" aria-label="Main navigation">
+  <a href="../../" class="nav-logo" aria-label="2Flow home">
+    <img src="../../Images/2flow-logo.png" alt="2Flow" id="navLogo">
+  </a>
+  <div class="nav-links" id="navLinks">
+    <div class="nav-item" data-menu="deliver">
+      <a href="../../deliver">What We Deliver <span class="nav-chevron">&#9660;</span></a>
+    </div>
+    <div class="nav-item" data-menu="solutions">
+      <a href="../../solutions">Solutions For <span class="nav-chevron">&#9660;</span></a>
+    </div>
+    <div class="nav-item has-dropdown">
+      <a href="../../why-2flow">Why 2Flow <span class="nav-chevron">&#9660;</span></a>
+      <div class="dropdown">
+        <a href="../../why-2flow/our-difference">Our Difference</a>
+        <a href="../../why-2flow/customer-stories">Customer Stories</a>
+        <a href="../../why-2flow/platform">Our Platform</a>
+        <a href="../../why-2flow/integrations">Integrations</a>
+        <a href="../../why-2flow/shopify">Shopify Specialists</a>
+        <a href="../../why-2flow/meet-the-team">Meet the Team</a>
+        <a href="../../why-2flow/virtual-tour">Visit our Dublin Hub</a>
+        <a href="../../why-2flow/faqs">FAQs</a>
+      </div>
+    </div>
+    <div class="nav-item"><a href="../../pricing">Pricing</a></div>
+  </div>
+  <div class="nav-cta-wrap">
+    <a href="../../book-a-call" class="nav-cta">Book a Call</a>
+  </div>
+  <button class="hamburger" id="hamburgerBtn" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navLinks">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- MEGA: WHAT WE DELIVER -->
+<div class="mega-menu" id="menu-deliver" aria-hidden="true">
+  <div class="mega-inner deliver-grid">
+    <div class="mega-col">
+      <div class="mega-col-label green">eCommerce Fulfilment</div>
+      <a href="../../deliver/pick-and-pack" class="mega-item">
+        <div class="mega-item-icon green-bg">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/></svg>
+        </div>
+        <div class="mega-item-text"><h4>Pick &amp; Pack</h4><p>Accurate, brand-aligned fulfilment at speed</p></div>
+      </a>
+      <a href="../../deliver/kitting-bundles" class="mega-item">
+        <div class="mega-item-icon green-bg">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+        </div>
+        <div class="mega-item-text"><h4>Kitting &amp; Bundles</h4><p>Gift sets, subscriptions, multi-SKU assembly</p></div>
+      </a>
+      <a href="../../deliver/returns-refurbishment" class="mega-item">
+        <div class="mega-item-icon green-bg">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg>
+        </div>
+        <div class="mega-item-text"><h4>Returns &amp; Refurbishment</h4><p>Fast, clean returns processing and restocking</p></div>
+      </a>
+      <a href="../../deliver/finishing-personalisation" class="mega-item">
+        <div class="mega-item-icon green-bg">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+        </div>
+        <div class="mega-item-text"><h4>Finishing &amp; Personalisation</h4><p>Engraving, inserts, gift messaging, branded packaging</p></div>
+      </a>
+      <a href="../../deliver/compliance-preparation" class="mega-item">
+        <div class="mega-item-icon green-bg">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+        </div>
+        <div class="mega-item-text"><h4>Compliance Preparation</h4><p>Regulated labelling, batch control, cold-chain handling</p></div>
+      </a>
+    </div>
+    <div class="mega-col">
+      <div class="mega-col-label navy">OmniChannel Specialists</div>
+      <a href="../../deliver/retail-b2b-distribution" class="mega-item">
+        <div class="mega-item-icon navy-bg">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        </div>
+        <div class="mega-item-text"><h4>Retail &amp; B2B Distribution</h4><p>Compliance-ready wholesale and retail prep</p></div>
+      </a>
+      <a href="../../deliver/amazon-fulfilment" class="mega-item">
+        <div class="mega-item-icon navy-bg">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        </div>
+        <div class="mega-item-text"><h4>Amazon Fulfilment</h4><p>FBA prep, FBM dispatch, seller compliance</p></div>
+      </a>
+      <a href="../../deliver/tiktok-shop" class="mega-item">
+        <div class="mega-item-icon navy-bg">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+        </div>
+        <div class="mega-item-text"><h4>TikTok Shop</h4><p>Integrated fulfilment for TikTok Shop sellers</p></div>
+      </a>
+      <a href="../../deliver/pop-up-shops" class="mega-item">
+        <div class="mega-item-icon navy-bg">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        </div>
+        <div class="mega-item-text"><h4>Pop-up &amp; Own-Store Fulfilment</h4><p>Replenishing your own retail locations, events and pop-ups</p></div>
+      </a>
+    </div>
+    <div class="mega-col">
+      <div class="mega-col-label slate">Beyond Fulfilment</div>
+      <a href="../../deliver/live-commerce" class="mega-item">
+        <div class="mega-item-icon slate-bg">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg>
+        </div>
+        <div class="mega-item-text"><h4>Live Commerce Fulfilment</h4><p>Rapid dispatch for live selling events and flash campaigns</p></div>
+      </a>
+      <a href="../../deliver/same-day-dublin" class="mega-item">
+        <div class="mega-item-icon slate-bg">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <div class="mega-item-text"><h4>Same-Day Dublin Delivery</h4><p>Cut-off noon, delivered same afternoon</p></div>
+      </a>
+      <a href="../../deliver/customer-service" class="mega-item">
+        <div class="mega-item-icon slate-bg">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        </div>
+        <div class="mega-item-text"><h4>Outsourced Customer Service</h4><p>Your brand voice, our team, seamless CX</p></div>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- MEGA: SOLUTIONS FOR -->
+<div class="mega-menu" id="menu-solutions" aria-hidden="true">
+  <div class="mega-inner solutions-grid">
+    <div>
+      <div class="mega-group-title">By Sector</div>
+      <a href="../../solutions/beauty-personal-care" class="mega-link"><strong>Beauty &amp; Personal Care</strong></a>
+      <a href="../../solutions/health-supplements" class="mega-link"><strong>Health &amp; Supplements</strong></a>
+      <a href="../../solutions/medical-healthcare" class="mega-link"><strong>Medical &amp; Healthcare</strong></a>
+      <a href="../../solutions/home-lifestyle" class="mega-link"><strong>Home &amp; Lifestyle</strong></a>
+      <a href="../../solutions/consumer-electronics" class="mega-link"><strong>Consumer Electronics</strong></a>
+      <a href="../../solutions/office-products" class="mega-link"><strong>Office Products</strong></a>
+      <a href="../../solutions/industrial-scientific" class="mega-link"><strong>Industrial &amp; Scientific</strong></a>
+    </div>
+    <div>
+      <div class="mega-group-title">By Need</div>
+      <a href="../../solutions/subscription-brands" class="mega-link"><strong>Subscription Brands</strong></a>
+      <a href="../../solutions/dtc-brands-scaling" class="mega-link"><strong>DTC Brands Scaling</strong></a>
+      <a href="../../solutions/brand-product-launch" class="mega-link"><strong>Brand / Product Launch</strong></a>
+      <a href="../../solutions/ireland-domestic" class="mega-link"><strong>Ireland Domestic</strong></a>
+      <a href="../../solutions/dublin-same-day" class="mega-link"><strong>Dublin Same-Day</strong></a>
+      <a href="../../solutions/eu-delivery" class="mega-link"><strong>EU Delivery</strong></a>
+      <a href="../../solutions/uk-rest-of-world" class="mega-link"><strong>UK &amp; Rest of World</strong></a>
+    </div>
+  </div>
+</div>
+
+<main id="main-content">
+
+<!-- ── SECTION 1: HERO ── -->
+<section class="hero-feature" aria-labelledby="hero-heading">
+  <div class="hero-feature-inner">
+    <div class="hero-text-col">
+      <nav class="hero-breadcrumb" aria-label="Breadcrumb">
+        <a href="../../">Home</a>
+        <span aria-hidden="true">›</span>
+        <a href="../../deliver">What We Deliver</a>
+        <span aria-hidden="true">›</span>
+        <span aria-current="page">Pick &amp; Pack</span>
+      </nav>
+      <div class="section-label" style="color:rgba(133,176,32,0.9);">eCommerce Fulfilment</div>
+      <h1 id="hero-heading">Every order, packed to your standard.<br><em>Dispatched the same day.</em></h1>
+      <p class="hero-feature-sub" style="margin-top:18px;">2Flow's pick &amp; pack service is built for brands where accuracy and presentation aren't optional. We take full ownership of every order from warehouse pick to carrier scan — so your customers receive exactly what your brand promised.</p>
+      <div class="hero-btns">
+        <a href="../../book-a-call" class="btn-primary">Book a Call</a>
+        <a href="../../pricing" class="btn-ghost btn-ghost-light">View Pricing</a>
+      </div>
+      <div class="hero-badges">
+        <span class="trust-badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="13" height="13"><polyline points="20 6 9 17 4 12"/></svg>
+          Same-day dispatch
+        </span>
+        <span class="trust-badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="13" height="13"><polyline points="20 6 9 17 4 12"/></svg>
+          Shopify sync every 15 min
+        </span>
+        <span class="trust-badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="13" height="13"><polyline points="20 6 9 17 4 12"/></svg>
+          Per-SKU pack instructions
+        </span>
+        <span class="trust-badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="13" height="13"><polyline points="20 6 9 17 4 12"/></svg>
+          Real-time order visibility
+        </span>
+      </div>
+    </div>
+    <div class="hero-visual" aria-hidden="true">
+      <div class="hero-stat-card">
+        <div class="stat-big">99.8%</div>
+        <div class="stat-label">Order accuracy across all clients — tracked through Mintsoft WMS on every pick</div>
+      </div>
+      <div class="hero-stats-row">
+        <div class="hero-stat-card small">
+          <div class="stat-big">Same<br>day</div>
+          <div class="stat-label">Dispatch on all orders received before cut-off</div>
+        </div>
+        <div class="hero-stat-card small">
+          <div class="stat-big">15<span style="font-size:18px;">min</span></div>
+          <div class="stat-label">Shopify and multichannel sync frequency</div>
+        </div>
+      </div>
+      <div class="hero-stat-card" style="display:flex; align-items:center; gap:16px;">
+        <div style="color:var(--brand-primary);">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="32" height="32"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <div>
+          <div style="font-size:14px; font-weight:700; color:white; margin-bottom:4px;">Full ownership model</div>
+          <div style="font-size:13px; color:rgba(255,255,255,0.55);">From inbound receipt to carrier scan — we own the outcome, not just the task</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── SECTION 2: THE COST OF GETTING IT WRONG ── -->
+<section class="problem-section" aria-labelledby="problem-heading">
+  <div class="container">
+    <div class="problem-header">
+      <div class="section-label">The Stakes</div>
+      <h2 id="problem-heading">A fulfilment error isn't an ops problem. It's a brand problem.</h2>
+      <p>eCommerce brands invest heavily in product, design, and marketing — then hand the final mile to a warehouse that doesn't care about brand standards. The numbers show what that costs.</p>
+    </div>
+    <div class="stat-grid">
+      <div class="stat-item">
+        <div class="stat-num">23%</div>
+        <div class="stat-desc">of consumers will never order from a retailer again after a poor delivery experience</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">41%</div>
+        <div class="stat-desc">of consumers blame the retailer, not the carrier, when a shipment goes wrong</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">69%</div>
+        <div class="stat-desc">of consumers are less likely to shop with a brand again when a 2-day delivery promise is missed</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── SECTION 3: THE 2FLOW APPROACH ── -->
+<section class="pillars-section" aria-labelledby="pillars-heading">
+  <div class="container">
+    <div class="pillars-header">
+      <div class="section-label">The 2Flow Approach</div>
+      <h2 id="pillars-heading">Fulfilment your customers will notice</h2>
+      <p class="section-intro">Three things separate 2Flow's pick &amp; pack from a generic warehouse: speed, accuracy, and the care taken with every order.</p>
+    </div>
+    <div class="pillars-grid">
+
+      <div class="pillar-card">
+        <div class="pillar-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="24" height="24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <h3>Speed. No exceptions.</h3>
+        <p>Orders received before cut-off are picked, packed, and scanned onto carriers the same day. We don't batch orders overnight or build up backlogs.</p>
+        <div class="pillar-detail">
+          <div class="pillar-detail-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="14" height="14"><polyline points="20 6 9 17 4 12"/></svg>
+            Same-day dispatch on all orders before cut-off
+          </div>
+          <div class="pillar-detail-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="14" height="14"><polyline points="20 6 9 17 4 12"/></svg>
+            Shopify sync every 15 minutes — orders pulled automatically
+          </div>
+          <div class="pillar-detail-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="14" height="14"><polyline points="20 6 9 17 4 12"/></svg>
+            Tracking pushed back to your store in real time
+          </div>
+        </div>
+      </div>
+
+      <div class="pillar-card">
+        <div class="pillar-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="24" height="24"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+        </div>
+        <h3>Accuracy at every pick.</h3>
+        <p>Every order is verified against your exact SKU list before it leaves the floor. Mintsoft WMS tracks each pick individually — so errors are caught before the customer finds them.</p>
+        <div class="pillar-detail">
+          <div class="pillar-detail-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="14" height="14"><polyline points="20 6 9 17 4 12"/></svg>
+            Per-pick verification through Mintsoft WMS
+          </div>
+          <div class="pillar-detail-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="14" height="14"><polyline points="20 6 9 17 4 12"/></svg>
+            Real-time stock and order visibility in your portal
+          </div>
+          <div class="pillar-detail-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="14" height="14"><polyline points="20 6 9 17 4 12"/></svg>
+            Proactive communication if anything needs your attention
+          </div>
+        </div>
+      </div>
+
+      <div class="pillar-card">
+        <div class="pillar-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="24" height="24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>
+        </div>
+        <h3>Packed the way you'd pack it yourself.</h3>
+        <p>Custom tissue, inserts, branded outer packaging, and presentation standards are configured at SKU level and applied automatically. Your customer opens a box that reflects your brand — not a warehouse.</p>
+        <div class="pillar-detail">
+          <div class="pillar-detail-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="14" height="14"><polyline points="20 6 9 17 4 12"/></svg>
+            Per-SKU packaging instructions — set once, applied every time
+          </div>
+          <div class="pillar-detail-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="14" height="14"><polyline points="20 6 9 17 4 12"/></svg>
+            Tissue, inserts, box selection, gift messaging
+          </div>
+          <div class="pillar-detail-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="14" height="14"><polyline points="20 6 9 17 4 12"/></svg>
+            Premium and regulated packaging both handled
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── SECTION 4: HOW IT WORKS ── -->
+<section class="process-section" aria-labelledby="process-heading">
+  <div class="container">
+    <div class="process-header">
+      <div class="section-label">The Process</div>
+      <h2 id="process-heading">From order received to carrier scanned</h2>
+      <p class="section-intro">Five steps from your customer placing an order to it leaving our Dublin hub. Every step owned by 2Flow.</p>
+    </div>
+    <div class="steps-list">
+      <div class="step-item">
+        <div class="step-num">1</div>
+        <div class="step-title">Order received</div>
+        <div class="step-desc">Synced from your store within 15 minutes of the customer placing it</div>
+      </div>
+      <div class="step-item">
+        <div class="step-num">2</div>
+        <div class="step-title">Picked to spec</div>
+        <div class="step-desc">Located, verified, and pulled against your exact SKU list via Mintsoft WMS</div>
+      </div>
+      <div class="step-item">
+        <div class="step-num">3</div>
+        <div class="step-title">Packed to standard</div>
+        <div class="step-desc">Branded packaging, inserts, and presentation applied per your per-SKU instructions</div>
+      </div>
+      <div class="step-item">
+        <div class="step-num">4</div>
+        <div class="step-title">Carrier dispatched</div>
+        <div class="step-desc">Allocated to the right carrier for your destination, scanned, and collected same day</div>
+      </div>
+      <div class="step-item">
+        <div class="step-num">5</div>
+        <div class="step-title">Tracking live</div>
+        <div class="step-desc">Real-time updates in your Mintsoft portal and pushed back to your store automatically</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── SECTION 5: CAPABILITIES ── -->
+<section class="capabilities-section" aria-labelledby="capabilities-heading">
+  <div class="container">
+    <div class="capabilities-header">
+      <div class="section-label">Capabilities</div>
+      <h2 id="capabilities-heading">Everything your orders need, covered</h2>
+      <p class="section-intro">The detail-level capabilities that matter when you're evaluating a fulfilment partner for your brand.</p>
+    </div>
+    <div class="capabilities-grid">
+
+      <div class="capability-item">
+        <div class="capability-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>
+        </div>
+        <div class="capability-text">
+          <h4>Single and multi-SKU orders</h4>
+          <p>Simple single-item dispatch through to complex multi-line orders — all handled at the same pace</p>
+        </div>
+      </div>
+
+      <div class="capability-item">
+        <div class="capability-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+        </div>
+        <div class="capability-text">
+          <h4>Branded packaging &amp; inserts</h4>
+          <p>Custom tissue, gift notes, loyalty cards, and brand inserts applied at SKU or order level</p>
+        </div>
+      </div>
+
+      <div class="capability-item">
+        <div class="capability-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+        </div>
+        <div class="capability-text">
+          <h4>Per-SKU pack instructions</h4>
+          <p>Set your exact pack spec per product in Mintsoft — applied automatically to every order, no manual briefing needed</p>
+        </div>
+      </div>
+
+      <div class="capability-item">
+        <div class="capability-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <div class="capability-text">
+          <h4>Same-day dispatch</h4>
+          <p>Orders confirmed before cut-off are picked, packed, and scanned onto carriers the same day</p>
+        </div>
+      </div>
+
+      <div class="capability-item">
+        <div class="capability-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+        </div>
+        <div class="capability-text">
+          <h4>Shopify &amp; multichannel sync</h4>
+          <p>Shopify integration with 15-minute sync. Orders pulled, tracking pushed back — fully automated</p>
+        </div>
+      </div>
+
+      <div class="capability-item">
+        <div class="capability-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+        </div>
+        <div class="capability-text">
+          <h4>Real-time order visibility</h4>
+          <p>Mintsoft client portal gives you live visibility of every order, stock level, and inbound shipment</p>
+        </div>
+      </div>
+
+      <div class="capability-item">
+        <div class="capability-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </div>
+        <div class="capability-text">
+          <h4>Multi-carrier dispatch</h4>
+          <p>An Post, DPD, DHL, and more — the right carrier selected for your destination and service level</p>
+        </div>
+      </div>
+
+      <div class="capability-item">
+        <div class="capability-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        </div>
+        <div class="capability-text">
+          <h4>Retail-ready preparation</h4>
+          <p>Shelf-ready labelling, barcode compliance, and pallet configuration for wholesale and retail orders</p>
+        </div>
+      </div>
+
+      <div class="capability-item">
+        <div class="capability-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        </div>
+        <div class="capability-text">
+          <h4>Amazon FBA &amp; FBM prep</h4>
+          <p>FBA-compliant labelling, bundling, and packaging. FBM dispatch from our Dublin hub with full seller compliance</p>
+        </div>
+      </div>
+
+      <div class="capability-item">
+        <div class="capability-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <div class="capability-text">
+          <h4>Fragile &amp; regulated handling</h4>
+          <p>Temperature-sensitive, fragile, and regulated products handled with the appropriate care and documentation</p>
+        </div>
+      </div>
+
+      <div class="capability-item">
+        <div class="capability-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        </div>
+        <div class="capability-text">
+          <h4>Gift messaging &amp; order notes</h4>
+          <p>Customer gift messages and order notes printed and included — no manual intervention needed on your end</p>
+        </div>
+      </div>
+
+      <div class="capability-item">
+        <div class="capability-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+        </div>
+        <div class="capability-text">
+          <h4>Scheduled reporting</h4>
+          <p>Set up automated stock and order reports from Mintsoft — delivered to your inbox on the schedule you choose</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── SECTION 6: SOCIAL PROOF ── -->
+<section class="proof-section" aria-labelledby="proof-heading">
+  <div class="container">
+    <div class="proof-header">
+      <div class="section-label">What Our Clients Say</div>
+      <h2 id="proof-heading">The difference your customers feel</h2>
+    </div>
+    <div class="quotes-grid">
+      <div class="quote-card">
+        <div class="quote-mark">"</div>
+        <p class="quote-text">We don't have to worry about it anymore. Orders go out, they're right, and if there's ever an issue, someone's already on it before we even know about it.</p>
+        <div class="quote-source">Health &amp; Wellness Brand, Ireland</div>
+      </div>
+      <div class="quote-card">
+        <div class="quote-mark">"</div>
+        <p class="quote-text">The packaging quality matters enormously for us. Our customers expect something premium when they open the box. 2Flow understand that — it's not something we have to keep explaining.</p>
+        <div class="quote-source">Luxury Fragrance Brand</div>
+      </div>
+      <div class="quote-card">
+        <div class="quote-mark">"</div>
+        <p class="quote-text">The visibility we have now is completely different. I can see exactly where every order is without having to chase anyone. That alone changed how we run the business.</p>
+        <div class="quote-source">Beauty Brand, Dublin</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── SECTION 7: WHO THIS IS FOR ── -->
+<section class="fit-section" aria-labelledby="fit-heading">
+  <div class="container">
+    <div class="fit-header">
+      <div class="section-label">Right Fit</div>
+      <h2 id="fit-heading">Built for brands where quality matters at every step</h2>
+      <p class="section-intro">2Flow's pick &amp; pack service is designed for a specific type of brand. We're honest about where we're the right fit — and where we're not.</p>
+    </div>
+    <div class="fit-grid">
+      <div class="fit-panel good">
+        <div class="fit-panel-label">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="16" height="16"><polyline points="20 6 9 17 4 12"/></svg>
+          A good fit for
+        </div>
+        <h3>Brands with high-value compact products</h3>
+        <ul class="fit-list">
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="14" height="14" style="color:var(--brand-primary);margin-top:2px;"><polyline points="20 6 9 17 4 12"/></svg>
+            DTC and multichannel brands where unboxing is part of the brand experience
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="14" height="14" style="color:var(--brand-primary);margin-top:2px;"><polyline points="20 6 9 17 4 12"/></svg>
+            Subscription brands requiring consistent, repeatable presentation on every order
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="14" height="14" style="color:var(--brand-primary);margin-top:2px;"><polyline points="20 6 9 17 4 12"/></svg>
+            Shopify merchants who need same-day dispatch and automated tracking
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="14" height="14" style="color:var(--brand-primary);margin-top:2px;"><polyline points="20 6 9 17 4 12"/></svg>
+            Health, beauty, supplements, and wellness brands scaling past self-fulfilment
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="14" height="14" style="color:var(--brand-primary);margin-top:2px;"><polyline points="20 6 9 17 4 12"/></svg>
+            Brands selling across Ireland, EU, and international markets from one hub
+          </li>
+        </ul>
+      </div>
+      <div class="fit-panel not">
+        <div class="fit-panel-label">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+          Less suited to
+        </div>
+        <h3>Categories we don't serve well</h3>
+        <ul class="fit-list">
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14" style="color:#B05050;margin-top:2px;"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+            Fashion brands with high return rates and large size/colour variant matrices
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14" style="color:#B05050;margin-top:2px;"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+            Bulky or oversized products where throughput economics don't stack up
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14" style="color:#B05050;margin-top:2px;"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+            Low-value, high-volume commodity products where margin leaves no room for quality handling
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14" style="color:#B05050;margin-top:2px;"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+            Businesses primarily looking for long-term static storage rather than fulfilment throughput
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── SECTION 8: FAQ ── -->
+<section class="faq-section" aria-labelledby="faq-heading">
+  <div class="container">
+    <div class="faq-header">
+      <div class="section-label">Common Questions</div>
+      <h2 id="faq-heading">What people ask us before they start</h2>
+    </div>
+    <div class="faq-list">
+
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          What is the cut-off time for same-day dispatch?
+          <svg class="faq-q-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="faq-a" hidden>Orders received and confirmed before our daily cut-off are picked, packed, and handed to carriers the same day. Cut-off times vary slightly depending on carrier and destination. Contact us to confirm the exact times for your order profile and shipping zones.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          Can I set custom packaging instructions per SKU?
+          <svg class="faq-q-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="faq-a" hidden>Yes. Mintsoft WMS supports per-SKU pack instructions including tissue selection, insert inclusion, outer packaging choice, and specific presentation standards. These are configured during your onboarding and applied automatically to every order from that point forward — no briefing required each time.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          How does 2Flow integrate with Shopify?
+          <svg class="faq-q-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="faq-a" hidden>2Flow syncs with your Shopify store every 15 minutes. New orders are pulled automatically, processed to your pack spec, and tracking information is pushed back to Shopify so your customers receive updates without any manual work on your end. We also support WooCommerce and other platforms — ask us about your specific stack.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          Do you handle Amazon FBA and FBM orders?
+          <svg class="faq-q-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="faq-a" hidden>Yes. We handle FBA preparation including labelling, bundling, and Amazon compliance requirements. For FBM, we dispatch from our Dublin hub with full seller compliance so your metrics stay healthy. If you're scaling your Amazon presence alongside DTC, we manage both from a single stock pool.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          How long does onboarding take?
+          <svg class="faq-q-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="faq-a" hidden>Most brands are live within two to four weeks of signing. The timeline includes Mintsoft setup, integration with your store, configuring your pack spec, and an inbound stock receipt. We manage the process and keep you updated throughout — you don't need a technical team to get started.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          What does pricing look like?
+          <svg class="faq-q-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="faq-a" hidden>Pick &amp; pack is priced per order, with a first-pick rate and an additional per-item rate for multi-SKU orders. Storage, inbound, and consumables are priced separately so you only pay for what you use. We'll put together a tailored quote based on your order volume, SKU count, and packaging requirements — head to our pricing page or book a call to get started.</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── SECTION 9: RELATED SERVICES ── -->
+<section class="related-section" aria-labelledby="related-heading">
+  <div class="container">
+    <div class="related-header">
+      <div class="section-label">Explore Further</div>
+      <h2 id="related-heading">Other ways 2Flow can help</h2>
+    </div>
+    <div class="related-grid">
+      <a href="../../deliver/kitting-bundles" class="related-card">
+        <div class="related-card-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+        </div>
+        <h3>Kitting &amp; Bundles</h3>
+        <p>Gift sets, subscription boxes, and multi-SKU assemblies built to your specification. Handled as part of your standard fulfilment flow.</p>
+        <div class="related-card-link">
+          Learn more
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </div>
+      </a>
+      <a href="../../deliver/returns-refurbishment" class="related-card">
+        <div class="related-card-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg>
+        </div>
+        <h3>Returns &amp; Refurbishment</h3>
+        <p>Fast, clean returns processing with grading, restocking, and refurbishment. Returned stock back in your available pool quickly.</p>
+        <div class="related-card-link">
+          Learn more
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </div>
+      </a>
+      <a href="../../deliver/finishing-personalisation" class="related-card">
+        <div class="related-card-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+        </div>
+        <h3>Finishing &amp; Personalisation</h3>
+        <p>Engraving, embossing, custom inserts, and branded finishing for brands where the unboxing moment is a marketing event.</p>
+        <div class="related-card-link">
+          Learn more
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ── SECTION 10: CTA ── -->
+<section class="cta-section" aria-labelledby="cta-heading">
+  <div class="container">
+    <div class="section-label" style="color:rgba(133,176,32,0.9);">Get Started</div>
+    <h2 id="cta-heading">Ready to talk about your orders?</h2>
+    <p>Most brands take 3 to 6 months to make the switch. Start the conversation now — so you're ready when the time is right, and your next busy period doesn't catch you unprepared.</p>
+    <div class="cta-btns">
+      <a href="../../book-a-call" class="btn-primary">Book a Call</a>
+      <a href="../../pricing" class="btn-ghost">View Pricing</a>
+    </div>
+    <p class="cta-note">No commitment required &nbsp;·&nbsp; Tailored to your order volume and category</p>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer role="contentinfo">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <img src="../../Images/2flow-logo.png" alt="2Flow" height="28" style="filter:brightness(0) invert(1) opacity(0.75);">
+        <p>Ireland's specialist eCommerce fulfilment partner. Full ownership from inbound stock receipt to delivered order, so your brand can scale without breaking.</p>
+        <p style="margin-top:8px; font-size:13px; color:rgba(255,255,255,0.4);">Dublin, Ireland</p>
+      </div>
+      <div class="footer-col">
+        <h5>What We Deliver</h5>
+        <a href="../../deliver/pick-and-pack">Pick &amp; Pack</a>
+        <a href="../../deliver/kitting-bundles">Kitting &amp; Bundles</a>
+        <a href="../../deliver/returns-refurbishment">Returns &amp; Refurbishment</a>
+        <a href="../../deliver/amazon-fulfilment">Amazon Fulfilment</a>
+        <a href="../../deliver/tiktok-shop">TikTok Shop</a>
+        <a href="../../deliver/same-day-dublin">Same-Day Dublin</a>
+        <a href="../../deliver/customer-service">Customer Service</a>
+      </div>
+      <div class="footer-col">
+        <h5>Solutions For</h5>
+        <a href="../../solutions/health-beauty">Health &amp; Beauty</a>
+        <a href="../../solutions/health-supplements">Health Supplements</a>
+        <a href="../../solutions/medical-healthcare">Medical &amp; Healthcare</a>
+        <a href="../../solutions/dtc-brands-scaling">DTC Brands Scaling</a>
+        <a href="../../solutions/eu-delivery">EU Delivery</a>
+        <a href="../../solutions/brand-product-launch">Brand / Product Launch</a>
+      </div>
+      <div class="footer-col">
+        <h5>Company</h5>
+        <a href="../../why-2flow/our-difference">Our Difference</a>
+        <a href="../../why-2flow/customer-stories">Customer Stories</a>
+        <a href="../../why-2flow/meet-the-team">Meet the Team</a>
+        <a href="../../why-2flow/virtual-tour">Visit our Centre</a>
+        <a href="../../pricing">Pricing</a>
+        <a href="../../book-a-call">Book a Call</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 2Flow Fulfilment Ltd. All rights reserved.</span>
+      <div class="footer-bottom-links">
+        <a href="../../privacy">Privacy Policy</a>
+        <a href="../../terms">Terms of Service</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // ── Scroll-aware nav ──
+  const nav = document.getElementById('mainNav');
+  function updateNav() {
+    nav.classList.toggle('nav-scrolled', window.scrollY > 40);
+  }
+  window.addEventListener('scroll', updateNav, { passive: true });
+  updateNav();
+
+  // ── Hamburger ──
+  const hamburgerBtn = document.getElementById('hamburgerBtn');
+  const navLinks = document.getElementById('navLinks');
+  if (hamburgerBtn && navLinks) {
+    hamburgerBtn.addEventListener('click', function() {
+      const isOpen = navLinks.classList.toggle('open');
+      this.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+  }
+
+  // ── Mega menus ──
+  const menuTriggers = document.querySelectorAll('[data-menu]');
+  const menus = document.querySelectorAll('.mega-menu');
+  let closeTimeout;
+  function openMenu(id) {
+    clearTimeout(closeTimeout);
+    menus.forEach(m => { m.classList.remove('active'); m.setAttribute('aria-hidden', 'true'); });
+    const m = document.getElementById('menu-' + id);
+    if (m) { m.classList.add('active'); m.setAttribute('aria-hidden', 'false'); }
+  }
+  function scheduleClose() {
+    closeTimeout = setTimeout(() => {
+      menus.forEach(m => { m.classList.remove('active'); m.setAttribute('aria-hidden', 'true'); });
+    }, 180);
+  }
+  menuTriggers.forEach(t => {
+    t.addEventListener('mouseenter', () => openMenu(t.dataset.menu));
+    t.addEventListener('mouseleave', scheduleClose);
+  });
+  menus.forEach(m => {
+    m.addEventListener('mouseenter', () => clearTimeout(closeTimeout));
+    m.addEventListener('mouseleave', scheduleClose);
+  });
+  document.addEventListener('click', e => {
+    if (!e.target.closest('[data-menu]') && !e.target.closest('.mega-menu')) {
+      menus.forEach(m => { m.classList.remove('active'); m.setAttribute('aria-hidden', 'true'); });
+    }
+  });
+
+  // ── FAQ accordion ──
+  document.querySelectorAll('.faq-q').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      const expanded = btn.getAttribute('aria-expanded') === 'true';
+      const answer = btn.nextElementSibling;
+      btn.setAttribute('aria-expanded', expanded ? 'false' : 'true');
+      if (answer) {
+        if (expanded) { answer.setAttribute('hidden', ''); }
+        else { answer.removeAttribute('hidden'); }
+      }
+    });
+  });
+</script>
+</body>
+</html>
