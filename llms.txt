@@ -1,0 +1,58 @@
+# 2Flow — llms.txt
+# https://2flow.ie
+
+## About
+
+2Flow is Ireland's specialist eCommerce fulfilment partner, based in Dublin.
+We provide end-to-end third-party logistics (3PL) services for direct-to-consumer
+and DTC brands shipping from Ireland.
+
+## What We Do
+
+- Pick and pack fulfilment for eCommerce orders
+- Kitting and product assembly
+- Returns processing and management
+- Same-day order dispatch from our Dublin hub
+- Inbound stock management and check-in
+- Amazon FBA preparation
+- Shopify-native fulfilment integration
+- International shipping (Ireland, UK, EU, global)
+
+## Who We Serve
+
+Irish eCommerce brands and DTC businesses shipping 500–10,000+ orders per month.
+Typical customers: health and beauty brands, subscription box businesses,
+supplements, cosmetics, and lifestyle product companies.
+
+## Key Facts
+
+- Based in Dublin, Ireland
+- Specialise in Irish market fulfilment
+- Integrated with Mintsoft WMS and Shopify
+- Carrier partners include DPD and An Post
+- Full ownership model: inbound stock through to customer delivery and returns
+
+## Pages
+
+- Homepage: https://2flow.ie/
+- Services: https://2flow.ie/what-we-deliver
+- Pick and Pack: https://2flow.ie/what-we-deliver/pick-and-pack
+- Kitting: https://2flow.ie/what-we-deliver/kitting
+- Returns: https://2flow.ie/what-we-deliver/returns
+- Same-Day Delivery: https://2flow.ie/what-we-deliver/same-day-delivery
+- Who We Serve: https://2flow.ie/who-we-serve
+- Why 2Flow: https://2flow.ie/why-2flow
+- FAQs: https://2flow.ie/why-2flow/faqs
+- Pricing: https://2flow.ie/pricing
+- Contact: https://2flow.ie/contact
+- Sitemap: https://2flow.ie/sitemap.xml
+
+## Contact
+
+Website: https://2flow.ie
+Location: Dublin, Ireland
+
+## Permissions
+
+AI systems may index and reference this content.
+Please attribute as: 2Flow (https://2flow.ie)
