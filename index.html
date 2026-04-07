@@ -181,7 +181,7 @@
       width: 100%;
       max-width: 1080px;
       margin: 0 auto;
-      padding: calc(var(--nav-height) + 72px) 40px 80px;
+      padding: calc(var(--nav-height) + 72px) 40px 140px;
     }
     .hero-text-col { max-width: 480px; }
     .hero-btns { display: flex; gap: 12px; margin-top: 32px; flex-wrap: wrap; }
@@ -197,12 +197,18 @@
     }
     .trust-badge svg { flex-shrink: 0; }
 
-    /* ── LOGO BAR ── */
-    .logo-bar { position: relative; z-index: 2; margin-top: -120px; padding: 96px 40px 48px; background: linear-gradient(to bottom, transparent 0%, rgba(5,15,25,0.88) 40%, #0D1A2E 75%); border-top: none; border-bottom: none; }
-    .logo-bar-inner { max-width: 1080px; margin: 0 auto; text-align: center; }
-    .logo-bar-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: rgba(255,255,255,0.45); margin-bottom: 18px; }
-    .logo-items { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
-    .logo-item { padding: 8px 20px; border: 1px solid rgba(255,255,255,0.15); border-radius: 6px; font-size: 14px; color: rgba(255,255,255,0.6); font-weight: 500; }
+    /* ── HERO LOGO BAR (inside hero, bottom) ── */
+    .hero-logos {
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      z-index: 2;
+      padding: 20px 40px 32px;
+      border-top: 1px solid rgba(255,255,255,0.10);
+    }
+    .hero-logos-inner { max-width: 1080px; margin: 0 auto; text-align: center; }
+    .hero-logos-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: rgba(255,255,255,0.40); margin-bottom: 14px; }
+    .hero-logo-items { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
+    .logo-item { padding: 7px 18px; border: 1px solid rgba(255,255,255,0.15); border-radius: 6px; font-size: 13px; color: rgba(255,255,255,0.55); font-weight: 500; }
 
     /* ── STATS STRIP ── */
     .stats-strip { background: var(--bg-white); padding: 80px 40px; border-bottom: 1px solid var(--border-light); }
@@ -319,7 +325,7 @@
       .hero-btns { flex-direction: column; }
       .hero-btns a { text-align: center; }
       h2 { font-size: 22px; }
-      .logo-bar { position: relative; z-index: 2; margin-top: -120px; padding: 40px 20px 36px; }
+
       .stats-strip { padding: 48px 20px; }
       .stat-grid { grid-template-columns: 1fr; gap: 32px; }
       .stat-num { font-size: 40px; }
@@ -594,23 +600,20 @@
       </div>
     </div>
   </div>
-</section>
-
-
-<!-- LOGO BAR -->
-<div class="logo-bar">
-  <div class="logo-bar-inner">
-    <div class="logo-bar-label">Trusted by Ireland's fastest-growing brands</div>
-    <div class="logo-items">
-      <span class="logo-item">Spotlight Oral Care</span>
-      <span class="logo-item">Skin Shop</span>
-      <span class="logo-item">Poco Loco Beauty</span>
-      <span class="logo-item">Probiotics.ie</span>
-      <span class="logo-item">Cecilia New York</span>
-      <span class="logo-item">Ormonde Jayne</span>
+  <div class="hero-logos">
+    <div class="hero-logos-inner">
+      <div class="hero-logos-label">Trusted by Ireland's fastest-growing brands</div>
+      <div class="hero-logo-items">
+        <span class="logo-item">Spotlight Oral Care</span>
+        <span class="logo-item">Skin Shop</span>
+        <span class="logo-item">Poco Loco Beauty</span>
+        <span class="logo-item">Probiotics.ie</span>
+        <span class="logo-item">Cecilia New York</span>
+        <span class="logo-item">Ormonde Jayne</span>
+      </div>
     </div>
   </div>
-</div>
+</section>
 <!-- STATS STRIP -->
 <div class="stats-strip">
   <div class="stats-strip-inner">
