@@ -118,10 +118,11 @@
     .channels-section { background: var(--bg-white); padding: 80px 40px; }
     .channels-header { max-width: 640px; margin-bottom: 56px; }
     .channels-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; max-width: 1080px; }
-    .channel-card { border-radius: 12px; padding: 36px 32px; border: 2px solid transparent; }
+    .channel-card { border-radius: 12px; padding: 36px 32px; border: 2px solid transparent; transition: all 0.2s; }
+    .channel-card:hover { box-shadow: 0 6px 24px rgba(133,176,32,0.14); transform: translateY(-3px); border-color: var(--brand-primary); }
     .channel-card.retail  { background: var(--bg-light); border-color: var(--border-light); }
     .channel-card.market  { background: var(--bg-light); border-color: var(--border-light); }
-    .channel-card.regulated { background: var(--bg-light); border-color: var(--brand-primary); }
+    .channel-card.regulated { background: rgba(133,176,32,0.05); border-color: var(--brand-primary); }
     .channel-badge { display: inline-block; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; line-height: 1; margin-bottom: 16px; color: var(--text-tertiary); }
     .channel-card.regulated .channel-badge { color: var(--brand-primary); }
     .channel-title { font-size: 22px; font-weight: 700; line-height: 1.2; margin-bottom: 12px; color: var(--text-primary); }
