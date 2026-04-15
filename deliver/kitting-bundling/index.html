@@ -1,0 +1,947 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kitting &amp; Bundling | Gift Sets, Subscription Boxes &amp; Multi-SKU Fulfilment | 2Flow</title>
+  <meta name="description" content="2Flow handles kitting and bundling at scale — gift sets, subscription boxes, multi-SKU bundles, and retail-ready builds. Pre-kitted or on-demand, from our Dublin warehouse.">
+  <meta name="keywords" content="kitting and bundling Ireland, gift set fulfilment Dublin, subscription box fulfilment Ireland, multi-SKU kitting 3PL, ecommerce bundling Ireland, Shopify kitting fulfilment">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://2flow.ie/deliver/kitting-bundling/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Kitting &amp; Bundling | 2Flow">
+  <meta property="og:description" content="Gift sets, subscription boxes, and multi-SKU bundles — kitted at scale from our Dublin warehouse.">
+  <meta property="og:url" content="https://2flow.ie/deliver/kitting-bundling/">
+  <meta property="og:site_name" content="2Flow">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Kitting &amp; Bundling | 2Flow">
+  <meta name="twitter:description" content="Gift sets, subscription boxes, and multi-SKU bundles — kitted at scale from our Dublin warehouse.">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="ai-content-declaration" content="This page describes 2Flow's kitting and bundling service. Key topics: gift set fulfilment, subscription box kitting, multi-SKU bundles, retail-ready kitting, seasonal peak kitting, ecommerce bundling Ireland.">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Service",
+        "@id": "https://2flow.ie/deliver/kitting-bundling/#service",
+        "name": "Kitting &amp; Bundling",
+        "description": "Gift set assembly, subscription box fulfilment, multi-SKU bundling, and retail-ready kitting from 2Flow's Dublin warehouse. Pre-kitted inventory or on-demand assembly.",
+        "provider": {
+          "@type": "LocalBusiness",
+          "name": "2Flow",
+          "url": "https://2flow.ie"
+        },
+        "areaServed": ["Ireland", "European Union", "United Kingdom"],
+        "serviceType": "eCommerce Fulfilment"
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://2flow.ie/deliver/kitting-bundling/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is the difference between pre-kitting and on-demand kitting?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Pre-kitting means we assemble your sets in advance and hold them as finished inventory, ready to ship the moment an order arrives. On-demand kitting means we assemble each set at the time of order. Pre-kitting is best for predictable gift sets and subscription boxes; on-demand kitting suits configurable bundles or low-volume special builds."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can 2Flow handle seasonal gift set surges at peak?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. We plan peak kitting alongside live order fulfilment, including concurrent DTC dispatch and retail drops. We recommend briefing peak kitting requirements at least 8 weeks before your peak period to ensure capacity and materials are in place."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you support subscription box fulfilment?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. We handle recurring subscription builds — pulling the correct SKU combination per subscriber tier, assembling, and dispatching on your billing cycle. We work with ReCharge and similar subscription platforms to automate order flow."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can you de-kit or disassemble existing bundles?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. If you receive pre-packaged gift sets that need to be broken down into individual components — whether to reroute stock, replenish individual SKUs, or repack for a new promotion — we can handle disassembly and re-induction as a separate job."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    :root {
+      --brand-primary: #85B020;
+      --brand-primary-hover: #6d9219;
+      --brand-navy: #252525;
+      --brand-charcoal: #383838;
+      --text-primary: #111111;
+      --text-secondary: #555555;
+      --text-tertiary: #737373;
+      --bg-white: #ffffff;
+      --bg-light: #F7F9F3;
+      --bg-dark: #252525;
+      --border-light: #E4EBD6;
+      --border-medium: #d1d5db;
+      --nav-height: 64px;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg-white); color: var(--text-primary); line-height: 1.6; font-size: 15px; }
+
+    /* ── NAV ── */
+    #mainNav {
+      background: transparent; padding: 0 40px;
+      display: flex; align-items: center; justify-content: space-between;
+      height: var(--nav-height); position: fixed; top: 0; left: 0; right: 0;
+      z-index: 300; border-bottom: 1px solid transparent;
+      transition: background 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+    }
+    #mainNav.nav-scrolled { background: var(--bg-white); border-bottom-color: var(--border-light); box-shadow: 0 2px 16px rgba(0,0,0,0.06); }
+    .nav-logo img { height: 34px; display: block; filter: brightness(0) invert(1); transition: filter 0.25s ease; }
+    #mainNav.nav-scrolled .nav-logo img { filter: none; }
+    .nav-logo { text-decoration: none; }
+    .nav-links { display: flex; align-items: stretch; height: var(--nav-height); }
+    .nav-item { display: flex; align-items: center; position: static; }
+    .nav-item > a { color: rgba(255,255,255,0.9); text-decoration: none; font-size: 14px; font-weight: 500; padding: 0 16px; height: var(--nav-height); display: flex; align-items: center; gap: 4px; transition: color 0.15s; white-space: nowrap; }
+    .nav-item > a:hover { color: white; }
+    #mainNav.nav-scrolled .nav-item > a { color: var(--text-secondary); }
+    #mainNav.nav-scrolled .nav-item > a:hover { color: var(--text-primary); }
+    .nav-chevron { font-size: 9px; opacity: 0.6; }
+    .nav-cta-wrap { display: flex; align-items: center; }
+    .nav-cta { background: var(--brand-primary); color: white !important; padding: 9px 20px; border-radius: 6px; font-weight: 600; font-size: 14px; text-decoration: none; transition: background 0.15s; }
+    .nav-cta:hover { background: var(--brand-primary-hover); }
+    .hamburger { display: none; background: none; border: none; cursor: pointer; padding: 8px; }
+    .hamburger span { display: block; width: 22px; height: 2px; background: white; margin: 5px 0; transition: background 0.25s; }
+    #mainNav.nav-scrolled .hamburger span { background: var(--text-primary); }
+
+    /* ── MEGA MENUS ── */
+    .mega-menu { display: none; position: fixed; left: 0; right: 0; top: var(--nav-height); background: white; border-bottom: 1px solid var(--border-light); box-shadow: 0 8px 32px rgba(0,0,0,0.08); z-index: 200; }
+    .mega-menu.active { display: block; }
+    .mega-inner { max-width: 1080px; margin: 0 auto; display: grid; padding: 28px 40px; }
+    .mega-inner.deliver-grid { grid-template-columns: repeat(3, 1fr); gap: 0; }
+    .mega-inner.solutions-grid { grid-template-columns: repeat(2, 1fr); gap: 48px; }
+    .mega-col { padding: 0 32px 0 0; }
+    .mega-col:last-child { padding-right: 0; }
+    .mega-col-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 14px; padding-bottom: 8px; border-bottom: 2px solid currentColor; }
+    .mega-col-label.green { color: #85B020; }
+    .mega-col-label.navy  { color: #1A1A1A; }
+    .mega-col-label.slate { color: #5C6673; }
+    .mega-item { display: flex; align-items: flex-start; gap: 10px; padding: 7px 6px; border-radius: 6px; text-decoration: none; transition: background 0.15s; }
+    .mega-item:hover { background: var(--bg-light); }
+    .mega-item-icon { width: 32px; height: 32px; border-radius: 6px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: white; }
+    .mega-item-icon.green-bg { background: #85B020; }
+    .mega-item-icon.navy-bg  { background: #1A1A1A; }
+    .mega-item-icon.slate-bg { background: #5C6673; }
+    .mega-item-text h4 { font-size: 13px; font-weight: 600; color: var(--text-primary); margin: 0 0 2px 0; line-height: 1.3; }
+    .mega-item-text p { font-size: 11px; color: var(--text-tertiary); margin: 0; line-height: 1.4; }
+    .mega-item:hover .mega-item-text h4 { color: var(--brand-primary); }
+    .mega-group-title { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-tertiary); margin-bottom: 14px; padding-bottom: 8px; border-bottom: 1px solid var(--border-light); }
+    .mega-link { display: block; padding: 8px 0; text-decoration: none; border-bottom: 1px solid var(--border-light); }
+    .mega-link strong { display: block; font-size: 14px; color: var(--text-primary); font-weight: 500; }
+    .mega-link:hover strong { color: var(--brand-primary); }
+    .mega-link:last-child { border-bottom: none; }
+
+    /* ── COMPACT DROPDOWN ── */
+    .nav-item.has-dropdown { position: relative; }
+    .dropdown { display: none; position: absolute; top: var(--nav-height); left: 0; background: white; border: 1px solid var(--border-light); border-radius: 8px; box-shadow: 0 8px 32px rgba(0,0,0,0.08); padding: 8px 0; min-width: 230px; z-index: 200; }
+    .nav-item.has-dropdown:hover .dropdown { display: block; }
+    .dropdown a { display: block; padding: 10px 20px; font-size: 14px; color: var(--text-secondary); text-decoration: none; }
+    .dropdown a:hover { background: var(--bg-light); color: var(--brand-primary); }
+
+    /* ── BUTTONS ── */
+    .btn-primary { background: var(--brand-primary); color: white; padding: 13px 28px; border-radius: 6px; font-weight: 600; font-size: 15px; text-decoration: none; display: inline-block; transition: background 0.15s; }
+    .btn-primary:hover { background: var(--brand-primary-hover); }
+    .btn-ghost { background: transparent; color: var(--text-primary); padding: 12px 28px; border-radius: 6px; font-weight: 600; font-size: 15px; text-decoration: none; border: 1px solid var(--border-medium); display: inline-block; transition: all 0.15s; }
+    .btn-ghost:hover { border-color: var(--text-primary); }
+    .btn-ghost-light { color: white !important; border-color: rgba(255,255,255,0.45) !important; }
+    .btn-ghost-light:hover { border-color: white !important; }
+
+    /* ── TYPE ── */
+    h1 { font-size: 44px; font-weight: 700; line-height: 1.12; color: var(--text-primary); }
+    h2 { font-size: 30px; font-weight: 700; line-height: 1.25; color: var(--text-primary); }
+    h3 { font-size: 20px; font-weight: 700; line-height: 1.3; color: var(--text-primary); }
+    h4 { font-size: 16px; font-weight: 700; line-height: 1.4; color: var(--text-primary); }
+    .section-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--brand-primary); margin-bottom: 14px; }
+    .section-intro { font-size: 17px; color: var(--text-secondary); line-height: 1.7; margin-top: 14px; max-width: 600px; }
+    .container { max-width: 1080px; margin: 0 auto; }
+
+    /* ── SKIP LINK ── */
+    .skip-link { position: absolute; top: -48px; left: 0; background: #85B020; color: #fff; padding: 8px 16px; font-weight: 600; font-size: 14px; z-index: 10000; text-decoration: none; border-radius: 0 0 4px 0; transition: top 0.15s; }
+    .skip-link:focus { top: 0; }
+    :focus-visible { outline: 3px solid #85B020; outline-offset: 2px; }
+
+    /* ── HERO (FEATURE PAGE — DARK 2-COL) ── */
+    .hero-feature { background: #0D1A2E; padding: calc(var(--nav-height) + 80px) 40px 80px; position: relative; overflow: hidden; }
+    .hero-feature::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 70% 60% at 80% 50%, rgba(133,176,32,0.07) 0%, transparent 70%); pointer-events: none; }
+    .hero-feature-inner { max-width: 1080px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+    .hero-breadcrumb { display: flex; align-items: center; gap: 6px; font-size: 12px; color: rgba(255,255,255,0.45); margin-bottom: 20px; flex-wrap: wrap; }
+    .hero-breadcrumb a { color: rgba(255,255,255,0.45); text-decoration: none; transition: color 0.15s; }
+    .hero-breadcrumb a:hover { color: var(--brand-primary); }
+    .hero-breadcrumb span { color: rgba(255,255,255,0.25); }
+    .hero-feature h1 { color: white; margin-bottom: 20px; }
+    .hero-feature h1 em { font-style: normal; color: var(--brand-primary); }
+    .hero-feature-sub { font-size: 17px; line-height: 1.7; color: rgba(255,255,255,0.7); }
+    .hero-btns { display: flex; gap: 12px; margin-top: 32px; flex-wrap: wrap; }
+    .hero-badges { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 24px; }
+    .trust-badge { display: inline-flex; align-items: center; gap: 6px; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15); border-radius: 99px; padding: 5px 14px; font-size: 12px; color: rgba(255,255,255,0.75); font-weight: 500; }
+    .trust-badge svg { flex-shrink: 0; }
+    .hero-visual { display: flex; flex-direction: column; gap: 16px; }
+    .hero-stat-card { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.10); border-radius: 12px; padding: 24px 28px; }
+    .hero-stat-card .stat-big { font-size: 40px; font-weight: 700; color: var(--brand-primary); line-height: 1; margin-bottom: 6px; }
+    .hero-stat-card .stat-label { font-size: 14px; color: rgba(255,255,255,0.65); line-height: 1.5; }
+    .hero-stat-card.small { padding: 18px 24px; }
+    .hero-stat-card.small .stat-big { font-size: 28px; }
+    .hero-stats-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+
+    /* ── KITTING TYPES SECTION ── */
+    .kitting-types { background: var(--bg-white); padding: 80px 40px; border-bottom: 1px solid var(--border-light); }
+    .kitting-types-header { text-align: center; max-width: 640px; margin: 0 auto 56px; }
+    .kitting-types-header p { font-size: 16px; color: var(--text-secondary); line-height: 1.7; margin-top: 14px; }
+    .kitting-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+    .kitting-card { border: 1px solid var(--border-light); border-radius: 12px; padding: 36px 32px; transition: all 0.2s; }
+    .kitting-card:hover { border-color: var(--brand-primary); box-shadow: 0 4px 24px rgba(133,176,32,0.12); transform: translateY(-2px); }
+    .kitting-card-icon { width: 52px; height: 52px; background: rgba(133,176,32,0.1); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: var(--brand-primary); margin-bottom: 20px; }
+    .kitting-card h3 { font-size: 19px; margin-bottom: 12px; }
+    .kitting-card p { font-size: 14px; color: var(--text-secondary); line-height: 1.7; }
+    .kitting-card-detail { margin-top: 20px; padding-top: 20px; border-top: 1px solid var(--border-light); }
+    .kitting-card-detail-item { display: flex; align-items: flex-start; gap: 8px; font-size: 13px; color: var(--text-secondary); padding: 5px 0; }
+    .kitting-card-detail-item svg { color: var(--brand-primary); flex-shrink: 0; margin-top: 2px; }
+
+    /* ── PROCESS ── */
+    .process-section { background: var(--bg-light); padding: 80px 40px; }
+    .process-header { max-width: 640px; margin-bottom: 56px; }
+    .steps-list { display: grid; grid-template-columns: repeat(5, 1fr); gap: 0; position: relative; }
+    .steps-list::before { content: ''; position: absolute; top: 32px; left: calc(10% + 16px); right: calc(10% + 16px); height: 2px; background: var(--border-light); z-index: 0; }
+    .step-item { text-align: center; padding: 0 12px; position: relative; z-index: 1; }
+    .step-num { width: 64px; height: 64px; border-radius: 50%; background: var(--brand-primary); color: white; font-weight: 700; font-size: 20px; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px; }
+    .step-title { font-size: 14px; font-weight: 700; color: var(--text-primary); margin-bottom: 6px; line-height: 1.3; }
+    .step-desc { font-size: 12px; color: var(--text-secondary); line-height: 1.5; }
+
+    /* ── CAPABILITIES ── */
+    .capabilities-section { background: var(--bg-white); padding: 80px 40px; }
+    .capabilities-header { max-width: 640px; margin-bottom: 56px; }
+    .capabilities-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .capability-item { display: flex; align-items: flex-start; gap: 12px; background: var(--bg-light); border: 1px solid var(--border-light); border-radius: 10px; padding: 20px; transition: all 0.2s; }
+    .capability-item:hover { border-color: var(--brand-primary); box-shadow: 0 2px 12px rgba(133,176,32,0.10); }
+    .capability-icon { width: 36px; height: 36px; flex-shrink: 0; background: rgba(133,176,32,0.15); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: var(--brand-primary); }
+    .capability-text h4 { font-size: 14px; font-weight: 600; margin-bottom: 4px; }
+    .capability-text p { font-size: 13px; color: var(--text-secondary); line-height: 1.5; }
+
+    /* ── SOCIAL PROOF ── */
+    .proof-section { background: #0D1A2E; padding: 80px 40px; }
+    .proof-header { text-align: center; max-width: 560px; margin: 0 auto 56px; }
+    .proof-header .section-label { color: rgba(133,176,32,0.9); }
+    .proof-header h2 { color: white; }
+    .quotes-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .quote-card { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.10); border-radius: 12px; padding: 32px; }
+    .quote-mark { font-size: 40px; color: var(--brand-primary); line-height: 1; margin-bottom: 16px; font-family: Georgia, serif; }
+    .quote-text { font-size: 15px; color: rgba(255,255,255,0.80); line-height: 1.75; font-style: italic; margin-bottom: 20px; }
+    .quote-source { font-size: 12px; color: rgba(255,255,255,0.40); text-transform: uppercase; letter-spacing: 0.08em; font-weight: 600; }
+
+    /* ── WHO THIS IS FOR ── */
+    .fit-section { background: var(--bg-white); padding: 80px 40px; }
+    .fit-header { max-width: 640px; margin-bottom: 56px; }
+    .fit-grid { display: grid; grid-template-columns: 1fr; gap: 24px; max-width: 680px; }
+    .fit-panel { border-radius: 12px; padding: 36px; }
+    .fit-panel.good { background: var(--bg-light); border: 1px solid var(--border-light); }
+    .fit-panel-label { display: flex; align-items: center; gap: 8px; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 20px; color: var(--brand-primary); }
+    .fit-panel h3 { font-size: 18px; margin-bottom: 20px; }
+    .fit-list { list-style: none; }
+    .fit-list li { display: flex; align-items: flex-start; gap: 10px; padding: 9px 0; font-size: 14px; border-bottom: 1px solid rgba(0,0,0,0.06); line-height: 1.5; }
+    .fit-list li:last-child { border-bottom: none; }
+    .fit-list li svg { flex-shrink: 0; margin-top: 1px; }
+
+    /* ── FAQ ── */
+    .faq-section { background: var(--bg-light); padding: 80px 40px; }
+    .faq-section .container { max-width: 760px; }
+    .faq-header { margin-bottom: 48px; }
+    .faq-list { display: flex; flex-direction: column; gap: 2px; }
+    .faq-item { background: var(--bg-white); border: 1px solid var(--border-light); border-radius: 10px; overflow: hidden; }
+    .faq-q { width: 100%; background: none; border: none; text-align: left; cursor: pointer; padding: 20px 24px; display: flex; justify-content: space-between; align-items: center; font-size: 15px; font-weight: 600; color: var(--text-primary); transition: color 0.15s; }
+    .faq-q:hover { color: var(--brand-primary); }
+    .faq-q-icon { flex-shrink: 0; color: var(--brand-primary); transition: transform 0.2s; }
+    .faq-q[aria-expanded="true"] .faq-q-icon { transform: rotate(45deg); }
+    .faq-a { padding: 0 24px 20px; font-size: 14px; color: var(--text-secondary); line-height: 1.75; }
+
+    /* ── RELATED SERVICES ── */
+    .related-section { background: var(--bg-white); padding: 80px 40px; }
+    .related-header { max-width: 560px; margin-bottom: 48px; }
+    .related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .related-card { background: var(--bg-white); border: 1px solid var(--border-light); border-radius: 12px; padding: 32px; text-decoration: none; display: block; transition: all 0.2s; }
+    .related-card:hover { border-color: var(--brand-primary); box-shadow: 0 4px 24px rgba(133,176,32,0.12); transform: translateY(-2px); }
+    .related-card-icon { width: 44px; height: 44px; background: rgba(133,176,32,0.1); border-radius: 10px; display: flex; align-items: center; justify-content: center; color: var(--brand-primary); margin-bottom: 18px; }
+    .related-card h3 { font-size: 17px; margin-bottom: 8px; color: var(--text-primary); }
+    .related-card p { font-size: 14px; color: var(--text-secondary); line-height: 1.6; }
+    .related-card-link { display: inline-flex; align-items: center; gap: 4px; color: var(--brand-primary); font-size: 13px; font-weight: 600; margin-top: 16px; }
+
+    /* ── CTA ── */
+    .cta-section { background: #0D1A2E; padding: 80px 40px; text-align: center; }
+    .cta-section h2 { color: white; margin-bottom: 16px; }
+    .cta-section p { color: rgba(255,255,255,0.65); font-size: 17px; margin-bottom: 36px; max-width: 520px; margin-left: auto; margin-right: auto; }
+    .cta-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+    .cta-note { margin-top: 20px; font-size: 13px; color: rgba(255,255,255,0.35); }
+    .cta-section .btn-ghost { color: white; border-color: rgba(255,255,255,0.3); }
+    .cta-section .btn-ghost:hover { border-color: white; }
+
+    /* ── FOOTER ── */
+    footer { background: #0D0D0D; padding: 56px 40px 32px; }
+    .footer-inner { max-width: 1080px; margin: 0 auto; }
+    .footer-top { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 48px; }
+    .footer-brand p { font-size: 14px; line-height: 1.7; margin-top: 16px; max-width: 280px; color: rgba(255,255,255,0.55); }
+    .footer-col h5 { font-size: 12px; font-weight: 700; color: white; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 16px; }
+    .footer-col a { display: block; font-size: 14px; color: rgba(255,255,255,0.5); text-decoration: none; padding: 5px 0; transition: color 0.15s; }
+    .footer-col a:hover { color: var(--brand-primary); }
+    .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 24px; display: flex; justify-content: space-between; font-size: 13px; color: rgba(255,255,255,0.4); }
+    .footer-bottom a { color: rgba(255,255,255,0.35); text-decoration: none; }
+    .footer-bottom a:hover { color: white; }
+    .footer-bottom-links { display: flex; gap: 24px; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 1024px) {
+      h1 { font-size: 36px; }
+      .hero-feature-inner { grid-template-columns: 1fr; gap: 40px; }
+      .hero-visual { display: none; }
+      .kitting-grid { grid-template-columns: 1fr 1fr; }
+      .steps-list { grid-template-columns: 1fr 1fr; gap: 24px; }
+      .steps-list::before { display: none; }
+      .capabilities-grid { grid-template-columns: 1fr 1fr; }
+      .quotes-grid { grid-template-columns: 1fr 1fr; }
+      .footer-top { grid-template-columns: 1fr 1fr; gap: 32px; }
+    }
+    @media (max-width: 768px) {
+      #mainNav { padding: 0 20px; }
+      .hamburger { display: block; }
+      .nav-links { display: none; position: fixed; top: var(--nav-height); left: 0; right: 0; bottom: 0; background: #111111; flex-direction: column; padding: 20px; height: auto; overflow-y: auto; z-index: 250; align-items: flex-start; }
+      .nav-links.open { display: flex; }
+      .nav-item { width: 100%; }
+      .nav-item > a { color: white !important; height: auto; padding: 14px 0; border-bottom: 1px solid rgba(255,255,255,0.1); width: 100%; }
+      .mega-menu { display: none !important; }
+      .nav-cta-wrap { display: none; }
+      .hero-feature { padding: calc(var(--nav-height) + 48px) 24px 60px; }
+      .kitting-grid { grid-template-columns: 1fr; }
+      .steps-list { grid-template-columns: 1fr; }
+      .capabilities-grid { grid-template-columns: 1fr; }
+      .quotes-grid { grid-template-columns: 1fr; }
+      .related-grid { grid-template-columns: 1fr; }
+      .footer-top { grid-template-columns: 1fr; gap: 32px; }
+      .footer-bottom { flex-direction: column; gap: 12px; }
+      h1 { font-size: 30px; }
+      h2 { font-size: 24px; }
+    }
+  </style>
+</head>
+<body>
+
+<a href="#main-content" class="skip-link">Skip to content</a>
+
+<!-- ── NAV ── -->
+<nav id="mainNav" role="navigation" aria-label="Main navigation">
+  <a href="/2flow-website/" class="nav-logo" aria-label="2Flow home">
+    <img src="/2flow-website/Images/2flow-logo.png" alt="2Flow logo" width="120" height="34">
+  </a>
+  <div class="nav-links" id="navLinks">
+    <div class="nav-item" id="deliverNavItem">
+      <a href="#" aria-haspopup="true" aria-expanded="false" id="deliverNavBtn">What We Deliver <span class="nav-chevron">▾</span></a>
+    </div>
+    <div class="nav-item" id="solutionsNavItem">
+      <a href="#" aria-haspopup="true" aria-expanded="false" id="solutionsNavBtn">Solutions For <span class="nav-chevron">▾</span></a>
+    </div>
+    <div class="nav-item has-dropdown">
+      <a href="#">About <span class="nav-chevron">▾</span></a>
+      <div class="dropdown">
+        <a href="/2flow-website/#about">Our Story</a>
+        <a href="/2flow-website/#team">The Team</a>
+        <a href="/2flow-website/#careers">Careers</a>
+      </div>
+    </div>
+    <div class="nav-item"><a href="/2flow-website/#contact">Contact</a></div>
+  </div>
+  <div class="nav-cta-wrap">
+    <a href="/2flow-website/#contact" class="nav-cta">Get a Quote</a>
+  </div>
+  <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- Deliver mega menu -->
+<div class="mega-menu" id="deliverMega" role="region" aria-label="What We Deliver menu">
+  <div class="mega-inner deliver-grid">
+    <div class="mega-col">
+      <div class="mega-col-label green">Core Fulfilment</div>
+      <a href="/2flow-website/deliver/pick-and-pack/" class="mega-item">
+        <div class="mega-item-icon green-bg"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 7H4a2 2 0 00-2 2v10a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z"/><path d="M16 3H8a2 2 0 00-2 2v2h12V5a2 2 0 00-2-2z"/></svg></div>
+        <div class="mega-item-text"><h4>Pick &amp; Pack</h4><p>Accurate, brand-aligned fulfilment at speed</p></div>
+      </a>
+      <a href="/2flow-website/deliver/kitting-bundling/" class="mega-item">
+        <div class="mega-item-icon green-bg"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg></div>
+        <div class="mega-item-text"><h4>Kitting &amp; Bundling</h4><p>Gift sets, subscriptions &amp; multi-SKU builds</p></div>
+      </a>
+    </div>
+    <div class="mega-col">
+      <div class="mega-col-label navy">Value-Add</div>
+      <a href="#" class="mega-item">
+        <div class="mega-item-icon navy-bg"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+        <div class="mega-item-text"><h4>Returns &amp; Refurbishment</h4><p>Grade, repack, and restock returned goods</p></div>
+      </a>
+      <a href="#" class="mega-item">
+        <div class="mega-item-icon navy-bg"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+        <div class="mega-item-text"><h4>Finishing &amp; Personalisation</h4><p>Inserts, labels, ribbons &amp; bespoke touches</p></div>
+      </a>
+    </div>
+    <div class="mega-col">
+      <div class="mega-col-label slate">Compliance &amp; Retail</div>
+      <a href="#" class="mega-item">
+        <div class="mega-item-icon slate-bg"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg></div>
+        <div class="mega-item-text"><h4>Compliance Preparation</h4><p>Amazon FBA, retail labelling &amp; audit-ready</p></div>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- Solutions mega menu -->
+<div class="mega-menu" id="solutionsMega" role="region" aria-label="Solutions For menu">
+  <div class="mega-inner solutions-grid">
+    <div class="mega-col">
+      <div class="mega-group-title">By Sector</div>
+      <a href="/2flow-website/solutions/beauty-personal-care/" class="mega-link"><strong>Beauty &amp; Personal Care</strong></a>
+      <a href="#" class="mega-link"><strong>Health &amp; Supplements</strong></a>
+      <a href="#" class="mega-link"><strong>Home &amp; Lifestyle</strong></a>
+      <a href="#" class="mega-link"><strong>Consumer Electronics</strong></a>
+    </div>
+    <div class="mega-col">
+      <div class="mega-group-title">By Stage</div>
+      <a href="#" class="mega-link"><strong>DTC Brands Scaling Fast</strong></a>
+      <a href="#" class="mega-link"><strong>Moving into Retail</strong></a>
+      <a href="#" class="mega-link"><strong>Replacing a 3PL</strong></a>
+    </div>
+  </div>
+</div>
+
+<!-- ── HERO ── -->
+<main id="main-content">
+<section class="hero-feature" aria-labelledby="hero-h1">
+  <div class="hero-feature-inner">
+    <div>
+      <nav class="hero-breadcrumb" aria-label="Breadcrumb">
+        <a href="/2flow-website/">Home</a>
+        <span aria-hidden="true">›</span>
+        <a href="/2flow-website/#deliver">What We Deliver</a>
+        <span aria-hidden="true">›</span>
+        <span aria-current="page">Kitting &amp; Bundling</span>
+      </nav>
+      <div class="section-label" style="color:rgba(133,176,32,0.95);">Kitting &amp; Bundling</div>
+      <h1 id="hero-h1">Assemble Once.<br><em>Ship a Brand Experience.</em></h1>
+      <p class="hero-feature-sub">Gift sets, subscription boxes, and multi-SKU bundles — built to spec, tracked from component to courier. Whether you're kitting 500 sets a month or 18,000 at Christmas, we absorb the complexity so your brand delivers on the promise.</p>
+      <div class="hero-btns">
+        <a href="/2flow-website/#contact" class="btn-primary">Get a Kitting Quote</a>
+        <a href="/2flow-website/deliver/pick-and-pack/" class="btn-ghost btn-ghost-light">See Pick &amp; Pack</a>
+      </div>
+      <div class="hero-badges" style="margin-top: 28px;">
+        <span class="trust-badge">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+          Pre-kitting &amp; on-demand
+        </span>
+        <span class="trust-badge">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+          Subscription box fulfilment
+        </span>
+        <span class="trust-badge">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+          Retail &amp; DTC concurrent
+        </span>
+      </div>
+    </div>
+    <div class="hero-visual" aria-hidden="true">
+      <div class="hero-stat-card">
+        <div class="stat-big">18k+</div>
+        <div class="stat-label">Gift sets kitted in a single Christmas season — concurrent with live DTC and retail dispatch</div>
+      </div>
+      <div class="hero-stats-row">
+        <div class="hero-stat-card small">
+          <div class="stat-big">3</div>
+          <div class="stat-label">Kitting modes: pre-kit, on-demand, and retail-drop</div>
+        </div>
+        <div class="hero-stat-card small">
+          <div class="stat-big">9/10</div>
+          <div class="stat-label">Average NPS across the 2Flow client base</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── THREE KITTING TYPES ── -->
+<section class="kitting-types" aria-labelledby="kitting-types-h2">
+  <div class="container">
+    <div class="kitting-types-header">
+      <div class="section-label">How We Kit</div>
+      <h2 id="kitting-types-h2">Three Models. One Warehouse.</h2>
+      <p>Different products and business models need different kitting approaches. We handle all three — and we can switch between them as your range evolves.</p>
+    </div>
+    <div class="kitting-grid">
+
+      <!-- Pre-Kitting -->
+      <div class="kitting-card">
+        <div class="kitting-card-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+        </div>
+        <h3>Pre-Kitting &amp; Gift Sets</h3>
+        <p>We build your sets in advance and hold them as finished inventory. When an order arrives, the kit ships immediately — no assembly delay, no bottleneck at peak. The right approach for seasonal gift sets, fixed bundles, and any product with predictable demand.</p>
+        <div class="kitting-card-detail">
+          <div class="kitting-card-detail-item">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            Built to your assembly spec, component by component
+          </div>
+          <div class="kitting-card-detail-item">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            Finished kits held as individual SKUs in Mintsoft WMS
+          </div>
+          <div class="kitting-card-detail-item">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            Scales to thousands of units in a single seasonal run
+          </div>
+          <div class="kitting-card-detail-item">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            Retail drops and DTC orders handled concurrently at peak
+          </div>
+        </div>
+      </div>
+
+      <!-- Subscription Boxes -->
+      <div class="kitting-card">
+        <div class="kitting-card-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+        </div>
+        <h3>Subscription Box Fulfilment</h3>
+        <p>Recurring builds require consistency, not just speed. Every subscriber gets the right SKU combination for their tier, every cycle, on time. We work with your billing platform to automate the order flow and treat each fulfilment cycle as a planned production run rather than a spike.</p>
+        <div class="kitting-card-detail">
+          <div class="kitting-card-detail-item">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            Integrates with ReCharge and major subscription platforms
+          </div>
+          <div class="kitting-card-detail-item">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            Per-tier SKU combinations — monthly, quarterly, or custom cadence
+          </div>
+          <div class="kitting-card-detail-item">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            Component stock forecasting ahead of each billing cycle
+          </div>
+          <div class="kitting-card-detail-item">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            Churn and upgrade variants handled without operational change
+          </div>
+        </div>
+      </div>
+
+      <!-- Multi-SKU & On-Demand -->
+      <div class="kitting-card">
+        <div class="kitting-card-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </div>
+        <h3>Multi-SKU &amp; On-Demand Kitting</h3>
+        <p>Some bundles are configurable, promotional, or simply too variable to pre-build. We assemble at the time of order — pulling components, combining to spec, and dispatching in a single pass. Handles product launches, custom bundles, promotional multipacks, and anything that doesn't fit a fixed template.</p>
+        <div class="kitting-card-detail">
+          <div class="kitting-card-detail-item">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            Configurable bundles — customer-selected or promotion-driven
+          </div>
+          <div class="kitting-card-detail-item">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            Multipacks: 2-pack, 3-pack, buy-X-get-Y without pre-building
+          </div>
+          <div class="kitting-card-detail-item">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            Launch kits: combine hero product with samples or inserts
+          </div>
+          <div class="kitting-card-detail-item">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            D-kitting available — disassemble and reinduct when plans change
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── HOW IT WORKS ── -->
+<section class="process-section" aria-labelledby="process-h2">
+  <div class="container">
+    <div class="process-header">
+      <div class="section-label">The Process</div>
+      <h2 id="process-h2">From Components to Customer</h2>
+      <p class="section-intro">Every kitting job follows the same structured path — whether it's a one-off gift set run or a rolling subscription build.</p>
+    </div>
+    <div class="steps-list">
+      <div class="step-item">
+        <div class="step-num">1</div>
+        <div class="step-title">Spec &amp; Setup</div>
+        <div class="step-desc">We document your kit spec in Mintsoft — components, quantities, assembly order, and any finishing instructions.</div>
+      </div>
+      <div class="step-item">
+        <div class="step-num">2</div>
+        <div class="step-title">Stock Induction</div>
+        <div class="step-desc">All components arrive, are booked in, and held as individual SKUs until the kitting job is raised.</div>
+      </div>
+      <div class="step-item">
+        <div class="step-num">3</div>
+        <div class="step-title">Kitting Run</div>
+        <div class="step-desc">Each unit is assembled to spec and scanned — pre-kitted sets are held as finished inventory; on-demand kits flow directly to dispatch.</div>
+      </div>
+      <div class="step-item">
+        <div class="step-num">4</div>
+        <div class="step-title">QC &amp; Scan</div>
+        <div class="step-desc">Finished kits are checked and scanned against the job sheet. Discrepancies are flagged before any unit leaves the floor.</div>
+      </div>
+      <div class="step-item">
+        <div class="step-num">5</div>
+        <div class="step-title">Dispatch</div>
+        <div class="step-desc">Kits ship via your carrier of choice. Tracking updates push back to Shopify automatically.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CAPABILITIES ── -->
+<section class="capabilities-section" aria-labelledby="cap-h2">
+  <div class="container">
+    <div class="capabilities-header">
+      <div class="section-label">Full Capabilities</div>
+      <h2 id="cap-h2">Everything That Goes Into a Kit</h2>
+      <p class="section-intro">Kitting is more than placing items in a box. Here's what we handle across every build type.</p>
+    </div>
+    <div class="capabilities-grid">
+      <div class="capability-item">
+        <div class="capability-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg></div>
+        <div class="capability-text"><h4>Gift Set Assembly</h4><p>Seasonal and evergreen gift sets built to your spec — tissue, ribbon, inserts, and outer packaging all included.</p></div>
+      </div>
+      <div class="capability-item">
+        <div class="capability-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg></div>
+        <div class="capability-text"><h4>Subscription Builds</h4><p>Per-tier SKU combinations dispatched on your billing cycle. Each run treated as a planned production job.</p></div>
+      </div>
+      <div class="capability-item">
+        <div class="capability-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg></div>
+        <div class="capability-text"><h4>Multipacks</h4><p>2-pack, 3-pack, or buy-X-get-Y configurations — assembled and labelled without pre-building.</p></div>
+      </div>
+      <div class="capability-item">
+        <div class="capability-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+        <div class="capability-text"><h4>Retail-Ready Kitting</h4><p>Sets built for retail drops with the correct retail labelling, barcodes, and packaging standards for your stockist.</p></div>
+      </div>
+      <div class="capability-item">
+        <div class="capability-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+        <div class="capability-text"><h4>Launch Kits</h4><p>Combine a hero product with samples, inserts, or a personalised note for new product launches and influencer seeding.</p></div>
+      </div>
+      <div class="capability-item">
+        <div class="capability-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 102.13-9.36L1 10"/></svg></div>
+        <div class="capability-text"><h4>D-Kitting &amp; Disassembly</h4><p>Break down pre-packaged sets, sort components back into individual SKUs, and reinduct as separate stock.</p></div>
+      </div>
+      <div class="capability-item">
+        <div class="capability-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg></div>
+        <div class="capability-text"><h4>Component Stock Control</h4><p>Components tracked as individual SKUs in Mintsoft. Low-stock alerts so you can raise kitting runs before stock runs out.</p></div>
+      </div>
+      <div class="capability-item">
+        <div class="capability-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg></div>
+        <div class="capability-text"><h4>Peak Planning</h4><p>We plan kitting capacity ahead of your busiest periods — Black Friday, Christmas, and key promotional dates — so kitting doesn't become the bottleneck.</p></div>
+      </div>
+      <div class="capability-item">
+        <div class="capability-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+        <div class="capability-text"><h4>Amazon FBA Prep</h4><p>Bundles built and labelled to Amazon's requirements — FNSKU, carton labels, and compliance packaging handled before items leave our dock.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── SOCIAL PROOF ── -->
+<section class="proof-section" aria-labelledby="proof-h2">
+  <div class="container">
+    <div class="proof-header">
+      <div class="section-label">What Customers Say</div>
+      <h2 id="proof-h2">Flexibility Is What They Remember</h2>
+    </div>
+    <div class="quotes-grid">
+      <div class="quote-card">
+        <div class="quote-mark">"</div>
+        <p class="quote-text">They're really flexible when it comes to stuff that might not be the everyday. You'd go to them with a weird request and they'd just say, yeah, that's fine.</p>
+        <div class="quote-source">Irish DTC brand, health &amp; wellness</div>
+      </div>
+      <div class="quote-card">
+        <div class="quote-mark">"</div>
+        <p class="quote-text">The guys have always been really personable, always tried their hardest. It feels like a partner. When I need them they're there — I can feel that confidence even without speaking to them regularly.</p>
+        <div class="quote-source">Irish DTC brand, personal care</div>
+      </div>
+      <div class="quote-card">
+        <div class="quote-mark">"</div>
+        <p class="quote-text">Q4 last year was pretty good — more than higher than our projections. No issues at all. They handled everything we threw at them.</p>
+        <div class="quote-source">Irish DTC brand, beauty &amp; cosmetics</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── RIGHT FIT ── -->
+<section class="fit-section" aria-labelledby="fit-h2">
+  <div class="container">
+    <div class="fit-header">
+      <div class="section-label">Is This Right For You?</div>
+      <h2 id="fit-h2">Who Our Kitting Service Works Best For</h2>
+      <p class="section-intro">Kitting adds complexity. That complexity is worth absorbing when the product and the business model are right for it.</p>
+    </div>
+    <div class="fit-grid">
+      <div class="fit-panel good">
+        <div class="fit-panel-label">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+          A strong fit if you...
+        </div>
+        <ul class="fit-list">
+          <li>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#85B020" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            Sell gift sets or seasonal bundles that require physical assembly before dispatch
+          </li>
+          <li>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#85B020" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            Run a subscription model with recurring per-tier builds
+          </li>
+          <li>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#85B020" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            Sell multipacks or configurable bundles that can't be pre-built as a single SKU
+          </li>
+          <li>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#85B020" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            Need retail-ready gift sets alongside your DTC orders — especially at peak
+          </li>
+          <li>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#85B020" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            Launch products with accompanying samples, inserts, or brand collateral
+          </li>
+          <li>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#85B020" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            Receive supplier-packaged gift sets that need to be broken into individual components
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FAQ ── -->
+<section class="faq-section" aria-labelledby="faq-h2">
+  <div class="container">
+    <div class="faq-header">
+      <div class="section-label">Common Questions</div>
+      <h2 id="faq-h2">Kitting &amp; Bundling FAQ</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false" aria-controls="faq1">
+          What is the difference between pre-kitting and on-demand kitting?
+          <svg class="faq-q-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="faq-a" id="faq1" hidden>
+          Pre-kitting means we assemble your sets in advance and hold them as finished inventory. When an order arrives, the kit ships immediately — no delay. On-demand kitting means we assemble each set at the point of order. Pre-kitting suits predictable gift sets and subscription builds; on-demand kitting suits configurable bundles or anything with too many variables to pre-build.
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false" aria-controls="faq2">
+          How do you handle peak kitting — Christmas, Black Friday, product launches?
+          <svg class="faq-q-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="faq-a" id="faq2" hidden>
+          We recommend briefing peak kitting requirements at least 8 weeks in advance. That gives us time to confirm component stock, agree the build schedule, and plan capacity alongside your regular order volume. We handle kitting and live DTC and retail dispatch concurrently — kitting doesn't pause your core operation.
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false" aria-controls="faq3">
+          Do you support subscription box fulfilment?
+          <svg class="faq-q-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="faq-a" id="faq3" hidden>
+          Yes. We handle recurring subscription builds — pulling the correct SKU combination per subscriber tier, assembling, and dispatching on your billing cycle. We work with ReCharge and similar platforms to automate order flow and treat each cycle as a planned production run.
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false" aria-controls="faq4">
+          Can you de-kit or disassemble existing bundles?
+          <svg class="faq-q-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="faq-a" id="faq4" hidden>
+          Yes. If you receive pre-packaged gift sets that need breaking down — to reroute stock, replenish individual SKUs, or repack for a new promotion — we handle disassembly and re-induction as a separate job. Components are scanned back into Mintsoft individually.
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false" aria-controls="faq5">
+          How are kit components tracked in the WMS?
+          <svg class="faq-q-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="faq-a" id="faq5" hidden>
+          All components are held as individual SKUs in Mintsoft and tracked separately. When a kitting job is raised, components are consumed against the job and finished kits are created as new inventory units. You can see component levels and finished kit stock in real time through your Mintsoft portal.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── RELATED SERVICES ── -->
+<section class="related-section" aria-labelledby="related-h2">
+  <div class="container">
+    <div class="related-header">
+      <div class="section-label">Related Services</div>
+      <h2 id="related-h2">Complete the Picture</h2>
+      <p class="section-intro">Kitting rarely happens in isolation. These services work alongside it.</p>
+    </div>
+    <div class="related-grid">
+      <a href="/2flow-website/deliver/pick-and-pack/" class="related-card">
+        <div class="related-card-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 7H4a2 2 0 00-2 2v10a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z"/><path d="M16 3H8a2 2 0 00-2 2v2h12V5a2 2 0 00-2-2z"/></svg>
+        </div>
+        <h3>Pick &amp; Pack</h3>
+        <p>Same-day dispatch, per-SKU packaging standards, and real-time order visibility for your standard DTC flow.</p>
+        <span class="related-card-link">Learn more <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+      </a>
+      <a href="#" class="related-card">
+        <div class="related-card-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <h3>Finishing &amp; Personalisation</h3>
+        <p>Ribbons, personalised notes, custom tissue, branded tape — the finishing touches that make a kit feel premium.</p>
+        <span class="related-card-link">Learn more <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+      </a>
+      <a href="#" class="related-card">
+        <div class="related-card-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 102.13-9.36L1 10"/></svg>
+        </div>
+        <h3>Returns &amp; Refurbishment</h3>
+        <p>Returned kits graded, disassembled, and components returned to stock — or refurbished and repackaged for resale.</p>
+        <span class="related-card-link">Learn more <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ── CTA ── -->
+<section class="cta-section" aria-labelledby="cta-h2">
+  <div class="container">
+    <div class="section-label" style="color:rgba(133,176,32,0.85);">Ready to Start?</div>
+    <h2 id="cta-h2">Let's Talk Kitting</h2>
+    <p>Tell us your product, your volumes, and your timeline. We'll confirm whether pre-kitting or on-demand is the right fit and come back with a quote.</p>
+    <div class="cta-btns">
+      <a href="/2flow-website/#contact" class="btn-primary">Get a Kitting Quote</a>
+      <a href="/2flow-website/deliver/pick-and-pack/" class="btn-ghost">See Pick &amp; Pack</a>
+    </div>
+    <p class="cta-note">Based in Dublin. Serving Irish and international DTC brands.</p>
+  </div>
+</section>
+</main>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="/2flow-website/" aria-label="2Flow home">
+          <img src="/2flow-website/Images/2flow-logo.png" alt="2Flow" height="30" style="filter:brightness(0) invert(1);">
+        </a>
+        <p>Ireland's eCommerce fulfilment partner. Pick &amp; pack, kitting, returns, and value-add services from our Dublin warehouse.</p>
+      </div>
+      <div class="footer-col">
+        <h5>What We Deliver</h5>
+        <a href="/2flow-website/deliver/pick-and-pack/">Pick &amp; Pack</a>
+        <a href="/2flow-website/deliver/kitting-bundling/">Kitting &amp; Bundling</a>
+        <a href="#">Returns &amp; Refurbishment</a>
+        <a href="#">Finishing &amp; Personalisation</a>
+        <a href="#">Compliance Preparation</a>
+      </div>
+      <div class="footer-col">
+        <h5>Solutions For</h5>
+        <a href="/2flow-website/solutions/beauty-personal-care/">Beauty &amp; Personal Care</a>
+        <a href="#">Health &amp; Supplements</a>
+        <a href="#">Home &amp; Lifestyle</a>
+        <a href="#">DTC Brands Scaling</a>
+      </div>
+      <div class="footer-col">
+        <h5>Company</h5>
+        <a href="/2flow-website/#about">About 2Flow</a>
+        <a href="/2flow-website/#contact">Contact Us</a>
+        <a href="#">Careers</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 2Flow Fulfilment Ltd. All rights reserved.</span>
+      <div class="footer-bottom-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Nav scroll
+  const nav = document.getElementById('mainNav');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('nav-scrolled', window.scrollY > 20);
+  }, { passive: true });
+
+  // Hamburger
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('navLinks');
+  hamburger.addEventListener('click', () => {
+    const open = navLinks.classList.toggle('open');
+    hamburger.setAttribute('aria-expanded', open);
+  });
+
+  // Mega menus
+  const deliverBtn = document.getElementById('deliverNavBtn');
+  const deliverMega = document.getElementById('deliverMega');
+  const solutionsBtn = document.getElementById('solutionsNavBtn');
+  const solutionsMega = document.getElementById('solutionsMega');
+
+  function toggleMega(btn, mega, other) {
+    const isActive = mega.classList.contains('active');
+    other.classList.remove('active');
+    mega.classList.toggle('active', !isActive);
+    btn.setAttribute('aria-expanded', !isActive);
+  }
+
+  deliverBtn.addEventListener('click', (e) => { e.preventDefault(); toggleMega(deliverBtn, deliverMega, solutionsMega); });
+  solutionsBtn.addEventListener('click', (e) => { e.preventDefault(); toggleMega(solutionsBtn, solutionsMega, deliverMega); });
+  document.addEventListener('click', (e) => {
+    if (!e.target.closest('#deliverNavItem') && !e.target.closest('#deliverMega')) {
+      deliverMega.classList.remove('active');
+      deliverBtn.setAttribute('aria-expanded', 'false');
+    }
+    if (!e.target.closest('#solutionsNavItem') && !e.target.closest('#solutionsMega')) {
+      solutionsMega.classList.remove('active');
+      solutionsBtn.setAttribute('aria-expanded', 'false');
+    }
+  });
+
+  // FAQ accordion
+  document.querySelectorAll('.faq-q').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const expanded = btn.getAttribute('aria-expanded') === 'true';
+      document.querySelectorAll('.faq-q').forEach(b => {
+        b.setAttribute('aria-expanded', 'false');
+        document.getElementById(b.getAttribute('aria-controls')).hidden = true;
+      });
+      if (!expanded) {
+        btn.setAttribute('aria-expanded', 'true');
+        document.getElementById(btn.getAttribute('aria-controls')).hidden = false;
+      }
+    });
+  });
+</script>
+</body>
+</html>
