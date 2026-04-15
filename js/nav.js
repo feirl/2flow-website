@@ -10,32 +10,52 @@
 
   /* ── Mega menu data ─────────────────────────────────────── */
 
+  // SVG icon paths (viewBox 0 0 24 24)
+  var ICONS = {
+    pickpack:      '<rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/>',
+    kitting:       '<path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/>',
+    returns:       '<polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/>',
+    finishing:     '<path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/>',
+    compliance:    '<path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>',
+    retail:        '<path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/>',
+    amazon:        '<circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>',
+    tiktok:        '<polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>',
+    popup:         '<path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><line x1="9" y1="22" x2="9" y2="12"/><line x1="15" y1="12" x2="15" y2="22"/><line x1="3" y1="15" x2="21" y2="15"/>',
+    live:          '<polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/>',
+    sameday:       '<circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>',
+    custservice:   '<path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>',
+  };
+
+  function icon(key) {
+    return '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">' + ICONS[key] + '</svg>';
+  }
+
   var DELIVER_COLS = [
     {
       label: 'eCommerce Fulfilment', cls: 'green',
       items: [
-        { href: B + '/deliver/pick-and-pack/',           title: 'Pick &amp; Pack',               desc: 'Accurate, brand-aligned fulfilment at speed' },
-        { href: B + '/deliver/kitting-bundling/',         title: 'Kitting &amp; Bundling',         desc: 'Gift sets, subscriptions, multi-SKU assembly' },
-        { href: B + '/deliver/returns-refurbishment/',    title: 'Returns &amp; Refurbishment',    desc: 'Fast, clean returns processing and restocking' },
-        { href: B + '/deliver/finishing-personalisation/',title: 'Finishing &amp; Personalisation',desc: 'Engraving, inserts, gift messaging, branded packaging' },
-        { href: B + '/deliver/compliance-preparation/',   title: 'Compliance Preparation',         desc: 'Regulated labelling, batch control, cold-chain handling' },
+        { href: B + '/deliver/pick-and-pack/',            icon: 'pickpack',   title: 'Pick &amp; Pack',               desc: 'Accurate, brand-aligned fulfilment at speed' },
+        { href: B + '/deliver/kitting-bundling/',          icon: 'kitting',    title: 'Kitting &amp; Bundling',         desc: 'Gift sets, subscriptions, multi-SKU assembly' },
+        { href: B + '/deliver/returns-refurbishment/',     icon: 'returns',    title: 'Returns &amp; Refurbishment',    desc: 'Fast, clean returns processing and restocking' },
+        { href: B + '/deliver/finishing-personalisation/', icon: 'finishing',  title: 'Finishing &amp; Personalisation',desc: 'Engraving, inserts, gift messaging, branded packaging' },
+        { href: B + '/deliver/compliance-preparation/',    icon: 'compliance', title: 'Compliance Preparation',         desc: 'Regulated labelling, batch control, cold-chain handling' },
       ]
     },
     {
       label: 'OmniChannel Specialists', cls: 'navy',
       items: [
-        { href: B + '/deliver/retail-b2b-distribution/', title: 'Retail &amp; B2B Distribution',     desc: 'Compliance-ready wholesale and retail prep' },
-        { href: B + '/deliver/amazon-fulfilment/',        title: 'Amazon Fulfilment',                 desc: 'FBA prep, FBM dispatch, seller compliance' },
-        { href: B + '/deliver/tiktok-shop/',              title: 'TikTok Shop',                       desc: 'Integrated fulfilment for TikTok Shop sellers' },
-        { href: B + '/deliver/pop-up-shops/',             title: 'Pop-up &amp; Own-Store Fulfilment', desc: 'Replenishing your own retail locations and events' },
+        { href: B + '/deliver/retail-b2b-distribution/',  icon: 'retail',   title: 'Retail &amp; B2B Distribution',     desc: 'Compliance-ready wholesale and retail prep' },
+        { href: B + '/deliver/amazon-fulfilment/',         icon: 'amazon',   title: 'Amazon Fulfilment',                 desc: 'FBA prep, FBM dispatch, seller compliance' },
+        { href: B + '/deliver/tiktok-shop/',               icon: 'tiktok',   title: 'TikTok Shop',                       desc: 'Integrated fulfilment for TikTok Shop sellers' },
+        { href: B + '/deliver/pop-up-shops/',              icon: 'popup',    title: 'Pop-up &amp; Own-Store Fulfilment', desc: 'Replenishing your own retail locations and events' },
       ]
     },
     {
       label: 'Beyond Fulfilment', cls: 'slate',
       items: [
-        { href: B + '/deliver/live-commerce/',    title: 'Live Commerce Fulfilment',      desc: 'Rapid dispatch for live selling events and flash campaigns' },
-        { href: B + '/deliver/same-day-dublin/',  title: 'Same-Day Dublin Delivery',      desc: 'Cut-off noon, delivered same afternoon' },
-        { href: B + '/deliver/customer-service/', title: 'Outsourced Customer Service',   desc: 'Your brand voice, our team, seamless CX' },
+        { href: B + '/deliver/live-commerce/',     icon: 'live',        title: 'Live Commerce Fulfilment',      desc: 'Rapid dispatch for live selling events and flash campaigns' },
+        { href: B + '/deliver/same-day-dublin/',   icon: 'sameday',     title: 'Same-Day Dublin Delivery',      desc: 'Cut-off noon, delivered same afternoon' },
+        { href: B + '/deliver/customer-service/',  icon: 'custservice', title: 'Outsourced Customer Service',   desc: 'Your brand voice, our team, seamless CX' },
       ]
     }
   ];
@@ -83,7 +103,7 @@
       for (var j = 0; j < col.items.length; j++) {
         var l = col.items[j];
         items += '<a href="' + l.href + '" class="mega-item' + active(l.href) + '">' +
-          '<div class="mega-item-icon ' + col.cls + '-bg"></div>' +
+          '<div class="mega-item-icon ' + col.cls + '-bg">' + icon(l.icon) + '</div>' +
           '<div class="mega-item-text"><h4>' + l.title + '</h4><p>' + l.desc + '</p></div>' +
           '</a>';
       }
