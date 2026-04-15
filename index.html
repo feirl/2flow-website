@@ -140,10 +140,13 @@
 
     /* ── PROOF ── */
     .proof-section { padding: 72px 40px; background: var(--bg-light); }
-    .proof-inner { max-width: 760px; margin: 0 auto; text-align: center; }
-    .big-quote { font-size: 21px; font-style: italic; line-height: 1.65; color: var(--text-primary); border-left: 3px solid var(--brand-primary); text-align: left; padding-left: 28px; margin: 24px 0; }
-    .quote-attr { font-size: 14px; color: var(--text-secondary); }
-    .quote-attr strong { color: var(--text-primary); }
+    .proof-inner { max-width: 1080px; margin: 0 auto; text-align: center; }
+    .home-quotes-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 40px; text-align: left; }
+    .home-quote-card { background: var(--bg-white); border-radius: 12px; padding: 32px; border: 1px solid var(--border-light); }
+    .home-quote-mark { font-size: 40px; color: var(--brand-primary); line-height: 1; margin-bottom: 12px; font-family: Georgia, serif; }
+    .home-quote-text { font-size: 15px; line-height: 1.75; color: var(--text-secondary); font-style: italic; margin-bottom: 20px; }
+    .home-quote-attr { font-size: 13px; color: var(--text-tertiary); }
+    .home-quote-attr strong { color: var(--text-primary); }
 
     /* ── SOLUTIONS ── */
     .solutions-section { padding: 72px 40px; background: var(--bg-white); }
@@ -166,6 +169,7 @@
 
     /* ── RESPONSIVE ── */
     @media (max-width: 1024px) {
+      .home-quotes-grid { grid-template-columns: 1fr 1fr; }
     }
     @media (max-width: 768px) {
       .nav-links.open { display: flex; }
@@ -196,6 +200,7 @@
       .services-header { flex-direction: column; align-items: flex-start; gap: 16px; }
       .dual-inner { grid-template-columns: 1fr; }
       .solutions-grid { grid-template-columns: 1fr; }
+      .home-quotes-grid { grid-template-columns: 1fr; }
       .cta-section { padding: 56px 20px; }
       .cta-btns { flex-direction: column; align-items: center; }
       .footer-brand { grid-column: 1 / -1; }
@@ -443,10 +448,25 @@
 <!-- PROOF -->
 <section class="proof-section">
   <div class="proof-inner">
-    <div class="section-label" style="text-align:center;">What Brands Say</div>
-    <p class="big-quote">2Flow handles the complexity that would otherwise slow us down. We focus on building the brand. They make sure every order lands perfectly.</p>
-    <p class="quote-attr"><strong>Founder, Irish DTC Beauty Brand</strong> &nbsp;|&nbsp; 2Flow Customer</p>
-    <div style="margin-top:32px;">
+    <div class="section-label" style="text-align:center;">What Our Customers Say</div>
+    <div class="home-quotes-grid">
+      <div class="home-quote-card">
+        <div class="home-quote-mark">"</div>
+        <p class="home-quote-text">Orders dispatch unbelievably fast. That results in 5-star Trustpilot reviews for me. Customer service are spot on — they reply back to me, meaning I can reply back to my customer nearly in real time. These two things in e-commerce are priceless.</p>
+        <div class="home-quote-attr"><strong>Darren Grant</strong> &nbsp;·&nbsp; Probiotics.ie</div>
+      </div>
+      <div class="home-quote-card">
+        <div class="home-quote-mark">"</div>
+        <p class="home-quote-text">Peace of mind. When I don't have to get involved a lot, that means everything is working. We grew a lot since we started — probably more than double since we started with them.</p>
+        <div class="home-quote-attr"><strong>Mihael</strong> &nbsp;·&nbsp; Ancestral Cosmetics</div>
+      </div>
+      <div class="home-quote-card">
+        <div class="home-quote-mark">"</div>
+        <p class="home-quote-text">We feel like they take a huge weight off our plates. It's never once been a conversation here about leaving 2Flow. Overall, we think so highly of them.</p>
+        <div class="home-quote-attr"><strong>Emma</strong> &nbsp;·&nbsp; Skin Shop</div>
+      </div>
+    </div>
+    <div style="margin-top:40px;">
       <a href="/proof" class="btn-primary">Read Customer Stories</a>
     </div>
   </div>
