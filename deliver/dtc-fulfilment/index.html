@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>eCommerce &amp; DTC Fulfilment | Shopify-Native 3PL Ireland | 2Flow</title>
+  <meta name="description" content="2Flow is Ireland's Shopify-native fulfilment partner for direct-to-consumer brands. Orders sync every 15 minutes, dispatch same day, tracking pushes back automatically. WooCommerce, Amazon, Etsy and TikTok Shop also supported.">
+  <meta name="keywords" content="Shopify fulfilment Ireland, DTC fulfilment Dublin, ecommerce 3PL Ireland, Shopify 3PL Ireland, direct to consumer fulfilment, WooCommerce fulfilment Ireland, ecommerce fulfilment Dublin, Shopify integration 3PL">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://2flow.ie/deliver/dtc-fulfilment/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="eCommerce &amp; DTC Fulfilment | 2Flow">
+  <meta property="og:description" content="Shopify-native fulfilment for Irish DTC brands. 15-min order sync, same-day dispatch, tracking auto-pushed back. WooCommerce, Amazon and more also supported.">
+  <meta property="og:url" content="https://2flow.ie/deliver/dtc-fulfilment/">
+  <meta property="og:site_name" content="2Flow">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="eCommerce &amp; DTC Fulfilment | 2Flow">
+  <meta name="twitter:description" content="Shopify-native 3PL for Irish DTC brands. 15-min sync, same-day dispatch, automatic tracking updates.">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="ai-content-declaration" content="This page describes 2Flow's eCommerce and DTC fulfilment service. Key topics: Shopify fulfilment Ireland, DTC 3PL, ecommerce fulfilment Dublin, Shopify integration, WooCommerce fulfilment, same-day dispatch, direct-to-consumer fulfilment Ireland.">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Service",
+        "@id": "https://2flow.ie/deliver/dtc-fulfilment/#service",
+        "name": "eCommerce &amp; DTC Fulfilment",
+        "description": "Shopify-native eCommerce fulfilment for direct-to-consumer brands in Ireland. Real-time order sync, same-day dispatch, automatic tracking updates, and per-SKU packaging standards — fully integrated with Shopify, WooCommerce, Amazon, Etsy and TikTok Shop.",
+        "provider": { "@type": "LocalBusiness", "name": "2Flow", "url": "https://2flow.ie" },
+        "areaServed": ["Ireland", "European Union", "United Kingdom"],
+        "serviceType": "eCommerce Fulfilment"
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://2flow.ie/deliver/dtc-fulfilment/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How does the Shopify integration work?",
+            "acceptedAnswer": { "@type": "Answer", "text": "2Flow connects directly to your Shopify store via our Mintsoft WMS integration. New orders are pulled automatically every 15 minutes — no manual exports, no CSV uploads. Once an order is dispatched, the tracking number is pushed back to Shopify and your customer receives their shipping notification automatically. Inventory levels in Mintsoft sync back to Shopify in real time so your store never oversells." }
+          },
+          {
+            "@type": "Question",
+            "name": "Which eCommerce platforms does 2Flow support besides Shopify?",
+            "acceptedAnswer": { "@type": "Answer", "text": "In addition to Shopify, 2Flow integrates with WooCommerce, Amazon (FBA and FBM), Etsy, TikTok Shop, Magento, and a range of other platforms via Mintsoft and direct API connections. If your platform isn't listed, speak to our team — we can assess whether a custom integration is possible." }
+          },
+          {
+            "@type": "Question",
+            "name": "How quickly are orders dispatched after they appear in your system?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Orders received and confirmed before our daily cut-off are picked, packed, and handed to carriers the same day. The 15-minute Shopify sync means orders are in our system quickly — and from there, our pick-and-pack team operates to a same-day dispatch standard for all qualifying orders." }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I set different packaging instructions for different products?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Yes. Per-SKU pack instructions are configured in Mintsoft at onboarding and applied automatically to every order. You can specify tissue, inserts, outer packaging, void fill, branded tape, and presentation standards per product. When a customer orders multiple SKUs with different pack specs, each is applied correctly within the same order." }
+          },
+          {
+            "@type": "Question",
+            "name": "How does inventory visibility work for DTC brands?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Your inventory levels are visible in real time through your Mintsoft portal. Every inbound receipt, pick, and return updates stock immediately. Inventory syncs back to your Shopify store so your product pages reflect true available stock. Low stock alerts can be configured so you're notified before you run out — not after." }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <link rel="stylesheet" href="/2flow-website/css/site.css">
+  <style>
+    /* ── HERO ── */
+    .hero-feature { background: #0D1A2E; padding: calc(var(--nav-height) + 80px) 40px 80px; position: relative; overflow: hidden; }
+    .hero-feature::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 70% 60% at 80% 50%, rgba(133,176,32,0.07) 0%, transparent 70%); pointer-events: none; }
+    .hero-feature-inner { max-width: 1080px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+    .hero-breadcrumb { display: flex; align-items: center; gap: 6px; font-size: 12px; color: rgba(255,255,255,0.45); margin-bottom: 20px; flex-wrap: wrap; }
+    .hero-breadcrumb span { color: rgba(255,255,255,0.25); }
+    .hero-feature h1 { color: white; margin-bottom: 20px; }
+    .hero-feature h1 em { font-style: normal; color: var(--brand-primary); }
+    .hero-feature-sub { font-size: 17px; line-height: 1.7; color: rgba(255,255,255,0.7); }
+    .hero-btns { display: flex; gap: 12px; margin-top: 32px; flex-wrap: wrap; }
+    .hero-badges { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 24px; }
+    .trust-badge { display: inline-flex; align-items: center; gap: 6px; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15); border-radius: 99px; padding: 5px 14px; font-size: 12px; color: rgba(255,255,255,0.75); font-weight: 500; }
+    .hero-visual { display: flex; flex-direction: column; gap: 16px; }
+    .hero-stat-card { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.10); border-radius: 12px; padding: 24px 28px; }
+    .hero-stat-card .stat-big { font-size: 40px; font-weight: 700; color: var(--brand-primary); line-height: 1; margin-bottom: 6px; }
+    .hero-stat-card .stat-label { font-size: 14px; color: rgba(255,255,255,0.65); line-height: 1.5; }
+    .hero-stat-card.small { padding: 18px 24px; }
+    .hero-stat-card.small .stat-big { font-size: 28px; }
+    .hero-stats-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+
+    /* ── PROBLEM ── */
+    .problem-section { background: var(--bg-white); padding: 80px 40px; border-bottom: 1px solid var(--border-light); }
+    .problem-header { text-align: center; max-width: 640px; margin: 0 auto 56px; }
+    .problem-header h2 { color: var(--text-primary); }
+    .problem-header p { font-size: 16px; color: var(--text-secondary); line-height: 1.7; margin-top: 14px; }
+    .problem-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; max-width: 1080px; margin: 0 auto; }
+    .problem-card { border: 1px solid var(--border-light); border-radius: 12px; padding: 32px; background: var(--bg-light); }
+    .problem-card-num { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-tertiary); margin-bottom: 16px; }
+    .problem-card h3 { font-size: 18px; margin-bottom: 12px; }
+    .problem-card p { font-size: 14px; color: var(--text-secondary); line-height: 1.7; }
+
+    /* ── PROCESS ── */
+    .process-section { background: var(--bg-light); padding: 80px 40px; }
+    .process-header { max-width: 640px; margin-bottom: 56px; }
+    .steps-list { display: grid; grid-template-columns: repeat(5, 1fr); gap: 0; position: relative; max-width: 1080px; }
+    .steps-list::before { content: ''; position: absolute; top: 32px; left: calc(10% + 16px); right: calc(10% + 16px); height: 2px; background: var(--border-light); z-index: 0; }
+    .step-item { text-align: center; padding: 0 12px; position: relative; z-index: 1; }
+    .step-num { width: 64px; height: 64px; border-radius: 50%; background: var(--brand-primary); color: white; font-weight: 700; font-size: 20px; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px; }
+    .step-title { font-size: 14px; font-weight: 700; color: var(--text-primary); margin-bottom: 6px; line-height: 1.3; }
+    .step-desc { font-size: 12px; color: var(--text-secondary); line-height: 1.5; }
+
+    /* ── PLATFORMS ── */
+    .platforms-section { background: var(--bg-white); padding: 80px 40px; }
+    .platforms-header { max-width: 640px; margin-bottom: 56px; }
+    .platforms-layout { max-width: 1080px; display: flex; flex-direction: column; gap: 24px; }
+
+    /* Shopify featured card */
+    .platform-featured { display: grid; grid-template-columns: 1fr 1fr; gap: 0; border-radius: 14px; overflow: hidden; border: 2px solid var(--brand-primary); }
+    .platform-featured-main { background: rgba(133,176,32,0.05); padding: 40px; }
+    .platform-featured-badge { display: inline-block; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--brand-primary); margin-bottom: 14px; }
+    .platform-featured-main h3 { font-size: 24px; font-weight: 700; margin-bottom: 12px; }
+    .platform-featured-main p { font-size: 14px; color: var(--text-secondary); line-height: 1.7; margin-bottom: 20px; }
+    .platform-featured-list { list-style: none; padding: 0; }
+    .platform-featured-list li { font-size: 13px; color: var(--text-secondary); padding: 6px 0; display: flex; gap: 8px; align-items: flex-start; border-bottom: 1px solid rgba(0,0,0,0.06); line-height: 1.5; }
+    .platform-featured-list li:last-child { border-bottom: none; }
+    .platform-featured-list li::before { content: '✓'; color: var(--brand-primary); font-weight: 700; flex-shrink: 0; }
+    .platform-featured-stats { background: var(--brand-navy); padding: 40px; display: flex; flex-direction: column; justify-content: center; gap: 28px; }
+    .platform-stat { border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 24px; }
+    .platform-stat:last-child { border-bottom: none; padding-bottom: 0; }
+    .platform-stat-num { font-size: 36px; font-weight: 700; color: var(--brand-primary); line-height: 1; margin-bottom: 6px; }
+    .platform-stat-label { font-size: 13px; color: rgba(255,255,255,0.65); line-height: 1.5; }
+
+    /* Other platforms grid */
+    .other-platforms-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-tertiary); margin-bottom: 16px; }
+    .other-platforms-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+    .platform-card { background: var(--bg-light); border: 1px solid var(--border-light); border-radius: 10px; padding: 20px 24px; transition: all 0.2s; }
+    .platform-card:hover { border-color: var(--brand-primary); box-shadow: 0 2px 12px rgba(133,176,32,0.10); transform: translateY(-2px); }
+    .platform-card h4 { font-size: 15px; font-weight: 700; margin-bottom: 4px; }
+    .platform-card p { font-size: 13px; color: var(--text-secondary); line-height: 1.5; }
+
+    /* ── CAPABILITIES ── */
+    .capabilities-section { background: var(--bg-light); padding: 80px 40px; }
+    .capabilities-header { max-width: 640px; margin-bottom: 56px; }
+    .capabilities-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; max-width: 1080px; }
+    .capability-item { display: flex; align-items: flex-start; gap: 12px; background: var(--bg-white); border: 1px solid var(--border-light); border-radius: 10px; padding: 20px; transition: all 0.2s; }
+    .capability-item:hover { border-color: var(--brand-primary); box-shadow: 0 2px 12px rgba(133,176,32,0.10); }
+    .capability-icon { width: 36px; height: 36px; flex-shrink: 0; background: rgba(133,176,32,0.1); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: var(--brand-primary); }
+    .capability-text h4 { font-size: 14px; font-weight: 600; margin-bottom: 4px; }
+    .capability-text p { font-size: 13px; color: var(--text-secondary); line-height: 1.5; }
+
+    /* ── PROOF ── */
+    .proof-section { background: #0D1A2E; padding: 80px 40px; }
+    .proof-header { text-align: center; max-width: 560px; margin: 0 auto 56px; }
+    .proof-header .section-label { color: rgba(133,176,32,0.9); }
+    .proof-header h2 { color: white; }
+    .quotes-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; max-width: 1080px; margin: 0 auto; }
+    .quote-card { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.10); border-radius: 12px; padding: 32px; }
+    .quote-mark { font-size: 40px; color: var(--brand-primary); line-height: 1; margin-bottom: 16px; font-family: Georgia, serif; }
+    .quote-text { font-size: 15px; color: rgba(255,255,255,0.80); line-height: 1.75; font-style: italic; margin-bottom: 20px; }
+    .quote-source { font-size: 12px; color: rgba(255,255,255,0.40); text-transform: uppercase; letter-spacing: 0.08em; font-weight: 600; }
+
+    /* ── FIT ── */
+    .fit-section { background: var(--bg-white); padding: 80px 40px; }
+    .fit-header { max-width: 640px; margin-bottom: 56px; }
+    .fit-grid { display: grid; grid-template-columns: 1fr; gap: 24px; max-width: 680px; }
+    .fit-panel { border-radius: 12px; padding: 36px; }
+    .fit-panel.good { background: var(--bg-light); border: 1px solid var(--border-light); }
+    .fit-panel-label { display: flex; align-items: center; gap: 8px; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 20px; color: var(--brand-primary); }
+    .fit-panel h3 { font-size: 18px; margin-bottom: 20px; }
+    .fit-list { list-style: none; }
+    .fit-list li { display: flex; align-items: flex-start; gap: 10px; padding: 9px 0; font-size: 14px; border-bottom: 1px solid rgba(0,0,0,0.06); line-height: 1.5; }
+    .fit-list li:last-child { border-bottom: none; }
+    .fit-list li svg { flex-shrink: 0; margin-top: 1px; }
+
+    /* ── FAQ ── */
+    .faq-section { background: var(--bg-light); padding: 80px 40px; }
+    .faq-section .container { max-width: 760px; }
+    .faq-header { margin-bottom: 48px; }
+    .faq-list { display: flex; flex-direction: column; gap: 2px; }
+    .faq-item { background: var(--bg-white); border: 1px solid var(--border-light); border-radius: 10px; overflow: hidden; }
+    .faq-q { width: 100%; background: none; border: none; text-align: left; cursor: pointer; padding: 20px 24px; display: flex; justify-content: space-between; align-items: center; font-size: 15px; font-weight: 600; color: var(--text-primary); transition: color 0.15s; }
+    .faq-q:hover { color: var(--brand-primary); }
+    .faq-q-icon { flex-shrink: 0; color: var(--brand-primary); transition: transform 0.2s; }
+    .faq-q[aria-expanded="true"] .faq-q-icon { transform: rotate(45deg); }
+    .faq-a { padding: 0 24px 20px; font-size: 14px; color: var(--text-secondary); line-height: 1.75; display: none; }
+    .faq-a.open { display: block; }
+
+    /* ── RELATED ── */
+    .related-section { background: var(--bg-white); padding: 80px 40px; }
+    .related-header { max-width: 560px; margin-bottom: 48px; }
+    .related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; max-width: 1080px; }
+    .related-card { background: var(--bg-white); border: 1px solid var(--border-light); border-radius: 12px; padding: 32px; text-decoration: none; display: block; transition: all 0.2s; }
+    .related-card:hover { border-color: var(--brand-primary); box-shadow: 0 4px 24px rgba(133,176,32,0.12); transform: translateY(-2px); }
+    .related-card-icon { width: 44px; height: 44px; background: rgba(133,176,32,0.1); border-radius: 10px; display: flex; align-items: center; justify-content: center; color: var(--brand-primary); margin-bottom: 18px; }
+    .related-card h3 { font-size: 17px; margin-bottom: 8px; color: var(--text-primary); }
+    .related-card p { font-size: 14px; color: var(--text-secondary); line-height: 1.6; }
+    .related-card-link { display: inline-flex; align-items: center; gap: 4px; color: var(--brand-primary); font-size: 13px; font-weight: 600; margin-top: 16px; }
+
+    /* ── CTA ── */
+    .cta-section { background: #0D1A2E; padding: 80px 40px; text-align: center; }
+    .cta-section h2 { color: white; margin-bottom: 16px; }
+    .cta-section p { color: rgba(255,255,255,0.65); font-size: 17px; margin-bottom: 36px; max-width: 520px; margin-left: auto; margin-right: auto; }
+    .cta-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+    .cta-note { margin-top: 20px; font-size: 13px; color: rgba(255,255,255,0.35); }
+    .cta-section .btn-ghost { color: white; border-color: rgba(255,255,255,0.3); }
+    .cta-section .btn-ghost:hover { border-color: white; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 1024px) {
+      .hero-feature-inner { grid-template-columns: 1fr; gap: 40px; }
+      .hero-visual { display: none; }
+      .problem-grid { grid-template-columns: 1fr 1fr; }
+      .steps-list { grid-template-columns: 1fr 1fr; gap: 24px; }
+      .steps-list::before { display: none; }
+      .platform-featured { grid-template-columns: 1fr; }
+      .platform-featured-stats { flex-direction: row; gap: 20px; }
+      .platform-stat { border-bottom: none; border-right: 1px solid rgba(255,255,255,0.1); padding-bottom: 0; padding-right: 20px; }
+      .platform-stat:last-child { border-right: none; padding-right: 0; }
+      .other-platforms-grid { grid-template-columns: 1fr 1fr; }
+      .capabilities-grid { grid-template-columns: 1fr 1fr; }
+      .quotes-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 768px) {
+      .hero-feature { padding: calc(var(--nav-height) + 48px) 24px 60px; }
+      .problem-grid, .capabilities-grid, .quotes-grid, .related-grid { grid-template-columns: 1fr; }
+      .other-platforms-grid { grid-template-columns: 1fr 1fr; }
+      .steps-list { grid-template-columns: 1fr; }
+      .platform-featured-stats { flex-direction: column; }
+      .platform-stat { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 20px; padding-right: 0; }
+      .platform-stat:last-child { border-bottom: none; padding-bottom: 0; }
+      .hero-btns { flex-direction: column; }
+      .problem-section, .process-section, .platforms-section, .capabilities-section, .proof-section, .fit-section, .faq-section, .related-section, .cta-section { padding: 56px 20px; }
+      .cta-btns { flex-direction: column; align-items: center; }
+    }
+  </style>
+</head>
+<body>
+
+<div id="site-nav"></div>
+<script src="/2flow-website/js/nav.js"></script>
+
+<main id="main-content">
+
+<!-- ── HERO ── -->
+<section class="hero-feature" aria-labelledby="hero-h1">
+  <div class="hero-feature-inner">
+    <div>
+      <nav class="hero-breadcrumb" aria-label="Breadcrumb">
+        <span>OmniChannel Specialists</span>
+        <span aria-hidden="true">›</span>
+        <span aria-current="page">eCommerce &amp; DTC</span>
+      </nav>
+      <h1 id="hero-h1">Built for DTC.<br><em>Native on Shopify.</em></h1>
+      <p class="hero-feature-sub">Orders sync every 15 minutes, dispatch the same day, tracking pushes back to your store automatically. Your customers get a seamless experience. You get an operation that runs without you watching it.</p>
+      <div class="hero-btns">
+        <a href="/2flow-website/#contact" class="btn-primary">Book a Call</a>
+        <a href="/2flow-website/why-2flow/shopify/" class="btn-ghost btn-ghost-light">Shopify Integration Detail</a>
+      </div>
+      <div class="hero-badges" style="margin-top:28px;">
+        <span class="trust-badge">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+          15-min Shopify sync
+        </span>
+        <span class="trust-badge">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+          Same-day dispatch
+        </span>
+        <span class="trust-badge">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+          6+ platforms supported
+        </span>
+      </div>
+    </div>
+    <div class="hero-visual" aria-hidden="true">
+      <div class="hero-stat-card">
+        <div class="stat-big">15 min</div>
+        <div class="stat-label">Shopify order sync — new orders in our system within 15 minutes of being placed, no manual uploads</div>
+      </div>
+      <div class="hero-stats-row">
+        <div class="hero-stat-card small">
+          <div class="stat-big">Same day</div>
+          <div class="stat-label">Dispatch for all qualifying orders before cut-off</div>
+        </div>
+        <div class="hero-stat-card small">
+          <div class="stat-big">Auto</div>
+          <div class="stat-label">Tracking pushed back to Shopify — no manual updates</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── THE PROBLEM ── -->
+<section class="problem-section" aria-labelledby="problem-h2">
+  <div style="max-width:1080px; margin:0 auto;">
+    <div class="problem-header">
+      <div class="section-label">Why DTC Fulfilment Breaks Down</div>
+      <h2 id="problem-h2">A 3PL that isn't integrated isn't a partner — it's overhead.</h2>
+      <p>When your store and your warehouse aren't connected in real time, every order creates manual work. Every manual step creates risk. And every gap between what your store shows and what your warehouse knows becomes a customer service problem waiting to happen.</p>
+    </div>
+    <div class="problem-grid">
+      <div class="problem-card">
+        <div class="problem-card-num">Problem 01</div>
+        <h3>Your store and warehouse speak different languages</h3>
+        <p>CSV exports, manual order entry, 24-hour lag between sale and fulfilment — these aren't processes, they're workarounds. Every day you're running on yesterday's data, making stock and dispatch decisions with information that's already out of date.</p>
+      </div>
+      <div class="problem-card">
+        <div class="problem-card-num">Problem 02</div>
+        <h3>Tracking doesn't reach your customers automatically</h3>
+        <p>"Where's my order?" is the most expensive question in DTC. When your 3PL sends you a spreadsheet with tracking numbers and you have to upload them manually to Shopify, your customers wait — and some of them don't wait quietly. They email, they leave reviews, they don't reorder.</p>
+      </div>
+      <div class="problem-card">
+        <div class="problem-card-num">Problem 03</div>
+        <h3>Inventory is always a day behind your decisions</h3>
+        <p>You run a promotion, a product goes viral, a stockist places a big order — and the number in Shopify is wrong because your warehouse hasn't updated it yet. Overselling, emergency stock checks, refund requests. The gap between your store and your 3PL costs you in ways that don't show up on a single line of the P&amp;L.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── PROCESS ── -->
+<section class="process-section" aria-labelledby="process-h2">
+  <div style="max-width:1080px; margin:0 auto;">
+    <div class="process-header">
+      <div class="section-label">How It Works</div>
+      <h2 id="process-h2">From Checkout to Doorstep Without the Manual Steps</h2>
+      <p class="section-intro">Once the integration is live, the process runs. You don't move orders, update tracking, or adjust inventory manually — the system does it.</p>
+    </div>
+    <div class="steps-list">
+      <div class="step-item">
+        <div class="step-num">1</div>
+        <div class="step-title">Platform Connect</div>
+        <div class="step-desc">Your Shopify store (or other platform) connected to Mintsoft at onboarding. Live sync configured, per-SKU pack instructions set, inventory mapped and reconciled.</div>
+      </div>
+      <div class="step-item">
+        <div class="step-num">2</div>
+        <div class="step-title">Order Received</div>
+        <div class="step-desc">New order detected in Mintsoft within 15 minutes of it being placed. Routed to the correct pick station with your pack spec applied automatically — no manual intervention.</div>
+      </div>
+      <div class="step-item">
+        <div class="step-num">3</div>
+        <div class="step-title">Pick, Pack &amp; Label</div>
+        <div class="step-desc">Order picked to your per-SKU spec. Branded packaging, inserts, and tissue applied. Carrier label generated at the correct rate for the destination. Quality checked.</div>
+      </div>
+      <div class="step-item">
+        <div class="step-num">4</div>
+        <div class="step-title">Dispatch &amp; Track</div>
+        <div class="step-desc">Handed to carrier before cut-off. Tracking number captured in Mintsoft the moment the carrier scans the parcel. Inventory decremented in real time.</div>
+      </div>
+      <div class="step-item">
+        <div class="step-num">5</div>
+        <div class="step-title">Customer Notified</div>
+        <div class="step-desc">Tracking number pushed back to Shopify automatically. Your customer gets their shipping notification. Your store shows the order as fulfilled. You didn't touch it.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── PLATFORMS ── -->
+<section class="platforms-section" aria-labelledby="platforms-h2">
+  <div style="max-width:1080px; margin:0 auto;">
+    <div class="platforms-header">
+      <div class="section-label">Platform Integrations</div>
+      <h2 id="platforms-h2">Native on Shopify. Fluent on everything else.</h2>
+      <p class="section-intro">Shopify is where we go deepest — real-time sync, automatic tracking push, live inventory. But we support the full range of eCommerce platforms so you're not locked into one stack.</p>
+    </div>
+    <div class="platforms-layout">
+
+      <!-- Shopify featured card -->
+      <div class="platform-featured">
+        <div class="platform-featured-main">
+          <div class="platform-featured-badge">Primary Integration — Shopify</div>
+          <h3>The integration your store was built for.</h3>
+          <p>2Flow's Mintsoft integration connects directly to Shopify — not via a third-party middleware or a batch export. Orders arrive in real time, inventory syncs both ways, and your customers get tracking updates automatically from the moment their parcel is scanned.</p>
+          <ul class="platform-featured-list">
+            <li>Orders pulled every 15 minutes — no CSV, no manual entry</li>
+            <li>Tracking numbers pushed back to Shopify on carrier scan</li>
+            <li>Live inventory sync — your store reflects true stock levels</li>
+            <li>Order edits and cancellations handled before dispatch</li>
+            <li>Per-SKU pack instructions stored in Mintsoft, not in spreadsheets</li>
+            <li>Returns logged and restocked, inventory updated automatically</li>
+          </ul>
+        </div>
+        <div class="platform-featured-stats">
+          <div class="platform-stat">
+            <div class="platform-stat-num">15 min</div>
+            <div class="platform-stat-label">Maximum lag between a Shopify order being placed and appearing in our fulfilment system</div>
+          </div>
+          <div class="platform-stat">
+            <div class="platform-stat-num">Auto</div>
+            <div class="platform-stat-label">Tracking pushed back to Shopify and customer notified — no manual upload required</div>
+          </div>
+          <div class="platform-stat">
+            <div class="platform-stat-num">Real-time</div>
+            <div class="platform-stat-label">Inventory sync back to your Shopify store — every pick and receipt reflected immediately</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Other platforms -->
+      <div>
+        <div class="other-platforms-label">Also supported</div>
+        <div class="other-platforms-grid">
+          <div class="platform-card">
+            <h4>WooCommerce</h4>
+            <p>Full order sync and inventory management for WordPress-based stores via Mintsoft integration.</p>
+          </div>
+          <div class="platform-card">
+            <h4>Amazon</h4>
+            <p>FBA prep and FBM dispatch from our Dublin warehouse. Compliance labelling and seller standards managed.</p>
+          </div>
+          <div class="platform-card">
+            <h4>TikTok Shop</h4>
+            <p>Same-day fulfilment built for the speed of social commerce and live selling events.</p>
+          </div>
+          <div class="platform-card">
+            <h4>Etsy &amp; Others</h4>
+            <p>Etsy, Magento, and other platforms connected via Mintsoft or direct API. Talk to us about your stack.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── CAPABILITIES ── -->
+<section class="capabilities-section" aria-labelledby="cap-h2">
+  <div style="max-width:1080px; margin:0 auto;">
+    <div class="capabilities-header">
+      <div class="section-label">Full Capabilities</div>
+      <h2 id="cap-h2">Everything a DTC Brand Needs from a 3PL</h2>
+      <p class="section-intro">From the moment a customer checks out to the moment they unbox — and everything in between, including when they want to send it back.</p>
+    </div>
+    <div class="capabilities-grid">
+      <div class="capability-item">
+        <div class="capability-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.59 13.41l-7.17 7.17a2 2 0 01-2.83 0L2 12V2h10l8.59 8.59a2 2 0 010 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg>
+        </div>
+        <div class="capability-text"><h4>Shopify Native Integration</h4><p>Direct connection to your Shopify store — no middleware, no exports. Orders in, tracking out, inventory synced both ways in real time.</p></div>
+      </div>
+      <div class="capability-item">
+        <div class="capability-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <div class="capability-text"><h4>Same-Day Dispatch</h4><p>Orders received before cut-off picked, packed, and handed to carriers the same day. Consistently. Not just when the warehouse isn't busy.</p></div>
+      </div>
+      <div class="capability-item">
+        <div class="capability-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/></svg>
+        </div>
+        <div class="capability-text"><h4>Per-SKU Pack Instructions</h4><p>Tissue, inserts, outer packaging, void fill, branded tape — configured per product at onboarding and applied automatically to every order. No briefing required at peak.</p></div>
+      </div>
+      <div class="capability-item">
+        <div class="capability-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .18h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        </div>
+        <div class="capability-text"><h4>Automatic Tracking Updates</h4><p>Tracking numbers pushed back to your platform the moment the carrier scans the parcel. Your customers get notified. You don't do anything.</p></div>
+      </div>
+      <div class="capability-item">
+        <div class="capability-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+        </div>
+        <div class="capability-text"><h4>Live Inventory Visibility</h4><p>Real-time stock levels in Mintsoft, synced back to your store. Low-stock alerts configurable. Every inbound receipt and return updates immediately — no end-of-day reconciliation.</p></div>
+      </div>
+      <div class="capability-item">
+        <div class="capability-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 102.13-9.36L1 10"/></svg>
+        </div>
+        <div class="capability-text"><h4>Returns Management</h4><p>Returns received, graded, and either restocked or quarantined. Inventory updated in Mintsoft and your store the moment a return is processed. No manual stock adjustments.</p></div>
+      </div>
+      <div class="capability-item">
+        <div class="capability-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+        </div>
+        <div class="capability-text"><h4>Multi-Channel Order Management</h4><p>Shopify, WooCommerce, Amazon, Etsy, TikTok Shop — all orders from all channels managed in one system. One inventory pool. One dispatch process. One view of everything.</p></div>
+      </div>
+      <div class="capability-item">
+        <div class="capability-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg>
+        </div>
+        <div class="capability-text"><h4>Subscription &amp; Recurring Orders</h4><p>Subscription box fulfilment, recurring DTC orders, and auto-replenishment programmes managed through Mintsoft. Every dispatch cycle runs to the same spec.</p></div>
+      </div>
+      <div class="capability-item">
+        <div class="capability-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+        </div>
+        <div class="capability-text"><h4>Branded Unboxing at Scale</h4><p>Your branded packaging spec applied from the first order to the thousandth. Tissue, outer, inserts, tape — consistent presentation at any volume, including during peak.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── SOCIAL PROOF ── -->
+<section class="proof-section" aria-labelledby="proof-h2">
+  <div style="max-width:1080px; margin:0 auto;">
+    <div class="proof-header">
+      <div class="section-label">What Customers Say</div>
+      <h2 id="proof-h2">DTC Brands That Scaled Without the Operational Drag</h2>
+    </div>
+    <div class="quotes-grid">
+      <div class="quote-card">
+        <div class="quote-mark">"</div>
+        <p class="quote-text">The Shopify integration is what made the difference. Orders go straight in, tracking comes straight back out. I haven't manually updated a fulfilment status in months. That time went back into the brand, not into the warehouse admin.</p>
+        <div class="quote-source">Founder &nbsp;·&nbsp; Irish DTC Skincare Brand</div>
+      </div>
+      <div class="quote-card">
+        <div class="quote-mark">"</div>
+        <p class="quote-text">We were running our own stock in a rented unit. Moving to 2Flow felt like a risk. Within two months the order accuracy was better than what we were doing ourselves, the tracking was automated, and I'd got about 20 hours a week back.</p>
+        <div class="quote-source">Founder &nbsp;·&nbsp; Health &amp; Supplement Brand</div>
+      </div>
+      <div class="quote-card">
+        <div class="quote-mark">"</div>
+        <p class="quote-text">2Flow handles the complexity that would otherwise slow us down. We focus on building the brand. They make sure every order lands perfectly.</p>
+        <div class="quote-source">Founder &nbsp;·&nbsp; Irish DTC Beauty Brand &nbsp;·&nbsp; 2Flow Customer</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── RIGHT FIT ── -->
+<section class="fit-section" aria-labelledby="fit-h2">
+  <div style="max-width:1080px; margin:0 auto;">
+    <div class="fit-header">
+      <div class="section-label">Is This Right for You?</div>
+      <h2 id="fit-h2">Built for DTC brands where the store and the warehouse need to be one system.</h2>
+      <p class="section-intro">If you're managing orders manually, chasing tracking updates, or making stock decisions on data that's hours old — this is what we fixed.</p>
+    </div>
+    <div class="fit-grid">
+      <div class="fit-panel good">
+        <div class="fit-panel-label">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+          A strong fit if you…
+        </div>
+        <h3>You sell direct-to-consumer and need your fulfilment to feel invisible.</h3>
+        <ul class="fit-list">
+          <li>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#85B020" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            Sell primarily on Shopify (or WooCommerce, Amazon, Etsy, or TikTok Shop)
+          </li>
+          <li>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#85B020" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            Want same-day dispatch as a consistent standard, not a best-effort promise
+          </li>
+          <li>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#85B020" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            Need tracking to reach customers automatically without manual uploads
+          </li>
+          <li>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#85B020" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            Have branded packaging requirements that need to be consistent at any volume
+          </li>
+          <li>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#85B020" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            Are scaling into new channels (retail, Amazon, TikTok) alongside your DTC store
+          </li>
+          <li>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#85B020" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            Want a 3PL based in Dublin, not a UK-centric operation treating Ireland as an afterthought
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FAQ ── -->
+<section class="faq-section" aria-labelledby="faq-h2">
+  <div class="container">
+    <div class="faq-header">
+      <div class="section-label">Common Questions</div>
+      <h2 id="faq-h2">eCommerce &amp; DTC Fulfilment — FAQ</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          How does the Shopify integration work?
+          <svg class="faq-q-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="faq-a">2Flow connects directly to your Shopify store via our Mintsoft WMS integration. New orders are pulled automatically every 15 minutes — no manual exports, no CSV uploads. Once an order is dispatched, the tracking number is pushed back to Shopify and your customer receives their shipping notification automatically. Inventory levels in Mintsoft sync back to Shopify in real time so your store never oversells.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          Which eCommerce platforms do you support besides Shopify?
+          <svg class="faq-q-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="faq-a">In addition to Shopify, 2Flow integrates with WooCommerce, Amazon (FBA and FBM), Etsy, TikTok Shop, Magento, and a range of other platforms via Mintsoft and direct API connections. If your platform isn't listed, speak to our team — we can assess whether a custom integration is possible for your stack.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          How quickly are orders dispatched after they appear in your system?
+          <svg class="faq-q-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="faq-a">Orders received and confirmed before our daily cut-off are picked, packed, and handed to carriers the same day. The 15-minute Shopify sync means orders arrive in our system quickly after being placed — and from there, our pick-and-pack team operates to a same-day dispatch standard. Contact us to confirm your specific cut-off time based on your carrier requirements.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          Can I set different packaging for different products?
+          <svg class="faq-q-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="faq-a">Yes. Per-SKU pack instructions are configured in Mintsoft at onboarding and applied automatically to every order. You can specify tissue, inserts, outer packaging, void fill, branded tape, and presentation standards per product. When a customer orders multiple SKUs with different pack specs, each is applied correctly within the same order — no manual intervention from your team or ours.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          How does inventory sync back to my Shopify store?
+          <svg class="faq-q-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="faq-a">Every pick, inbound receipt, and return is reflected in Mintsoft in real time and synced back to your Shopify store immediately. Your product pages show true available stock — not yesterday's count minus a rough estimate of today's orders. Low-stock alerts can be configured so you're notified before you run out, not after a customer has already ordered something you can't fulfil.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── RELATED SERVICES ── -->
+<section class="related-section" aria-labelledby="related-h2">
+  <div style="max-width:1080px; margin:0 auto;">
+    <div class="related-header">
+      <div class="section-label">Related Services</div>
+      <h2 id="related-h2">The full DTC stack.</h2>
+    </div>
+    <div class="related-grid">
+      <a href="/2flow-website/deliver/pick-and-pack/" class="related-card">
+        <div class="related-card-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/></svg>
+        </div>
+        <h3>Pick &amp; Pack</h3>
+        <p>The core fulfilment operation behind every DTC order — 99.8% accuracy, same-day dispatch, brand-aligned packaging from first order to thousandth.</p>
+        <span class="related-card-link">Learn more &#8594;</span>
+      </a>
+      <a href="/2flow-website/deliver/returns-refurbishment/" class="related-card">
+        <div class="related-card-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 102.13-9.36L1 10"/></svg>
+        </div>
+        <h3>Returns &amp; Refurbishment</h3>
+        <p>DTC returns received, graded, restocked, and synced back to your Shopify inventory automatically. No manual adjustments, no lost stock.</p>
+        <span class="related-card-link">Learn more &#8594;</span>
+      </a>
+      <a href="/2flow-website/deliver/finishing-personalisation/" class="related-card">
+        <div class="related-card-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+        </div>
+        <h3>Finishing &amp; Personalisation</h3>
+        <p>Engraving, branded tissue, ribbons, handwritten notes — the DTC unboxing experience that earns repeat orders and social posts.</p>
+        <span class="related-card-link">Learn more &#8594;</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ── CTA ── -->
+<section class="cta-section" aria-labelledby="cta-h2">
+  <h2 id="cta-h2">Let your store focus on selling.<br>We'll handle everything after checkout.</h2>
+  <p>Tell us your platform, your volumes, and your packaging requirements. We'll show you exactly how 2Flow connects to your store and what the operation looks like from day one.</p>
+  <div class="cta-btns">
+    <a href="/2flow-website/#contact" class="btn-primary">Book a Call</a>
+    <a href="/2flow-website/why-2flow/shopify/" class="btn-ghost">Shopify Integration Detail</a>
+  </div>
+  <p class="cta-note">No commitment required &bull; Dublin-based team &bull; Shopify, WooCommerce, Amazon, TikTok Shop and more</p>
+</section>
+
+</main>
+
+<!-- ── FOOTER ── -->
+<div id="site-footer"></div>
+<script src="/2flow-website/js/footer.js"></script>
+
+<script>
+  document.querySelectorAll('.faq-q').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const expanded = btn.getAttribute('aria-expanded') === 'true';
+      document.querySelectorAll('.faq-q').forEach(b => {
+        b.setAttribute('aria-expanded', 'false');
+        b.nextElementSibling.classList.remove('open');
+      });
+      if (!expanded) {
+        btn.setAttribute('aria-expanded', 'true');
+        btn.nextElementSibling.classList.add('open');
+      }
+    });
+  });
+</script>
+</body>
+</html>
