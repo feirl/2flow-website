@@ -1,117 +1,160 @@
 /* ============================================================
    2Flow — Global Navigation Component
-   Edit the data objects below to update nav across all pages.
+   Edit the data below to update nav across every page.
    ============================================================ */
 
 (function () {
 
-  var BASE = '/2flow-website';
+  var B = '/2flow-website';
   var path = window.location.pathname;
 
-  /* ── Data ───────────────────────────────────────────────── */
+  /* ── Mega menu data ─────────────────────────────────────── */
 
-  var deliverCols = [
+  var DELIVER_COLS = [
     {
-      label: 'Core Fulfilment', cls: 'green',
-      links: [
-        { href: BASE + '/deliver/pick-and-pack/',    title: 'Pick &amp; Pack',          desc: 'Accurate, brand-aligned fulfilment at speed',         bg: 'green-bg', icon: 'M20 7H4a2 2 0 00-2 2v10a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2zM16 3H8a2 2 0 00-2 2v2h12V5a2 2 0 00-2-2z' },
-        { href: BASE + '/deliver/kitting-bundling/', title: 'Kitting &amp; Bundling',   desc: 'Gift sets, subscriptions &amp; multi-SKU builds',      bg: 'green-bg', icon: 'M3 3h7v7H3zM14 3h7v7h-7zM3 14h7v7H3zM14 14h7v7h-7z' },
+      label: 'eCommerce Fulfilment', cls: 'green',
+      items: [
+        { href: B + '/deliver/pick-and-pack/',           title: 'Pick &amp; Pack',               desc: 'Accurate, brand-aligned fulfilment at speed' },
+        { href: B + '/deliver/kitting-bundling/',         title: 'Kitting &amp; Bundling',         desc: 'Gift sets, subscriptions, multi-SKU assembly' },
+        { href: B + '/deliver/returns-refurbishment/',    title: 'Returns &amp; Refurbishment',    desc: 'Fast, clean returns processing and restocking' },
+        { href: B + '/deliver/finishing-personalisation/',title: 'Finishing &amp; Personalisation',desc: 'Engraving, inserts, gift messaging, branded packaging' },
+        { href: B + '/deliver/compliance-preparation/',   title: 'Compliance Preparation',         desc: 'Regulated labelling, batch control, cold-chain handling' },
       ]
     },
     {
-      label: 'Value-Add', cls: 'navy',
-      links: [
-        { href: BASE + '/deliver/returns-refurbishment/',    title: 'Returns &amp; Refurbishment',     desc: 'Grade, repack, and restock returned goods',           bg: 'navy-bg', icon: 'M1 4v6h6M3.51 15a9 9 0 102.13-9.36L1 10' },
-        { href: BASE + '/deliver/finishing-personalisation/', title: 'Finishing &amp; Personalisation', desc: 'Inserts, labels, ribbons &amp; bespoke touches',       bg: 'navy-bg', icon: 'M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z' },
+      label: 'OmniChannel Specialists', cls: 'navy',
+      items: [
+        { href: B + '/deliver/retail-b2b-distribution/', title: 'Retail &amp; B2B Distribution',     desc: 'Compliance-ready wholesale and retail prep' },
+        { href: B + '/deliver/amazon-fulfilment/',        title: 'Amazon Fulfilment',                 desc: 'FBA prep, FBM dispatch, seller compliance' },
+        { href: B + '/deliver/tiktok-shop/',              title: 'TikTok Shop',                       desc: 'Integrated fulfilment for TikTok Shop sellers' },
+        { href: B + '/deliver/pop-up-shops/',             title: 'Pop-up &amp; Own-Store Fulfilment', desc: 'Replenishing your own retail locations and events' },
       ]
     },
     {
-      label: 'Compliance &amp; Retail', cls: 'slate',
-      links: [
-        { href: BASE + '/deliver/compliance-preparation/', title: 'Compliance Preparation', desc: 'Amazon FBA, retail labelling &amp; audit-ready', bg: 'slate-bg', icon: 'M9 11l3 3L22 4M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11' },
+      label: 'Beyond Fulfilment', cls: 'slate',
+      items: [
+        { href: B + '/deliver/live-commerce/',    title: 'Live Commerce Fulfilment',      desc: 'Rapid dispatch for live selling events and flash campaigns' },
+        { href: B + '/deliver/same-day-dublin/',  title: 'Same-Day Dublin Delivery',      desc: 'Cut-off noon, delivered same afternoon' },
+        { href: B + '/deliver/customer-service/', title: 'Outsourced Customer Service',   desc: 'Your brand voice, our team, seamless CX' },
       ]
     }
   ];
 
-  var solutionSectors = [
-    { href: BASE + '/solutions/beauty-personal-care/', label: 'Beauty &amp; Personal Care' },
-    { href: BASE + '/solutions/health-supplements/',   label: 'Health &amp; Supplements' },
-    { href: BASE + '/solutions/home-lifestyle/',       label: 'Home &amp; Lifestyle' },
-    { href: BASE + '/solutions/consumer-electronics/', label: 'Consumer Electronics' },
+  var SOLUTION_SECTORS = [
+    { href: B + '/solutions/beauty-personal-care/',  label: 'Beauty &amp; Personal Care' },
+    { href: B + '/solutions/health-supplements/',    label: 'Health &amp; Supplements' },
+    { href: B + '/solutions/medical-healthcare/',    label: 'Medical &amp; Healthcare' },
+    { href: B + '/solutions/home-lifestyle/',        label: 'Home &amp; Lifestyle' },
+    { href: B + '/solutions/consumer-electronics/',  label: 'Consumer Electronics' },
+    { href: B + '/solutions/office-products/',       label: 'Office Products' },
+    { href: B + '/solutions/industrial-scientific/', label: 'Industrial &amp; Scientific' },
   ];
 
-  var solutionStages = [
-    { href: BASE + '/solutions/dtc-brands-scaling/', label: 'DTC Brands Scaling Fast' },
-    { href: BASE + '/solutions/moving-into-retail/', label: 'Moving into Retail' },
-    { href: BASE + '/solutions/replacing-a-3pl/',    label: 'Replacing a 3PL' },
+  var SOLUTION_NEEDS = [
+    { href: B + '/solutions/subscription-brands/',  label: 'Subscription Brands' },
+    { href: B + '/solutions/dtc-brands-scaling/',   label: 'DTC Brands Scaling' },
+    { href: B + '/solutions/brand-product-launch/', label: 'Brand / Product Launch' },
+    { href: B + '/solutions/ireland-domestic/',     label: 'Ireland Domestic' },
+    { href: B + '/solutions/dublin-same-day/',      label: 'Dublin Same-Day' },
+    { href: B + '/solutions/eu-delivery/',          label: 'EU Delivery' },
+    { href: B + '/solutions/uk-rest-of-world/',     label: 'UK &amp; Rest of World' },
   ];
 
-  /* ── Build HTML strings ──────────────────────────────────── */
+  var WHY_LINKS = [
+    { href: B + '/why-2flow/our-difference',   label: 'Our Difference' },
+    { href: B + '/why-2flow/customer-stories', label: 'Customer Stories' },
+    { href: B + '/why-2flow/platform',         label: 'Our Platform' },
+    { href: B + '/why-2flow/integrations',     label: 'Integrations' },
+    { href: B + '/why-2flow/shopify',          label: 'Shopify Specialists' },
+    { href: B + '/why-2flow/meet-the-team',    label: 'Meet the Team' },
+    { href: B + '/why-2flow/virtual-tour',     label: 'Visit our Dublin Hub' },
+    { href: B + '/why-2flow/faqs',             label: 'FAQs' },
+  ];
 
-  function svg(d) {
-    return '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="' + d + '"/></svg>';
-  }
+  /* ── Build HTML ──────────────────────────────────────────── */
+
+  function active(href) { return path.indexOf(href) === 0 ? ' active' : ''; }
 
   function buildDeliverMega() {
     var cols = '';
-    for (var i = 0; i < deliverCols.length; i++) {
-      var col = deliverCols[i];
+    for (var i = 0; i < DELIVER_COLS.length; i++) {
+      var col = DELIVER_COLS[i];
       var items = '';
-      for (var j = 0; j < col.links.length; j++) {
-        var l = col.links[j];
-        var active = (path.indexOf(l.href) === 0) ? ' active' : '';
-        items += '<a href="' + l.href + '" class="mega-item' + active + '">' +
-          '<div class="mega-item-icon ' + l.bg + '">' + svg(l.icon) + '</div>' +
+      for (var j = 0; j < col.items.length; j++) {
+        var l = col.items[j];
+        items += '<a href="' + l.href + '" class="mega-item' + active(l.href) + '">' +
+          '<div class="mega-item-icon ' + col.cls + '-bg"></div>' +
           '<div class="mega-item-text"><h4>' + l.title + '</h4><p>' + l.desc + '</p></div>' +
           '</a>';
       }
       cols += '<div class="mega-col"><div class="mega-col-label ' + col.cls + '">' + col.label + '</div>' + items + '</div>';
     }
-    return '<div id="deliverMega" class="mega-menu"><div class="mega-inner deliver-grid">' + cols + '</div></div>';
+    return '<div id="deliverMega" class="mega-menu">' +
+      '<div class="mega-inner deliver-grid">' + cols + '</div>' +
+      '</div>';
   }
 
   function buildSolutionsMega() {
     var s1 = '', s2 = '';
-    for (var i = 0; i < solutionSectors.length; i++) {
-      var l = solutionSectors[i];
-      s1 += '<a href="' + l.href + '" class="mega-link' + (path.indexOf(l.href) === 0 ? ' active' : '') + '"><strong>' + l.label + '</strong></a>';
+    for (var i = 0; i < SOLUTION_SECTORS.length; i++) {
+      var l = SOLUTION_SECTORS[i];
+      s1 += '<a href="' + l.href + '" class="mega-link' + active(l.href) + '"><strong>' + l.label + '</strong></a>';
     }
-    for (var i = 0; i < solutionStages.length; i++) {
-      var l = solutionStages[i];
-      s2 += '<a href="' + l.href + '" class="mega-link' + (path.indexOf(l.href) === 0 ? ' active' : '') + '"><strong>' + l.label + '</strong></a>';
+    for (var i = 0; i < SOLUTION_NEEDS.length; i++) {
+      var l = SOLUTION_NEEDS[i];
+      s2 += '<a href="' + l.href + '" class="mega-link' + active(l.href) + '"><strong>' + l.label + '</strong></a>';
     }
-    return '<div id="solutionsMega" class="mega-menu"><div class="mega-inner solutions-grid">' +
+    return '<div id="solutionsMega" class="mega-menu">' +
+      '<div class="mega-inner solutions-grid">' +
       '<div class="mega-col"><div class="mega-group-title">By Sector</div>' + s1 + '</div>' +
-      '<div class="mega-col"><div class="mega-group-title">By Stage</div>' + s2 + '</div>' +
+      '<div class="mega-col"><div class="mega-group-title">By Need</div>' + s2 + '</div>' +
       '</div></div>';
+  }
+
+  function buildWhyDropdown() {
+    var links = '';
+    for (var i = 0; i < WHY_LINKS.length; i++) {
+      links += '<a href="' + WHY_LINKS[i].href + '">' + WHY_LINKS[i].label + '</a>';
+    }
+    return links;
   }
 
   var inDeliver  = path.indexOf('/deliver/')   !== -1;
   var inSolution = path.indexOf('/solutions/') !== -1;
+  var inWhy      = path.indexOf('/why-2flow')  !== -1;
 
-  var html =
+  var NAV_HTML =
     '<nav id="mainNav" role="navigation" aria-label="Main navigation">' +
-      '<a href="' + BASE + '/" class="nav-logo" aria-label="2Flow home">' +
-        '<img src="' + BASE + '/Images/2flow-logo.png" alt="2Flow" width="120" height="34">' +
+      '<a href="' + B + '/" class="nav-logo" aria-label="2Flow home">' +
+        '<img src="' + B + '/Images/2flow-logo.png" alt="2Flow" width="120" height="34">' +
       '</a>' +
       '<div class="nav-links" id="navLinks">' +
-        '<div class="nav-item">' +
-          '<a href="javascript:void(0)" id="js-deliver-btn"' + (inDeliver ? ' class="nav-active"' : '') + '>What We Deliver <span class="nav-chevron">&#9662;</span></a>' +
+
+        '<div class="nav-item" id="js-deliver-trigger">' +
+          '<a href="' + B + '/deliver/"' + (inDeliver ? ' class="nav-active"' : '') + '>' +
+            'What We Deliver <span class="nav-chevron">&#9662;</span>' +
+          '</a>' +
         '</div>' +
-        '<div class="nav-item">' +
-          '<a href="javascript:void(0)" id="js-solutions-btn"' + (inSolution ? ' class="nav-active"' : '') + '>Solutions For <span class="nav-chevron">&#9662;</span></a>' +
+
+        '<div class="nav-item" id="js-solutions-trigger">' +
+          '<a href="' + B + '/solutions/"' + (inSolution ? ' class="nav-active"' : '') + '>' +
+            'Solutions For <span class="nav-chevron">&#9662;</span>' +
+          '</a>' +
         '</div>' +
+
         '<div class="nav-item has-dropdown">' +
-          '<a href="#">About <span class="nav-chevron">&#9662;</span></a>' +
-          '<div class="dropdown">' +
-            '<a href="' + BASE + '/#about">Our Story</a>' +
-            '<a href="' + BASE + '/#team">The Team</a>' +
-            '<a href="' + BASE + '/#careers">Careers</a>' +
-          '</div>' +
+          '<a href="' + B + '/why-2flow/"' + (inWhy ? ' class="nav-active"' : '') + '>' +
+            'Why 2Flow <span class="nav-chevron">&#9662;</span>' +
+          '</a>' +
+          '<div class="dropdown">' + buildWhyDropdown() + '</div>' +
         '</div>' +
-        '<div class="nav-item"><a href="' + BASE + '/#contact">Contact</a></div>' +
+
+        '<div class="nav-item"><a href="' + B + '/pricing/">Pricing</a></div>' +
+
       '</div>' +
-      '<div class="nav-cta-wrap"><a href="' + BASE + '/#contact" class="nav-cta">Get a Quote</a></div>' +
+      '<div class="nav-cta-wrap">' +
+        '<a href="' + B + '/#contact" class="nav-cta">Book a Call</a>' +
+      '</div>' +
       '<button class="hamburger" id="js-hamburger" aria-label="Open menu" aria-expanded="false">' +
         '<span></span><span></span><span></span>' +
       '</button>' +
@@ -120,95 +163,103 @@
     buildSolutionsMega();
 
   /* ── Inject ──────────────────────────────────────────────── */
-
   var placeholder = document.getElementById('site-nav');
   if (!placeholder) return;
-  placeholder.innerHTML = html;
+  placeholder.innerHTML = NAV_HTML;
 
-  /* ── References (elements exist in DOM immediately after innerHTML) ── */
-
-  var mainNav      = document.getElementById('mainNav');
-  var navLinks     = document.getElementById('navLinks');
-  var hamburger    = document.getElementById('js-hamburger');
-  var deliverBtn   = document.getElementById('js-deliver-btn');
-  var solutionsBtn = document.getElementById('js-solutions-btn');
-  var deliverMega  = document.getElementById('deliverMega');
+  /* ── Element refs ────────────────────────────────────────── */
+  var mainNav       = document.getElementById('mainNav');
+  var navLinks      = document.getElementById('navLinks');
+  var hamburger     = document.getElementById('js-hamburger');
+  var deliverTrig   = document.getElementById('js-deliver-trigger');
+  var solutionsTrig = document.getElementById('js-solutions-trigger');
+  var deliverMega   = document.getElementById('deliverMega');
   var solutionsMega = document.getElementById('solutionsMega');
 
-  /* ── Mega menu open/close ────────────────────────────────── */
+  /* ── Hover mega menu logic ───────────────────────────────── */
+  var currentMega = null;
+  var closeTimer  = null;
 
-  function showMega(mega) {
-    mega.style.display = 'block';
-  }
-
-  function hideMega(mega) {
-    mega.style.display = '';  // revert to CSS default (none)
-  }
-
-  var openMega = null;
-
-  function toggleMega(mega, btn) {
-    if (openMega === mega) {
-      // Already open — close it
-      hideMega(mega);
-      openMega = null;
-    } else {
-      // Close whatever was open
-      if (openMega) hideMega(openMega);
-      showMega(mega);
-      openMega = mega;
+  function openMega(mega) {
+    clearTimeout(closeTimer);
+    if (currentMega && currentMega !== mega) {
+      currentMega.style.display = 'none';
     }
+    mega.style.display = 'block';
+    currentMega = mega;
   }
 
-  function closeAll() {
-    if (openMega) { hideMega(openMega); openMega = null; }
+  function scheduleClose() {
+    clearTimeout(closeTimer);
+    closeTimer = setTimeout(function() {
+      if (currentMega) {
+        currentMega.style.display = 'none';
+        currentMega = null;
+      }
+    }, 120);
   }
 
-  /* ── Event listeners ─────────────────────────────────────── */
-
-  if (deliverBtn && deliverMega) {
-    deliverBtn.onclick = function(e) {
-      e.preventDefault();
-      toggleMega(deliverMega, deliverBtn);
-    };
+  function cancelClose() {
+    clearTimeout(closeTimer);
   }
 
-  if (solutionsBtn && solutionsMega) {
-    solutionsBtn.onclick = function(e) {
-      e.preventDefault();
-      toggleMega(solutionsMega, solutionsBtn);
-    };
+  function wireHover(trigger, mega) {
+    if (!trigger || !mega) return;
+
+    trigger.addEventListener('mouseenter', function() { openMega(mega); });
+    trigger.addEventListener('mouseleave', scheduleClose);
+
+    mega.addEventListener('mouseenter', cancelClose);
+    mega.addEventListener('mouseleave', scheduleClose);
   }
 
-  // Close on click outside
-  document.onclick = function(e) {
-    if (!openMega) return;
+  wireHover(deliverTrig, deliverMega);
+  wireHover(solutionsTrig, solutionsMega);
+
+  // Also support click/tap (for keyboard and touch users)
+  function bindClick(trigger, mega) {
+    if (!trigger || !mega) return;
+    trigger.querySelector('a').addEventListener('click', function(e) {
+      if (window.innerWidth < 1024) {
+        e.preventDefault();
+        var isOpen = mega.style.display === 'block';
+        if (currentMega) { currentMega.style.display = 'none'; currentMega = null; }
+        if (!isOpen) { mega.style.display = 'block'; currentMega = mega; }
+      }
+    });
+  }
+
+  bindClick(deliverTrig, deliverMega);
+  bindClick(solutionsTrig, solutionsMega);
+
+  // Close on outside click
+  document.addEventListener('click', function(e) {
+    if (!currentMega) return;
     var node = e.target;
-    // Walk up the DOM — if we hit deliverBtn, solutionsBtn, or an open mega, keep it open
-    while (node && node !== document) {
-      if (node === deliverBtn || node === solutionsBtn || node === deliverMega || node === solutionsMega) return;
+    while (node) {
+      if (node === deliverTrig || node === solutionsTrig || node === deliverMega || node === solutionsMega) return;
       node = node.parentNode;
     }
-    closeAll();
-  };
+    if (currentMega) { currentMega.style.display = 'none'; currentMega = null; }
+  });
 
-  document.onkeydown = function(e) {
-    if (e.key === 'Escape') closeAll();
-  };
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && currentMega) { currentMega.style.display = 'none'; currentMega = null; }
+  });
 
-  // Hamburger
+  /* ── Hamburger ───────────────────────────────────────────── */
   if (hamburger && navLinks) {
-    hamburger.onclick = function() {
+    hamburger.addEventListener('click', function() {
       var open = navLinks.classList.toggle('open');
       hamburger.setAttribute('aria-expanded', String(open));
-    };
+    });
   }
 
-  // Scroll: nav background flip
+  /* ── Scroll: nav background flip ────────────────────────── */
   function onScroll() {
     if (mainNav) mainNav.classList.toggle('nav-scrolled', window.scrollY > 20);
   }
-  window.onscroll = onScroll;
+  window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
 
 })();
