@@ -1,133 +1,105 @@
 /* ============================================================
    2Flow — Global Navigation Component
-   To add or change a nav item, edit the data below.
-   Drop <div id="site-nav"></div> + this script tag at the
-   very top of every page's <body>.
+   Edit the data objects below to update nav across all pages.
    ============================================================ */
 
 (function () {
+
   var BASE = '/2flow-website';
   var path = window.location.pathname;
 
-  /* ── Nav data ──────────────────────────────────────────── */
+  /* ── Data ───────────────────────────────────────────────── */
 
-  var deliverItems = [
+  var deliverCols = [
     {
-      col: 'Core Fulfilment', colClass: 'green',
-      items: [
-        {
-          href: BASE + '/deliver/pick-and-pack/',
-          iconBg: 'green-bg',
-          title: 'Pick &amp; Pack',
-          desc: 'Accurate, brand-aligned fulfilment at speed',
-          icon: '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 7H4a2 2 0 00-2 2v10a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z"/><path d="M16 3H8a2 2 0 00-2 2v2h12V5a2 2 0 00-2-2z"/></svg>',
-        },
-        {
-          href: BASE + '/deliver/kitting-bundling/',
-          iconBg: 'green-bg',
-          title: 'Kitting &amp; Bundling',
-          desc: 'Gift sets, subscriptions &amp; multi-SKU builds',
-          icon: '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>',
-        },
+      label: 'Core Fulfilment', cls: 'green',
+      links: [
+        { href: BASE + '/deliver/pick-and-pack/',    title: 'Pick &amp; Pack',          desc: 'Accurate, brand-aligned fulfilment at speed',         bg: 'green-bg', icon: 'M20 7H4a2 2 0 00-2 2v10a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2zM16 3H8a2 2 0 00-2 2v2h12V5a2 2 0 00-2-2z' },
+        { href: BASE + '/deliver/kitting-bundling/', title: 'Kitting &amp; Bundling',   desc: 'Gift sets, subscriptions &amp; multi-SKU builds',      bg: 'green-bg', icon: 'M3 3h7v7H3zM14 3h7v7h-7zM3 14h7v7H3zM14 14h7v7h-7z' },
       ]
     },
     {
-      col: 'Value-Add', colClass: 'navy',
-      items: [
-        {
-          href: BASE + '/deliver/returns-refurbishment/',
-          iconBg: 'navy-bg',
-          title: 'Returns &amp; Refurbishment',
-          desc: 'Grade, repack, and restock returned goods',
-          icon: '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 102.13-9.36L1 10"/></svg>',
-        },
-        {
-          href: BASE + '/deliver/finishing-personalisation/',
-          iconBg: 'navy-bg',
-          title: 'Finishing &amp; Personalisation',
-          desc: 'Inserts, labels, ribbons &amp; bespoke touches',
-          icon: '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>',
-        },
+      label: 'Value-Add', cls: 'navy',
+      links: [
+        { href: BASE + '/deliver/returns-refurbishment/',    title: 'Returns &amp; Refurbishment',     desc: 'Grade, repack, and restock returned goods',           bg: 'navy-bg', icon: 'M1 4v6h6M3.51 15a9 9 0 102.13-9.36L1 10' },
+        { href: BASE + '/deliver/finishing-personalisation/', title: 'Finishing &amp; Personalisation', desc: 'Inserts, labels, ribbons &amp; bespoke touches',       bg: 'navy-bg', icon: 'M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z' },
       ]
     },
     {
-      col: 'Compliance &amp; Retail', colClass: 'slate',
-      items: [
-        {
-          href: BASE + '/deliver/compliance-preparation/',
-          iconBg: 'slate-bg',
-          title: 'Compliance Preparation',
-          desc: 'Amazon FBA, retail labelling &amp; audit-ready',
-          icon: '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>',
-        },
+      label: 'Compliance &amp; Retail', cls: 'slate',
+      links: [
+        { href: BASE + '/deliver/compliance-preparation/', title: 'Compliance Preparation', desc: 'Amazon FBA, retail labelling &amp; audit-ready', bg: 'slate-bg', icon: 'M9 11l3 3L22 4M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11' },
       ]
     }
   ];
 
-  var solutionsSectors = [
+  var solutionSectors = [
     { href: BASE + '/solutions/beauty-personal-care/', label: 'Beauty &amp; Personal Care' },
-    { href: BASE + '/solutions/health-supplements/',  label: 'Health &amp; Supplements' },
-    { href: BASE + '/solutions/home-lifestyle/',      label: 'Home &amp; Lifestyle' },
-    { href: BASE + '/solutions/consumer-electronics/',label: 'Consumer Electronics' },
+    { href: BASE + '/solutions/health-supplements/',   label: 'Health &amp; Supplements' },
+    { href: BASE + '/solutions/home-lifestyle/',       label: 'Home &amp; Lifestyle' },
+    { href: BASE + '/solutions/consumer-electronics/', label: 'Consumer Electronics' },
   ];
 
-  var solutionsStages = [
+  var solutionStages = [
     { href: BASE + '/solutions/dtc-brands-scaling/', label: 'DTC Brands Scaling Fast' },
     { href: BASE + '/solutions/moving-into-retail/', label: 'Moving into Retail' },
-    { href: BASE + '/solutions/replacing-a-3pl/',   label: 'Replacing a 3PL' },
+    { href: BASE + '/solutions/replacing-a-3pl/',    label: 'Replacing a 3PL' },
   ];
 
-  /* ── Helpers ───────────────────────────────────────────── */
-  function isActive(href) {
-    return path === href || path.indexOf(href.replace(/\/$/, '')) === 0;
+  /* ── Build HTML strings ──────────────────────────────────── */
+
+  function svg(d) {
+    return '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="' + d + '"/></svg>';
   }
 
-  function buildDeliverCols() {
-    return deliverItems.map(function(group) {
-      var items = group.items.map(function(item) {
-        var cls = isActive(item.href) ? ' active' : '';
-        return '<a href="' + item.href + '" class="mega-item' + cls + '">' +
-          '<div class="mega-item-icon ' + item.iconBg + '">' + item.icon + '</div>' +
-          '<div class="mega-item-text"><h4>' + item.title + '</h4><p>' + item.desc + '</p></div>' +
+  function buildDeliverMega() {
+    var cols = '';
+    for (var i = 0; i < deliverCols.length; i++) {
+      var col = deliverCols[i];
+      var items = '';
+      for (var j = 0; j < col.links.length; j++) {
+        var l = col.links[j];
+        var active = (path.indexOf(l.href) === 0) ? ' active' : '';
+        items += '<a href="' + l.href + '" class="mega-item' + active + '">' +
+          '<div class="mega-item-icon ' + l.bg + '">' + svg(l.icon) + '</div>' +
+          '<div class="mega-item-text"><h4>' + l.title + '</h4><p>' + l.desc + '</p></div>' +
           '</a>';
-      }).join('');
-      return '<div class="mega-col"><div class="mega-col-label ' + group.colClass + '">' + group.col + '</div>' + items + '</div>';
-    }).join('');
+      }
+      cols += '<div class="mega-col"><div class="mega-col-label ' + col.cls + '">' + col.label + '</div>' + items + '</div>';
+    }
+    return '<div id="deliverMega" class="mega-menu"><div class="mega-inner deliver-grid">' + cols + '</div></div>';
   }
 
-  function buildSolutionsCols() {
-    var sectors = solutionsSectors.map(function(l) {
-      var cls = isActive(l.href) ? ' active' : '';
-      return '<a href="' + l.href + '" class="mega-link' + cls + '"><strong>' + l.label + '</strong></a>';
-    }).join('');
-    var stages = solutionsStages.map(function(l) {
-      var cls = isActive(l.href) ? ' active' : '';
-      return '<a href="' + l.href + '" class="mega-link' + cls + '"><strong>' + l.label + '</strong></a>';
-    }).join('');
-    return '<div class="mega-col"><div class="mega-group-title">By Sector</div>' + sectors + '</div>' +
-           '<div class="mega-col"><div class="mega-group-title">By Stage</div>' + stages + '</div>';
+  function buildSolutionsMega() {
+    var s1 = '', s2 = '';
+    for (var i = 0; i < solutionSectors.length; i++) {
+      var l = solutionSectors[i];
+      s1 += '<a href="' + l.href + '" class="mega-link' + (path.indexOf(l.href) === 0 ? ' active' : '') + '"><strong>' + l.label + '</strong></a>';
+    }
+    for (var i = 0; i < solutionStages.length; i++) {
+      var l = solutionStages[i];
+      s2 += '<a href="' + l.href + '" class="mega-link' + (path.indexOf(l.href) === 0 ? ' active' : '') + '"><strong>' + l.label + '</strong></a>';
+    }
+    return '<div id="solutionsMega" class="mega-menu"><div class="mega-inner solutions-grid">' +
+      '<div class="mega-col"><div class="mega-group-title">By Sector</div>' + s1 + '</div>' +
+      '<div class="mega-col"><div class="mega-group-title">By Stage</div>' + s2 + '</div>' +
+      '</div></div>';
   }
 
-  /* ── Active top-level detection ────────────────────────── */
-  var deliverActive  = path.indexOf('/deliver/')   !== -1 ? ' nav-active' : '';
-  var solutionActive = path.indexOf('/solutions/') !== -1 ? ' nav-active' : '';
+  var inDeliver  = path.indexOf('/deliver/')   !== -1;
+  var inSolution = path.indexOf('/solutions/') !== -1;
 
-  /* ── Build nav HTML ─────────────────────────────────────── */
-  var navHTML =
+  var html =
     '<nav id="mainNav" role="navigation" aria-label="Main navigation">' +
       '<a href="' + BASE + '/" class="nav-logo" aria-label="2Flow home">' +
         '<img src="' + BASE + '/Images/2flow-logo.png" alt="2Flow" width="120" height="34">' +
       '</a>' +
       '<div class="nav-links" id="navLinks">' +
-        '<div class="nav-item" id="deliverNavItem">' +
-          '<a href="#" class="' + deliverActive.trim() + '" id="deliverNavBtn" aria-haspopup="true" aria-expanded="false">' +
-            'What We Deliver <span class="nav-chevron">&#9662;</span>' +
-          '</a>' +
+        '<div class="nav-item">' +
+          '<a href="javascript:void(0)" id="js-deliver-btn"' + (inDeliver ? ' class="nav-active"' : '') + '>What We Deliver <span class="nav-chevron">&#9662;</span></a>' +
         '</div>' +
-        '<div class="nav-item" id="solutionsNavItem">' +
-          '<a href="#" class="' + solutionActive.trim() + '" id="solutionsNavBtn" aria-haspopup="true" aria-expanded="false">' +
-            'Solutions For <span class="nav-chevron">&#9662;</span>' +
-          '</a>' +
+        '<div class="nav-item">' +
+          '<a href="javascript:void(0)" id="js-solutions-btn"' + (inSolution ? ' class="nav-active"' : '') + '>Solutions For <span class="nav-chevron">&#9662;</span></a>' +
         '</div>' +
         '<div class="nav-item has-dropdown">' +
           '<a href="#">About <span class="nav-chevron">&#9662;</span></a>' +
@@ -139,93 +111,104 @@
         '</div>' +
         '<div class="nav-item"><a href="' + BASE + '/#contact">Contact</a></div>' +
       '</div>' +
-      '<div class="nav-cta-wrap">' +
-        '<a href="' + BASE + '/#contact" class="nav-cta">Get a Quote</a>' +
-      '</div>' +
-      '<button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">' +
+      '<div class="nav-cta-wrap"><a href="' + BASE + '/#contact" class="nav-cta">Get a Quote</a></div>' +
+      '<button class="hamburger" id="js-hamburger" aria-label="Open menu" aria-expanded="false">' +
         '<span></span><span></span><span></span>' +
       '</button>' +
     '</nav>' +
+    buildDeliverMega() +
+    buildSolutionsMega();
 
-    '<div class="mega-menu" id="deliverMega" role="region" aria-label="What We Deliver">' +
-      '<div class="mega-inner deliver-grid">' + buildDeliverCols() + '</div>' +
-    '</div>' +
+  /* ── Inject ──────────────────────────────────────────────── */
 
-    '<div class="mega-menu" id="solutionsMega" role="region" aria-label="Solutions For">' +
-      '<div class="mega-inner solutions-grid">' + buildSolutionsCols() + '</div>' +
-    '</div>';
-
-  /* ── Inject HTML ────────────────────────────────────────── */
   var placeholder = document.getElementById('site-nav');
   if (!placeholder) return;
-  placeholder.innerHTML = navHTML;
+  placeholder.innerHTML = html;
 
-  /* ── Wire up events (elements exist now — no need to wait) ─ */
+  /* ── References (elements exist in DOM immediately after innerHTML) ── */
 
-  // Scroll: logo + text colour flip
-  var mainNav = document.getElementById('mainNav');
-  function onScroll() {
-    if (mainNav) mainNav.classList.toggle('nav-scrolled', window.scrollY > 20);
-  }
-  window.addEventListener('scroll', onScroll, { passive: true });
-  onScroll(); // run once on load
-
-  // Hamburger
-  var hamburger = document.getElementById('hamburger');
-  var navLinks  = document.getElementById('navLinks');
-  if (hamburger && navLinks) {
-    hamburger.addEventListener('click', function() {
-      var open = navLinks.classList.toggle('open');
-      hamburger.setAttribute('aria-expanded', String(open));
-    });
-  }
-
-  // Mega menus
-  var deliverBtn    = document.getElementById('deliverNavBtn');
-  var deliverMega   = document.getElementById('deliverMega');
-  var solutionsBtn  = document.getElementById('solutionsNavBtn');
+  var mainNav      = document.getElementById('mainNav');
+  var navLinks     = document.getElementById('navLinks');
+  var hamburger    = document.getElementById('js-hamburger');
+  var deliverBtn   = document.getElementById('js-deliver-btn');
+  var solutionsBtn = document.getElementById('js-solutions-btn');
+  var deliverMega  = document.getElementById('deliverMega');
   var solutionsMega = document.getElementById('solutionsMega');
 
-  function closeAll() {
-    if (deliverMega)   { deliverMega.classList.remove('active');   }
-    if (solutionsMega) { solutionsMega.classList.remove('active'); }
-    if (deliverBtn)    { deliverBtn.setAttribute('aria-expanded', 'false');   }
-    if (solutionsBtn)  { solutionsBtn.setAttribute('aria-expanded', 'false'); }
+  /* ── Mega menu open/close ────────────────────────────────── */
+
+  function showMega(mega) {
+    mega.style.display = 'block';
   }
 
-  function toggle(mega, btn) {
-    var isOpen = mega.classList.contains('active');
-    closeAll();
-    if (!isOpen) {
-      mega.classList.add('active');
-      btn.setAttribute('aria-expanded', 'true');
+  function hideMega(mega) {
+    mega.style.display = '';  // revert to CSS default (none)
+  }
+
+  var openMega = null;
+
+  function toggleMega(mega, btn) {
+    if (openMega === mega) {
+      // Already open — close it
+      hideMega(mega);
+      openMega = null;
+    } else {
+      // Close whatever was open
+      if (openMega) hideMega(openMega);
+      showMega(mega);
+      openMega = mega;
     }
   }
 
+  function closeAll() {
+    if (openMega) { hideMega(openMega); openMega = null; }
+  }
+
+  /* ── Event listeners ─────────────────────────────────────── */
+
   if (deliverBtn && deliverMega) {
-    deliverBtn.addEventListener('click', function(e) {
+    deliverBtn.onclick = function(e) {
       e.preventDefault();
-      toggle(deliverMega, deliverBtn);
-    });
+      toggleMega(deliverMega, deliverBtn);
+    };
   }
 
   if (solutionsBtn && solutionsMega) {
-    solutionsBtn.addEventListener('click', function(e) {
+    solutionsBtn.onclick = function(e) {
       e.preventDefault();
-      toggle(solutionsMega, solutionsBtn);
-    });
+      toggleMega(solutionsMega, solutionsBtn);
+    };
   }
 
-  // Close on outside click or Escape
-  document.addEventListener('click', function(e) {
-    if (!e.target.closest('#deliverNavItem') && !e.target.closest('#deliverMega') &&
-        !e.target.closest('#solutionsNavItem') && !e.target.closest('#solutionsMega')) {
-      closeAll();
+  // Close on click outside
+  document.onclick = function(e) {
+    if (!openMega) return;
+    var node = e.target;
+    // Walk up the DOM — if we hit deliverBtn, solutionsBtn, or an open mega, keep it open
+    while (node && node !== document) {
+      if (node === deliverBtn || node === solutionsBtn || node === deliverMega || node === solutionsMega) return;
+      node = node.parentNode;
     }
-  });
+    closeAll();
+  };
 
-  document.addEventListener('keydown', function(e) {
+  document.onkeydown = function(e) {
     if (e.key === 'Escape') closeAll();
-  });
+  };
+
+  // Hamburger
+  if (hamburger && navLinks) {
+    hamburger.onclick = function() {
+      var open = navLinks.classList.toggle('open');
+      hamburger.setAttribute('aria-expanded', String(open));
+    };
+  }
+
+  // Scroll: nav background flip
+  function onScroll() {
+    if (mainNav) mainNav.classList.toggle('nav-scrolled', window.scrollY > 20);
+  }
+  window.onscroll = onScroll;
+  onScroll();
 
 })();
