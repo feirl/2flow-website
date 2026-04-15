@@ -28,8 +28,6 @@
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
 
-    /* Logo: white when transparent, original when scrolled */
-
     /* ── GRIDS & CARDS ── */
     .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
     .card { border: 1px solid var(--border-light); border-radius: 10px; padding: 28px; background: var(--bg-white); transition: all 0.2s; }
@@ -37,7 +35,7 @@
     .card-icon { width: 44px; height: 44px; border-radius: 10px; background: rgba(133,176,32,0.1); display: flex; align-items: center; justify-content: center; margin-bottom: 16px; color: var(--brand-primary); }
     .card-link { color: var(--brand-primary); font-size: 13px; font-weight: 600; text-decoration: none; margin-top: 14px; display: inline-block; }
 
-    /* ── HERO V2: FULL-BLEED ── */
+    /* ── HERO: VIDEO FULLBLEED ── */
     .hero-fullbleed {
       position: relative;
       min-height: 100vh;
@@ -45,19 +43,34 @@
       align-items: center;
       overflow: hidden;
     }
-    .hero-bg {
+
+    /* Video takes the same position as the old hero-bg image */
+    .hero-video {
       position: absolute;
       inset: 0;
       width: 100%;
       height: 100%;
       object-fit: cover;
-      /* Anchor to left-centre so the fireplace/armchair side is visible on wide screens */
-      object-position: 10% center;
+      object-position: center center;
+      z-index: 0;
     }
-    /* Gradient: dense dark on left (text side), fades to lighter on right (face/package side) */
+
+    /* Poster image sits behind the video — shown while video loads or on reduced-motion */
+    .hero-poster {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center center;
+      z-index: 0;
+    }
+
+    /* Gradient: dense dark on left (text side), fades to lighter on right */
     .hero-overlay {
       position: absolute;
       inset: 0;
+      z-index: 1;
       background:
         linear-gradient(to bottom, transparent 55%, rgba(5,15,25,0.85) 80%, rgba(5,15,25,0.97) 100%),
         linear-gradient(
@@ -67,7 +80,9 @@
           rgba(5, 15, 25, 0.30) 58%,
           rgba(5, 15, 25, 0.05) 100%
         );
+      pointer-events: none;
     }
+
     .hero-content-wrap {
       position: relative;
       z-index: 2;
@@ -79,6 +94,7 @@
     .hero-text-col { max-width: 480px; }
     .hero-btns { display: flex; gap: 12px; margin-top: 32px; flex-wrap: wrap; }
     .hero-badges { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 24px; }
+
     /* Trust badges: dark-background variant */
     .trust-badge {
       display: inline-flex; align-items: center; gap: 6px;
@@ -164,14 +180,19 @@
     .cta-section .btn-ghost { color: white; border-color: rgba(255,255,255,0.3); }
     .cta-section .btn-ghost:hover { border-color: white; }
 
-    /* ── RESPONSIVE ── */
-    @media (max-width: 1024px) {
+    /* ── REDUCED MOTION: pause video, show poster ── */
+    @media (prefers-reduced-motion: reduce) {
+      .hero-video { display: none; }
     }
+
+    /* ── RESPONSIVE ── */
     @media (max-width: 768px) {
       .nav-links.open { display: flex; }
+
       /* Hero mobile */
       .hero-fullbleed { min-height: 100svh; align-items: flex-end; }
-      .hero-bg { object-position: 70% center; }
+      .hero-video,
+      .hero-poster { object-position: 60% center; }
       .hero-overlay {
         background: linear-gradient(
           to top,
@@ -202,10 +223,7 @@
       .shopify-strip-outer { padding: 28px 20px !important; }
       .shopify-strip { flex-direction: column; align-items: flex-start !important; gap: 20px !important; }
     }
-
-    /* Skip link */
-    /* Focus visible */
-    </style>
+  </style>
 
   <script type="application/ld+json">
   {
@@ -249,32 +267,37 @@
 <script src="/2flow-website/js/nav.js"></script>
 
 <main id="main-content">
-<!-- HERO V2: FULL-BLEED -->
-<!--
-  IMAGE SETUP:
-  1. Save the editorial image to: Images/hero-editorial.jpg
-  2. For best performance, convert to WebP: Images/hero-editorial.webp (with .jpg fallback)
-  3. Recommended dimensions: 2560 x 1440px at 85% JPEG quality (~400KB)
-  4. Mobile crop: for best mobile results, create a portrait crop at ~900x1200px
-     saved as Images/hero-editorial-mobile.jpg and add a <source> below.
--->
+
+<!-- ── HERO: VIDEO FULLBLEED ── -->
 <section class="hero-fullbleed">
-  <picture>
-    <!-- Optional: mobile portrait crop (portrait-focused, tighter on the subject) -->
-    <!-- <source media="(max-width: 768px)" srcset="Images/hero-editorial-mobile.webp" type="image/webp"> -->
-    <!-- <source media="(max-width: 768px)" srcset="Images/hero-editorial-mobile.jpg"> -->
-    <!-- Desktop WebP -->
-    <source srcset="Images/hero-home.webp" type="image/webp">
-    <!-- Fallback JPG -->
-    <img
-      class="hero-bg"
-      src="Images/hero-home.jpg"
-      alt="2Flow team member packing orders in the Dublin fulfilment warehouse."
-      loading="eager"
-      fetchpriority="high"
-    >
-  </picture>
-  <div class="hero-overlay"></div>
+
+  <!-- Poster image: shown instantly while video buffers, and for reduced-motion users -->
+  <img
+    class="hero-poster"
+    src="Images/hero-home.jpg"
+    alt=""
+    aria-hidden="true"
+    loading="eager"
+    fetchpriority="high"
+  >
+
+  <!-- Video background: autoplay, muted, looped. playsinline prevents iOS fullscreen takeover. -->
+  <video
+    class="hero-video"
+    autoplay
+    loop
+    muted
+    playsinline
+    preload="auto"
+    disablepictureinpicture
+    poster="Images/hero-home.jpg"
+    aria-hidden="true"
+  >
+    <source src="Images/2flow-moment.mp4" type="video/mp4">
+  </video>
+
+  <div class="hero-overlay" aria-hidden="true"></div>
+
   <div class="hero-content-wrap">
     <div class="hero-text-col">
       <div class="section-label" style="color:rgba(133,176,32,0.95);">Ireland's eCommerce Fulfilment Partner</div>
@@ -293,6 +316,7 @@
       </div>
     </div>
   </div>
+
   <div class="hero-logos">
     <div class="hero-logos-inner">
       <div class="hero-logos-label">Trusted by Ireland's fastest-growing brands</div>
@@ -307,6 +331,7 @@
     </div>
   </div>
 </section>
+
 <!-- STATS STRIP -->
 <div class="stats-strip">
   <div class="stats-strip-inner">
@@ -452,7 +477,6 @@
   </div>
 </section>
 
-
 <!-- SOLUTIONS FOR -->
 <section class="solutions-section">
   <div class="solutions-inner">
@@ -528,6 +552,8 @@
   <p class="cta-note">No commitment required &bull; Tailored to your product and volumes &bull; Dublin-based team</p>
 </section>
 
+</main>
+
 <!-- ── FOOTER (injected by footer.js) ── -->
 <div id="site-footer"></div>
 <script src="/2flow-website/js/footer.js"></script>
@@ -597,6 +623,12 @@
       });
     }
   });
+
+  // ── Reduced motion: pause video ──
+  const heroVideo = document.querySelector('.hero-video');
+  if (heroVideo && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    heroVideo.pause();
+  }
 </script>
 </body>
 </html>
