@@ -272,14 +272,17 @@
 <section class="hero-fullbleed">
 
   <!-- Poster image: shown instantly while video buffers, and for reduced-motion users -->
-  <img
-    class="hero-poster"
-    src="Images/hero-home.jpg"
-    alt=""
-    aria-hidden="true"
-    loading="eager"
-    fetchpriority="high"
-  >
+  <picture>
+    <source srcset="Images/hero-video-poster.webp" type="image/webp">
+    <img
+      class="hero-poster"
+      src="Images/hero-video-poster.jpg"
+      alt=""
+      aria-hidden="true"
+      loading="eager"
+      fetchpriority="high"
+    >
+  </picture>
 
   <!-- Video background: autoplay, muted, looped. playsinline prevents iOS fullscreen takeover. -->
   <video
@@ -290,7 +293,7 @@
     playsinline
     preload="auto"
     disablepictureinpicture
-    poster="Images/hero-home.jpg"
+    poster="Images/hero-video-poster.jpg"
     aria-hidden="true"
   >
     <source src="Images/2flow-moment.mp4" type="video/mp4">
