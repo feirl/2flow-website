@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sectors We Serve | 2Flow Ireland's eCommerce Fulfilment Partner</title>
+  <meta name="description" content="2Flow provides specialist fulfilment for Health & Beauty, Fashion, Food & Supplements, Electronics, Homeware and more. Sector-specific expertise built into every operation.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://2flow.ie/sectors/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Sectors We Serve | 2Flow">
+  <meta property="og:description" content="Sector-specific fulfilment expertise for Ireland's fastest-growing eCommerce brands.">
+  <meta property="og:url" content="https://2flow.ie/sectors/">
+  <meta property="og:site_name" content="2Flow">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+
+  <link rel="stylesheet" href="/2flow-website/css/site.css">
+
+  <style>
+
+    /* ── HERO ── */
+    .hero-feature {
+      background: #0D1A2E;
+      padding: calc(var(--nav-height) + 90px) 40px 90px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-feature-bg {
+      position: absolute; inset: 0;
+      width: 100%; height: 100%;
+      object-fit: cover; object-position: center 30%;
+      z-index: 0;
+    }
+    .hero-feature-overlay {
+      position: absolute; inset: 0; z-index: 1;
+      background:
+        linear-gradient(100deg,
+          rgba(13,26,46,0.93) 0%,
+          rgba(13,26,46,0.78) 40%,
+          rgba(13,26,46,0.50) 70%,
+          rgba(13,26,46,0.30) 100%),
+        linear-gradient(to bottom, transparent 50%, rgba(13,26,46,0.70) 100%);
+      pointer-events: none;
+    }
+    .hero-inner {
+      position: relative; z-index: 2;
+      max-width: 1080px; margin: 0 auto;
+    }
+    .hero-breadcrumb {
+      display: flex; align-items: center; gap: 6px;
+      font-size: 12px; color: rgba(255,255,255,0.45);
+      margin-bottom: 24px; flex-wrap: wrap;
+    }
+    .hero-breadcrumb a { color: rgba(255,255,255,0.45); text-decoration: none; transition: color 0.15s; }
+    .hero-breadcrumb a:hover { color: var(--brand-primary); }
+    .hero-breadcrumb span { color: rgba(255,255,255,0.25); }
+    .hero-feature h1 { color: white; max-width: 680px; margin-bottom: 20px; }
+    .hero-feature h1 em { font-style: normal; color: var(--brand-primary); }
+    .hero-sub {
+      font-size: 17px; line-height: 1.7;
+      color: rgba(255,255,255,0.70);
+      max-width: 560px; margin-bottom: 36px;
+    }
+    .hero-btns { display: flex; gap: 12px; flex-wrap: wrap; }
+
+    /* ── STAT STRIP ── */
+    .stat-strip {
+      background: var(--bg-white);
+      border-bottom: 1px solid var(--border-light);
+      padding: 40px;
+    }
+    .stat-strip-inner {
+      max-width: 1080px; margin: 0 auto;
+      display: flex; justify-content: space-between;
+      align-items: center; gap: 32px; flex-wrap: wrap;
+    }
+    .stat-strip-intro {
+      max-width: 420px;
+    }
+    .stat-strip-intro p {
+      font-size: 15px; color: var(--text-secondary); line-height: 1.7; margin-top: 10px;
+    }
+    .stat-strip-nums {
+      display: flex; gap: 48px; flex-wrap: wrap;
+    }
+    .strip-stat { text-align: center; }
+    .strip-stat-num {
+      font-size: 36px; font-weight: 700;
+      color: var(--brand-primary); line-height: 1;
+      margin-bottom: 6px;
+    }
+    .strip-stat-label {
+      font-size: 13px; color: var(--text-secondary); line-height: 1.4;
+    }
+
+    /* ── SECTOR GRID ── */
+    .sectors-section {
+      background: var(--bg-light);
+      padding: 80px 40px;
+    }
+    .sectors-section-inner { max-width: 1080px; margin: 0 auto; }
+    .sectors-header { text-align: center; max-width: 600px; margin: 0 auto 56px; }
+    .sectors-header h2 { margin-bottom: 14px; }
+    .sectors-header p { font-size: 16px; color: var(--text-secondary); line-height: 1.7; }
+
+    .sectors-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .sector-card {
+      position: relative;
+      border-radius: 14px;
+      overflow: hidden;
+      min-height: 320px;
+      display: flex; flex-direction: column; justify-content: flex-end;
+      text-decoration: none;
+      transition: transform 0.25s, box-shadow 0.25s;
+    }
+    .sector-card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0,0,0,0.18); }
+    .sector-card-bg {
+      position: absolute; inset: 0;
+      background-size: cover; background-position: center;
+      transition: transform 0.4s;
+    }
+    .sector-card:hover .sector-card-bg { transform: scale(1.04); }
+    .sector-card-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(to top, rgba(5,15,25,0.92) 0%, rgba(5,15,25,0.50) 55%, rgba(5,15,25,0.15) 100%);
+    }
+    .sector-card-body {
+      position: relative; z-index: 2;
+      padding: 28px;
+    }
+    .sector-tag {
+      display: inline-block;
+      background: var(--brand-primary);
+      color: white;
+      font-size: 10px; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 0.08em;
+      padding: 4px 10px; border-radius: 4px;
+      margin-bottom: 12px;
+    }
+    .sector-card h3 {
+      color: white; font-size: 20px;
+      margin-bottom: 10px; line-height: 1.25;
+    }
+    .sector-bullets {
+      list-style: none; margin: 0 0 18px; padding: 0;
+    }
+    .sector-bullets li {
+      font-size: 13px; color: rgba(255,255,255,0.72);
+      padding: 4px 0;
+      display: flex; align-items: flex-start; gap: 8px;
+      line-height: 1.45;
+    }
+    .sector-bullets li::before {
+      content: '✓';
+      color: var(--brand-primary);
+      font-weight: 700; flex-shrink: 0;
+      margin-top: 1px;
+    }
+    .sector-card-link {
+      font-size: 13px; font-weight: 600;
+      color: var(--brand-primary);
+      display: flex; align-items: center; gap: 6px;
+    }
+
+    /* Sector card colour palettes (used when no photo) */
+    .sc-beauty   { background: linear-gradient(135deg, #1a0a2e 0%, #2d1a4e 100%); }
+    .sc-fashion  { background: linear-gradient(135deg, #0d1a2e 0%, #1a2d3e 100%); }
+    .sc-food     { background: linear-gradient(135deg, #0a2010 0%, #1a3a1a 100%); }
+    .sc-electronics { background: linear-gradient(135deg, #1a1a0a 0%, #2e2e10 100%); }
+    .sc-homeware { background: linear-gradient(135deg, #2e1a0a 0%, #3e2a10 100%); }
+    .sc-pets     { background: linear-gradient(135deg, #0a1a2e 0%, #102040 100%); }
+
+    /* ── SPOTLIGHT ── */
+    .spotlight-section { background: var(--bg-white); padding: 80px 40px; }
+    .spotlight-inner { max-width: 1080px; margin: 0 auto; }
+    .spotlight-header { max-width: 600px; margin-bottom: 64px; }
+    .spotlight-header h2 { margin-bottom: 14px; }
+    .spotlight-header p { font-size: 16px; color: var(--text-secondary); line-height: 1.7; }
+
+    .spotlight-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+      margin-bottom: 80px;
+    }
+    .spotlight-row:last-child { margin-bottom: 0; }
+    .spotlight-row.reverse { direction: rtl; }
+    .spotlight-row.reverse > * { direction: ltr; }
+
+    .spotlight-img-wrap {
+      border-radius: 14px;
+      overflow: hidden;
+      aspect-ratio: 4/3;
+    }
+    .spotlight-img-wrap img {
+      width: 100%; height: 100%;
+      object-fit: cover; object-position: center;
+      display: block;
+    }
+    .spotlight-copy .section-label { margin-bottom: 14px; }
+    .spotlight-copy h3 { font-size: 26px; margin-bottom: 16px; }
+    .spotlight-copy p { font-size: 15px; color: var(--text-secondary); line-height: 1.75; margin-bottom: 16px; }
+    .spotlight-list {
+      list-style: none; padding: 0; margin: 0 0 28px;
+    }
+    .spotlight-list li {
+      display: flex; align-items: flex-start; gap: 10px;
+      padding: 8px 0;
+      font-size: 14px; color: var(--text-primary);
+      border-bottom: 1px solid var(--border-light);
+      line-height: 1.5;
+    }
+    .spotlight-list li::before {
+      content: '✓';
+      color: var(--brand-primary);
+      font-weight: 700; flex-shrink: 0;
+      margin-top: 1px;
+    }
+    .spotlight-quote {
+      background: var(--bg-light);
+      border-left: 3px solid var(--brand-primary);
+      border-radius: 0 8px 8px 0;
+      padding: 20px 24px;
+      margin-top: 24px;
+    }
+    .spotlight-quote p {
+      font-size: 14px; font-style: italic;
+      color: var(--text-primary); line-height: 1.65; margin: 0 0 8px;
+    }
+    .spotlight-quote cite {
+      font-size: 12px; color: var(--text-tertiary);
+      text-transform: uppercase; letter-spacing: 0.07em;
+      font-weight: 600; font-style: normal;
+    }
+
+    /* ── TESTIMONIALS ── */
+    .testimonials-section { background: #0D1A2E; padding: 80px 40px; }
+    .testimonials-inner { max-width: 1080px; margin: 0 auto; }
+    .testimonials-header { text-align: center; max-width: 540px; margin: 0 auto 56px; }
+    .testimonials-header .section-label { color: rgba(133,176,32,0.9); }
+    .testimonials-header h2 { color: white; margin-bottom: 14px; }
+    .testimonials-header p { font-size: 15px; color: rgba(255,255,255,0.55); line-height: 1.7; }
+    .testimonials-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .testimonial-card {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.09);
+      border-radius: 12px; padding: 28px;
+    }
+    .t-sector-tag {
+      font-size: 10px; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 0.08em;
+      color: var(--brand-primary); margin-bottom: 16px;
+      display: block;
+    }
+    .t-quote-mark { font-size: 36px; color: var(--brand-primary); line-height: 1; margin-bottom: 12px; font-family: Georgia, serif; }
+    .t-quote-text { font-size: 14px; color: rgba(255,255,255,0.78); line-height: 1.75; font-style: italic; margin-bottom: 20px; }
+    .t-source { font-size: 11px; color: rgba(255,255,255,0.38); text-transform: uppercase; letter-spacing: 0.08em; font-weight: 600; }
+
+    /* ── CTA ── */
+    .cta-section {
+      background: var(--brand-primary);
+      padding: 80px 40px;
+      text-align: center;
+    }
+    .cta-section h2 { color: white; margin-bottom: 16px; }
+    .cta-section p { color: rgba(255,255,255,0.80); font-size: 17px; max-width: 540px; margin: 0 auto 36px; line-height: 1.7; }
+    .cta-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+    .btn-white { background: white; color: var(--brand-primary); padding: 13px 28px; border-radius: 6px; font-weight: 700; font-size: 15px; text-decoration: none; transition: background 0.15s; }
+    .btn-white:hover { background: rgba(255,255,255,0.90); }
+    .btn-outline-white { background: transparent; color: white; padding: 12px 28px; border-radius: 6px; font-weight: 600; font-size: 15px; border: 2px solid rgba(255,255,255,0.55); text-decoration: none; transition: border-color 0.15s; }
+    .btn-outline-white:hover { border-color: white; }
+    .cta-note { margin-top: 20px; font-size: 13px; color: rgba(255,255,255,0.55); }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 900px) {
+      .sectors-grid { grid-template-columns: repeat(2, 1fr); }
+      .spotlight-row, .spotlight-row.reverse { grid-template-columns: 1fr; direction: ltr; gap: 32px; }
+      .testimonials-grid { grid-template-columns: 1fr; gap: 16px; }
+      .stat-strip-inner { flex-direction: column; align-items: flex-start; gap: 28px; }
+      .stat-strip-nums { gap: 32px; }
+    }
+    @media (max-width: 600px) {
+      .hero-feature { padding: calc(var(--nav-height) + 60px) 24px 60px; }
+      .sectors-section, .spotlight-section, .testimonials-section, .cta-section { padding: 60px 24px; }
+      .stat-strip { padding: 32px 24px; }
+      .sectors-grid { grid-template-columns: 1fr; }
+      h1 { font-size: 32px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── NAV ── -->
+<div id="site-nav"></div>
+<script src="/2flow-website/js/nav.js"></script>
+
+<main>
+
+<!-- ── HERO ── -->
+<section class="hero-feature" aria-labelledby="hero-h1">
+  <img class="hero-feature-bg" src="/2flow-website/Images/hero-editorial.jpg" alt="" aria-hidden="true" loading="eager" fetchpriority="high">
+  <div class="hero-feature-overlay" aria-hidden="true"></div>
+  <div class="hero-inner">
+    <nav class="hero-breadcrumb" aria-label="Breadcrumb">
+      <a href="/2flow-website/">Home</a>
+      <span>›</span>
+      <span>Sectors</span>
+    </nav>
+    <div class="section-label" style="color:rgba(133,176,32,0.95);">Who We Work With</div>
+    <h1 id="hero-h1">Fulfilment Built Around <em>Your Sector</em></h1>
+    <p class="hero-sub">Every sector has its own rhythms, regulations, and customer expectations. We've built operational expertise across six of Ireland's fastest-growing eCommerce categories — so your fulfilment works the way your business does.</p>
+    <div class="hero-btns">
+      <a href="/2flow-website/#contact" class="btn-primary">Book a Call</a>
+      <a href="/2flow-website/deliver/" class="btn-ghost btn-ghost-light">Explore Our Services</a>
+    </div>
+  </div>
+</section>
+
+<!-- ── STAT STRIP ── -->
+<section class="stat-strip">
+  <div class="stat-strip-inner">
+    <div class="stat-strip-intro">
+      <div class="section-label">Built on Operational Depth</div>
+      <p>Generic fulfilment creates avoidable problems. Sector knowledge means we anticipate your challenges before they become your customers' problems.</p>
+    </div>
+    <div class="stat-strip-nums">
+      <div class="strip-stat">
+        <div class="strip-stat-num">6</div>
+        <div class="strip-stat-label">Sectors Served</div>
+      </div>
+      <div class="strip-stat">
+        <div class="strip-stat-num">200+</div>
+        <div class="strip-stat-label">Active Brands</div>
+      </div>
+      <div class="strip-stat">
+        <div class="strip-stat-num">99.8%</div>
+        <div class="strip-stat-label">Pick Accuracy</div>
+      </div>
+      <div class="strip-stat">
+        <div class="strip-stat-num">Same Day</div>
+        <div class="strip-stat-label">Dispatch Cut-off</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── SECTOR GRID ── -->
+<section class="sectors-section" aria-labelledby="sectors-h2">
+  <div class="sectors-section-inner">
+    <div class="sectors-header">
+      <div class="section-label">The Sectors We Serve</div>
+      <h2 id="sectors-h2">We know your category inside out.</h2>
+      <p>From compliance-sensitive supplements to high-SKU fashion, our team has hands-on experience with the operational demands of each sector.</p>
+    </div>
+
+    <div class="sectors-grid">
+
+      <!-- Health & Beauty -->
+      <a href="#health-beauty" class="sector-card">
+        <div class="sector-card-bg sc-beauty"></div>
+        <div class="sector-card-overlay"></div>
+        <div class="sector-card-body">
+          <span class="sector-tag">Health &amp; Beauty</span>
+          <h3>Skincare, Supplements &amp; Wellness</h3>
+          <ul class="sector-bullets">
+            <li>Batch &amp; expiry date tracking per SKU</li>
+            <li>Fragile product handling &amp; kitting</li>
+            <li>Subscription box assembly</li>
+          </ul>
+          <span class="sector-card-link">Learn more &#8594;</span>
+        </div>
+      </a>
+
+      <!-- Fashion & Apparel -->
+      <a href="#fashion" class="sector-card">
+        <div class="sector-card-bg sc-fashion"></div>
+        <div class="sector-card-overlay"></div>
+        <div class="sector-card-body">
+          <span class="sector-tag">Fashion &amp; Apparel</span>
+          <h3>Clothing, Accessories &amp; Footwear</h3>
+          <ul class="sector-bullets">
+            <li>Size &amp; variant picking at scale</li>
+            <li>Returns grading &amp; restock</li>
+            <li>Branded tissue &amp; presentation</li>
+          </ul>
+          <span class="sector-card-link">Learn more &#8594;</span>
+        </div>
+      </a>
+
+      <!-- Food & Supplements -->
+      <a href="#food" class="sector-card">
+        <div class="sector-card-bg sc-food"></div>
+        <div class="sector-card-overlay"></div>
+        <div class="sector-card-body">
+          <span class="sector-tag">Food &amp; Supplements</span>
+          <h3>Nutrition, Health Foods &amp; Beverages</h3>
+          <ul class="sector-bullets">
+            <li>FIFO stock rotation as standard</li>
+            <li>Compliance labelling &amp; lot control</li>
+            <li>Temperature-aware storage</li>
+          </ul>
+          <span class="sector-card-link">Learn more &#8594;</span>
+        </div>
+      </a>
+
+      <!-- Consumer Electronics -->
+      <a href="#electronics" class="sector-card">
+        <div class="sector-card-bg sc-electronics"></div>
+        <div class="sector-card-overlay"></div>
+        <div class="sector-card-body">
+          <span class="sector-tag">Consumer Electronics</span>
+          <h3>Gadgets, Accessories &amp; Tech</h3>
+          <ul class="sector-bullets">
+            <li>Serial number &amp; IMEI tracking</li>
+            <li>Anti-static &amp; protective packing</li>
+            <li>Amazon FBA &amp; FBM prep</li>
+          </ul>
+          <span class="sector-card-link">Learn more &#8594;</span>
+        </div>
+      </a>
+
+      <!-- Homeware & Lifestyle -->
+      <a href="#homeware" class="sector-card">
+        <div class="sector-card-bg sc-homeware"></div>
+        <div class="sector-card-overlay"></div>
+        <div class="sector-card-body">
+          <span class="sector-tag">Homeware &amp; Lifestyle</span>
+          <h3>Home, Garden &amp; Gift</h3>
+          <ul class="sector-bullets">
+            <li>Fragile &amp; oversized item handling</li>
+            <li>Gift wrapping &amp; personalisation</li>
+            <li>Retail-ready wholesale packing</li>
+          </ul>
+          <span class="sector-card-link">Learn more &#8594;</span>
+        </div>
+      </a>
+
+      <!-- Pet Products -->
+      <a href="#pets" class="sector-card">
+        <div class="sector-card-bg sc-pets"></div>
+        <div class="sector-card-overlay"></div>
+        <div class="sector-card-body">
+          <span class="sector-tag">Pet Products</span>
+          <h3>Food, Accessories &amp; Supplements</h3>
+          <ul class="sector-bullets">
+            <li>Heavy SKU &amp; bulk order fulfilment</li>
+            <li>Subscription &amp; repeat order handling</li>
+            <li>Expiry &amp; batch compliance</li>
+          </ul>
+          <span class="sector-card-link">Learn more &#8594;</span>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── SPOTLIGHT ── -->
+<section class="spotlight-section" aria-labelledby="spotlight-h2">
+  <div class="spotlight-inner">
+    <div class="spotlight-header">
+      <div class="section-label">Sector Deep Dives</div>
+      <h2 id="spotlight-h2">Where we've built the deepest expertise.</h2>
+      <p>Three sectors where 2Flow has developed specialist workflows, compliance knowledge, and operational patterns that generic 3PLs simply don't have.</p>
+    </div>
+
+    <!-- Health & Beauty -->
+    <div class="spotlight-row" id="health-beauty">
+      <div class="spotlight-img-wrap">
+        <img src="/2flow-website/Images/hero-editorial-b.jpg" alt="Health and beauty fulfilment" loading="lazy">
+      </div>
+      <div class="spotlight-copy">
+        <div class="section-label">Health &amp; Beauty</div>
+        <h3>Precision fulfilment for your most sensitive SKUs.</h3>
+        <p>Health and beauty brands face a double challenge: product fragility and regulatory requirements. We handle both. Batch tracking, expiry monitoring, and FIFO rotation are built into every Health &amp; Beauty operation from day one.</p>
+        <ul class="spotlight-list">
+          <li>Batch &amp; expiry date tracking across every SKU</li>
+          <li>Kitting for gift sets, subscription boxes &amp; bundles</li>
+          <li>Branded tissue, ribbon &amp; insert placement per spec</li>
+          <li>Fragile item packing with void fill to brand standard</li>
+          <li>Returns graded &amp; restocked or quarantined</li>
+        </ul>
+        <div class="spotlight-quote">
+          <p>"2Flow handle our subscription boxes every month without a single picking error. The attention to pack presentation is exactly what our customers expect."</p>
+          <cite>Skincare Brand — Dublin</cite>
+        </div>
+      </div>
+    </div>
+
+    <!-- Fashion -->
+    <div class="spotlight-row reverse" id="fashion">
+      <div class="spotlight-img-wrap">
+        <img src="/2flow-website/Images/hero-home.jpg" alt="Fashion fulfilment Ireland" loading="lazy">
+      </div>
+      <div class="spotlight-copy">
+        <div class="section-label">Fashion &amp; Apparel</div>
+        <h3>High-SKU fulfilment that keeps up with your catalogue.</h3>
+        <p>Fashion is the most variant-heavy category in eCommerce — sizes, colours, bundles, and seasonal launches make accuracy non-negotiable. Our pick-and-pack team operates to 99.8% accuracy even at peak volumes.</p>
+        <ul class="spotlight-list">
+          <li>Size &amp; colour variant picking with barcode verification</li>
+          <li>Returns graded, steamed &amp; restocked to sellable</li>
+          <li>Branded tissue, hangtags &amp; presentation packaging</li>
+          <li>Same-day dispatch for orders before cut-off</li>
+          <li>TikTok Shop &amp; social commerce fulfilment</li>
+        </ul>
+        <div class="spotlight-quote">
+          <p>"Switching to 2Flow cut our return-to-stock time from 5 days to same-day. That alone paid for the move in the first month."</p>
+          <cite>Fashion Brand — Ireland</cite>
+        </div>
+      </div>
+    </div>
+
+    <!-- Food & Supplements -->
+    <div class="spotlight-row" id="food">
+      <div class="spotlight-img-wrap">
+        <img src="/2flow-website/Images/hero-editorial.jpg" alt="Food and supplements fulfilment" loading="lazy">
+      </div>
+      <div class="spotlight-copy">
+        <div class="section-label">Food &amp; Supplements</div>
+        <h3>Compliance-ready from day one.</h3>
+        <p>Food and supplement brands operate in a tightly regulated space. Lot control, FIFO rotation, and labelling compliance aren't optional extras — they're the baseline. We've built our food and supplement operation around these requirements, so you never have to ask twice.</p>
+        <ul class="spotlight-list">
+          <li>FIFO stock rotation enforced at system level</li>
+          <li>Lot &amp; batch traceability for every despatch</li>
+          <li>Compliance labelling &amp; re-labelling support</li>
+          <li>Temperature-aware storage for sensitive products</li>
+          <li>Subscription &amp; repeat order management</li>
+        </ul>
+        <div class="spotlight-quote">
+          <p>"We needed a 3PL that understood our compliance obligations. 2Flow's team knew exactly what lot tracking and FIFO meant before we finished the sentence."</p>
+          <cite>Nutrition Brand — Ireland</cite>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ── TESTIMONIALS ── -->
+<section class="testimonials-section" aria-labelledby="testimonials-h2">
+  <div class="testimonials-inner">
+    <div class="testimonials-header">
+      <div class="section-label">What Our Clients Say</div>
+      <h2 id="testimonials-h2">Trusted across every sector.</h2>
+      <p>Brands across Ireland's eCommerce categories rely on 2Flow to get orders out accurately and on time, every time.</p>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <span class="t-sector-tag">Health &amp; Beauty</span>
+        <div class="t-quote-mark">&ldquo;</div>
+        <p class="t-quote-text">Every subscription box goes out perfectly packed. Our customers notice — we get compliments on the unboxing every single month.</p>
+        <div class="t-source">Wellness Brand — Dublin</div>
+      </div>
+      <div class="testimonial-card">
+        <span class="t-sector-tag">Fashion &amp; Apparel</span>
+        <div class="t-quote-mark">&ldquo;</div>
+        <p class="t-quote-text">Peak season used to terrify us. With 2Flow, our Black Friday went smoother than any regular week had been with our old 3PL.</p>
+        <div class="t-source">Clothing Brand — Ireland</div>
+      </div>
+      <div class="testimonial-card">
+        <span class="t-sector-tag">Food &amp; Supplements</span>
+        <div class="t-quote-mark">&ldquo;</div>
+        <p class="t-quote-text">Batch tracking, FIFO, compliance labels — they had it all set up before our first inbound arrived. Zero hand-holding required.</p>
+        <div class="t-source">Nutrition Brand — Ireland</div>
+      </div>
+      <div class="testimonial-card">
+        <span class="t-sector-tag">Consumer Electronics</span>
+        <div class="t-quote-mark">&ldquo;</div>
+        <p class="t-quote-text">Amazon FBA prep was always a bottleneck for us. 2Flow turned it into a non-issue — correctly labelled, on time, every shipment.</p>
+        <div class="t-source">Tech Accessories Brand — Dublin</div>
+      </div>
+      <div class="testimonial-card">
+        <span class="t-sector-tag">Homeware &amp; Lifestyle</span>
+        <div class="t-quote-mark">&ldquo;</div>
+        <p class="t-quote-text">Fragile goods, gift wrapping, handwritten cards — they handle every element exactly as briefed. Not once have we had a breakage complaint.</p>
+        <div class="t-source">Gift &amp; Homeware Brand — Ireland</div>
+      </div>
+      <div class="testimonial-card">
+        <span class="t-sector-tag">Pet Products</span>
+        <div class="t-quote-mark">&ldquo;</div>
+        <p class="t-quote-text">Our subscription customers are the most loyal we have. 2Flow keeps those orders going out on time every week without us having to chase anything.</p>
+        <div class="t-source">Pet Nutrition Brand — Ireland</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CTA ── -->
+<section class="cta-section" aria-labelledby="cta-h2">
+  <h2 id="cta-h2">Tell us your sector.<br>We'll show you how we handle it.</h2>
+  <p>Every brand we work with starts with a conversation. Tell us your category, your volumes, and your fulfilment pain points — we'll show you exactly how 2Flow operates for businesses like yours.</p>
+  <div class="cta-btns">
+    <a href="/2flow-website/#contact" class="btn-white">Book a Call</a>
+    <a href="/2flow-website/deliver/" class="btn-outline-white">Explore Our Services</a>
+  </div>
+  <p class="cta-note">No commitment required &bull; Dublin-based team &bull; Same-day response</p>
+</section>
+
+</main>
+
+<!-- ── FOOTER ── -->
+<div id="site-footer"></div>
+<script src="/2flow-website/js/footer.js"></script>
+
+</body>
+</html>
