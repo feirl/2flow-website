@@ -82,6 +82,16 @@
       pointer-events: none;
     }
 
+    .hero-video-fade {
+      position: absolute;
+      inset: 0;
+      z-index: 2;
+      background: #000;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 1.5s ease-in;
+    }
+
     .hero-content-wrap {
       position: relative;
       z-index: 2;
@@ -296,6 +306,7 @@
   </video>
 
   <div class="hero-overlay" aria-hidden="true"></div>
+  <div class="hero-video-fade" aria-hidden="true"></div>
 
   <div class="hero-content-wrap">
     <div class="hero-text-col">
@@ -627,6 +638,35 @@
   const heroVideo = document.querySelector('.hero-video');
   if (heroVideo && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
     heroVideo.pause();
+  }
+
+  // ── Video end fade to black then fade back in on loop ──
+  const videoFade = document.querySelector('.hero-video-fade');
+  if (heroVideo && videoFade) {
+    const FADE_BEFORE = 2.5;
+    let lastTime = 0;
+    let fading = false;
+
+    heroVideo.addEventListener('timeupdate', () => {
+      const current = heroVideo.currentTime;
+      const duration = heroVideo.duration;
+      if (!duration) return;
+
+      // Detect loop: currentTime jumped backwards significantly
+      if (lastTime > duration - FADE_BEFORE && current < FADE_BEFORE) {
+        fading = false;
+        videoFade.style.transition = 'opacity 1s ease-out';
+        videoFade.style.opacity = 0;
+      }
+      lastTime = current;
+
+      const remaining = duration - current;
+      if (remaining <= FADE_BEFORE && !fading) {
+        fading = true;
+        videoFade.style.transition = 'opacity ' + FADE_BEFORE + 's ease-in';
+        videoFade.style.opacity = 1;
+      }
+    });
   }
 </script>
 </body>
