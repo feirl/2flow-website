@@ -5,6 +5,8 @@
    Page-specific CSS stays in each page's <style> block.
    ============================================================ */
 
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap');
+
 /* ── VARIABLES ── */
 :root {
   --brand-primary:       #85B020;
@@ -44,7 +46,7 @@ body {
 :focus-visible { outline: 3px solid #85B020; outline-offset: 2px; }
 
 /* ── TYPOGRAPHY ── */
-h1 { font-size: 44px; font-weight: 700; line-height: 1.12; color: var(--text-primary); }
+h1 { font-size: 60px; font-weight: 700; font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1; letter-spacing: -0.07em; color: var(--text-primary); }
 h2 { font-size: 30px; font-weight: 700; line-height: 1.25; color: var(--text-primary); }
 h3 { font-size: 20px; font-weight: 700; line-height: 1.30; color: var(--text-primary); }
 h4 { font-size: 16px; font-weight: 700; line-height: 1.40; color: var(--text-primary); }
