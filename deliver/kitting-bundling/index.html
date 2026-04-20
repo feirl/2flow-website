@@ -85,7 +85,22 @@
 
     /* ── HERO (FEATURE PAGE — DARK 2-COL) ── */
     .hero-feature { background: #0D1A2E; padding: calc(var(--nav-height) + 80px) 40px 80px; position: relative; overflow: hidden; }
-    .hero-feature::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 70% 60% at 80% 50%, rgba(133,176,32,0.07) 0%, transparent 70%); pointer-events: none; }
+    .hero-feature-bg {
+      position: absolute; inset: 0;
+      width: 100%; height: 100%;
+      object-fit: cover; object-position: center;
+      z-index: 0;
+      pointer-events: none;
+    }
+    .hero-feature::before {
+      content: ''; position: absolute; inset: 0; z-index: 1;
+      background: linear-gradient(100deg,
+        rgba(13,26,46,0.90) 0%,
+        rgba(13,26,46,0.75) 50%,
+        rgba(13,26,46,0.50) 75%,
+        rgba(13,26,46,0.20) 100%);
+      pointer-events: none;
+    }
     .hero-feature-inner { max-width: 1080px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
     .hero-breadcrumb { display: flex; align-items: center; gap: 6px; font-size: 12px; color: rgba(255,255,255,0.45); margin-bottom: 20px; flex-wrap: wrap; }
     .hero-breadcrumb a { color: rgba(255,255,255,0.45); text-decoration: none; transition: color 0.15s; }
@@ -99,9 +114,9 @@
     .trust-badge { display: inline-flex; align-items: center; gap: 6px; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15); border-radius: 99px; padding: 5px 14px; font-size: 12px; color: rgba(255,255,255,0.75); font-weight: 500; }
     .trust-badge svg { flex-shrink: 0; }
     .hero-visual { display: flex; flex-direction: column; gap: 16px; }
-    .hero-stat-card { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.10); border-radius: 12px; padding: 24px 28px; }
+    .hero-stat-card { background: rgba(5,15,30,0.55); border: 1px solid rgba(255,255,255,0.22); border-radius: 12px; padding: 24px 28px; backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
     .hero-stat-card .stat-big { font-size: 40px; font-weight: 700; color: var(--brand-primary); line-height: 1; margin-bottom: 6px; }
-    .hero-stat-card .stat-label { font-size: 14px; color: rgba(255,255,255,0.65); line-height: 1.5; }
+    .hero-stat-card .stat-label { font-size: 14px; color: rgba(255,255,255,0.88); line-height: 1.5; }
     .hero-stat-card.small { padding: 18px 24px; }
     .hero-stat-card.small .stat-big { font-size: 28px; }
     .hero-stats-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
@@ -228,7 +243,8 @@
 <!-- ── HERO ── -->
 <main id="main-content">
 <section class="hero-feature" aria-labelledby="hero-h1">
-  <div class="hero-feature-inner">
+  <img class="hero-feature-bg" src="/2flow-website/Images/aurele2.jpg" alt="" aria-hidden="true" loading="eager" fetchpriority="high">
+  <div class="hero-feature-inner" style="position:relative;z-index:2;">
     <div>
       <nav class="hero-breadcrumb" aria-label="Breadcrumb">
         <span>eCommerce Fulfilment</span>
