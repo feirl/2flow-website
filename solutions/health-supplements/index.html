@@ -56,7 +56,7 @@
       position: absolute; inset: 0;
       width: 100%; height: 100%;
       object-fit: cover; object-position: center;
-      z-index: 0;
+      z-index: 0; pointer-events: none;
     }
     .hero-feature::before {
       content: '';
@@ -233,7 +233,15 @@
 
 <!-- ── HERO ── -->
 <section class="hero-feature" aria-labelledby="hero-heading">
-  <img class="hero-feature-bg" src="/2flow-website/Images/marciano.jpg" alt="" aria-hidden="true" loading="eager" fetchpriority="high">
+  <video
+    class="hero-feature-bg"
+    autoplay loop muted playsinline
+    preload="auto" disablepictureinpicture
+    aria-hidden="true"
+    poster="/2flow-website/Images/marciano.jpg"
+  >
+    <source src="/2flow-website/Images/marciano.mp4" type="video/mp4">
+  </video>
   <div class="hero-feature-inner">
     <div class="hero-text-col">
       <nav class="hero-breadcrumb" aria-label="Breadcrumb">
