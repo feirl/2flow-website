@@ -1,5 +1,5 @@
 /* ============================================================
-   2Flow — Global Navigation Component
+   2Flow. Global Navigation Component
    Edit the data below to update nav across every page.
    ============================================================ */
 

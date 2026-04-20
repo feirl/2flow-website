@@ -1,5 +1,5 @@
 /* ============================================================
-   2Flow — Global Footer Component
+   2Flow. Global Footer Component
    To add or change footer links, edit the data below.
    Drop <div id="site-footer"></div> + this script at the
    bottom of every page's <body>.
