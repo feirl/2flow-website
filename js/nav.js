@@ -55,9 +55,8 @@
     {
       label: 'Beyond Fulfilment', cls: 'slate',
       items: [
-        { href: B + '/deliver/live-commerce/',     icon: 'live',        title: 'Live Commerce Fulfilment',      desc: 'Rapid dispatch for live selling events and flash campaigns' },
-        { href: B + '/deliver/same-day-dublin/',   icon: 'sameday',     title: 'Same-Day Dublin Delivery',      desc: 'Cut-off noon, delivered same afternoon' },
-        { href: B + '/deliver/customer-service/',  icon: 'custservice', title: 'Outsourced Customer Service',   desc: 'Your brand voice, our team, seamless CX' },
+        { href: B + '/deliver/live-commerce/',   icon: 'live',    title: 'Live Commerce Fulfilment',  desc: 'A dedicated studio space to host live selling events, with same-day fulfilment to match' },
+        { href: B + '/deliver/same-day-dublin/', icon: 'sameday', title: 'Same-Day Dublin Delivery',  desc: 'Via Cyclone Couriers. Cut-off noon, delivered same afternoon. Ideal for urgent, cold-chain and medical' },
       ]
     }
   ];
