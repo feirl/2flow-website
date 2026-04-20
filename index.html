@@ -133,6 +133,12 @@
     .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; text-align: center; margin-top: 48px; }
     .stat-num { font-size: 52px; font-weight: 700; color: var(--brand-primary); line-height: 1; margin-bottom: 12px; }
     .stat-desc { font-size: 15px; color: var(--text-secondary); line-height: 1.6; }
+    @keyframes statPop {
+      0%   { transform: scale(0.8); opacity: 0; }
+      60%  { transform: scale(1.06); }
+      100% { transform: scale(1);   opacity: 1; }
+    }
+    .stat-num.counting { animation: statPop 0.4s ease forwards; }
 
     /* ── PROCESS ── */
     .process-strip { padding: 72px 40px; background: var(--bg-light); }
@@ -407,15 +413,15 @@
     </div>
     <div class="stat-grid">
       <div>
-        <div class="stat-num">23%</div>
+        <div class="stat-num" data-target="23" data-suffix="%">0%</div>
         <p class="stat-desc">of consumers will never order from a retailer again after a poor delivery experience</p>
       </div>
       <div>
-        <div class="stat-num">41%</div>
+        <div class="stat-num" data-target="41" data-suffix="%">0%</div>
         <p class="stat-desc">of consumers blame the retailer, not the carrier, for shipping failures</p>
       </div>
       <div>
-        <div class="stat-num">69%</div>
+        <div class="stat-num" data-target="69" data-suffix="%">0%</div>
         <p class="stat-desc">of consumers are less likely to shop with a brand again when a 2-day delivery promise is missed</p>
       </div>
     </div>
@@ -696,6 +702,46 @@
   if (heroVideo && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
     heroVideo.pause();
   }
+
+  // ── Stat count-up on scroll into view ──
+  (function () {
+    const statNums = Array.from(document.querySelectorAll('.stat-num[data-target]'));
+    if (!statNums.length) return;
+
+    function countUp(el) {
+      const target = parseInt(el.dataset.target, 10);
+      const suffix = el.dataset.suffix || '';
+      const duration = 1200;
+      const startTime = performance.now();
+
+      el.classList.add('counting');
+
+      function tick(now) {
+        const elapsed  = now - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+        // Ease out cubic
+        const eased = 1 - Math.pow(1 - progress, 3);
+        el.textContent = Math.round(eased * target) + suffix;
+        if (progress < 1) {
+          requestAnimationFrame(tick);
+        } else {
+          el.textContent = target + suffix;
+        }
+      }
+      requestAnimationFrame(tick);
+    }
+
+    const observer = new IntersectionObserver(function (entries) {
+      if (entries[0].isIntersecting) {
+        observer.disconnect();
+        statNums.forEach(function (el, i) {
+          setTimeout(function () { countUp(el); }, i * 150);
+        });
+      }
+    }, { threshold: 0.4 });
+
+    observer.observe(statNums[0].closest('.stat-grid'));
+  }());
 
   // ── Process tab: rotating text ──
   (function () {
