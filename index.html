@@ -137,9 +137,64 @@
     /* ── PROCESS ── */
     .process-strip { padding: 72px 40px; background: var(--bg-light); }
     .process-inner { max-width: 1080px; margin: 0 auto; }
-    .process-flow { display: flex; align-items: center; gap: 0; margin-top: 40px; overflow-x: auto; padding-bottom: 8px; }
-    .process-step { flex: 1; min-width: 130px; text-align: center; padding: 16px 10px; background: var(--brand-primary); border-radius: 8px; color: white; font-size: 13px; font-weight: 600; line-height: 1.4; }
-    .process-arrow { color: var(--brand-primary); padding: 0 6px; flex-shrink: 0; }
+    /* ── PROCESS SINGLE TAB ── */
+    .process-flow { margin-top: 40px; display: flex; flex-direction: column; align-items: center; }
+    .process-single-tab {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--brand-primary);
+      border-radius: 10px;
+      padding: 22px 48px;
+      min-width: 408px;
+      box-shadow: 0 4px 20px rgba(92,184,0,0.25);
+      overflow: hidden;
+      position: relative;
+    }
+    .process-tab-clip {
+      overflow: hidden;
+      height: 1.5em;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    @keyframes textSlideIn {
+      from { opacity: 0; transform: translateY(100%); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes textSlideOut {
+      from { opacity: 1; transform: translateY(0); }
+      to   { opacity: 0; transform: translateY(-100%); }
+    }
+    .process-tab-text {
+      display: block;
+      color: white;
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 1.5;
+      white-space: nowrap;
+      letter-spacing: 0.01em;
+    }
+    .process-tab-text.text-in  { animation: textSlideIn  0.4s cubic-bezier(0.22,1,0.36,1) forwards; }
+    .process-tab-text.text-out { animation: textSlideOut 0.3s ease-in forwards; }
+
+    /* Step dots */
+    .process-dots {
+      display: flex;
+      gap: 7px;
+      margin-top: 16px;
+      align-items: center;
+    }
+    .process-dot {
+      width: 7px; height: 7px;
+      border-radius: 50%;
+      background: rgba(92,184,0,0.25);
+      transition: background 0.3s ease, transform 0.3s ease;
+    }
+    .process-dot.dot-active {
+      background: var(--brand-primary);
+      transform: scale(1.4);
+    }
 
     /* ── SERVICES ── */
     .services-section { padding: 72px 40px; background: var(--bg-light); }
@@ -377,17 +432,19 @@
       <p style="color:var(--text-secondary); font-size:16px; margin-top:14px; line-height:1.7;">Most 3PLs handle a slice. 2Flow takes full ownership from inbound stock receipt to customer exception handling, so nothing falls through the gaps between handoffs.</p>
     </div>
     <div class="process-flow">
-      <div class="process-step">Inbound Stock Receipt</div>
-      <div class="process-arrow"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg></div>
-      <div class="process-step">Stock Management &amp; Forecasting</div>
-      <div class="process-arrow"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg></div>
-      <div class="process-step">Bespoke &amp; Personalised Prep</div>
-      <div class="process-arrow"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg></div>
-      <div class="process-step">Logistics Selection &amp; Dispatch</div>
-      <div class="process-arrow"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg></div>
-      <div class="process-step">Order Delivery &amp; Receipt Experience</div>
-      <div class="process-arrow"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg></div>
-      <div class="process-step">Customer Queries &amp; Returns</div>
+      <div class="process-single-tab">
+        <div class="process-tab-clip">
+          <span class="process-tab-text" id="processTabText">Inbound Stock Receipt</span>
+        </div>
+      </div>
+      <div class="process-dots" id="processDots">
+        <span class="process-dot dot-active"></span>
+        <span class="process-dot"></span>
+        <span class="process-dot"></span>
+        <span class="process-dot"></span>
+        <span class="process-dot"></span>
+        <span class="process-dot"></span>
+      </div>
     </div>
   </div>
 </section>
@@ -639,6 +696,47 @@
   if (heroVideo && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
     heroVideo.pause();
   }
+
+  // ── Process tab: rotating text ──
+  (function () {
+    const steps = [
+      'Inbound Stock Receipt',
+      'Stock Management & Forecasting',
+      'Bespoke & Personalised Prep',
+      'Logistics Selection & Dispatch',
+      'Order Delivery & Receipt Experience',
+      'Customer Queries & Returns'
+    ];
+    const tabText = document.getElementById('processTabText');
+    const dots    = Array.from(document.querySelectorAll('.process-dot'));
+    if (!tabText || !dots.length) return;
+
+    let current = 0;
+
+    function goTo(next) {
+      // Slide current text out
+      tabText.classList.remove('text-in');
+      tabText.classList.add('text-out');
+
+      setTimeout(function () {
+        // Swap text and slide in
+        current = next;
+        tabText.textContent = steps[current];
+        tabText.classList.remove('text-out');
+        tabText.classList.add('text-in');
+
+        // Update dots
+        dots.forEach(function (d, i) {
+          d.classList.toggle('dot-active', i === current);
+        });
+      }, 300); // matches textSlideOut duration
+    }
+
+    // Start cycling
+    setInterval(function () {
+      goTo((current + 1) % steps.length);
+    }, 2000);
+  }());
 
   // ── Video end fade to black then fade back in on loop ──
   const videoFade = document.querySelector('.hero-video-fade');
