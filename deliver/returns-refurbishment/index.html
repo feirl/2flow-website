@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -66,8 +66,8 @@
 
   <link rel="stylesheet" href="/2flow-website/css/site.css">
   <style>
-    /* ── HERO ── */
-    .hero-feature { background: #0D1A2E; padding: calc(var(--nav-height) + 80px) 40px 80px; position: relative; overflow: hidden; }
+    /* â”€â”€ HERO â”€â”€ */
+    .hero-feature { background: #0D1A2E; padding: calc(var(--nav-height) + 104px) 40px 104px; min-height: 700px; position: relative; overflow: hidden; }
     .hero-feature-bg {
       position: absolute; inset: 0;
       width: 100%; height: 100%;
@@ -103,7 +103,7 @@
     .hero-stat-card.small .stat-big { font-size: 28px; }
     .hero-stats-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
 
-    /* ── PROBLEM SECTION ── */
+    /* â”€â”€ PROBLEM SECTION â”€â”€ */
     .problem-section { background: var(--bg-white); padding: 80px 40px; border-bottom: 1px solid var(--border-light); }
     .problem-header { text-align: center; max-width: 640px; margin: 0 auto 56px; }
     .problem-header h2 { color: var(--text-primary); }
@@ -114,7 +114,7 @@
     .problem-card h3 { font-size: 18px; margin-bottom: 12px; }
     .problem-card p { font-size: 14px; color: var(--text-secondary); line-height: 1.7; }
 
-    /* ── PROCESS ── */
+    /* â”€â”€ PROCESS â”€â”€ */
     .process-section { background: var(--bg-light); padding: 80px 40px; }
     .process-header { max-width: 640px; margin-bottom: 56px; }
     .steps-list { display: grid; grid-template-columns: repeat(5, 1fr); gap: 0; position: relative; }
@@ -124,7 +124,7 @@
     .step-title { font-size: 14px; font-weight: 700; color: var(--text-primary); margin-bottom: 6px; line-height: 1.3; }
     .step-desc { font-size: 12px; color: var(--text-secondary); line-height: 1.5; }
 
-    /* ── GRADING SECTION ── */
+    /* â”€â”€ GRADING SECTION â”€â”€ */
     .grading-section { background: var(--bg-white); padding: 80px 40px; }
     .grading-header { max-width: 640px; margin-bottom: 56px; }
     .grades-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
@@ -143,7 +143,7 @@
     .grade-card.b .grade-action { background: var(--bg-light); color: var(--text-secondary); }
     .grade-card.c .grade-action { background: #FDF8F8; color: #B05050; }
 
-    /* ── CAPABILITIES ── */
+    /* â”€â”€ CAPABILITIES â”€â”€ */
     .capabilities-section { background: var(--bg-light); padding: 80px 40px; }
     .capabilities-header { max-width: 640px; margin-bottom: 56px; }
     .capabilities-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
@@ -153,7 +153,7 @@
     .capability-text h4 { font-size: 14px; font-weight: 600; margin-bottom: 4px; }
     .capability-text p { font-size: 13px; color: var(--text-secondary); line-height: 1.5; }
 
-    /* ── PROOF ── */
+    /* â”€â”€ PROOF â”€â”€ */
     .proof-section { background: #0D1A2E; padding: 80px 40px; }
     .proof-header { text-align: center; max-width: 560px; margin: 0 auto 56px; }
     .proof-header .section-label { color: rgba(133,176,32,0.9); }
@@ -164,7 +164,7 @@
     .quote-text { font-size: 15px; color: rgba(255,255,255,0.80); line-height: 1.75; font-style: italic; margin-bottom: 20px; }
     .quote-source { font-size: 12px; color: rgba(255,255,255,0.40); text-transform: uppercase; letter-spacing: 0.08em; font-weight: 600; }
 
-    /* ── FIT ── */
+    /* â”€â”€ FIT â”€â”€ */
     .fit-section { background: var(--bg-white); padding: 80px 40px; }
     .fit-header { max-width: 640px; margin-bottom: 56px; }
     .fit-grid { display: grid; grid-template-columns: 1fr; gap: 24px; max-width: 680px; }
@@ -177,7 +177,7 @@
     .fit-list li:last-child { border-bottom: none; }
     .fit-list li svg { flex-shrink: 0; margin-top: 1px; }
 
-    /* ── FAQ ── */
+    /* â”€â”€ FAQ â”€â”€ */
     .faq-section { background: var(--bg-light); padding: 80px 40px; }
     .faq-section .container { max-width: 760px; }
     .faq-header { margin-bottom: 48px; }
@@ -189,7 +189,7 @@
     .faq-q[aria-expanded="true"] .faq-q-icon { transform: rotate(45deg); }
     .faq-a { padding: 0 24px 20px; font-size: 14px; color: var(--text-secondary); line-height: 1.75; }
 
-    /* ── RELATED ── */
+    /* â”€â”€ RELATED â”€â”€ */
     .related-section { background: var(--bg-white); padding: 80px 40px; }
     .related-header { max-width: 560px; margin-bottom: 48px; }
     .related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
@@ -200,7 +200,7 @@
     .related-card p { font-size: 14px; color: var(--text-secondary); line-height: 1.6; }
     .related-card-link { display: inline-flex; align-items: center; gap: 4px; color: var(--brand-primary); font-size: 13px; font-weight: 600; margin-top: 16px; }
 
-    /* ── CTA ── */
+    /* â”€â”€ CTA â”€â”€ */
     .cta-section { background: #0D1A2E; padding: 80px 40px; text-align: center; }
     .cta-section h2 { color: white; margin-bottom: 16px; }
     .cta-section p { color: rgba(255,255,255,0.65); font-size: 17px; margin-bottom: 36px; max-width: 520px; margin-left: auto; margin-right: auto; }
@@ -209,7 +209,7 @@
     .cta-section .btn-ghost { color: white; border-color: rgba(255,255,255,0.3); }
     .cta-section .btn-ghost:hover { border-color: white; }
 
-    /* ── RESPONSIVE ── */
+    /* â”€â”€ RESPONSIVE â”€â”€ */
     @media (max-width: 1024px) {
       .hero-feature-inner { grid-template-columns: 1fr; gap: 40px; }
       .hero-visual { display: none; }
@@ -268,14 +268,14 @@
 
 <main id="main-content">
 
-<!-- ── HERO ── -->
+<!-- â”€â”€ HERO â”€â”€ -->
 <section class="hero-feature" aria-labelledby="hero-h1">
   <img class="hero-feature-bg" src="/2flow-website/Images/blouse2.jpg" alt="" aria-hidden="true" loading="eager" fetchpriority="high">
   <div class="hero-feature-inner" style="position:relative;z-index:2;">
     <div>
       <nav class="hero-breadcrumb" aria-label="Breadcrumb">
         <span>eCommerce Fulfilment</span>
-        <span aria-hidden="true">›</span>
+        <span aria-hidden="true">â€º</span>
         <span aria-current="page">Returns &amp; Refurbishment</span>
       </nav>
       <h1 id="hero-h1">Returns That <em>Protect</em><br>Your Brand Reputation.</h1>
@@ -302,7 +302,7 @@
   </div>
 </section>
 
-<!-- ── THE PROBLEM ── -->
+<!-- â”€â”€ THE PROBLEM â”€â”€ -->
 <section class="problem-section" aria-labelledby="problem-h2">
   <div class="container">
     <div class="problem-header">
@@ -330,7 +330,7 @@
   </div>
 </section>
 
-<!-- ── PROCESS ── -->
+<!-- â”€â”€ PROCESS â”€â”€ -->
 <section class="process-section" aria-labelledby="process-h2">
   <div class="container">
     <div class="process-header">
@@ -368,7 +368,7 @@
   </div>
 </section>
 
-<!-- ── GRADING TIERS ── -->
+<!-- â”€â”€ GRADING TIERS â”€â”€ -->
 <section class="grading-section" aria-labelledby="grading-h2">
   <div class="container">
     <div class="grading-header">
@@ -399,7 +399,7 @@
   </div>
 </section>
 
-<!-- ── CAPABILITIES ── -->
+<!-- â”€â”€ CAPABILITIES â”€â”€ -->
 <section class="capabilities-section" aria-labelledby="cap-h2">
   <div class="container">
     <div class="capabilities-header">
@@ -448,7 +448,7 @@
   </div>
 </section>
 
-<!-- ── SOCIAL PROOF ── -->
+<!-- â”€â”€ SOCIAL PROOF â”€â”€ -->
 <section class="proof-section" aria-labelledby="proof-h2">
   <div class="container">
     <div class="proof-header">
@@ -459,23 +459,23 @@
       <div class="quote-card">
         <div class="quote-mark">"</div>
         <p class="quote-text">A lot of the orders going out from our previous place were going out damaged, or being mispacked. Returns that had been knocked about were going back out to new customers. We couldn't have our reputation suffer from other people's actions.</p>
-        <div class="quote-source">Customer service manager &nbsp;·&nbsp; Irish eCommerce brand</div>
+        <div class="quote-source">Customer service manager &nbsp;Â·&nbsp; Irish eCommerce brand</div>
       </div>
       <div class="quote-card">
         <div class="quote-mark">"</div>
         <p class="quote-text">Returns go back to 2Flow and they manage everything. We ship worldwide. And 2Flow handles all the returns from markets outside US, UK and Canada. It just works.</p>
-        <div class="quote-source">Founder &nbsp;·&nbsp; Irish beauty &amp; cosmetics brand</div>
+        <div class="quote-source">Founder &nbsp;Â·&nbsp; Irish beauty &amp; cosmetics brand</div>
       </div>
       <div class="quote-card">
         <div class="quote-mark">"</div>
         <p class="quote-text">We are now able to really properly track everything. If we ever have a recall, we know that we'd be able to trace where shipments have gone so we can do the proper procedures. That level of control wasn't there before.</p>
-        <div class="quote-source">Operations team &nbsp;·&nbsp; Irish medical distributor</div>
+        <div class="quote-source">Operations team &nbsp;Â·&nbsp; Irish medical distributor</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ── RIGHT FIT ── -->
+<!-- â”€â”€ RIGHT FIT â”€â”€ -->
 <section class="fit-section" aria-labelledby="fit-h2">
   <div class="container">
     <div class="fit-header">
@@ -520,7 +520,7 @@
   </div>
 </section>
 
-<!-- ── FAQ ── -->
+<!-- â”€â”€ FAQ â”€â”€ -->
 <section class="faq-section" aria-labelledby="faq-h2">
   <div class="container">
     <div class="faq-header">
@@ -567,7 +567,7 @@
   </div>
 </section>
 
-<!-- ── RELATED ── -->
+<!-- â”€â”€ RELATED â”€â”€ -->
 <section class="related-section" aria-labelledby="related-h2">
   <div class="container">
     <div class="related-header">
@@ -604,7 +604,7 @@
   </div>
 </section>
 
-<!-- ── CTA ── -->
+<!-- â”€â”€ CTA â”€â”€ -->
 <section class="cta-section" aria-labelledby="cta-h2">
   <div class="container">
     <div class="section-label" style="color:rgba(133,176,32,0.85);">Ready to Start?</div>

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -40,7 +40,7 @@
 
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    .hero-feature { background: #0D1A2E; padding: calc(var(--nav-height) + 80px) 40px 80px; position: relative; overflow: hidden; min-height: 600px; display: flex; align-items: center; }
+    .hero-feature { background: #0D1A2E; padding: calc(var(--nav-height) + 104px) 40px 104px; min-height: 700px; position: relative; overflow: hidden; min-height: 700px; display: flex; align-items: center; }
     .hero-video-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; z-index: 0; }
     .hero-feature::before { content: ''; position: absolute; inset: 0; z-index: 1; background: linear-gradient(100deg, rgba(13,26,46,0.88) 0%, rgba(13,26,46,0.68) 35%, rgba(13,26,46,0.38) 65%, rgba(13,26,46,0.12) 100%); pointer-events: none; }
     .hero-feature-inner { max-width: 1080px; margin: 0 auto; width: 100%; position: relative; z-index: 2; }
@@ -56,7 +56,7 @@
     .trust-badge { display: inline-flex; align-items: center; gap: 6px; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15); border-radius: 99px; padding: 5px 14px; font-size: 12px; color: rgba(255,255,255,0.75); font-weight: 500; }
     .trust-badge svg { flex-shrink: 0; }
 
-    /* ── PARTNER FEATURE ── */
+    /* â”€â”€ PARTNER FEATURE â”€â”€ */
     .partner-section { background: var(--bg-white); padding: 80px 40px; }
     .container { max-width: 1080px; margin: 0 auto; }
     .partner-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
@@ -75,7 +75,7 @@
     .spec-card h3 { font-size: 22px; font-weight: 700; color: var(--text-primary); margin-bottom: 8px; }
     .spec-card p { font-size: 14px; color: var(--text-secondary); line-height: 1.6; }
 
-    /* ── USE CASES ── */
+    /* â”€â”€ USE CASES â”€â”€ */
     .usecases-section { background: var(--bg-light); padding: 80px 40px; }
     .usecases-header { max-width: 640px; margin-bottom: 56px; }
     .usecases-header p { font-size: 16px; color: var(--text-secondary); line-height: 1.7; margin-top: 14px; }
@@ -86,7 +86,7 @@
     .usecase-card h3 { font-size: 18px; margin-bottom: 12px; }
     .usecase-card p { font-size: 14px; color: var(--text-secondary); line-height: 1.7; }
 
-    /* ── HOW IT WORKS ── */
+    /* â”€â”€ HOW IT WORKS â”€â”€ */
     .process-section { background: var(--bg-white); padding: 80px 40px; }
     .process-header { max-width: 640px; margin-bottom: 56px; }
     .process-header p { font-size: 16px; color: var(--text-secondary); line-height: 1.7; margin-top: 14px; }
@@ -97,7 +97,7 @@
     .step-title { font-size: 14px; font-weight: 700; color: var(--text-primary); margin-bottom: 6px; line-height: 1.3; }
     .step-desc { font-size: 12px; color: var(--text-secondary); line-height: 1.5; }
 
-    /* ── METRICS ── */
+    /* â”€â”€ METRICS â”€â”€ */
     .metrics-strip { background: #111111; padding: 64px 40px; }
     .metrics-inner { max-width: 1080px; margin: 0 auto; display: grid; grid-template-columns: repeat(3, 1fr); }
     .metric-item { text-align: center; padding: 0 32px; border-right: 1px solid rgba(255,255,255,0.1); }
@@ -105,7 +105,7 @@
     .metric-num { font-size: 48px; font-weight: 700; color: var(--brand-primary); line-height: 1; margin-bottom: 10px; }
     .metric-label { font-size: 14px; color: rgba(255,255,255,0.55); line-height: 1.5; }
 
-    /* ── QUOTES ── */
+    /* â”€â”€ QUOTES â”€â”€ */
     .proof-section { background: #0D1A2E; padding: 80px 40px; }
     .proof-header { text-align: center; max-width: 560px; margin: 0 auto 56px; }
     .proof-header .section-label { color: rgba(92,184,0,0.9); }
@@ -117,7 +117,7 @@
     .quote-source { font-size: 12px; color: rgba(255,255,255,0.40); text-transform: uppercase; letter-spacing: 0.08em; font-weight: 600; }
     .quote-brand { font-size: 12px; color: rgba(92,184,0,0.7); font-weight: 600; margin-top: 4px; }
 
-    /* ── RELATED ── */
+    /* â”€â”€ RELATED â”€â”€ */
     .related-section { background: var(--bg-white); padding: 80px 40px; }
     .related-header { max-width: 560px; margin-bottom: 48px; }
     .related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
@@ -128,7 +128,7 @@
     .related-card p { font-size: 14px; color: var(--text-secondary); line-height: 1.6; }
     .related-card-link { display: inline-flex; align-items: center; gap: 4px; color: var(--brand-primary); font-size: 13px; font-weight: 600; margin-top: 16px; }
 
-    /* ── CTA ── */
+    /* â”€â”€ CTA â”€â”€ */
     .cta-section { background: #0D1A2E; padding: 80px 40px; text-align: center; }
     .cta-section h2 { color: white; margin-bottom: 16px; }
     .cta-section p { color: rgba(255,255,255,0.65); font-size: 17px; margin-bottom: 36px; max-width: 520px; margin-left: auto; margin-right: auto; }
@@ -137,7 +137,7 @@
     .cta-section .btn-ghost { color: white; border-color: rgba(255,255,255,0.3); }
     .cta-section .btn-ghost:hover { border-color: white; }
 
-    /* ── RESPONSIVE ── */
+    /* â”€â”€ RESPONSIVE â”€â”€ */
     @media (max-width: 1024px) {
       .partner-layout { grid-template-columns: 1fr; gap: 40px; }
       .usecases-grid { grid-template-columns: 1fr 1fr; }
@@ -199,7 +199,7 @@
 
 <main id="main-content">
 
-<!-- ── HERO ── -->
+<!-- â”€â”€ HERO â”€â”€ -->
 <section class="hero-feature" aria-labelledby="hero-heading">
   <video class="hero-video-bg" autoplay loop muted playsinline preload="auto" disablepictureinpicture aria-hidden="true">
     <source src="/2flow-website/Images/hero-same-day-dublin.mp4" type="video/mp4">
@@ -208,7 +208,7 @@
     <div class="hero-text-col">
       <nav class="hero-breadcrumb" aria-label="Breadcrumb">
         <span class="crumb">What We Deliver</span>
-        <span aria-hidden="true">›</span>
+        <span aria-hidden="true">â€º</span>
         <span aria-current="page">Same-Day Dublin Delivery</span>
       </nav>
       <h1 id="hero-heading">Order before noon.<br><em>Delivered same afternoon.</em></h1>
@@ -239,15 +239,15 @@
   </div>
 </section>
 
-<!-- ── PARTNER FEATURE ── -->
+<!-- â”€â”€ PARTNER FEATURE â”€â”€ -->
 <section class="partner-section" aria-labelledby="partner-heading">
   <div class="container">
     <div class="partner-layout">
       <div class="partner-text">
         <div class="section-label">The Partnership</div>
         <h2 id="partner-heading">2Flow fulfilment. Cyclone delivery. Same afternoon.</h2>
-        <p>2Flow handles the pick, pack, and dispatch from our Finglas warehouse. Cyclone Couriers handles the last mile across Dublin city and county. Together the two operations deliver a genuine same-day service — not next-morning, not same-day if conditions allow, but same afternoon for everything dispatched before noon.</p>
-        <p>Cyclone already runs temperature-sensitive deliveries for medical and healthcare clients, including weight loss medications packed in ice. That capability is available to 2Flow clients who need cold-chain delivery within Dublin — no additional cold storage infrastructure required on your end.</p>
+        <p>2Flow handles the pick, pack, and dispatch from our Finglas warehouse. Cyclone Couriers handles the last mile across Dublin city and county. Together the two operations deliver a genuine same-day service â€” not next-morning, not same-day if conditions allow, but same afternoon for everything dispatched before noon.</p>
+        <p>Cyclone already runs temperature-sensitive deliveries for medical and healthcare clients, including weight loss medications packed in ice. That capability is available to 2Flow clients who need cold-chain delivery within Dublin â€” no additional cold storage infrastructure required on your end.</p>
         <ul class="partner-detail-list">
           <li>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="20 6 9 17 4 12"/></svg>
@@ -255,7 +255,7 @@
           </li>
           <li>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="20 6 9 17 4 12"/></svg>
-            Cut-off noon — all qualifying orders delivered the same afternoon
+            Cut-off noon â€” all qualifying orders delivered the same afternoon
           </li>
           <li>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="20 6 9 17 4 12"/></svg>
@@ -263,11 +263,11 @@
           </li>
           <li>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="20 6 9 17 4 12"/></svg>
-            Temperature-sensitive deliveries available — Cyclone already handles medical packages in ice packs
+            Temperature-sensitive deliveries available â€” Cyclone already handles medical packages in ice packs
           </li>
           <li>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="20 6 9 17 4 12"/></svg>
-            No minimum order volume — available as part of your standard 2Flow fulfilment service
+            No minimum order volume â€” available as part of your standard 2Flow fulfilment service
           </li>
         </ul>
       </div>
@@ -292,7 +292,7 @@
   </div>
 </section>
 
-<!-- ── USE CASES ── -->
+<!-- â”€â”€ USE CASES â”€â”€ -->
 <section class="usecases-section" aria-labelledby="usecases-heading">
   <div class="container">
     <div class="usecases-header">
@@ -330,7 +330,7 @@
   </div>
 </section>
 
-<!-- ── HOW IT WORKS ── -->
+<!-- â”€â”€ HOW IT WORKS â”€â”€ -->
 <section class="process-section" aria-labelledby="process-heading">
   <div class="container">
     <div class="process-header">
@@ -363,7 +363,7 @@
   </div>
 </section>
 
-<!-- ── METRICS ── -->
+<!-- â”€â”€ METRICS â”€â”€ -->
 <section class="metrics-strip" aria-label="Service metrics">
   <div class="metrics-inner">
     <div class="metric-item">
@@ -381,7 +381,7 @@
   </div>
 </section>
 
-<!-- ── QUOTES ── -->
+<!-- â”€â”€ QUOTES â”€â”€ -->
 <section class="proof-section" aria-labelledby="proof-heading">
   <div class="proof-header">
     <div class="section-label">What Our Clients Say</div>
@@ -413,7 +413,7 @@
   </div>
 </section>
 
-<!-- ── RELATED ── -->
+<!-- â”€â”€ RELATED â”€â”€ -->
 <section class="related-section" aria-labelledby="related-heading">
   <div class="container">
     <div class="related-header">
@@ -453,7 +453,7 @@
   </div>
 </section>
 
-<!-- ── CTA ── -->
+<!-- â”€â”€ CTA â”€â”€ -->
 <section class="cta-section" aria-labelledby="cta-heading">
   <div class="container">
     <div class="section-label" style="color:rgba(92,184,0,0.9);">Get Started</div>

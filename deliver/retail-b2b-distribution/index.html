@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -71,8 +71,8 @@
 
   <link rel="stylesheet" href="/2flow-website/css/site.css">
   <style>
-    /* ── HERO ── */
-    .hero-feature { background: #0D1A2E; padding: calc(var(--nav-height) + 80px) 40px 80px; position: relative; overflow: hidden; min-height: 600px; display: flex; align-items: center; }
+    /* â”€â”€ HERO â”€â”€ */
+    .hero-feature { background: #0D1A2E; padding: calc(var(--nav-height) + 104px) 40px 104px; min-height: 700px; position: relative; overflow: hidden; min-height: 700px; display: flex; align-items: center; }
     .hero-feature::before { content: ''; position: absolute; inset: 0; z-index: 1; background: linear-gradient(100deg, rgba(13,26,46,0.88) 0%, rgba(13,26,46,0.68) 35%, rgba(13,26,46,0.38) 65%, rgba(13,26,46,0.12) 100%); pointer-events: none; }
     .hero-feature-inner { max-width: 1080px; margin: 0 auto; width: 100%; position: relative; z-index: 2; }
     .hero-video-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; z-index: 0; }
@@ -95,7 +95,7 @@
     .hero-stat-card.small .stat-big { font-size: 28px; }
     .hero-stats-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
 
-    /* ── PROBLEM ── */
+    /* â”€â”€ PROBLEM â”€â”€ */
     .problem-section { background: var(--bg-white); padding: 80px 40px; border-bottom: 1px solid var(--border-light); }
     .problem-header { text-align: center; max-width: 640px; margin: 0 auto 56px; }
     .problem-header h2 { color: var(--text-primary); }
@@ -106,7 +106,7 @@
     .problem-card h3 { font-size: 18px; margin-bottom: 12px; }
     .problem-card p { font-size: 14px; color: var(--text-secondary); line-height: 1.7; }
 
-    /* ── PROCESS ── */
+    /* â”€â”€ PROCESS â”€â”€ */
     .process-section { background: var(--bg-light); padding: 80px 40px; }
     .process-header { max-width: 640px; margin-bottom: 56px; }
     .steps-list { display: grid; grid-template-columns: repeat(5, 1fr); gap: 0; position: relative; max-width: 1080px; }
@@ -116,7 +116,7 @@
     .step-title { font-size: 14px; font-weight: 700; color: var(--text-primary); margin-bottom: 6px; line-height: 1.3; }
     .step-desc { font-size: 12px; color: var(--text-secondary); line-height: 1.5; }
 
-    /* ── B2B CHANNELS ── */
+    /* â”€â”€ B2B CHANNELS â”€â”€ */
     .channels-section { background: var(--bg-white); padding: 80px 40px; }
     .channels-header { max-width: 640px; margin-bottom: 56px; }
     .channels-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; max-width: 1080px; }
@@ -131,9 +131,9 @@
     .channel-card p { font-size: 14px; color: var(--text-secondary); line-height: 1.7; margin-bottom: 16px; }
     .channel-list { list-style: none; padding: 0; margin: 0; }
     .channel-list li { font-size: 13px; color: var(--text-secondary); padding: 6px 0; display: flex; gap: 8px; align-items: flex-start; line-height: 1.5; }
-    .channel-list li::before { content: '✓'; color: var(--brand-primary); font-weight: 700; flex-shrink: 0; }
+    .channel-list li::before { content: 'âœ“'; color: var(--brand-primary); font-weight: 700; flex-shrink: 0; }
 
-    /* ── CAPABILITIES ── */
+    /* â”€â”€ CAPABILITIES â”€â”€ */
     .capabilities-section { background: var(--bg-light); padding: 80px 40px; }
     .capabilities-header { max-width: 640px; margin-bottom: 56px; }
     .capabilities-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; max-width: 1080px; }
@@ -143,7 +143,7 @@
     .capability-text h4 { font-size: 14px; font-weight: 600; margin-bottom: 4px; }
     .capability-text p { font-size: 13px; color: var(--text-secondary); line-height: 1.5; }
 
-    /* ── PROOF ── */
+    /* â”€â”€ PROOF â”€â”€ */
     .proof-section { background: #0D1A2E; padding: 80px 40px; }
     .proof-header { text-align: center; max-width: 560px; margin: 0 auto 56px; }
     .proof-header .section-label { color: rgba(133,176,32,0.9); }
@@ -154,7 +154,7 @@
     .quote-text { font-size: 15px; color: rgba(255,255,255,0.80); line-height: 1.75; font-style: italic; margin-bottom: 20px; }
     .quote-source { font-size: 12px; color: rgba(255,255,255,0.40); text-transform: uppercase; letter-spacing: 0.08em; font-weight: 600; }
 
-    /* ── FIT ── */
+    /* â”€â”€ FIT â”€â”€ */
     .fit-section { background: var(--bg-white); padding: 80px 40px; }
     .fit-header { max-width: 640px; margin-bottom: 56px; }
     .fit-grid { display: grid; grid-template-columns: 1fr; gap: 24px; max-width: 680px; }
@@ -167,7 +167,7 @@
     .fit-list li:last-child { border-bottom: none; }
     .fit-list li svg { flex-shrink: 0; margin-top: 1px; }
 
-    /* ── FAQ ── */
+    /* â”€â”€ FAQ â”€â”€ */
     .faq-section { background: var(--bg-light); padding: 80px 40px; }
     .faq-section .container { max-width: 760px; }
     .faq-header { margin-bottom: 48px; }
@@ -180,7 +180,7 @@
     .faq-a { padding: 0 24px 20px; font-size: 14px; color: var(--text-secondary); line-height: 1.75; display: none; }
     .faq-a.open { display: block; }
 
-    /* ── RELATED ── */
+    /* â”€â”€ RELATED â”€â”€ */
     .related-section { background: var(--bg-white); padding: 80px 40px; }
     .related-header { max-width: 560px; margin-bottom: 48px; }
     .related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; max-width: 1080px; }
@@ -191,7 +191,7 @@
     .related-card p { font-size: 14px; color: var(--text-secondary); line-height: 1.6; }
     .related-card-link { display: inline-flex; align-items: center; gap: 4px; color: var(--brand-primary); font-size: 13px; font-weight: 600; margin-top: 16px; }
 
-    /* ── CTA ── */
+    /* â”€â”€ CTA â”€â”€ */
     .cta-section { background: #0D1A2E; padding: 80px 40px; text-align: center; }
     .cta-section h2 { color: white; margin-bottom: 16px; }
     .cta-section p { color: rgba(255,255,255,0.65); font-size: 17px; margin-bottom: 36px; max-width: 520px; margin-left: auto; margin-right: auto; }
@@ -200,7 +200,7 @@
     .cta-section .btn-ghost { color: white; border-color: rgba(255,255,255,0.3); }
     .cta-section .btn-ghost:hover { border-color: white; }
 
-    /* ── RESPONSIVE ── */
+    /* â”€â”€ RESPONSIVE â”€â”€ */
     @media (max-width: 1024px) {
       .problem-grid, .channels-grid { grid-template-columns: 1fr 1fr; }
       .steps-list { grid-template-columns: 1fr 1fr; gap: 24px; }
@@ -259,7 +259,7 @@
 
 <main id="main-content">
 
-<!-- ── HERO ── -->
+<!-- â”€â”€ HERO â”€â”€ -->
 <section class="hero-feature" aria-labelledby="hero-h1">
   <video class="hero-video-bg" autoplay loop muted playsinline preload="auto" disablepictureinpicture aria-hidden="true">
     <source src="/2flow-website/Images/hero-retail-b2b.mp4" type="video/mp4">
@@ -268,7 +268,7 @@
     <div class="hero-text-col">
       <nav class="hero-breadcrumb" aria-label="Breadcrumb">
         <span>What We Deliver</span>
-        <span aria-hidden="true">›</span>
+        <span aria-hidden="true">â€º</span>
         <span aria-current="page">Retail &amp; B2B Distribution</span>
       </nav>
       <h1 id="hero-h1">Your Retail Buyers Have<br><em>Zero Tolerance for Error.</em></h1>
@@ -295,7 +295,7 @@
   </div>
 </section>
 
-<!-- ── THE PROBLEM ── -->
+<!-- â”€â”€ THE PROBLEM â”€â”€ -->
 <section class="problem-section" aria-labelledby="problem-h2">
   <div style="max-width:1080px; margin:0 auto;">
     <div class="problem-header">
@@ -323,7 +323,7 @@
   </div>
 </section>
 
-<!-- ── PROCESS ── -->
+<!-- â”€â”€ PROCESS â”€â”€ -->
 <section class="process-section" aria-labelledby="process-h2">
   <div style="max-width:1080px; margin:0 auto;">
     <div class="process-header">
@@ -361,7 +361,7 @@
   </div>
 </section>
 
-<!-- ── THREE B2B FLOWS ── -->
+<!-- â”€â”€ THREE B2B FLOWS â”€â”€ -->
 <section class="channels-section" aria-labelledby="channels-h2">
   <div style="max-width:1080px; margin:0 auto;">
     <div class="channels-header">
@@ -410,7 +410,7 @@
   </div>
 </section>
 
-<!-- ── CAPABILITIES ── -->
+<!-- â”€â”€ CAPABILITIES â”€â”€ -->
 <section class="capabilities-section" aria-labelledby="cap-h2">
   <div style="max-width:1080px; margin:0 auto;">
     <div class="capabilities-header">
@@ -477,7 +477,7 @@
   </div>
 </section>
 
-<!-- ── SOCIAL PROOF ── -->
+<!-- â”€â”€ SOCIAL PROOF â”€â”€ -->
 <section class="proof-section" aria-labelledby="proof-h2">
   <div style="max-width:1080px; margin:0 auto;">
     <div class="proof-header">
@@ -488,23 +488,23 @@
       <div class="quote-card">
         <div class="quote-mark">"</div>
         <p class="quote-text">It comes in quite quickly into the warehouse and can be dispatched quite quickly out. Usually a very quick turnaround. Because sometimes there's very little time between us receiving a product and having to dispatch it to store. They handle our retail and DTC from one place.</p>
-        <div class="quote-source">Co-founders &nbsp;·&nbsp; Irish beauty brand</div>
+        <div class="quote-source">Co-founders &nbsp;Â·&nbsp; Irish beauty brand</div>
       </div>
       <div class="quote-card">
         <div class="quote-mark">"</div>
         <p class="quote-text">They have a good understanding of the big retailers that we deal with. They're doing it a long time. There's a willingness, the majority of the time, to try and make something happen. When you're a small business, certain things can make such a difference.</p>
-        <div class="quote-source">Operations team &nbsp;·&nbsp; Irish consumer brand</div>
+        <div class="quote-source">Operations team &nbsp;Â·&nbsp; Irish consumer brand</div>
       </div>
       <div class="quote-card">
         <div class="quote-mark">"</div>
         <p class="quote-text">I'd recommend it to anyone selling physical goods. You don't need to have a massive inventory. I think people think of outsourcing as this huge mammoth thing. It doesn't have to be.</p>
-        <div class="quote-source">Founder &nbsp;·&nbsp; Irish health supplement brand</div>
+        <div class="quote-source">Founder &nbsp;Â·&nbsp; Irish health supplement brand</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ── RIGHT FIT ── -->
+<!-- â”€â”€ RIGHT FIT â”€â”€ -->
 <section class="fit-section" aria-labelledby="fit-h2">
   <div style="max-width:1080px; margin:0 auto;">
     <div class="fit-header">
@@ -516,7 +516,7 @@
       <div class="fit-panel good">
         <div class="fit-panel-label">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-          A strong fit if you…
+          A strong fit if youâ€¦
         </div>
         <h3>You're selling through multiple channels and need each one fulfilled correctly.</h3>
         <ul class="fit-list">
@@ -550,7 +550,7 @@
   </div>
 </section>
 
-<!-- ── FAQ ── -->
+<!-- â”€â”€ FAQ â”€â”€ -->
 <section class="faq-section" aria-labelledby="faq-h2">
   <div class="container">
     <div class="faq-header">
@@ -597,7 +597,7 @@
   </div>
 </section>
 
-<!-- ── RELATED SERVICES ── -->
+<!-- â”€â”€ RELATED SERVICES â”€â”€ -->
 <section class="related-section" aria-labelledby="related-h2">
   <div style="max-width:1080px; margin:0 auto;">
     <div class="related-header">
@@ -633,7 +633,7 @@
   </div>
 </section>
 
-<!-- ── CTA ── -->
+<!-- â”€â”€ CTA â”€â”€ -->
 <section class="cta-section" aria-labelledby="cta-h2">
   <h2 id="cta-h2">Ready to grow into retail without the growing pains?</h2>
   <p>Tell us your channels, your buyers, and your volumes. We'll show you exactly how 2Flow handles it. And how we keep retail and DTC from getting in each other's way.</p>
@@ -646,7 +646,7 @@
 
 </main>
 
-<!-- ── FOOTER ── -->
+<!-- â”€â”€ FOOTER â”€â”€ -->
 <div id="site-footer"></div>
 <script src="/2flow-website/js/footer.js"></script>
 
