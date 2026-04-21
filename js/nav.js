@@ -5,7 +5,7 @@
 
 (function () {
 
-  var B = '/2flow-website';
+  var B = '';
   var path = window.location.pathname;
 
   /* ── Mega menu data ─────────────────────────────────────── */
