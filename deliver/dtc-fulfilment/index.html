@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -71,8 +71,8 @@
 
   <link rel="stylesheet" href="/2flow-website/css/site.css">
   <style>
-    /* â”€â”€ HERO â”€â”€ */
-    .hero-feature { background: #0D1A2E; padding: calc(var(--nav-height) + 104px) 40px 104px; min-height: 700px; position: relative; overflow: hidden; min-height: 700px; display: flex; align-items: center; }
+    /* ── HERO ── */
+    .hero-feature { background: #0D1A2E; padding: calc(var(--nav-height) + 104px) 40px 104px; min-height: 834px; position: relative; overflow: hidden; min-height: 834px; display: flex; align-items: center; }
     .hero-feature::before { content: ''; position: absolute; inset: 0; z-index: 1; background: linear-gradient(100deg, rgba(13,26,46,0.88) 0%, rgba(13,26,46,0.68) 35%, rgba(13,26,46,0.38) 65%, rgba(13,26,46,0.12) 100%); pointer-events: none; }
     .hero-feature-inner { max-width: 1080px; margin: 0 auto; width: 100%; position: relative; z-index: 2; }
     .hero-video-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; z-index: 0; }
@@ -93,7 +93,7 @@
     .hero-stat-card.small .stat-big { font-size: 28px; }
     .hero-stats-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
 
-    /* â”€â”€ PROBLEM â”€â”€ */
+    /* ── PROBLEM ── */
     .problem-section { background: var(--bg-white); padding: 80px 40px; border-bottom: 1px solid var(--border-light); }
     .problem-header { text-align: center; max-width: 640px; margin: 0 auto 56px; }
     .problem-header h2 { color: var(--text-primary); }
@@ -104,7 +104,7 @@
     .problem-card h3 { font-size: 18px; margin-bottom: 12px; }
     .problem-card p { font-size: 14px; color: var(--text-secondary); line-height: 1.7; }
 
-    /* â”€â”€ PROCESS â”€â”€ */
+    /* ── PROCESS ── */
     .process-section { background: var(--bg-light); padding: 80px 40px; }
     .process-header { max-width: 640px; margin-bottom: 56px; }
     .steps-list { display: grid; grid-template-columns: repeat(5, 1fr); gap: 0; position: relative; max-width: 1080px; }
@@ -114,7 +114,7 @@
     .step-title { font-size: 14px; font-weight: 700; color: var(--text-primary); margin-bottom: 6px; line-height: 1.3; }
     .step-desc { font-size: 12px; color: var(--text-secondary); line-height: 1.5; }
 
-    /* â”€â”€ PLATFORMS â”€â”€ */
+    /* ── PLATFORMS ── */
     .platforms-section { background: var(--bg-white); padding: 80px 40px; }
     .platforms-header { max-width: 640px; margin-bottom: 56px; }
     .platforms-layout { max-width: 1080px; display: flex; flex-direction: column; gap: 24px; }
@@ -128,7 +128,7 @@
     .platform-featured-list { list-style: none; padding: 0; }
     .platform-featured-list li { font-size: 13px; color: var(--text-secondary); padding: 6px 0; display: flex; gap: 8px; align-items: flex-start; border-bottom: 1px solid rgba(0,0,0,0.06); line-height: 1.5; }
     .platform-featured-list li:last-child { border-bottom: none; }
-    .platform-featured-list li::before { content: 'âœ“'; color: var(--brand-primary); font-weight: 700; flex-shrink: 0; }
+    .platform-featured-list li::before { content: '✓'; color: var(--brand-primary); font-weight: 700; flex-shrink: 0; }
     .platform-featured-stats { background: var(--brand-navy); padding: 40px; display: flex; flex-direction: column; justify-content: center; gap: 28px; }
     .platform-stat { border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 24px; }
     .platform-stat:last-child { border-bottom: none; padding-bottom: 0; }
@@ -143,7 +143,7 @@
     .platform-card h4 { font-size: 15px; font-weight: 700; margin-bottom: 4px; }
     .platform-card p { font-size: 13px; color: var(--text-secondary); line-height: 1.5; }
 
-    /* â”€â”€ CAPABILITIES â”€â”€ */
+    /* ── CAPABILITIES ── */
     .capabilities-section { background: var(--bg-light); padding: 80px 40px; }
     .capabilities-header { max-width: 640px; margin-bottom: 56px; }
     .capabilities-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; max-width: 1080px; }
@@ -153,7 +153,7 @@
     .capability-text h4 { font-size: 14px; font-weight: 600; margin-bottom: 4px; }
     .capability-text p { font-size: 13px; color: var(--text-secondary); line-height: 1.5; }
 
-    /* â”€â”€ PROOF â”€â”€ */
+    /* ── PROOF ── */
     .proof-section { background: #0D1A2E; padding: 80px 40px; }
     .proof-header { text-align: center; max-width: 560px; margin: 0 auto 56px; }
     .proof-header .section-label { color: rgba(133,176,32,0.9); }
@@ -164,7 +164,7 @@
     .quote-text { font-size: 15px; color: rgba(255,255,255,0.80); line-height: 1.75; font-style: italic; margin-bottom: 20px; }
     .quote-source { font-size: 12px; color: rgba(255,255,255,0.40); text-transform: uppercase; letter-spacing: 0.08em; font-weight: 600; }
 
-    /* â”€â”€ FIT â”€â”€ */
+    /* ── FIT ── */
     .fit-section { background: var(--bg-white); padding: 80px 40px; }
     .fit-header { max-width: 640px; margin-bottom: 56px; }
     .fit-grid { display: grid; grid-template-columns: 1fr; gap: 24px; max-width: 680px; }
@@ -177,7 +177,7 @@
     .fit-list li:last-child { border-bottom: none; }
     .fit-list li svg { flex-shrink: 0; margin-top: 1px; }
 
-    /* â”€â”€ FAQ â”€â”€ */
+    /* ── FAQ ── */
     .faq-section { background: var(--bg-light); padding: 80px 40px; }
     .faq-section .container { max-width: 760px; }
     .faq-header { margin-bottom: 48px; }
@@ -190,7 +190,7 @@
     .faq-a { padding: 0 24px 20px; font-size: 14px; color: var(--text-secondary); line-height: 1.75; display: none; }
     .faq-a.open { display: block; }
 
-    /* â”€â”€ RELATED â”€â”€ */
+    /* ── RELATED ── */
     .related-section { background: var(--bg-white); padding: 80px 40px; }
     .related-header { max-width: 560px; margin-bottom: 48px; }
     .related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; max-width: 1080px; }
@@ -201,7 +201,7 @@
     .related-card p { font-size: 14px; color: var(--text-secondary); line-height: 1.6; }
     .related-card-link { display: inline-flex; align-items: center; gap: 4px; color: var(--brand-primary); font-size: 13px; font-weight: 600; margin-top: 16px; }
 
-    /* â”€â”€ CTA â”€â”€ */
+    /* ── CTA ── */
     .cta-section { background: #0D1A2E; padding: 80px 40px; text-align: center; }
     .cta-section h2 { color: white; margin-bottom: 16px; }
     .cta-section p { color: rgba(255,255,255,0.65); font-size: 17px; margin-bottom: 36px; max-width: 520px; margin-left: auto; margin-right: auto; }
@@ -210,7 +210,7 @@
     .cta-section .btn-ghost { color: white; border-color: rgba(255,255,255,0.3); }
     .cta-section .btn-ghost:hover { border-color: white; }
 
-    /* â”€â”€ RESPONSIVE â”€â”€ */
+    /* ── RESPONSIVE ── */
     @media (max-width: 1024px) {
       .problem-grid { grid-template-columns: 1fr 1fr; }
       .steps-list { grid-template-columns: 1fr 1fr; gap: 24px; }
@@ -278,7 +278,7 @@
 
 <main id="main-content">
 
-<!-- â”€â”€ HERO â”€â”€ -->
+<!-- ── HERO ── -->
 <section class="hero-feature" aria-labelledby="hero-h1">
   <video class="hero-video-bg" autoplay loop muted playsinline preload="auto" disablepictureinpicture aria-hidden="true">
     <source src="/2flow-website/Images/hero-dtc-fulfilment.mp4" type="video/mp4">
@@ -287,7 +287,7 @@
     <div class="hero-text-col">
       <nav class="hero-breadcrumb" aria-label="Breadcrumb">
         <span>What We Deliver</span>
-        <span aria-hidden="true">â€º</span>
+        <span aria-hidden="true">›</span>
         <span aria-current="page">eCommerce &amp; DTC</span>
       </nav>
       <h1 id="hero-h1">Built for DTC.<br><em>Native on Shopify.</em></h1>
@@ -314,7 +314,7 @@
   </div>
 </section>
 
-<!-- â”€â”€ THE PROBLEM â”€â”€ -->
+<!-- ── THE PROBLEM ── -->
 <section class="problem-section" aria-labelledby="problem-h2">
   <div style="max-width:1080px; margin:0 auto;">
     <div class="problem-header">
@@ -342,7 +342,7 @@
   </div>
 </section>
 
-<!-- â”€â”€ PROCESS â”€â”€ -->
+<!-- ── PROCESS ── -->
 <section class="process-section" aria-labelledby="process-h2">
   <div style="max-width:1080px; margin:0 auto;">
     <div class="process-header">
@@ -380,7 +380,7 @@
   </div>
 </section>
 
-<!-- â”€â”€ PLATFORMS â”€â”€ -->
+<!-- ── PLATFORMS ── -->
 <section class="platforms-section" aria-labelledby="platforms-h2">
   <div style="max-width:1080px; margin:0 auto;">
     <div class="platforms-header">
@@ -448,7 +448,7 @@
   </div>
 </section>
 
-<!-- â”€â”€ CAPABILITIES â”€â”€ -->
+<!-- ── CAPABILITIES ── -->
 <section class="capabilities-section" aria-labelledby="cap-h2">
   <div style="max-width:1080px; margin:0 auto;">
     <div class="capabilities-header">
@@ -515,7 +515,7 @@
   </div>
 </section>
 
-<!-- â”€â”€ SOCIAL PROOF â”€â”€ -->
+<!-- ── SOCIAL PROOF ── -->
 <section class="proof-section" aria-labelledby="proof-h2">
   <div style="max-width:1080px; margin:0 auto;">
     <div class="proof-header">
@@ -526,23 +526,23 @@
       <div class="quote-card">
         <div class="quote-mark">"</div>
         <p class="quote-text">Straight away it was technology integration. The ability to jump on a call and hear: yeah, we'll take an API connection to Shopify, we'll have your orders in. That's not something you hear from everyone.</p>
-        <div class="quote-source">Founder &nbsp;Â·&nbsp; Irish health supplement brand</div>
+        <div class="quote-source">Founder &nbsp;·&nbsp; Irish health supplement brand</div>
       </div>
       <div class="quote-card">
         <div class="quote-mark">"</div>
         <p class="quote-text">Since we moved over to 2Flow, and since we started using Mintsoft, the amount of times we would need to contact the fulfillment centre has dramatically decreased, which is great, because it just saves time for everybody.</p>
-        <div class="quote-source">Customer service manager &nbsp;Â·&nbsp; Irish eCommerce brand</div>
+        <div class="quote-source">Customer service manager &nbsp;·&nbsp; Irish eCommerce brand</div>
       </div>
       <div class="quote-card">
         <div class="quote-mark">"</div>
         <p class="quote-text">With the last warehouse we used, even setting up a new product on the system was not a straightforward process. Mintsoft is just a far superior piece of software to what they were using previously. The efficiency of how 2Flow run things, plus Mintsoft, is actually fantastic.</p>
-        <div class="quote-source">Operations lead &nbsp;Â·&nbsp; Irish skincare retailer</div>
+        <div class="quote-source">Operations lead &nbsp;·&nbsp; Irish skincare retailer</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- â”€â”€ RIGHT FIT â”€â”€ -->
+<!-- ── RIGHT FIT ── -->
 <section class="fit-section" aria-labelledby="fit-h2">
   <div style="max-width:1080px; margin:0 auto;">
     <div class="fit-header">
@@ -554,7 +554,7 @@
       <div class="fit-panel good">
         <div class="fit-panel-label">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-          A strong fit if youâ€¦
+          A strong fit if you…
         </div>
         <h3>You sell direct-to-consumer and need your fulfilment to feel invisible.</h3>
         <ul class="fit-list">
@@ -588,7 +588,7 @@
   </div>
 </section>
 
-<!-- â”€â”€ FAQ â”€â”€ -->
+<!-- ── FAQ ── -->
 <section class="faq-section" aria-labelledby="faq-h2">
   <div class="container">
     <div class="faq-header">
@@ -635,7 +635,7 @@
   </div>
 </section>
 
-<!-- â”€â”€ RELATED SERVICES â”€â”€ -->
+<!-- ── RELATED SERVICES ── -->
 <section class="related-section" aria-labelledby="related-h2">
   <div style="max-width:1080px; margin:0 auto;">
     <div class="related-header">
@@ -671,7 +671,7 @@
   </div>
 </section>
 
-<!-- â”€â”€ CTA â”€â”€ -->
+<!-- ── CTA ── -->
 <section class="cta-section" aria-labelledby="cta-h2">
   <h2 id="cta-h2">Let your store focus on selling.<br>We'll handle everything after checkout.</h2>
   <p>Tell us your platform, your volumes, and your packaging requirements. We'll show you exactly how 2Flow connects to your store and what the operation looks like from day one.</p>
@@ -684,7 +684,7 @@
 
 </main>
 
-<!-- â”€â”€ FOOTER â”€â”€ -->
+<!-- ── FOOTER ── -->
 <div id="site-footer"></div>
 <script src="/2flow-website/js/footer.js"></script>
 
