@@ -56,6 +56,13 @@
       object-fit: cover; object-position: center;
       z-index: 0;
     }
+    .hero-video-fade {
+      position: absolute; inset: 0; z-index: 1;
+      background: #000;
+      opacity: 0;
+      transition: opacity 0.8s ease;
+      pointer-events: none;
+    }
     .hero-feature::before {
       content: '';
       position: absolute; inset: 0; z-index: 1;
@@ -256,12 +263,14 @@
 <section class="hero-feature" aria-labelledby="hero-heading">
   <video
     class="hero-video-bg"
+    id="heroVid"
     autoplay loop muted playsinline
     preload="auto" disablepictureinpicture
     aria-hidden="true"
   >
-    <source src="/2flow-website/Images/hero-healthcare.mp4" type="video/mp4">
+    <source src="/2flow-website/Images/healthcare.mp4" type="video/mp4">
   </video>
+  <div class="hero-video-fade" id="heroFade"></div>
   <div class="hero-feature-inner">
     <div class="hero-text-col">
       <nav class="hero-breadcrumb" aria-label="Breadcrumb">
@@ -532,6 +541,21 @@
 <!-- ── FOOTER ── -->
 <div id="site-footer"></div>
 <script src="/2flow-website/js/footer.js"></script>
+<script>
+  (function() {
+    var vid = document.getElementById('heroVid');
+    var fade = document.getElementById('heroFade');
+    var fadeDuration = 0.8; // seconds before end to start fade
+    vid.addEventListener('timeupdate', function() {
+      var remaining = vid.duration - vid.currentTime;
+      if (remaining <= fadeDuration) {
+        fade.style.opacity = 1;
+      } else {
+        fade.style.opacity = 0;
+      }
+    });
+  })();
+</script>
 
 </body>
 </html>
