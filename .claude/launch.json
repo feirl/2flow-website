@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "2flow-website",
+      "runtimeExecutable": "powershell",
+      "runtimeArgs": ["-NoProfile", "-Command", "$root = 'C:\\'; $listener = [System.Net.HttpListener]::new(); $listener.Prefixes.Add('http://localhost:3000/'); $listener.Start(); Write-Host 'Serving on http://localhost:3000/2flow-website/'; while ($listener.IsListening) { $ctx = $listener.GetContext(); $req = $ctx.Request; $res = $ctx.Response; $path = Join-Path $root $req.Url.LocalPath.TrimStart('/'); if (Test-Path $path -PathType Container) { $path = Join-Path $path 'index.html' }; if (Test-Path $path) { $ext = [System.IO.Path]::GetExtension($path).ToLower(); $mime = @{'.html'='text/html';'.css'='text/css';'.js'='application/javascript';'.png'='image/png';'.jpg'='image/jpeg';'.jpeg'='image/jpeg';'.svg'='image/svg+xml';'.mp4'='video/mp4';'.webp'='image/webp';'.ico'='image/x-icon'}; $res.ContentType = if ($mime[$ext]) { $mime[$ext] } else { 'application/octet-stream' }; $bytes = [System.IO.File]::ReadAllBytes($path); $res.ContentLength64 = $bytes.Length; $res.OutputStream.Write($bytes, 0, $bytes.Length) } else { $res.StatusCode = 404 }; $res.Close() }"],
+      "port": 3000
+    }
+  ]
+}
