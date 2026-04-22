@@ -171,7 +171,6 @@
         '</div>' +
 
         '<div class="nav-item"><a href="' + B + '/pricing/">Pricing</a></div>' +
-        '<div class="nav-item"><a href="' + B + '/home2/">Home 2</a></div>' +
 
       '</div>' +
       '<div class="nav-cta-wrap">' +
