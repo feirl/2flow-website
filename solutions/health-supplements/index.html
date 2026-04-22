@@ -51,6 +51,8 @@
       padding: calc(var(--nav-height) + 80px) 40px 80px;
       position: relative;
       overflow: hidden;
+      min-height: 846px;
+      display: flex; align-items: center;
     }
     .hero-feature-bg {
       position: absolute; inset: 0;
@@ -58,6 +60,7 @@
       object-fit: cover; object-position: center;
       z-index: 0; pointer-events: none;
     }
+    .hero-video-fade { position: absolute; inset: 0; z-index: 1; background: #000; opacity: 0; transition: opacity 0.8s ease; pointer-events: none; }
     .hero-feature::before {
       content: '';
       position: absolute;
@@ -264,12 +267,14 @@
 <section class="hero-feature" aria-labelledby="hero-heading">
   <video
     class="hero-feature-bg"
+    id="heroVid"
     autoplay loop muted playsinline
     preload="auto" disablepictureinpicture
     aria-hidden="true"
   >
     <source src="/Images/marciano.mp4" type="video/mp4">
   </video>
+  <div class="hero-video-fade" id="heroFade"></div>
   <div class="hero-feature-inner">
     <div class="hero-text-col">
       <nav class="hero-breadcrumb" aria-label="Breadcrumb">
@@ -555,5 +560,20 @@
 <div id="site-footer"></div>
 <script src="/js/footer.js"></script>
 
+<script>
+  (function() {
+    var vid = document.getElementById('heroVid');
+    var fade = document.getElementById('heroFade');
+    var fadeDuration = 0.8;
+    vid.addEventListener('timeupdate', function() {
+      var remaining = vid.duration - vid.currentTime;
+      if (remaining <= fadeDuration) {
+        fade.style.opacity = 1;
+      } else {
+        fade.style.opacity = 0;
+      }
+    });
+  })();
+</script>
 </body>
 </html>
