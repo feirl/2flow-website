@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Platform | Why 2Flow | eCommerce Fulfilment Ireland</title>
+  <meta name="description" content="2Flow runs on enterprise-grade warehouse management software. Real-time stock visibility, order tracking, inbound management and reporting - all accessible through your own client portal.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://2flow.ie/why-2flow/platform">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="The Platform | 2Flow eCommerce Fulfilment Ireland">
+  <meta property="og:description" content="Real-time visibility into your stock, your orders, your entire operation. See what you get access to as a 2Flow client.">
+  <meta property="og:url" content="https://2flow.ie/why-2flow/platform">
+  <meta property="og:site_name" content="2Flow">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://2flow.ie/"},
+      {"@type": "ListItem", "position": 2, "name": "Why 2Flow", "item": "https://2flow.ie/why-2flow/"},
+      {"@type": "ListItem", "position": 3, "name": "The Platform", "item": "https://2flow.ie/why-2flow/platform"}
+    ]
+  }
+  </script>
+
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    /* ── HERO ── */
+    .hero-feature {
+      background: #0D1A2E;
+      padding: calc(var(--nav-height) + 80px) 40px 80px;
+      position: relative; overflow: hidden;
+      display: flex; align-items: flex-start;
+    }
+    .hero-feature::before {
+      content: '';
+      position: absolute;
+      top: -120px; right: -80px;
+      width: 560px; height: 560px;
+      background: radial-gradient(circle, rgba(92,184,0,0.13) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero-feature-inner { max-width: 1080px; margin: 0 auto; position: relative; width: 100%; }
+    .hero-text-col { max-width: 720px; }
+    .hero-breadcrumb { display: flex; align-items: center; gap: 6px; font-size: 12px; color: rgba(255,255,255,0.45); margin-bottom: 20px; flex-wrap: wrap; }
+    .hero-breadcrumb a { color: rgba(255,255,255,0.45); text-decoration: none; transition: color 0.15s; }
+    .hero-breadcrumb a:hover { color: var(--brand-primary); }
+    .hero-breadcrumb span { color: rgba(255,255,255,0.25); }
+    .hero-feature h1 { color: white; margin-bottom: 20px; }
+    .hero-feature h1 em { font-style: normal; color: var(--brand-primary); }
+    .hero-sub { font-size: 18px; line-height: 1.7; color: rgba(255,255,255,0.65); max-width: 600px; margin-top: 18px; }
+    .hero-btns { display: flex; gap: 12px; margin-top: 32px; flex-wrap: wrap; }
+
+    /* ── SHARED ── */
+    .container { max-width: 1080px; margin: 0 auto; }
+    .section-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; color: var(--brand-primary); margin-bottom: 12px; }
+    .section-intro { font-size: 17px; color: var(--text-secondary); line-height: 1.8; max-width: 640px; margin-top: 14px; }
+
+    /* ── OPS PLATFORM ── */
+    .ops-section { background: var(--bg-white); padding: 88px 40px; }
+    .ops-header { margin-bottom: 56px; max-width: 640px; }
+    .ops-header h2 { margin-top: 8px; }
+
+    .ops-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .ops-card {
+      background: var(--bg-light);
+      border: 1px solid var(--border-light);
+      border-radius: 14px;
+      padding: 32px 28px;
+    }
+    .ops-icon {
+      width: 44px; height: 44px;
+      background: rgba(92,184,0,0.1);
+      border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      color: var(--brand-primary);
+      margin-bottom: 20px;
+    }
+    .ops-card h3 { font-size: 16px; font-weight: 700; color: var(--text-primary); margin-bottom: 10px; line-height: 1.3; }
+    .ops-card p { font-size: 14px; color: var(--text-secondary); line-height: 1.75; }
+
+    /* ── PORTAL INTRO ── */
+    .portal-intro-section { background: #0D1A2E; padding: 88px 40px; }
+    .portal-intro-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 72px;
+      align-items: center;
+    }
+    .portal-intro-text .section-label { color: rgba(92,184,0,0.9); }
+    .portal-intro-text h2 { color: white; margin-top: 8px; }
+    .portal-intro-text p { font-size: 16px; color: rgba(255,255,255,0.6); line-height: 1.8; margin-top: 16px; }
+    .portal-intro-text p + p { margin-top: 12px; }
+
+    /* Stylised portal preview card */
+    .portal-preview {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 16px;
+      overflow: hidden;
+    }
+    .preview-bar {
+      background: rgba(255,255,255,0.06);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      padding: 12px 20px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .preview-dot { width: 8px; height: 8px; border-radius: 50%; }
+    .preview-dot:nth-child(1) { background: rgba(255,255,255,0.15); }
+    .preview-dot:nth-child(2) { background: rgba(255,255,255,0.1); }
+    .preview-dot:nth-child(3) { background: rgba(255,255,255,0.07); }
+    .preview-bar-title { font-size: 11px; color: rgba(255,255,255,0.3); font-weight: 600; letter-spacing: 0.06em; margin-left: 8px; }
+    .preview-body { padding: 24px 20px; display: flex; flex-direction: column; gap: 12px; }
+    .preview-stat-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+    .preview-stat {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 8px;
+      padding: 14px 12px;
+    }
+    .preview-stat-label { font-size: 10px; color: rgba(255,255,255,0.3); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 6px; }
+    .preview-stat-val { font-size: 20px; font-weight: 700; color: white; line-height: 1; }
+    .preview-stat-val.green { color: var(--brand-primary); }
+    .preview-table { width: 100%; border-collapse: collapse; }
+    .preview-table-hdr { font-size: 9px; color: rgba(255,255,255,0.25); text-transform: uppercase; letter-spacing: 0.1em; padding: 6px 0; border-bottom: 1px solid rgba(255,255,255,0.06); display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 8px; }
+    .preview-table-row { font-size: 11px; color: rgba(255,255,255,0.55); padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.04); display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 8px; align-items: center; }
+    .preview-badge { display: inline-block; padding: 2px 8px; border-radius: 99px; font-size: 10px; font-weight: 700; }
+    .preview-badge.dispatched { background: rgba(92,184,0,0.15); color: var(--brand-primary); }
+    .preview-badge.picking { background: rgba(255,165,0,0.15); color: #F5A623; }
+    .preview-badge.pending { background: rgba(255,255,255,0.08); color: rgba(255,255,255,0.4); }
+
+    /* ── PORTAL FEATURES ── */
+    .portal-features-section { background: var(--bg-light); padding: 88px 40px; }
+    .portal-features-header { max-width: 560px; margin-bottom: 56px; }
+    .portal-features-header h2 { margin-top: 8px; }
+    .portal-features-header p { font-size: 16px; color: var(--text-secondary); line-height: 1.7; margin-top: 14px; }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2px;
+      background: var(--border-light);
+      border-radius: 16px;
+      overflow: hidden;
+    }
+    .feature-tile {
+      background: white;
+      padding: 36px 32px;
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+    }
+    .feature-tile-icon {
+      width: 40px; height: 40px; flex-shrink: 0;
+      background: rgba(92,184,0,0.1);
+      border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      color: var(--brand-primary);
+      margin-top: 2px;
+    }
+    .feature-tile-text h3 { font-size: 16px; font-weight: 700; color: var(--text-primary); margin-bottom: 8px; }
+    .feature-tile-text p { font-size: 14px; color: var(--text-secondary); line-height: 1.75; }
+
+    /* ── IN PRACTICE ── */
+    .practice-section { background: #0D1A2E; padding: 88px 40px; }
+    .practice-header { max-width: 560px; margin-bottom: 56px; }
+    .practice-header h2 { color: white; margin-top: 8px; }
+    .practice-header p { font-size: 16px; color: rgba(255,255,255,0.55); line-height: 1.7; margin-top: 14px; }
+    .practice-header .section-label { color: rgba(92,184,0,0.9); }
+
+    .practice-list { display: flex; flex-direction: column; gap: 20px; max-width: 800px; }
+    .practice-item {
+      display: flex;
+      gap: 24px;
+      align-items: flex-start;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 14px;
+      padding: 28px 28px;
+    }
+    .practice-num {
+      font-size: 13px; font-weight: 700; color: var(--brand-primary);
+      background: rgba(92,184,0,0.1);
+      border-radius: 99px;
+      width: 32px; height: 32px; flex-shrink: 0;
+      display: flex; align-items: center; justify-content: center;
+      letter-spacing: 0.02em;
+    }
+    .practice-item h3 { font-size: 16px; font-weight: 700; color: white; margin-bottom: 8px; }
+    .practice-item p { font-size: 14px; color: rgba(255,255,255,0.55); line-height: 1.75; }
+
+    /* ── CTA ── */
+    .cta-section { background: var(--bg-light); padding: 88px 40px; text-align: center; }
+    .cta-section h2 { color: var(--text-primary); margin-bottom: 16px; }
+    .cta-section p { color: var(--text-secondary); font-size: 17px; margin-bottom: 36px; max-width: 480px; margin-left: auto; margin-right: auto; }
+    .cta-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+    .cta-note { margin-top: 18px; font-size: 13px; color: var(--text-tertiary); }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 960px) {
+      .ops-grid { grid-template-columns: repeat(2, 1fr); }
+      .portal-intro-inner { grid-template-columns: 1fr; }
+      .features-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 768px) {
+      .hero-feature { padding: calc(var(--nav-height) + 48px) 20px 56px; }
+      .ops-section, .portal-intro-section, .portal-features-section, .practice-section, .cta-section { padding: 60px 20px; }
+      .ops-grid { grid-template-columns: 1fr; }
+      .preview-stat-row { grid-template-columns: repeat(2, 1fr); }
+    }
+  </style>
+  <link rel="stylesheet" href="/css/site.css">
+</head>
+<body>
+
+<a href="#main-content" class="skip-link">Skip to content</a>
+<div id="site-nav"></div>
+<script src="/js/nav.js"></script>
+
+<main id="main-content">
+
+<!-- HERO -->
+<section class="hero-feature" aria-labelledby="hero-heading">
+  <div class="hero-feature-inner">
+    <div class="hero-text-col">
+      <nav class="hero-breadcrumb" aria-label="Breadcrumb">
+        <a href="/why-2flow/">Why 2Flow</a>
+        <span aria-hidden="true">›</span>
+        <span aria-current="page">The Platform</span>
+      </nav>
+      <h1 id="hero-heading">You can see everything <em>we can see.</em></h1>
+      <p class="hero-sub">2Flow runs on enterprise warehouse management software used by leading 3PLs across Europe. Every order, every pick, every stock movement is tracked in real time - and you have direct access to all of it.</p>
+      <div class="hero-btns">
+        <a href="/book-a-call/" class="btn-primary">Book a Call</a>
+        <a href="/why-2flow/" class="btn-ghost btn-ghost-light">Why 2Flow</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- OPS PLATFORM -->
+<section class="ops-section" aria-labelledby="ops-heading">
+  <div class="container">
+    <div class="ops-header">
+      <p class="section-label">How it runs</p>
+      <h2 id="ops-heading">What the platform does on your behalf</h2>
+      <p class="section-intro">The warehouse management system sits at the centre of every operation. It is what makes same-day dispatch possible, what catches errors before they reach customers, and what lets the team scale through peak without slowing down.</p>
+    </div>
+
+    <div class="ops-grid">
+
+      <div class="ops-card">
+        <div class="ops-icon" aria-hidden="true">
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+        </div>
+        <h3>Orders sync in minutes</h3>
+        <p>Orders from your Shopify store or other sales channel sync automatically and are queued for picking within 15 minutes of being placed. No manual imports, no batched uploads.</p>
+      </div>
+
+      <div class="ops-card">
+        <div class="ops-icon" aria-hidden="true">
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+        </div>
+        <h3>Pick accuracy, by design</h3>
+        <p>Every pick is barcode-scanned against the order. The system validates the right product, the right quantity, the right destination before anything leaves the shelf. Errors are flagged before they become mis-ships.</p>
+      </div>
+
+      <div class="ops-card">
+        <div class="ops-icon" aria-hidden="true">
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+        </div>
+        <h3>Expiry and rotation management</h3>
+        <p>For health, food and perishable products, the platform enforces FIFO and FEFO automatically. Oldest stock ships first. Expiry dates are tracked per batch. No manual rotation required.</p>
+      </div>
+
+      <div class="ops-card">
+        <div class="ops-icon" aria-hidden="true">
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+        </div>
+        <h3>Built for peak</h3>
+        <p>Batch scheduling groups orders for efficient picking runs. The system allocates work automatically across the team, maintaining throughput whether it is a quiet Tuesday or Black Friday weekend.</p>
+      </div>
+
+      <div class="ops-card">
+        <div class="ops-icon" aria-hidden="true">
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M16 3h5v5M4 20L21 3M21 16v5h-5M15 15l6 6M4 4l5 5"/></svg>
+        </div>
+        <h3>Returns handled properly</h3>
+        <p>Returned items are received, inspected and logged back to stock through the same system - with full traceability. Nothing gets lost in a pile or restocked without a record.</p>
+      </div>
+
+      <div class="ops-card">
+        <div class="ops-icon" aria-hidden="true">
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        </div>
+        <h3>Multi-carrier, automatic labels</h3>
+        <p>Integrated with all major carriers. The platform generates shipping labels automatically and routes orders to the right carrier based on destination, weight and service level. No manual carrier selection.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- PORTAL INTRO -->
+<section class="portal-intro-section" aria-labelledby="portal-intro-heading">
+  <div class="container">
+    <div class="portal-intro-inner">
+
+      <div class="portal-intro-text">
+        <p class="section-label">Client portal</p>
+        <h2 id="portal-intro-heading" style="color:white;">Your operation, visible from anywhere.</h2>
+        <p>As a 2Flow client, you get your own secure portal. It is not a read-only dashboard that shows you what we decide to share. It gives you direct, real-time access to your stock, your orders, your inbound deliveries and your account - from any device, at any time.</p>
+        <p>Most brands tell us they check it once a day at most. The point is not that you need to watch it constantly. The point is that when you need something, it is there - and you do not need to call us to get it.</p>
+      </div>
+
+      <!-- Stylised portal preview -->
+      <div class="portal-preview" role="img" aria-label="Illustration of the client portal dashboard">
+        <div class="preview-bar">
+          <div class="preview-dot"></div>
+          <div class="preview-dot"></div>
+          <div class="preview-dot"></div>
+          <span class="preview-bar-title">CLIENT PORTAL &nbsp;·&nbsp; STOCK OVERVIEW</span>
+        </div>
+        <div class="preview-body">
+          <div class="preview-stat-row">
+            <div class="preview-stat">
+              <div class="preview-stat-label">Units in stock</div>
+              <div class="preview-stat-val green">2,847</div>
+            </div>
+            <div class="preview-stat">
+              <div class="preview-stat-label">Dispatched today</div>
+              <div class="preview-stat-val">134</div>
+            </div>
+            <div class="preview-stat">
+              <div class="preview-stat-label">Inbound pending</div>
+              <div class="preview-stat-val">480</div>
+            </div>
+          </div>
+          <div style="margin-top:4px;">
+            <div class="preview-table-hdr">
+              <span>Order ref</span>
+              <span>Value</span>
+              <span>Status</span>
+            </div>
+            <div class="preview-table-row">
+              <span>#ORD-10482</span>
+              <span>€42.00</span>
+              <span><span class="preview-badge dispatched">Dispatched</span></span>
+            </div>
+            <div class="preview-table-row">
+              <span>#ORD-10481</span>
+              <span>€89.50</span>
+              <span><span class="preview-badge dispatched">Dispatched</span></span>
+            </div>
+            <div class="preview-table-row">
+              <span>#ORD-10480</span>
+              <span>€31.00</span>
+              <span><span class="preview-badge picking">Picking</span></span>
+            </div>
+            <div class="preview-table-row">
+              <span>#ORD-10479</span>
+              <span>€65.00</span>
+              <span><span class="preview-badge pending">Pending</span></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- PORTAL FEATURES -->
+<section class="portal-features-section" aria-labelledby="portal-features-heading">
+  <div class="container">
+    <div class="portal-features-header">
+      <p class="section-label">What you can access</p>
+      <h2 id="portal-features-heading">Everything in your portal</h2>
+      <p>Seven things you can do from the client portal - without picking up the phone.</p>
+    </div>
+
+    <div class="features-grid">
+
+      <div class="feature-tile">
+        <div class="feature-tile-icon" aria-hidden="true">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg>
+        </div>
+        <div class="feature-tile-text">
+          <h3>Live stock levels</h3>
+          <p>See exactly what you have in the warehouse right now. Units by SKU, by batch, by location. The same view the 2Flow team has - updated in real time.</p>
+        </div>
+      </div>
+
+      <div class="feature-tile">
+        <div class="feature-tile-icon" aria-hidden="true">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </div>
+        <div class="feature-tile-text">
+          <h3>Order tracking</h3>
+          <p>Track every order from the moment it is placed to the moment it dispatches. See status in real time - pending, picking, packed, dispatched. No more chasing for updates.</p>
+        </div>
+      </div>
+
+      <div class="feature-tile">
+        <div class="feature-tile-icon" aria-hidden="true">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/><line x1="9" y1="15" x2="15" y2="15"/></svg>
+        </div>
+        <div class="feature-tile-text">
+          <h3>Inbound management</h3>
+          <p>Raise advance shipping notices and schedule incoming deliveries yourself. The warehouse team can plan receiving before your stock arrives, which means faster check-in times.</p>
+        </div>
+      </div>
+
+      <div class="feature-tile">
+        <div class="feature-tile-icon" aria-hidden="true">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+        </div>
+        <div class="feature-tile-text">
+          <h3>On-demand reports</h3>
+          <p>Build and run your own inventory, order and performance reports whenever you need them. No waiting, no requests. Pull a stock report at 11pm before a board meeting the next morning.</p>
+        </div>
+      </div>
+
+      <div class="feature-tile">
+        <div class="feature-tile-icon" aria-hidden="true">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+        </div>
+        <div class="feature-tile-text">
+          <h3>Itemised invoices</h3>
+          <p>Every charge broken down by activity: storage, pick and pack, handling, returns, shipping. You can see exactly what you are being charged for and why.</p>
+        </div>
+      </div>
+
+      <div class="feature-tile">
+        <div class="feature-tile-icon" aria-hidden="true">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+        </div>
+        <div class="feature-tile-text">
+          <h3>Low stock alerts</h3>
+          <p>Set your own threshold per SKU. When stock drops below it, you get an automatic alert. You decide the level - the platform does the watching.</p>
+        </div>
+      </div>
+
+      <div class="feature-tile">
+        <div class="feature-tile-icon" aria-hidden="true">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        </div>
+        <div class="feature-tile-text">
+          <h3>Raise and track queries</h3>
+          <p>Log support queries directly through the portal and track their status. Every issue is on record, with a response thread - so nothing falls into a WhatsApp message and gets lost.</p>
+        </div>
+      </div>
+
+      <div class="feature-tile">
+        <div class="feature-tile-icon" aria-hidden="true">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <div class="feature-tile-text">
+          <h3>Product management</h3>
+          <p>Add and update product details directly from the portal. Set preferences for stock allocation, picking method, and labelling requirements without going back and forth over email.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- IN PRACTICE -->
+<section class="practice-section" aria-labelledby="practice-heading">
+  <div class="container">
+    <div class="practice-header">
+      <p class="section-label">In practice</p>
+      <h2 id="practice-heading" style="color:white;">What this looks like day-to-day</h2>
+      <p>Three things that happen differently when your fulfilment partner runs on a proper platform.</p>
+    </div>
+
+    <div class="practice-list">
+
+      <div class="practice-item">
+        <div class="practice-num" aria-hidden="true">01</div>
+        <div>
+          <h3>You stop chasing updates</h3>
+          <p>Instead of emailing your 3PL to ask how many units you have left, or whether an order has gone out, you check the portal. It takes 30 seconds. Real-time data means the answer is always current - not from a spreadsheet that was updated at the end of last week.</p>
+        </div>
+      </div>
+
+      <div class="practice-item">
+        <div class="practice-num" aria-hidden="true">02</div>
+        <div>
+          <h3>You know about stock issues before your customers do</h3>
+          <p>Low stock alerts fire automatically when a SKU hits your threshold. You have time to place a replenishment order before you sell out. No more discovering you have run out of your bestseller when the customer service emails start arriving.</p>
+        </div>
+      </div>
+
+      <div class="practice-item">
+        <div class="practice-num" aria-hidden="true">03</div>
+        <div>
+          <h3>Inbound stock arrives faster</h3>
+          <p>When you raise an advance shipping notice before your delivery arrives, the warehouse team can plan the receiving run before the pallet comes through the door. Stock gets checked in and available to sell faster than if it arrives unannounced.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- CTA -->
+<section class="cta-section" aria-labelledby="cta-heading">
+  <div class="container">
+    <h2 id="cta-heading">Want to see the portal in action?</h2>
+    <p>Book a call and we can walk you through exactly what you would see as a 2Flow client.</p>
+    <div class="cta-btns">
+      <a href="/book-a-call/" class="btn-primary">Book a Call</a>
+      <a href="/why-2flow/" class="btn-ghost">Back to Why 2Flow</a>
+    </div>
+    <p class="cta-note">Dublin-based team &nbsp;·&nbsp; Same-day dispatch &nbsp;·&nbsp; 27 EU countries</p>
+  </div>
+</section>
+
+</main>
+
+<div id="site-footer"></div>
+<script src="/js/footer.js"></script>
+
+</body>
+</html>
