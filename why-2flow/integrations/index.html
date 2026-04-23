@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Integrations | Why 2Flow | eCommerce Fulfilment Ireland</title>
+  <meta name="description" content="2Flow connects directly to Shopify, WooCommerce, Amazon, eBay, TikTok Shop and more. Orders flow automatically from your store to our warehouse - no manual imports.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://2flow.ie/why-2flow/integrations">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Integrations | 2Flow eCommerce Fulfilment Ireland">
+  <meta property="og:description" content="Connect your store, your marketplaces, your accounting software. Orders flow automatically from sale to dispatch.">
+  <meta property="og:url" content="https://2flow.ie/why-2flow/integrations">
+  <meta property="og:site_name" content="2Flow">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://2flow.ie/"},
+      {"@type": "ListItem", "position": 2, "name": "Why 2Flow", "item": "https://2flow.ie/why-2flow/"},
+      {"@type": "ListItem", "position": 3, "name": "Integrations", "item": "https://2flow.ie/why-2flow/integrations"}
+    ]
+  }
+  </script>
+
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    /* ── HERO ── */
+    .hero-feature {
+      background: #0D1A2E;
+      padding: calc(var(--nav-height) + 80px) 40px 80px;
+      position: relative; overflow: hidden;
+      display: flex; align-items: flex-start;
+    }
+    .hero-feature::before {
+      content: '';
+      position: absolute;
+      top: -120px; right: -80px;
+      width: 560px; height: 560px;
+      background: radial-gradient(circle, rgba(92,184,0,0.13) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero-feature-inner { max-width: 1080px; margin: 0 auto; position: relative; width: 100%; }
+    .hero-text-col { max-width: 720px; }
+    .hero-breadcrumb { display: flex; align-items: center; gap: 6px; font-size: 12px; color: rgba(255,255,255,0.45); margin-bottom: 20px; flex-wrap: wrap; }
+    .hero-breadcrumb a { color: rgba(255,255,255,0.45); text-decoration: none; transition: color 0.15s; }
+    .hero-breadcrumb a:hover { color: var(--brand-primary); }
+    .hero-breadcrumb span { color: rgba(255,255,255,0.25); }
+    .hero-feature h1 { color: white; margin-bottom: 20px; }
+    .hero-feature h1 em { font-style: normal; color: var(--brand-primary); }
+    .hero-sub { font-size: 18px; line-height: 1.7; color: rgba(255,255,255,0.65); max-width: 600px; margin-top: 18px; }
+    .hero-btns { display: flex; gap: 12px; margin-top: 32px; flex-wrap: wrap; }
+
+    /* ── SHARED ── */
+    .container { max-width: 1080px; margin: 0 auto; }
+    .section-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; color: var(--brand-primary); margin-bottom: 12px; }
+
+    /* ── SHOPIFY FEATURE ── */
+    .shopify-section { background: var(--bg-white); padding: 88px 40px; }
+    .shopify-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 72px;
+      align-items: center;
+    }
+    .shopify-text h2 { margin-top: 8px; margin-bottom: 20px; }
+    .shopify-text p { font-size: 16px; color: var(--text-secondary); line-height: 1.8; }
+    .shopify-text p + p { margin-top: 14px; }
+    .shopify-points { display: flex; flex-direction: column; gap: 14px; margin-top: 28px; }
+    .shopify-point { display: flex; align-items: flex-start; gap: 12px; font-size: 14px; color: var(--text-secondary); line-height: 1.6; }
+    .shopify-point-icon {
+      width: 22px; height: 22px; flex-shrink: 0;
+      background: rgba(92,184,0,0.12);
+      border-radius: 6px;
+      display: flex; align-items: center; justify-content: center;
+      color: var(--brand-primary);
+      margin-top: 1px;
+    }
+
+    /* Shopify visual */
+    .shopify-visual {
+      background: var(--bg-light);
+      border: 1px solid var(--border-light);
+      border-radius: 20px;
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .flow-row { display: flex; align-items: center; gap: 16px; }
+    .flow-node {
+      flex: 1;
+      background: white;
+      border: 1px solid var(--border-light);
+      border-radius: 12px;
+      padding: 18px 20px;
+      text-align: center;
+    }
+    .flow-node-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-tertiary); margin-bottom: 4px; }
+    .flow-node-val { font-size: 15px; font-weight: 700; color: var(--text-primary); }
+    .flow-node.green { border-color: rgba(92,184,0,0.3); background: rgba(92,184,0,0.05); }
+    .flow-node.green .flow-node-val { color: var(--brand-primary); }
+    .flow-arrow { color: var(--brand-primary); flex-shrink: 0; }
+    .flow-stat { display: flex; align-items: center; gap: 8px; }
+    .flow-stat-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--brand-primary); flex-shrink: 0; }
+    .flow-stat-text { font-size: 13px; color: var(--text-secondary); }
+    .flow-stat-text strong { color: var(--text-primary); }
+
+    /* ── INTEGRATION CATEGORIES ── */
+    .integrations-section { background: var(--bg-light); padding: 88px 40px; }
+    .integrations-header { max-width: 640px; margin-bottom: 60px; }
+    .integrations-header h2 { margin-top: 8px; }
+    .integrations-header p { font-size: 16px; color: var(--text-secondary); line-height: 1.7; margin-top: 14px; }
+
+    .cat-group { margin-bottom: 52px; }
+    .cat-group:last-child { margin-bottom: 0; }
+    .cat-header { display: flex; align-items: center; gap: 14px; margin-bottom: 20px; }
+    .cat-icon {
+      width: 36px; height: 36px; flex-shrink: 0;
+      background: rgba(92,184,0,0.1);
+      border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      color: var(--brand-primary);
+    }
+    .cat-title { font-size: 14px; font-weight: 700; color: var(--text-primary); text-transform: uppercase; letter-spacing: 0.08em; }
+    .cat-desc { font-size: 13px; color: var(--text-tertiary); margin-top: 2px; }
+
+    .integration-chips { display: flex; flex-wrap: wrap; gap: 10px; }
+    .chip {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: white;
+      border: 1px solid var(--border-light);
+      border-radius: 10px;
+      padding: 10px 16px;
+      font-size: 14px; font-weight: 600; color: var(--text-primary);
+      transition: border-color 0.15s, box-shadow 0.15s;
+    }
+    .chip:hover { border-color: var(--brand-primary); box-shadow: 0 0 0 3px rgba(92,184,0,0.08); }
+    .chip-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--brand-primary); flex-shrink: 0; }
+    .chip.muted { background: var(--bg-light); color: var(--text-secondary); font-weight: 500; font-size: 13px; }
+    .chip.muted .chip-dot { background: var(--text-tertiary); opacity: 0.5; }
+
+    /* ── API SECTION ── */
+    .api-section { background: #0D1A2E; padding: 88px 40px; }
+    .api-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 72px;
+      align-items: center;
+    }
+    .api-text .section-label { color: rgba(92,184,0,0.9); }
+    .api-text h2 { color: white; margin-top: 8px; margin-bottom: 20px; }
+    .api-text p { font-size: 16px; color: rgba(255,255,255,0.6); line-height: 1.8; }
+    .api-text p + p { margin-top: 14px; }
+    .api-btns { display: flex; gap: 12px; margin-top: 32px; flex-wrap: wrap; }
+    .api-text .btn-ghost { color: white; border-color: rgba(255,255,255,0.3); }
+    .api-text .btn-ghost:hover { border-color: white; }
+
+    .api-count-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+    .api-count-card {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.09);
+      border-radius: 14px;
+      padding: 28px 24px;
+    }
+    .api-count-num {
+      font-size: 36px; font-weight: 700; color: var(--brand-primary);
+      line-height: 1; margin-bottom: 8px;
+    }
+    .api-count-label {
+      font-size: 13px; color: rgba(255,255,255,0.5); line-height: 1.5;
+    }
+
+    /* ── CTA ── */
+    .cta-section { background: var(--bg-light); padding: 88px 40px; text-align: center; }
+    .cta-section h2 { color: var(--text-primary); margin-bottom: 16px; }
+    .cta-section p { color: var(--text-secondary); font-size: 17px; margin-bottom: 36px; max-width: 480px; margin-left: auto; margin-right: auto; }
+    .cta-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+    .cta-note { margin-top: 18px; font-size: 13px; color: var(--text-tertiary); }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 960px) {
+      .shopify-inner, .api-inner { grid-template-columns: 1fr; gap: 48px; }
+    }
+    @media (max-width: 768px) {
+      .hero-feature { padding: calc(var(--nav-height) + 48px) 20px 56px; }
+      .shopify-section, .integrations-section, .api-section, .cta-section { padding: 60px 20px; }
+      .api-count-grid { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+  <link rel="stylesheet" href="/css/site.css">
+</head>
+<body>
+
+<a href="#main-content" class="skip-link">Skip to content</a>
+<div id="site-nav"></div>
+<script src="/js/nav.js"></script>
+
+<main id="main-content">
+
+<!-- HERO -->
+<section class="hero-feature" aria-labelledby="hero-heading">
+  <div class="hero-feature-inner">
+    <div class="hero-text-col">
+      <nav class="hero-breadcrumb" aria-label="Breadcrumb">
+        <a href="/why-2flow/">Why 2Flow</a>
+        <span aria-hidden="true">›</span>
+        <span aria-current="page">Integrations</span>
+      </nav>
+      <h1 id="hero-heading">Your store connects.<br><em>Your orders flow automatically.</em></h1>
+      <p class="hero-sub">From the moment a customer checks out, the order is in our system. No manual imports, no spreadsheets, no delays. 2Flow integrates directly with the platforms your business already runs on.</p>
+      <div class="hero-btns">
+        <a href="/book-a-call/" class="btn-primary">Book a Call</a>
+        <a href="/why-2flow/" class="btn-ghost btn-ghost-light">Why 2Flow</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- SHOPIFY FEATURE -->
+<section class="shopify-section" aria-labelledby="shopify-heading">
+  <div class="container">
+    <div class="shopify-inner">
+
+      <div class="shopify-text">
+        <p class="section-label">Our primary integration</p>
+        <h2 id="shopify-heading">Built for Shopify brands</h2>
+        <p>Most of the brands we work with are on Shopify, and our setup reflects that. The connection is direct and automatic - orders sync from your store to our warehouse in minutes, and tracking numbers flow back to your customers without you touching anything.</p>
+        <p>Whether you are running a single storefront or managing multiple Shopify stores, the integration handles it. Everything stays in sync.</p>
+        <div class="shopify-points">
+          <div class="shopify-point">
+            <div class="shopify-point-icon" aria-hidden="true">
+              <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            Orders sync automatically within 15 minutes of being placed
+          </div>
+          <div class="shopify-point">
+            <div class="shopify-point-icon" aria-hidden="true">
+              <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            Tracking numbers update in Shopify as soon as orders dispatch
+          </div>
+          <div class="shopify-point">
+            <div class="shopify-point-icon" aria-hidden="true">
+              <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            Stock levels sync back to your store in real time
+          </div>
+          <div class="shopify-point">
+            <div class="shopify-point-icon" aria-hidden="true">
+              <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            Works with Shopify Markets, multiple currencies and international storefronts
+          </div>
+        </div>
+      </div>
+
+      <div class="shopify-visual" role="img" aria-label="Illustration of Shopify order flow">
+        <div class="flow-row">
+          <div class="flow-node green">
+            <div class="flow-node-label">Shopify order placed</div>
+            <div class="flow-node-val">2Flow notified</div>
+          </div>
+        </div>
+        <div style="display:flex; align-items:center; padding-left:24px;">
+          <svg width="16" height="24" viewBox="0 0 16 24" fill="none" aria-hidden="true"><line x1="8" y1="0" x2="8" y2="20" stroke="#5CB800" stroke-width="2"/><polyline points="3,15 8,22 13,15" fill="none" stroke="#5CB800" stroke-width="2"/></svg>
+          <span style="font-size:11px; color:var(--text-tertiary); margin-left:12px; font-weight:600; text-transform:uppercase; letter-spacing:0.1em;">Within 15 minutes</span>
+        </div>
+        <div class="flow-row">
+          <div class="flow-node">
+            <div class="flow-node-label">Warehouse action</div>
+            <div class="flow-node-val">Picked &amp; packed</div>
+          </div>
+          <svg class="flow-arrow" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+          <div class="flow-node">
+            <div class="flow-node-label">Same day</div>
+            <div class="flow-node-val">Dispatched</div>
+          </div>
+        </div>
+        <div style="display:flex; align-items:center; padding-left:24px;">
+          <svg width="16" height="24" viewBox="0 0 16 24" fill="none" aria-hidden="true"><line x1="8" y1="0" x2="8" y2="20" stroke="#5CB800" stroke-width="2"/><polyline points="3,15 8,22 13,15" fill="none" stroke="#5CB800" stroke-width="2"/></svg>
+          <span style="font-size:11px; color:var(--text-tertiary); margin-left:12px; font-weight:600; text-transform:uppercase; letter-spacing:0.1em;">Automatically</span>
+        </div>
+        <div class="flow-row">
+          <div class="flow-node green">
+            <div class="flow-node-label">Back to Shopify</div>
+            <div class="flow-node-val">Tracking updated</div>
+          </div>
+        </div>
+        <div style="border-top: 1px solid var(--border-light); padding-top:16px; display:flex; flex-direction:column; gap:8px;">
+          <div class="flow-stat"><div class="flow-stat-dot"></div><span class="flow-stat-text"><strong>Stock levels</strong> sync back to your store in real time</span></div>
+          <div class="flow-stat"><div class="flow-stat-dot"></div><span class="flow-stat-text"><strong>Customer notifications</strong> sent automatically on dispatch</span></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- INTEGRATION CATEGORIES -->
+<section class="integrations-section" aria-labelledby="integrations-heading">
+  <div class="container">
+    <div class="integrations-header">
+      <p class="section-label">All integrations</p>
+      <h2 id="integrations-heading">Connect the rest of your stack</h2>
+      <p>Beyond Shopify, 2Flow connects to all major eCommerce platforms, marketplaces, carriers and accounting software. If your business already uses it, there is almost certainly a direct integration.</p>
+    </div>
+
+    <!-- eCommerce Platforms -->
+    <div class="cat-group">
+      <div class="cat-header">
+        <div class="cat-icon" aria-hidden="true">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+        </div>
+        <div>
+          <div class="cat-title">eCommerce Platforms</div>
+          <div class="cat-desc">Your online store, connected directly</div>
+        </div>
+      </div>
+      <div class="integration-chips">
+        <div class="chip"><span class="chip-dot"></span>Shopify</div>
+        <div class="chip"><span class="chip-dot"></span>WooCommerce</div>
+        <div class="chip"><span class="chip-dot"></span>Magento</div>
+        <div class="chip"><span class="chip-dot"></span>Squarespace</div>
+      </div>
+    </div>
+
+    <!-- Marketplaces -->
+    <div class="cat-group">
+      <div class="cat-header">
+        <div class="cat-icon" aria-hidden="true">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        </div>
+        <div>
+          <div class="cat-title">Marketplaces</div>
+          <div class="cat-desc">Sell on multiple channels, fulfil from one place</div>
+        </div>
+      </div>
+      <div class="integration-chips">
+        <div class="chip"><span class="chip-dot"></span>Amazon</div>
+        <div class="chip"><span class="chip-dot"></span>eBay</div>
+        <div class="chip"><span class="chip-dot"></span>TikTok Shop</div>
+        <div class="chip"><span class="chip-dot"></span>Wayfair</div>
+      </div>
+    </div>
+
+    <!-- Carriers -->
+    <div class="cat-group">
+      <div class="cat-header">
+        <div class="cat-icon" aria-hidden="true">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+        </div>
+        <div>
+          <div class="cat-title">Carriers</div>
+          <div class="cat-desc">80+ domestic and international carriers</div>
+        </div>
+      </div>
+      <div class="integration-chips">
+        <div class="chip"><span class="chip-dot"></span>DPD</div>
+        <div class="chip"><span class="chip-dot"></span>DHL</div>
+        <div class="chip"><span class="chip-dot"></span>FedEx</div>
+        <div class="chip"><span class="chip-dot"></span>UPS</div>
+        <div class="chip muted"><span class="chip-dot"></span>+ many more via multi-carrier</div>
+      </div>
+    </div>
+
+    <!-- Accounting -->
+    <div class="cat-group">
+      <div class="cat-header">
+        <div class="cat-icon" aria-hidden="true">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+        </div>
+        <div>
+          <div class="cat-title">Accounting &amp; Finance</div>
+          <div class="cat-desc">Fulfilment activity flows straight into your books</div>
+        </div>
+      </div>
+      <div class="integration-chips">
+        <div class="chip"><span class="chip-dot"></span>Xero</div>
+        <div class="chip"><span class="chip-dot"></span>QuickBooks</div>
+        <div class="chip"><span class="chip-dot"></span>Sage</div>
+      </div>
+    </div>
+
+    <!-- Inventory & ERP -->
+    <div class="cat-group">
+      <div class="cat-header">
+        <div class="cat-icon" aria-hidden="true">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+        </div>
+        <div>
+          <div class="cat-title">Inventory &amp; ERP</div>
+          <div class="cat-desc">Keep stock data consistent across your entire operation</div>
+        </div>
+      </div>
+      <div class="integration-chips">
+        <div class="chip"><span class="chip-dot"></span>Unleashed</div>
+        <div class="chip"><span class="chip-dot"></span>Zoho</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- API / CUSTOM -->
+<section class="api-section" aria-labelledby="api-heading">
+  <div class="container">
+    <div class="api-inner">
+
+      <div class="api-text">
+        <p class="section-label">Custom &amp; API</p>
+        <h2 id="api-heading">Don't see yours? We can connect it.</h2>
+        <p>If your platform is not on the list, it does not mean it cannot be connected. Our warehouse management system supports custom API integration, which means that if your platform has an API, there is almost always a way to wire it in.</p>
+        <p>Talk to us about your stack during the onboarding call. We have connected a wide range of bespoke setups and will tell you honestly what is and is not possible.</p>
+        <div class="api-btns">
+          <a href="/book-a-call/" class="btn-primary">Talk to us</a>
+          <a href="/why-2flow/platform/" class="btn-ghost">About the platform</a>
+        </div>
+      </div>
+
+      <div class="api-count-grid">
+        <div class="api-count-card">
+          <div class="api-count-num">170+</div>
+          <div class="api-count-label">Pre-built integrations across platforms, carriers and software</div>
+        </div>
+        <div class="api-count-card">
+          <div class="api-count-num">15 min</div>
+          <div class="api-count-label">Average order sync time from Shopify to warehouse</div>
+        </div>
+        <div class="api-count-card">
+          <div class="api-count-num">API</div>
+          <div class="api-count-label">Custom connector available for platforms not yet listed</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- CTA -->
+<section class="cta-section" aria-labelledby="cta-heading">
+  <div class="container">
+    <h2 id="cta-heading">Ready to connect your store?</h2>
+    <p>Book a call and we will confirm exactly how your setup connects and what onboarding looks like.</p>
+    <div class="cta-btns">
+      <a href="/book-a-call/" class="btn-primary">Book a Call</a>
+      <a href="/why-2flow/" class="btn-ghost">Back to Why 2Flow</a>
+    </div>
+    <p class="cta-note">Dublin-based team &nbsp;·&nbsp; Same-day dispatch &nbsp;·&nbsp; 27 EU countries</p>
+  </div>
+</section>
+
+</main>
+
+<div id="site-footer"></div>
+<script src="/js/footer.js"></script>
+
+</body>
+</html>
