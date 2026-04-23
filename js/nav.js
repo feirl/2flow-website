@@ -174,7 +174,7 @@
 
       '</div>' +
       '<div class="nav-cta-wrap">' +
-        '<a href="' + B + '/#contact" class="nav-cta">Book a Call</a>' +
+        '<a href="' + B + '/book-a-call/" class="nav-cta">Book a Call</a>' +
       '</div>' +
       '<button class="hamburger" id="js-hamburger" aria-label="Open menu" aria-expanded="false">' +
         '<span></span><span></span><span></span>' +
