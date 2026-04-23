@@ -54,6 +54,30 @@
   }
   </script>
 
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Who will I deal with at 2Flow day to day?",
+        "acceptedAnswer": { "@type": "Answer", "text": "You will deal directly with Simon Pleass (Managing Director), Steven O'Connell (Operations Manager) and Eve Hyland Martin (Head of Brand Partnerships). There is no helpdesk or rotating account manager." }
+      },
+      {
+        "@type": "Question",
+        "name": "Is 2Flow a large company?",
+        "acceptedAnswer": { "@type": "Answer", "text": "2Flow is a deliberately focused operation. The team is small by design - it means every client has direct access to the people running their fulfilment, not a support queue." }
+      },
+      {
+        "@type": "Question",
+        "name": "What are 2Flow's operating hours?",
+        "acceptedAnswer": { "@type": "Answer", "text": "The warehouse operates Monday to Friday. Orders placed before 1pm dispatch same day. The team is responsive outside core hours for anything urgent." }
+      }
+    ]
+  }
+  </script>
+
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -226,6 +250,33 @@
       .team-grid { grid-template-columns: 1fr; max-width: 420px; margin: 0 auto; }
       .values-grid { grid-template-columns: 1fr; }
     }
+
+    /* ── FAQ ── */
+    .faq-section { background: var(--bg-white); padding: 88px 40px; border-top: 1px solid var(--border-light); }
+    .faq-container { max-width: 1080px; margin: 0 auto; }
+    .faq-header { max-width: 560px; margin-bottom: 48px; }
+    .faq-header .section-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; color: var(--brand-primary); margin-bottom: 12px; }
+    .faq-header h2 { margin-top: 8px; }
+    .faq-list { max-width: 760px; }
+    .faq-item { border-bottom: 1px solid var(--border-light); }
+    .faq-item:first-child { border-top: 1px solid var(--border-light); }
+    .faq-q {
+      width: 100%; background: none; border: none; cursor: pointer;
+      display: flex; align-items: center; justify-content: space-between; gap: 16px;
+      padding: 22px 0; text-align: left;
+    }
+    .faq-q-text { font-size: 15px; font-weight: 700; color: var(--text-primary); line-height: 1.45; }
+    .faq-icon {
+      width: 26px; height: 26px; flex-shrink: 0; border-radius: 50%;
+      background: rgba(92,184,0,0.1);
+      display: flex; align-items: center; justify-content: center;
+      color: var(--brand-primary); transition: transform 0.2s; font-size: 18px; line-height: 1;
+    }
+    .faq-item.open .faq-icon { transform: rotate(45deg); }
+    .faq-a { display: none; padding-bottom: 22px; }
+    .faq-item.open .faq-a { display: block; }
+    .faq-a p { font-size: 15px; color: var(--text-secondary); line-height: 1.85; }
+    @media (max-width: 768px) { .faq-section { padding: 60px 20px; } }
   </style>
   <link rel="stylesheet" href="/css/site.css">
 </head>
