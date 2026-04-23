@@ -69,14 +69,43 @@
   }
   </script>
 
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is DTC fulfilment?",
+        "acceptedAnswer": { "@type": "Answer", "text": "DTC (direct-to-consumer) fulfilment is the process of shipping orders directly from a brand's warehouse partner to the end customer, bypassing retail intermediaries. 2Flow handles DTC fulfilment natively for Shopify brands with real-time order sync and same-day dispatch." }
+      },
+      {
+        "@type": "Question",
+        "name": "How does 2Flow integrate with Shopify for DTC fulfilment?",
+        "acceptedAnswer": { "@type": "Answer", "text": "2Flow connects to Shopify through Mintsoft WMS. Orders sync every 15 minutes, tracking numbers are pushed back to Shopify automatically, and inventory levels update in real time. No manual order processing required." }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the dispatch cut-off for DTC orders?",
+        "acceptedAnswer": { "@type": "Answer", "text": "DTC orders received before 1pm are dispatched the same day. 2Flow's team will often process orders received after cut-off the same day where capacity allows." }
+      },
+      {
+        "@type": "Question",
+        "name": "Does 2Flow handle DTC returns?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. Returns are received, inspected, graded and restocked through the same Mintsoft system. Shopify inventory updates automatically when returned units are processed back to sellable status." }
+      }
+    ]
+  }
+  </script>
+
   <link rel="stylesheet" href="/css/site.css">
   <style>
     /* ── HERO ── */
-    .hero-feature { background: #0D1A2E; padding: calc(var(--nav-height) + 104px) 40px 104px; min-height: 834px; position: relative; overflow: hidden; min-height: 834px; display: flex; align-items: center; }
+    .hero-feature { background: #0D1A2E; padding: calc(var(--nav-height) + 80px) 40px 80px; position: relative; overflow: hidden; min-height: 600px; display: flex; align-items: center; }
     .hero-feature::before { content: ''; position: absolute; inset: 0; z-index: 1; background: linear-gradient(100deg, rgba(13,26,46,0.88) 0%, rgba(13,26,46,0.68) 35%, rgba(13,26,46,0.38) 65%, rgba(13,26,46,0.12) 100%); pointer-events: none; }
     .hero-feature-inner { max-width: 1080px; margin: 0 auto; width: 100%; position: relative; z-index: 2; }
     .hero-video-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; z-index: 0; }
-    .hero-text-col { max-width: 500px; }
+    .hero-text-col { max-width: 648px; }
     .hero-breadcrumb { display: flex; align-items: center; gap: 6px; font-size: 12px; color: rgba(255,255,255,0.45); margin-bottom: 20px; flex-wrap: wrap; }
     .hero-breadcrumb span { color: rgba(255,255,255,0.25); }
     .hero-feature h1 { color: white; margin-bottom: 20px; }

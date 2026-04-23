@@ -42,6 +42,35 @@
   }
   </script>
 
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Does 2Flow handle batch tracking for health supplements?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. Every inbound supplement delivery is logged at batch level. Lot numbers are recorded and tied to each dispatch. This provides full traceability from receipt to customer — essential for regulatory compliance and recall management." }
+      },
+      {
+        "@type": "Question",
+        "name": "Does 2Flow enforce FIFO stock rotation for supplements?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. FIFO (first in, first out) rotation is enforced at the system level through Mintsoft WMS, not by manual instruction. The oldest batch always ships first. Expired stock cannot reach your customer." }
+      },
+      {
+        "@type": "Question",
+        "name": "Can 2Flow handle compliance labelling for supplement brands?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. Market-specific labelling is applied at fulfilment. Re-labelling for EU or UK regulatory requirements is handled in-house. You do not need a separate SKU per market." }
+      },
+      {
+        "@type": "Question",
+        "name": "Does 2Flow store refrigerated supplements?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. 2Flow has dedicated refrigerated storage on-site for cold-chain supplement SKUs including probiotics and temperature-sensitive nutritional products. Cold receipt, cold pick and cold dispatch are all available." }
+      }
+    ]
+  }
+  </script>
+
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -51,8 +80,6 @@
       padding: calc(var(--nav-height) + 80px) 40px 80px;
       position: relative;
       overflow: hidden;
-      min-height: 846px;
-      display: flex; align-items: center;
     }
     .hero-feature-bg {
       position: absolute; inset: 0;
@@ -60,7 +87,6 @@
       object-fit: cover; object-position: center;
       z-index: 0; pointer-events: none;
     }
-    .hero-video-fade { position: absolute; inset: 0; z-index: 1; background: #000; opacity: 0; transition: opacity 0.8s ease; pointer-events: none; }
     .hero-feature::before {
       content: '';
       position: absolute;
@@ -267,14 +293,12 @@
 <section class="hero-feature" aria-labelledby="hero-heading">
   <video
     class="hero-feature-bg"
-    id="heroVid"
     autoplay loop muted playsinline
     preload="auto" disablepictureinpicture
     aria-hidden="true"
   >
-    <source src="/Images/health-supplements.mp4" type="video/mp4">
+    <source src="/Images/marciano.mp4" type="video/mp4">
   </video>
-  <div class="hero-video-fade" id="heroFade"></div>
   <div class="hero-feature-inner">
     <div class="hero-text-col">
       <nav class="hero-breadcrumb" aria-label="Breadcrumb">
@@ -560,20 +584,5 @@
 <div id="site-footer"></div>
 <script src="/js/footer.js"></script>
 
-<script>
-  (function() {
-    var vid = document.getElementById('heroVid');
-    var fade = document.getElementById('heroFade');
-    var fadeDuration = 0.8;
-    vid.addEventListener('timeupdate', function() {
-      var remaining = vid.duration - vid.currentTime;
-      if (remaining <= fadeDuration) {
-        fade.style.opacity = 1;
-      } else {
-        fade.style.opacity = 0;
-      }
-    });
-  })();
-</script>
 </body>
 </html>

@@ -131,7 +131,7 @@
     .stats-strip { background: var(--bg-white); padding: 80px 40px; border-bottom: 1px solid var(--border-light); }
     .stats-strip-inner { max-width: 1080px; margin: 0 auto; }
     .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; text-align: center; margin-top: 48px; }
-    .stat-num { font-size: 52px; font-weight: 700; font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; color: var(--brand-primary); line-height: 1; margin-bottom: 12px; }
+    .stat-num { font-size: 52px; font-weight: 700; color: var(--brand-primary); line-height: 1; margin-bottom: 12px; }
     .stat-desc { font-size: 15px; color: var(--text-secondary); line-height: 1.6; }
     @keyframes statPop {
       0%   { transform: scale(0.8); opacity: 0; }
@@ -300,28 +300,148 @@
     "@context": "https://schema.org",
     "@graph": [
       {
-        "@type": "LocalBusiness",
+        "@type": ["LocalBusiness", "Organization"],
         "@id": "https://2flow.ie/#business",
         "name": "2Flow",
-        "description": "Ireland's specialist eCommerce fulfilment partner providing end-to-end 3PL services for DTC brands.",
+        "legalName": "2Flow",
+        "description": "Ireland's specialist eCommerce fulfilment partner. Pick and pack, kitting, subscription fulfilment, Amazon prep, same-day Dublin delivery and full 3PL services for DTC brands.",
         "url": "https://2flow.ie",
         "logo": "https://2flow.ie/Images/2flow-logo.png",
+        "image": "https://2flow.ie/Images/og-image.jpg",
         "address": {
           "@type": "PostalAddress",
           "addressLocality": "Dublin",
+          "addressRegion": "Finglas",
           "addressCountry": "IE"
         },
         "areaServed": ["Ireland", "United Kingdom", "European Union"],
-        "priceRange": "££"
+        "priceRange": "££",
+        "knowsAbout": [
+          "eCommerce Fulfilment",
+          "Third-Party Logistics",
+          "Subscription Fulfilment",
+          "Amazon FBA Preparation",
+          "Same-Day Delivery Dublin",
+          "Kitting and Bundling",
+          "Returns Management",
+          "Shopify Fulfilment Ireland"
+        ],
+        "sameAs": []
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://2flow.ie/#website",
+        "url": "https://2flow.ie",
+        "name": "2Flow",
+        "publisher": { "@id": "https://2flow.ie/#business" }
       },
       {
         "@type": "Service",
         "@id": "https://2flow.ie/#service",
-        "name": "eCommerce Fulfilment",
+        "name": "eCommerce Fulfilment Ireland",
         "provider": { "@id": "https://2flow.ie/#business" },
         "serviceType": "Third-Party Logistics (3PL)",
-        "description": "Pick and pack, kitting, returns management, same-day dispatch and international shipping for Irish eCommerce brands.",
-        "areaServed": ["Ireland", "United Kingdom", "European Union"]
+        "description": "Pick and pack, kitting, subscription fulfilment, Amazon FBA prep, returns management, same-day dispatch and international shipping for Irish eCommerce brands.",
+        "areaServed": ["Ireland", "United Kingdom", "European Union"],
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "2Flow Fulfilment Services",
+          "itemListElement": [
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Pick and Pack Fulfilment" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Kitting and Bundling" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Subscription Brand Fulfilment" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Amazon FBA Preparation" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Same-Day Dublin Delivery" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Returns and Refurbishment" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Live Commerce Fulfilment" } }
+          ]
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://2flow.ie/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is 2Flow?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "2Flow is Ireland's specialist eCommerce fulfilment partner, based in Dublin. We provide pick and pack, kitting, returns, subscription fulfilment, Amazon FBA prep and same-day delivery services for DTC and eCommerce brands shipping from Ireland."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Where is 2Flow based?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "2Flow is based in Finglas, Dublin, Ireland. We fulfil orders across Ireland, the UK, the EU and internationally."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is the cut-off time for same-day dispatch?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The standard cut-off for same-day dispatch is 1pm. Orders received before that are dispatched the same day. For Same-Day Dublin Delivery via Cyclone Couriers, the cut-off is noon."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does 2Flow integrate with Shopify?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. 2Flow has a native Shopify integration through Mintsoft WMS with 15-minute order sync, automatic tracking updates and real-time inventory visibility. We also integrate with WooCommerce, Amazon, TikTok Shop and ReCharge."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does 2Flow handle subscription brand fulfilment?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. 2Flow is specifically optimised for subscription brands. We integrate with ReCharge, plan labour around billing cycles, handle batch kitting with scan-verified assembly, manage per-subscriber personalisation, and have a defined process for late-recovered failed payment orders."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does 2Flow offer same-day delivery in Dublin?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. 2Flow offers same-day delivery across Dublin city and county via partner Cyclone Couriers. Cut-off is noon. No minimum order volume. Temperature-controlled delivery is available for medical and cold-chain products."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does 2Flow handle Amazon FBA preparation?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. 2Flow handles Amazon FBA prep including labelling, poly-bagging, carton configuration and compliance. We also offer FBM fulfilment with 24-hour dispatch, and 2Flow clients get access to a dedicated Amazon Ireland onboarding programme with up to 12 months of fee support."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What types of brands does 2Flow work with?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "2Flow works with eCommerce and DTC brands typically shipping 500 to 10,000+ orders per month. We have particular expertise in health and supplements, beauty and personal care, medical and healthcare, subscription boxes, consumer electronics, and home and lifestyle."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can 2Flow handle cold-chain or temperature-sensitive products?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. 2Flow has refrigerated storage on-site for cold-chain SKUs. Same-day Dublin delivery via Cyclone Couriers is also temperature-controlled, currently used for medical products including weight-loss medications shipped in ice packs."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What carriers does 2Flow use?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "2Flow's primary carriers are DPD Ireland and An Post for domestic and international shipping. Same-day Dublin delivery is via Cyclone Couriers. Carrier selection is managed by 2Flow to deliver the best available service for each shipment."
+            }
+          }
+        ]
       }
     ]
   }
@@ -646,6 +766,83 @@
       </div>
     </div>
     <a href="/why-2flow/integrations" style="font-size:13px; padding:9px 18px; border-radius:6px; border:1px solid var(--border-medium); color:var(--text-primary); font-weight:600; text-decoration:none; white-space:nowrap; transition:all 0.15s;">View all integrations &#8594;</a>
+  </div>
+</section>
+
+<!-- FAQ SECTION -->
+<section style="background:var(--bg-light); padding:80px 40px;" aria-labelledby="faq-heading">
+  <div style="max-width:1080px; margin:0 auto;">
+    <div style="max-width:640px; margin-bottom:56px;">
+      <div class="section-label">FAQs</div>
+      <h2 id="faq-heading">Common questions about 2Flow</h2>
+    </div>
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:24px;">
+
+      <details style="background:white; border:1px solid var(--border-light); border-radius:12px; padding:24px 28px; cursor:pointer;">
+        <summary style="font-size:16px; font-weight:600; color:var(--text-primary); list-style:none; display:flex; justify-content:space-between; align-items:center; gap:16px;">
+          What is 2Flow?
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="flex-shrink:0;"><polyline points="6 9 12 15 18 9"/></svg>
+        </summary>
+        <p style="margin-top:16px; font-size:14px; color:var(--text-secondary); line-height:1.7;">2Flow is Ireland's specialist eCommerce fulfilment partner, based in Dublin. We take full ownership of the operational chain — from inbound stock through to delivered order and returns — so your brand can scale without managing warehouse operations.</p>
+      </details>
+
+      <details style="background:white; border:1px solid var(--border-light); border-radius:12px; padding:24px 28px; cursor:pointer;">
+        <summary style="font-size:16px; font-weight:600; color:var(--text-primary); list-style:none; display:flex; justify-content:space-between; align-items:center; gap:16px;">
+          What is the cut-off for same-day dispatch?
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="flex-shrink:0;"><polyline points="6 9 12 15 18 9"/></svg>
+        </summary>
+        <p style="margin-top:16px; font-size:14px; color:var(--text-secondary); line-height:1.7;">Same-day dispatch cut-off is 1pm. Orders received before that are dispatched the same working day. For Same-Day Dublin Delivery via our partner Cyclone Couriers, the cut-off is noon with delivery the same afternoon.</p>
+      </details>
+
+      <details style="background:white; border:1px solid var(--border-light); border-radius:12px; padding:24px 28px; cursor:pointer;">
+        <summary style="font-size:16px; font-weight:600; color:var(--text-primary); list-style:none; display:flex; justify-content:space-between; align-items:center; gap:16px;">
+          Does 2Flow integrate with Shopify?
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="flex-shrink:0;"><polyline points="6 9 12 15 18 9"/></svg>
+        </summary>
+        <p style="margin-top:16px; font-size:14px; color:var(--text-secondary); line-height:1.7;">Yes. We have a native Shopify integration through Mintsoft WMS with 15-minute order sync, automatic tracking updates and real-time inventory visibility. We also integrate with WooCommerce, Amazon, TikTok Shop, ReCharge and other platforms.</p>
+      </details>
+
+      <details style="background:white; border:1px solid var(--border-light); border-radius:12px; padding:24px 28px; cursor:pointer;">
+        <summary style="font-size:16px; font-weight:600; color:var(--text-primary); list-style:none; display:flex; justify-content:space-between; align-items:center; gap:16px;">
+          Does 2Flow handle subscription brands?
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="flex-shrink:0;"><polyline points="6 9 12 15 18 9"/></svg>
+        </summary>
+        <p style="margin-top:16px; font-size:14px; color:var(--text-secondary); line-height:1.7;">Yes — and we are specifically optimised for them. We integrate with ReCharge, plan our operation around your billing cycle, handle batch kitting with scan-verified assembly, and have a defined process for late-recovered failed payment orders.</p>
+      </details>
+
+      <details style="background:white; border:1px solid var(--border-light); border-radius:12px; padding:24px 28px; cursor:pointer;">
+        <summary style="font-size:16px; font-weight:600; color:var(--text-primary); list-style:none; display:flex; justify-content:space-between; align-items:center; gap:16px;">
+          Can 2Flow handle temperature-sensitive products?
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="flex-shrink:0;"><polyline points="6 9 12 15 18 9"/></svg>
+        </summary>
+        <p style="margin-top:16px; font-size:14px; color:var(--text-secondary); line-height:1.7;">Yes. We have refrigerated storage on-site for cold-chain SKUs. Same-day Dublin delivery via Cyclone Couriers is also temperature-controlled — currently used for medical products including weight-loss medications shipped in ice packs.</p>
+      </details>
+
+      <details style="background:white; border:1px solid var(--border-light); border-radius:12px; padding:24px 28px; cursor:pointer;">
+        <summary style="font-size:16px; font-weight:600; color:var(--text-primary); list-style:none; display:flex; justify-content:space-between; align-items:center; gap:16px;">
+          What order volumes does 2Flow work with?
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="flex-shrink:0;"><polyline points="6 9 12 15 18 9"/></svg>
+        </summary>
+        <p style="margin-top:16px; font-size:14px; color:var(--text-secondary); line-height:1.7;">2Flow works best with brands shipping from around 500 orders per month upwards. We have clients ranging from fast-growing DTC brands to established names shipping 10,000+ orders per month across multiple channels.</p>
+      </details>
+
+      <details style="background:white; border:1px solid var(--border-light); border-radius:12px; padding:24px 28px; cursor:pointer;">
+        <summary style="font-size:16px; font-weight:600; color:var(--text-primary); list-style:none; display:flex; justify-content:space-between; align-items:center; gap:16px;">
+          Does 2Flow handle Amazon FBA preparation?
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="flex-shrink:0;"><polyline points="6 9 12 15 18 9"/></svg>
+        </summary>
+        <p style="margin-top:16px; font-size:14px; color:var(--text-secondary); line-height:1.7;">Yes. 2Flow handles FBA prep including labelling, poly-bagging, carton configuration and compliance. We also do FBM with 24-hour dispatch. 2Flow clients get access to a dedicated Amazon Ireland onboarding programme, including up to 12 months of fee support.</p>
+      </details>
+
+      <details style="background:white; border:1px solid var(--border-light); border-radius:12px; padding:24px 28px; cursor:pointer;">
+        <summary style="font-size:16px; font-weight:600; color:var(--text-primary); list-style:none; display:flex; justify-content:space-between; align-items:center; gap:16px;">
+          What carriers does 2Flow use?
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="flex-shrink:0;"><polyline points="6 9 12 15 18 9"/></svg>
+        </summary>
+        <p style="margin-top:16px; font-size:14px; color:var(--text-secondary); line-height:1.7;">Our primary carriers are DPD Ireland and An Post for domestic and international shipping. Same-day Dublin delivery is via Cyclone Couriers. Carrier selection is managed by 2Flow — you don't need to manage carrier accounts.</p>
+      </details>
+
+    </div>
   </div>
 </section>
 

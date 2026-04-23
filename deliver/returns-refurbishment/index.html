@@ -64,10 +64,39 @@
   }
   </script>
 
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How does 2Flow handle eCommerce returns?",
+        "acceptedAnswer": { "@type": "Answer", "text": "2Flow processes returns end-to-end: receipt, inspection, condition grading, restocking of sellable units, and quarantine of unsellable stock. All returns are tracked in Mintsoft with real-time visibility in the client portal." }
+      },
+      {
+        "@type": "Question",
+        "name": "How quickly are returns processed at 2Flow?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Returns are typically inspected and graded within 24 to 48 hours of receipt. Sellable units are restocked to available inventory promptly so they can be re-sold without delay." }
+      },
+      {
+        "@type": "Question",
+        "name": "Can returned products be refurbished at 2Flow?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. 2Flow handles light refurbishment including re-labelling, re-packaging, poly-bagging, and preparation of returned units for resale or re-fulfilment." }
+      },
+      {
+        "@type": "Question",
+        "name": "Does 2Flow handle returns for subscription brands?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. Returns from subscription customers are processed with the same speed and accuracy as standard eCommerce returns. Refund or exchange workflows are managed through Shopify or the brand's order management platform." }
+      }
+    ]
+  }
+  </script>
+
   <link rel="stylesheet" href="/css/site.css">
   <style>
     /* ── HERO ── */
-    .hero-feature { background: #0D1A2E; padding: calc(var(--nav-height) + 104px) 40px 104px; min-height: 834px; position: relative; overflow: hidden; }
+    .hero-feature { background: #0D1A2E; padding: calc(var(--nav-height) + 80px) 40px 80px; position: relative; overflow: hidden; }
     .hero-feature-bg {
       position: absolute; inset: 0;
       width: 100%; height: 100%;
@@ -84,7 +113,7 @@
       pointer-events: none;
     }
     .hero-feature-inner { max-width: 1080px; margin: 0 auto; }
-    .hero-text-col { max-width: 500px; }
+    .hero-text-col { max-width: 648px; }
     .hero-breadcrumb { display: flex; align-items: center; gap: 6px; font-size: 12px; color: rgba(255,255,255,0.45); margin-bottom: 20px; flex-wrap: wrap; }
     .hero-breadcrumb a { color: rgba(255,255,255,0.45); text-decoration: none; transition: color 0.15s; }
     .hero-breadcrumb a:hover { color: var(--brand-primary); }
@@ -272,7 +301,7 @@
 <section class="hero-feature" aria-labelledby="hero-h1">
   <img class="hero-feature-bg" src="/Images/blouse2.jpg" alt="" aria-hidden="true" loading="eager" fetchpriority="high">
   <div class="hero-feature-inner" style="position:relative;z-index:2;">
-    <div class="hero-text-col">
+    <div>
       <nav class="hero-breadcrumb" aria-label="Breadcrumb">
         <span>eCommerce Fulfilment</span>
         <span aria-hidden="true">›</span>

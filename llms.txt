@@ -1,56 +1,159 @@
 # 2Flow — llms.txt
+# Ireland's eCommerce Fulfilment Partner
 # https://2flow.ie
+# Last updated: 2026-04-23
 
-## About
+## About 2Flow
 
-2Flow is Ireland's specialist eCommerce fulfilment partner, based in Dublin.
-We provide end-to-end third-party logistics (3PL) services for direct-to-consumer
-and DTC brands shipping from Ireland.
+2Flow is Ireland's specialist eCommerce fulfilment partner, based in Dublin (Finglas).
+We provide end-to-end third-party logistics (3PL) services for direct-to-consumer (DTC)
+and eCommerce brands shipping from Ireland to Ireland, the UK, the EU and globally.
 
-## What We Do
+2Flow takes full ownership of the operational chain — from inbound stock receipt through
+to customer delivery and returns — so brands can scale without managing warehouse operations.
 
-- Pick and pack fulfilment for eCommerce orders
-- Kitting and product assembly
-- Returns processing and management
-- Same-day order dispatch from our Dublin hub
-- Inbound stock management and check-in
-- Amazon FBA preparation
-- Shopify-native fulfilment integration
-- International shipping (Ireland, UK, EU, global)
+## Location
+
+- Warehouse: Finglas, Dublin, Ireland
+- Serves: Ireland, United Kingdom, European Union, international
+
+## What We Do (Services)
+
+### eCommerce Fulfilment
+- Pick and Pack: Accurate, brand-aligned order fulfilment at speed, same-day dispatch available
+- Kitting and Bundling: Gift sets, subscription boxes, multi-SKU assembly, product bundles
+- Returns and Refurbishment: Fast returns processing, grading, restocking and refurbishment
+- Finishing and Personalisation: Engraving, custom inserts, gift messaging, branded packaging, tissue paper
+- Compliance Preparation: Regulated labelling, batch control, FIFO stock rotation, cold-chain handling
+
+### OmniChannel Specialists
+- eCommerce and DTC Fulfilment: Shopify-native fulfilment, 15-minute order sync, real-time inventory
+- Retail and B2B Distribution: Compliance-ready wholesale prep, EDI, retail-standard packing
+- Amazon Fulfilment: FBA prep, FBM 24-hour dispatch, exclusive Amazon Ireland onboarding programme
+- TikTok Shop: Integrated fulfilment for TikTok Shop sellers, fast dispatch for live selling spikes
+- Pop-up and Own-Store Fulfilment: Replenishment for own retail locations, events and concessions
+
+### Beyond Fulfilment
+- Live Commerce Fulfilment: Dedicated studio space at Finglas for live selling events (TikTok, Instagram, YouTube), same-day dispatch
+- Same-Day Dublin Delivery: Via Cyclone Couriers, noon cut-off, Dublin city and county, cold-chain and medical capable
 
 ## Who We Serve
 
-Irish eCommerce brands and DTC businesses shipping 500–10,000+ orders per month.
-Typical customers: health and beauty brands, subscription box businesses,
-supplements, cosmetics, and lifestyle product companies.
+### By Sector
+- Beauty and Personal Care: Gift sets, subscription boxes, branded unboxing, fragrance, skincare
+- Health Supplements: Batch tracking, FIFO, lot control, compliance labelling, subscription fulfilment
+- Medical and Healthcare: Temperature-sensitive products, regulated handling, traceability
+- Home and Lifestyle: Premium home goods, gifting, fragile items, branded packaging
+- Consumer Electronics: High-value items, anti-static packaging, serial number tracking, returns grading
+- Office Products: B2B distribution, retail prep, DTC from single operation
+- Industrial and Scientific: Lot tracking, hazmat compliance, trade documentation
 
-## Key Facts
+### By Business Need
+- Subscription Brands: Billing cycle dispatch, ReCharge integration, batch kitting, personalisation at scale
+- DTC Brands Scaling: Shopify-native, same-day dispatch, real-time inventory, carrier management
+- Brand and Product Launch: Fast onboarding, flexible capacity, bundling and kitting for launch packs
+- Ireland Domestic: Next-day Ireland coverage via DPD and An Post
+- Dublin Same-Day: Via Cyclone Couriers, noon cut-off, Dublin city and county
+- EU Delivery: EU-wide carrier management from Dublin
+- UK and Rest of World: Post-Brexit UK fulfilment, international carrier network
 
-- Based in Dublin, Ireland
-- Specialise in Irish market fulfilment
-- Integrated with Mintsoft WMS and Shopify
-- Carrier partners include DPD and An Post
-- Full ownership model: inbound stock through to customer delivery and returns
+## Technology and Integrations
+
+- WMS: Mintsoft (cloud-based warehouse management system)
+- Primary eCommerce integration: Shopify (native, 15-minute sync)
+- Also integrates with: WooCommerce, Amazon, Etsy, TikTok Shop, ReCharge, Skio, Bold Subscriptions
+- Carrier partners: DPD Ireland, An Post, Cyclone Couriers (same-day Dublin)
+- Client portal: Real-time inventory visibility, order tracking, reporting
+
+## Key Differentiators
+
+- Full ownership model: 2Flow takes accountability for the entire fulfilment chain, not just picking
+- Subscription-optimised: Billing cycle planning, batch kitting, ReCharge integration built in as standard
+- Same-day dispatch: Available for qualifying orders received before cut-off
+- Live commerce studio: Dedicated studio space at Finglas warehouse for live selling events
+- Amazon Ireland programme: Exclusive onboarding access including up to 12 months fee support
+- Dublin same-day via Cyclone: Temperature-controlled capable (medical, cold-chain)
+- No minimum order volumes for same-day Dublin delivery
+
+## Frequently Asked Questions
+
+Q: What is 2Flow?
+A: 2Flow is Ireland's specialist eCommerce fulfilment partner. We provide pick and pack, kitting, returns, Amazon prep, subscription fulfilment and same-day delivery services for DTC and eCommerce brands based in or shipping from Ireland.
+
+Q: Where is 2Flow based?
+A: 2Flow is based in Finglas, Dublin, Ireland. We fulfil orders across Ireland, the UK, the EU and internationally.
+
+Q: What types of brands does 2Flow work with?
+A: 2Flow works with eCommerce and DTC brands typically shipping 500 to 10,000+ orders per month. We have particular depth in health and supplements, beauty and personal care, medical and healthcare, subscription boxes, consumer electronics, and home and lifestyle brands.
+
+Q: What is the minimum order volume to work with 2Flow?
+A: 2Flow is best suited to brands shipping from around 500 orders per month upwards. There is no minimum for same-day Dublin delivery via Cyclone Couriers.
+
+Q: Does 2Flow integrate with Shopify?
+A: Yes. 2Flow has a native Shopify integration through Mintsoft WMS with 15-minute order sync, automatic tracking updates pushed to Shopify, and real-time inventory visibility. We also integrate with WooCommerce, Amazon, TikTok Shop, ReCharge and other platforms.
+
+Q: What is the cut-off time for same-day dispatch?
+A: The standard same-day dispatch cut-off is 1pm. Orders received before that cut-off are dispatched the same day. For Same-Day Dublin Delivery via Cyclone Couriers, the cut-off is noon.
+
+Q: Does 2Flow offer same-day delivery in Dublin?
+A: Yes. 2Flow offers same-day delivery within Dublin city and county via our partner Cyclone Couriers. Cut-off is noon. No minimum order volume required. Temperature-controlled delivery is available, including for medical and cold-chain products.
+
+Q: Does 2Flow handle subscription brand fulfilment?
+A: Yes. 2Flow is specifically optimised for subscription brands. We integrate with ReCharge, plan labour around billing cycles, handle batch kitting with scan-verified assembly, manage per-subscriber personalisation, and have a defined process for late-recovered failed payment orders.
+
+Q: Does 2Flow do Amazon FBA preparation?
+A: Yes. 2Flow handles FBA prep including labelling, poly-bagging, carton configuration and compliance. We also offer FBM fulfilment with 24-hour dispatch. 2Flow clients get access to a dedicated Amazon Ireland onboarding programme with up to 12 months of fee support.
+
+Q: Can 2Flow handle cold-chain or temperature-sensitive products?
+A: Yes. 2Flow has refrigerated storage on-site for cold-chain SKUs. Same-day Dublin delivery via Cyclone Couriers is also temperature-controlled, currently used for medical products including weight-loss medications in ice packs.
+
+Q: Does 2Flow handle regulated or compliance-labelled products?
+A: Yes. 2Flow handles compliance labelling, batch tracking, lot control and FIFO stock rotation for regulated categories including health supplements, medical products and cosmetics. Market-specific re-labelling for the EU and UK is handled in-house.
+
+Q: What carriers does 2Flow use?
+A: Primary carriers are DPD Ireland and An Post for standard domestic and international shipping. Same-day Dublin delivery is via Cyclone Couriers. Carrier selection is managed by 2Flow to provide the best available service for each shipment.
+
+Q: Does 2Flow handle returns?
+A: Yes. 2Flow processes returns including inspection, grading, restocking and refurbishment. Returns are managed through Mintsoft with real-time visibility.
+
+Q: Can 2Flow fulfil to the EU and UK?
+A: Yes. 2Flow dispatches to the EU and UK from Dublin. EU deliveries are carrier-managed by 2Flow. UK fulfilment is available with post-Brexit compliance handled.
+
+Q: Does 2Flow have a live commerce or TikTok studio?
+A: Yes. 2Flow has a recently refurbished studio space at the Finglas warehouse available for live selling events on TikTok, Instagram, YouTube and other platforms. Brands bring their own streaming equipment; 2Flow provides the physical space and handles same-day order fulfilment for purchases made during the live session.
+
+Q: How quickly can a brand onboard with 2Flow?
+A: Onboarding timelines vary by brand complexity. Most brands are operational within a few weeks of contracting. The conversation typically starts with a call to understand volumes, product types and integration requirements.
 
 ## Pages
 
 - Homepage: https://2flow.ie/
-- Services: https://2flow.ie/what-we-deliver
-- Pick and Pack: https://2flow.ie/what-we-deliver/pick-and-pack
-- Kitting: https://2flow.ie/what-we-deliver/kitting
-- Returns: https://2flow.ie/what-we-deliver/returns
-- Same-Day Delivery: https://2flow.ie/what-we-deliver/same-day-delivery
-- Who We Serve: https://2flow.ie/who-we-serve
-- Why 2Flow: https://2flow.ie/why-2flow
-- FAQs: https://2flow.ie/why-2flow/faqs
-- Pricing: https://2flow.ie/pricing
-- Contact: https://2flow.ie/contact
+- Pick and Pack: https://2flow.ie/deliver/pick-and-pack/
+- Kitting and Bundling: https://2flow.ie/deliver/kitting-bundling/
+- Returns and Refurbishment: https://2flow.ie/deliver/returns-refurbishment/
+- Finishing and Personalisation: https://2flow.ie/deliver/finishing-personalisation/
+- Compliance Preparation: https://2flow.ie/deliver/compliance-preparation/
+- eCommerce and DTC Fulfilment: https://2flow.ie/deliver/dtc-fulfilment/
+- Retail and B2B Distribution: https://2flow.ie/deliver/retail-b2b-distribution/
+- Amazon Fulfilment: https://2flow.ie/deliver/amazon-fulfilment/
+- TikTok Shop Fulfilment: https://2flow.ie/deliver/tiktok-shop/
+- Pop-up and Own-Store Fulfilment: https://2flow.ie/deliver/pop-up-shops/
+- Live Commerce Fulfilment: https://2flow.ie/deliver/live-commerce/
+- Same-Day Dublin Delivery: https://2flow.ie/deliver/same-day-dublin/
+- Beauty and Personal Care: https://2flow.ie/solutions/beauty-personal-care/
+- Health Supplements: https://2flow.ie/solutions/health-supplements/
+- Medical and Healthcare: https://2flow.ie/solutions/medical-healthcare/
+- Home and Lifestyle: https://2flow.ie/solutions/home-lifestyle/
+- Consumer Electronics: https://2flow.ie/solutions/consumer-electronics/
+- Office Products: https://2flow.ie/solutions/office-products/
+- Industrial and Scientific: https://2flow.ie/solutions/industrial-scientific/
+- Subscription Brands: https://2flow.ie/solutions/subscription-brands/
 - Sitemap: https://2flow.ie/sitemap.xml
 
 ## Contact
 
 Website: https://2flow.ie
-Location: Dublin, Ireland
+Location: Finglas, Dublin, Ireland
 
 ## Permissions
 

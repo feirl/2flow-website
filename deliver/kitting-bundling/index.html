@@ -80,11 +80,40 @@
   }
   </script>
 
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is kitting and bundling in fulfilment?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Kitting is the process of assembling multiple individual SKUs into a single ready-to-ship unit — for example, a subscription box, gift set, or promotional bundle. 2Flow handles kitting at scale with scan-verified assembly and variable monthly contents managed in the WMS." }
+      },
+      {
+        "@type": "Question",
+        "name": "Can 2Flow handle subscription box kitting?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. Subscription box kitting is one of 2Flow's core specialisms. We manage billing cycle batches, variable monthly contents, personalisation by subscriber tier, and branded packaging — all with scan-verified accuracy." }
+      },
+      {
+        "@type": "Question",
+        "name": "How does 2Flow manage changes to kit contents each month?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Kit specifications are managed in Mintsoft WMS. When contents change, the new build spec is updated in the system and enforced from the first unit of the new cycle. No paper-based pick lists." }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the minimum quantity for kitting runs?",
+        "acceptedAnswer": { "@type": "Answer", "text": "There is no fixed minimum. 2Flow handles kitting runs from small gift set batches through to large subscription billing cycle batches of thousands of units." }
+      }
+    ]
+  }
+  </script>
+
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
 
     /* ── HERO (FEATURE PAGE. DARK 2-COL) ── */
-    .hero-feature { background: #0D1A2E; padding: calc(var(--nav-height) + 104px) 40px 104px; min-height: 834px; position: relative; overflow: hidden; }
+    .hero-feature { background: #0D1A2E; padding: calc(var(--nav-height) + 80px) 40px 80px; position: relative; overflow: hidden; }
     .hero-feature-bg {
       position: absolute; inset: 0;
       width: 100%; height: 100%;
@@ -95,15 +124,14 @@
     .hero-feature::before {
       content: ''; position: absolute; inset: 0; z-index: 1;
       background: linear-gradient(100deg,
-        rgba(13,26,46,1.00) 0%,
-        rgba(13,26,46,0.95) 20%,
-        rgba(13,26,46,0.70) 45%,
-        rgba(13,26,46,0.25) 65%,
-        rgba(13,26,46,0.05) 100%);
+        rgba(13,26,46,0.90) 0%,
+        rgba(13,26,46,0.75) 50%,
+        rgba(13,26,46,0.50) 75%,
+        rgba(13,26,46,0.20) 100%);
       pointer-events: none;
     }
     .hero-feature-inner { max-width: 1080px; margin: 0 auto; }
-    .hero-text-col { max-width: 500px; }
+    .hero-text-col { max-width: 648px; }
     .hero-breadcrumb { display: flex; align-items: center; gap: 6px; font-size: 12px; color: rgba(255,255,255,0.45); margin-bottom: 20px; flex-wrap: wrap; }
     .hero-breadcrumb a { color: rgba(255,255,255,0.45); text-decoration: none; transition: color 0.15s; }
     .hero-breadcrumb a:hover { color: var(--brand-primary); }
@@ -279,7 +307,7 @@
 <section class="hero-feature" aria-labelledby="hero-h1">
   <img class="hero-feature-bg" src="/Images/aurele2.jpg" alt="" aria-hidden="true" loading="eager" fetchpriority="high">
   <div class="hero-feature-inner" style="position:relative;z-index:2;">
-    <div class="hero-text-col">
+    <div>
       <nav class="hero-breadcrumb" aria-label="Breadcrumb">
         <span>eCommerce Fulfilment</span>
         <span aria-hidden="true">›</span>
