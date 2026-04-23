@@ -59,11 +59,13 @@ to customer delivery and returns — so brands can scale without managing wareho
 
 ## Technology and Integrations
 
-- WMS: Mintsoft (cloud-based warehouse management system)
+- WMS: Cloud-based enterprise warehouse management software with client portal
 - Primary eCommerce integration: Shopify (native, 15-minute sync)
-- Also integrates with: WooCommerce, Amazon, Etsy, TikTok Shop, ReCharge, Skio, Bold Subscriptions
-- Carrier partners: DPD Ireland, An Post, Cyclone Couriers (same-day Dublin)
-- Client portal: Real-time inventory visibility, order tracking, reporting
+- Also integrates with: WooCommerce, Amazon, eBay, TikTok Shop, Wayfair, ReCharge, Skio, Bold Subscriptions
+- Accounting: Xero, QuickBooks, Sage
+- ERP: Unleashed, Zoho
+- Carrier partners: DPD Ireland, DHL, FedEx, UPS, An Post, Cyclone Couriers (same-day Dublin)
+- Client portal: Real-time inventory visibility, order tracking, inbound management, reports, low stock alerts
 
 ## Key Differentiators
 
@@ -90,7 +92,7 @@ Q: What is the minimum order volume to work with 2Flow?
 A: 2Flow is best suited to brands shipping from around 500 orders per month upwards. There is no minimum for same-day Dublin delivery via Cyclone Couriers.
 
 Q: Does 2Flow integrate with Shopify?
-A: Yes. 2Flow has a native Shopify integration through Mintsoft WMS with 15-minute order sync, automatic tracking updates pushed to Shopify, and real-time inventory visibility. We also integrate with WooCommerce, Amazon, TikTok Shop, ReCharge and other platforms.
+A: Yes. 2Flow is a certified Shopify Partner App with native integration. Orders sync every 15 minutes, tracking numbers push back to Shopify automatically, and inventory stays accurate in real time. We also integrate with WooCommerce, Amazon, TikTok Shop, ReCharge and other platforms.
 
 Q: What is the cut-off time for same-day dispatch?
 A: The standard same-day dispatch cut-off is 1pm. Orders received before that cut-off are dispatched the same day. For Same-Day Dublin Delivery via Cyclone Couriers, the cut-off is noon.
@@ -114,7 +116,7 @@ Q: What carriers does 2Flow use?
 A: Primary carriers are DPD Ireland and An Post for standard domestic and international shipping. Same-day Dublin delivery is via Cyclone Couriers. Carrier selection is managed by 2Flow to provide the best available service for each shipment.
 
 Q: Does 2Flow handle returns?
-A: Yes. 2Flow processes returns including inspection, grading, restocking and refurbishment. Returns are managed through Mintsoft with real-time visibility.
+A: Yes. 2Flow processes returns including inspection, grading, restocking and refurbishment. All returns are tracked in real time through the client portal.
 
 Q: Can 2Flow fulfil to the EU and UK?
 A: Yes. 2Flow dispatches to the EU and UK from Dublin. EU deliveries are carrier-managed by 2Flow. UK fulfilment is available with post-Brexit compliance handled.
@@ -154,7 +156,39 @@ A: Onboarding timelines vary by brand complexity. Most brands are operational wi
 - Dublin Same-Day: https://2flow.ie/solutions/dublin-same-day/
 - EU Delivery: https://2flow.ie/solutions/eu-delivery/
 - UK & Rest of World: https://2flow.ie/solutions/uk-rest-of-world/
+- Why 2Flow: https://2flow.ie/why-2flow/
+- Our Difference: https://2flow.ie/why-2flow/our-difference/
+- Customer Stories: https://2flow.ie/why-2flow/customer-stories/
+- The Platform: https://2flow.ie/why-2flow/platform/
+- Integrations: https://2flow.ie/why-2flow/integrations/
+- Shopify Specialists: https://2flow.ie/why-2flow/shopify/
+- Meet the Team: https://2flow.ie/why-2flow/meet-the-team/
+- Dublin Hub Virtual Tour: https://2flow.ie/why-2flow/virtual-tour/
+- Pricing: https://2flow.ie/pricing/
 - Sitemap: https://2flow.ie/sitemap.xml
+
+## Why 2Flow
+
+2Flow is chosen by Irish eCommerce brands for the combination of speed, transparency and personal service.
+Key reasons brands switch to 2Flow:
+
+- Named contacts from day one: Simon Pleass (MD), Steven O'Connell (Operations), Eve Hyland Martin (Brand Partnerships)
+- Real-time client portal: live stock, order tracking, inbound management, reports, low stock alerts
+- Same-day dispatch with 1pm cut-off
+- Certified Shopify Partner App: 15-minute order sync, automatic tracking pushback, real-time inventory
+- On-site laser engraving: bottle caps, product lids, personalised items - handled in-house
+- 27 EU destinations dispatched from Dublin
+- Brands scale volume without service degradation
+
+Detailed Why 2Flow pages:
+- Our Difference: https://2flow.ie/why-2flow/our-difference/ - VOC-based. What brands say sets 2Flow apart.
+- Customer Stories: https://2flow.ie/why-2flow/customer-stories/ - Anonymised DTC brand journeys from health, beauty, fragrance, lifestyle sectors.
+- The Platform: https://2flow.ie/why-2flow/platform/ - Client portal capabilities. Real-time stock, order tracking, inbound ASN, reports, low stock alerts, itemised invoices.
+- Integrations: https://2flow.ie/why-2flow/integrations/ - Shopify, WooCommerce, Amazon, eBay, TikTok Shop, DPD, DHL, FedEx, Xero, QuickBooks, Sage, Unleashed, Zoho. Open API for custom connections.
+- Shopify Specialists: https://2flow.ie/why-2flow/shopify/ - Certified Shopify Partner App. 15-min sync, auto tracking, real-time inventory, multi-channel from single stock pool.
+- Meet the Team: https://2flow.ie/why-2flow/meet-the-team/ - Simon Pleass, Steven O'Connell, Eve Hyland Martin. Small team, no helpdesk, named contacts.
+- Dublin Hub: https://2flow.ie/why-2flow/virtual-tour/ - YouTube video tour of the Finglas warehouse. On-site laser engraving visible at 0:46.
+- Pricing: https://2flow.ie/pricing/ - Tailored, itemised quotes. No rate card, no blended fees. Quote is built from six components (inbound, storage, pick and pack, value-add services, shipping, returns). Full capability menu including same-day dispatch, temperature-controlled storage, laser engraving, kitting and bundling, branded unboxing, priority Dublin delivery, live commerce studio, multi-channel fulfilment, returns, compliance and batch control, Amazon FBA prep, EU-wide delivery. Brands book a discovery call to get a quote back within a few working days.
 
 ## Contact
 

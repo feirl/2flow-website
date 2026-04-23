@@ -100,7 +100,8 @@
       margin: 0 auto;
       padding: calc(var(--nav-height) + 72px) 40px 140px;
     }
-    .hero-text-col { max-width: 480px; }
+    .hero-text-col { max-width: 660px; }
+    .hero-text-col h1 { font-size: 66px; line-height: 1.0; }
     .hero-btns { display: flex; gap: 12px; margin-top: 32px; flex-wrap: wrap; }
     .hero-badges { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 24px; }
 
@@ -260,24 +261,40 @@
       .nav-links.open { display: flex; }
 
       /* Hero mobile */
-      .hero-fullbleed { min-height: 100svh; align-items: flex-end; }
+      .hero-fullbleed {
+        min-height: 100svh;
+        flex-direction: column;
+        align-items: stretch;
+      }
       .hero-video,
       .hero-poster { object-position: 60% center; }
       .hero-overlay {
         background: linear-gradient(
           to top,
-          rgba(5, 15, 25, 0.95) 0%,
-          rgba(5, 15, 25, 0.70) 50%,
-          rgba(5, 15, 25, 0.20) 100%
+          rgba(5, 15, 25, 0.96) 0%,
+          rgba(5, 15, 25, 0.80) 40%,
+          rgba(5, 15, 25, 0.45) 75%,
+          rgba(5, 15, 25, 0.15) 100%
         );
       }
       .hero-content-wrap {
-        padding: calc(var(--nav-height) + 24px) 20px 56px;
-        align-items: flex-end;
+        display: block;
+        padding: calc(var(--nav-height) + 55svh) 20px 32px;
       }
       .hero-text-col { max-width: 100%; }
-      .hero-btns { flex-direction: column; }
+      .hero-text-col h1 { font-size: 44px; line-height: 1.05; }
+      .hero-text-col p { font-size: 16px; }
+      .hero-btns { flex-direction: column; margin-top: 28px; }
       .hero-btns a { text-align: center; }
+
+      /* Logos: in-flow on mobile so they no longer sit on top of buttons/pills */
+      .hero-logos {
+        position: relative;
+        bottom: auto; left: auto; right: auto;
+        padding: 18px 20px 24px;
+      }
+      .hero-logos-label { font-size: 10px; margin-bottom: 10px; }
+      .logo-item { padding: 5px 12px; font-size: 11px; }
 
       .stats-strip { padding: 48px 20px; }
       .stat-grid { grid-template-columns: 1fr; gap: 32px; }
@@ -527,7 +544,7 @@
   <div class="hero-content-wrap">
     <div class="hero-text-col">
       <div class="section-label" style="color:rgba(133,176,32,0.95);">Ireland's eCommerce Fulfilment Partner</div>
-      <h1 style="color:white; text-shadow: 0 1px 3px rgba(0,0,0,0.3);">Great Fulfilment Delivers <span style="color: var(--brand-primary);">Great Moments</span></h1>
+      <h1 style="color:white; text-shadow: 0 1px 3px rgba(0,0,0,0.3);">Great Fulfilment Delivers<br><span style="color: var(--brand-primary);">Great Moments</span></h1>
       <p style="font-size:17px; color:rgba(255,255,255,0.82); margin-top:20px; line-height:1.75;">
         2Flow takes full ownership of your operational chain so your brand can scale without breaking. Pick, pack, dispatch and delight, across Ireland and the EU.
       </p>

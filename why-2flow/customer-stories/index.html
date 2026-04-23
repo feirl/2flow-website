@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customer Stories | 2Flow eCommerce Fulfilment Ireland</title>
+  <meta name="description" content="Real outcomes from Irish eCommerce brands who moved fulfilment to 2Flow. Health, beauty, lifestyle, fragrance. The journeys in their own words.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://2flow.ie/why-2flow/customer-stories">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Customer Stories | 2Flow eCommerce Fulfilment Ireland">
+  <meta property="og:description" content="Real outcomes from Irish DTC brands who switched to 2Flow. Time saved, orders scaled, teams freed up. Read the stories.">
+  <meta property="og:url" content="https://2flow.ie/why-2flow/customer-stories">
+  <meta property="og:site_name" content="2Flow">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://2flow.ie/"},
+      {"@type": "ListItem", "position": 2, "name": "Why 2Flow", "item": "https://2flow.ie/why-2flow/"},
+      {"@type": "ListItem", "position": 3, "name": "Customer Stories", "item": "https://2flow.ie/why-2flow/customer-stories"}
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What types of brands does 2Flow work with?",
+        "acceptedAnswer": { "@type": "Answer", "text": "2Flow works with Irish DTC brands across health, beauty, wellness, skincare, fragrance and lifestyle. Most are Shopify-based and sell across Ireland, the UK and the EU." }
+      },
+      {
+        "@type": "Question",
+        "name": "How long does it take to transition fulfilment to 2Flow?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Most brands are onboarded within a few weeks. The process involves a stock transfer, integration setup and a test period before going fully live." }
+      },
+      {
+        "@type": "Question",
+        "name": "What happens when my brand grows quickly?",
+        "acceptedAnswer": { "@type": "Answer", "text": "The 2Flow operation is set up to absorb growth. Brands in these stories doubled and more in volume without needing to change their fulfilment setup." }
+      },
+      {
+        "@type": "Question",
+        "name": "Can 2Flow handle peak periods like Black Friday?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. 2Flow processes peak volume for multiple brands simultaneously. The operation is built for it and brands report consistent service through their highest-traffic periods." }
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    /* ── HERO ── */
+    .hero-feature {
+      background: #0D1A2E;
+      padding: calc(var(--nav-height) + 80px) 40px 80px;
+      position: relative; overflow: hidden;
+      display: flex; align-items: flex-start;
+    }
+    .hero-feature::before {
+      content: '';
+      position: absolute;
+      top: -120px; right: -80px;
+      width: 560px; height: 560px;
+      background: radial-gradient(circle, rgba(92,184,0,0.13) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero-feature-inner { max-width: 1080px; margin: 0 auto; position: relative; width: 100%; }
+    .hero-text-col { max-width: 760px; }
+    .hero-breadcrumb { display: flex; align-items: center; gap: 6px; font-size: 12px; color: rgba(255,255,255,0.45); margin-bottom: 20px; flex-wrap: wrap; }
+    .hero-breadcrumb a { color: rgba(255,255,255,0.45); text-decoration: none; transition: color 0.15s; }
+    .hero-breadcrumb a:hover { color: var(--brand-primary); }
+    .hero-breadcrumb span { color: rgba(255,255,255,0.25); }
+    .hero-feature h1 { color: white; margin-bottom: 20px; }
+    .hero-feature h1 em { font-style: normal; color: var(--brand-primary); }
+    .hero-sub { font-size: 18px; line-height: 1.7; color: rgba(255,255,255,0.65); max-width: 600px; margin-top: 18px; }
+    .hero-btns { display: flex; gap: 12px; margin-top: 32px; flex-wrap: wrap; }
+    .hero-note {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 99px;
+      padding: 8px 16px;
+      font-size: 12px; color: rgba(255,255,255,0.5);
+      margin-top: 28px;
+    }
+    .hero-note svg { color: var(--brand-primary); flex-shrink: 0; }
+
+    /* ── STORY SECTIONS ── */
+    .story-section { padding: 88px 40px; }
+    .story-section.bg-white { background: var(--bg-white); }
+    .story-section.bg-light { background: var(--bg-light); }
+    .container { max-width: 1080px; margin: 0 auto; }
+
+    .story-inner {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 72px;
+      align-items: start;
+    }
+    .story-inner.reverse { direction: rtl; }
+    .story-inner.reverse > * { direction: ltr; }
+
+    /* Story tag + title */
+    .story-tag {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-size: 11px; font-weight: 700; text-transform: uppercase;
+      letter-spacing: 0.12em; color: var(--brand-primary);
+      margin-bottom: 8px;
+    }
+    .story-industry {
+      font-size: 11px; font-weight: 600; text-transform: uppercase;
+      letter-spacing: 0.1em; color: var(--text-tertiary);
+      margin-bottom: 20px;
+    }
+    .story-heading {
+      font-size: clamp(22px, 2.4vw, 28px);
+      font-weight: 700;
+      line-height: 1.25;
+      color: var(--text-primary);
+      margin-bottom: 28px;
+    }
+    .story-heading em { font-style: normal; color: var(--brand-primary); }
+
+    /* Act labels */
+    .story-acts { display: flex; flex-direction: column; gap: 20px; }
+    .act { padding-left: 16px; border-left: 2px solid var(--border-light); }
+    .act-label {
+      font-size: 10px; font-weight: 700; text-transform: uppercase;
+      letter-spacing: 0.14em; color: var(--text-tertiary);
+      margin-bottom: 6px;
+    }
+    .act p { font-size: 15px; color: var(--text-secondary); line-height: 1.8; }
+    .act.act-after { border-left-color: var(--brand-primary); }
+    .act.act-after .act-label { color: var(--brand-primary); }
+
+    /* Quote stack */
+    .quote-stack { display: flex; flex-direction: column; gap: 20px; }
+
+    .story-quote {
+      background: #0D1A2E;
+      border-radius: 14px;
+      padding: 32px;
+      position: relative;
+    }
+    .story-quote::before {
+      content: '"';
+      position: absolute; top: 18px; left: 26px;
+      font-size: 64px; line-height: 1;
+      color: var(--brand-primary); opacity: 0.2;
+      font-family: Georgia, serif; pointer-events: none;
+    }
+    .story-quote-text {
+      font-size: 15px; color: rgba(255,255,255,0.88);
+      line-height: 1.75; font-style: italic;
+      padding-top: 24px;
+      margin-bottom: 18px;
+    }
+    .story-quote-meta { display: flex; align-items: center; gap: 10px; }
+    .story-quote-avatar {
+      width: 34px; height: 34px; border-radius: 50%;
+      background: rgba(92,184,0,0.15);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 13px; font-weight: 700; color: var(--brand-primary);
+      flex-shrink: 0;
+    }
+    .story-quote-role { font-size: 11px; font-weight: 700; color: rgba(255,255,255,0.4); text-transform: uppercase; letter-spacing: 0.07em; }
+    .story-quote-brand { font-size: 11px; color: rgba(92,184,0,0.75); font-weight: 600; margin-top: 2px; }
+
+    /* Outcome chip */
+    .outcome-chip {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: rgba(92,184,0,0.1);
+      border: 1px solid rgba(92,184,0,0.25);
+      border-radius: 99px;
+      padding: 6px 12px;
+      font-size: 12px; font-weight: 700; color: var(--brand-primary);
+      margin-top: 24px;
+    }
+
+    /* ── MORE STORIES GRID ── */
+    .more-section { background: #0D1A2E; padding: 88px 40px; }
+    .more-header { max-width: 560px; margin-bottom: 48px; }
+    .more-header h2 { color: white; margin-top: 8px; }
+    .more-header p { font-size: 16px; color: rgba(255,255,255,0.55); line-height: 1.7; margin-top: 12px; }
+    .more-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; color: rgba(92,184,0,0.9); margin-bottom: 8px; }
+
+    .story-cards { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+    .story-card {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.09);
+      border-radius: 16px;
+      padding: 36px;
+      display: flex; flex-direction: column;
+    }
+    .card-tag {
+      font-size: 10px; font-weight: 700; text-transform: uppercase;
+      letter-spacing: 0.12em; color: var(--brand-primary);
+      margin-bottom: 16px;
+    }
+    .card-narrative {
+      font-size: 14px; color: rgba(255,255,255,0.6);
+      line-height: 1.8; margin-bottom: 24px; flex: 1;
+    }
+    .card-quote-mark { font-size: 32px; color: var(--brand-primary); opacity: 0.4; font-family: Georgia, serif; line-height: 1; margin-bottom: 10px; }
+    .card-quote-text {
+      font-size: 15px; color: rgba(255,255,255,0.88);
+      line-height: 1.7; font-style: italic;
+      margin-bottom: 18px;
+    }
+    .card-attr { font-size: 11px; color: rgba(255,255,255,0.35); font-weight: 700; text-transform: uppercase; letter-spacing: 0.07em; }
+    .card-brand { font-size: 11px; color: rgba(92,184,0,0.7); font-weight: 600; margin-top: 3px; }
+    .card-divider { border: none; border-top: 1px solid rgba(255,255,255,0.08); margin: 20px 0; }
+
+    /* ── CTA ── */
+    .cta-section { background: var(--bg-light); padding: 88px 40px; text-align: center; }
+    .cta-section h2 { color: var(--text-primary); margin-bottom: 16px; }
+    .cta-section p { color: var(--text-secondary); font-size: 17px; margin-bottom: 36px; max-width: 480px; margin-left: auto; margin-right: auto; }
+    .cta-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+    .cta-note { margin-top: 18px; font-size: 13px; color: var(--text-tertiary); }
+
+    /* ── RESPONSIVE ── */
+    @media (min-width: 961px) {
+      .quote-stack { padding-top: 150px; }
+    }
+    @media (max-width: 960px) {
+      .story-inner { grid-template-columns: 1fr; gap: 40px; }
+      .story-inner.reverse { direction: ltr; }
+      .story-cards { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 768px) {
+      .hero-feature { padding: calc(var(--nav-height) + 48px) 20px 56px; }
+      .story-section { padding: 60px 20px; }
+      .more-section { padding: 60px 20px; }
+      .cta-section { padding: 60px 20px; }
+    }
+
+    /* ── FAQ ── */
+    .faq-section { background: var(--bg-white); padding: 88px 40px; border-top: 1px solid var(--border-light); }
+    .faq-container { max-width: 1080px; margin: 0 auto; }
+    .faq-header { max-width: 560px; margin-bottom: 48px; }
+    .faq-header .section-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; color: var(--brand-primary); margin-bottom: 12px; }
+    .faq-header h2 { margin-top: 8px; }
+    .faq-list { max-width: 760px; }
+    .faq-item { border-bottom: 1px solid var(--border-light); }
+    .faq-item:first-child { border-top: 1px solid var(--border-light); }
+    .faq-q {
+      width: 100%; background: none; border: none; cursor: pointer;
+      display: flex; align-items: center; justify-content: space-between; gap: 16px;
+      padding: 22px 0; text-align: left;
+    }
+    .faq-q-text { font-size: 15px; font-weight: 700; color: var(--text-primary); line-height: 1.45; }
+    .faq-icon {
+      width: 26px; height: 26px; flex-shrink: 0; border-radius: 50%;
+      background: rgba(92,184,0,0.1);
+      display: flex; align-items: center; justify-content: center;
+      color: var(--brand-primary); transition: transform 0.2s; font-size: 18px; line-height: 1;
+    }
+    .faq-item.open .faq-icon { transform: rotate(45deg); }
+    .faq-a { display: none; padding-bottom: 22px; }
+    .faq-item.open .faq-a { display: block; }
+    .faq-a p { font-size: 15px; color: var(--text-secondary); line-height: 1.85; }
+    @media (max-width: 768px) { .faq-section { padding: 60px 20px; } }
+  </style>
+  <link rel="stylesheet" href="/css/site.css">
+</head>
+<body>
+
+<a href="#main-content" class="skip-link">Skip to content</a>
+<div id="site-nav"></div>
+<script src="/js/nav.js"></script>
+
+<main id="main-content">
+
+<!-- HERO -->
+<section class="hero-feature" aria-labelledby="hero-heading">
+  <div class="hero-feature-inner">
+    <div class="hero-text-col">
+      <nav class="hero-breadcrumb" aria-label="Breadcrumb">
+        <a href="/why-2flow/">Why 2Flow</a>
+        <span aria-hidden="true">›</span>
+        <span aria-current="page">Customer Stories</span>
+      </nav>
+      <h1 id="hero-heading">The journeys brands take.<br><em>In their own words.</em></h1>
+      <p class="hero-sub">Where they were before. What changed. What running their business looks like now.</p>
+      <div class="hero-btns">
+        <a href="/book-a-call/" class="btn-primary">Talk to us</a>
+        <a href="/why-2flow/our-difference/" class="btn-ghost btn-ghost-light">Our difference</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- STORY 1: SUPPLEMENTS FOUNDER -->
+<section class="story-section bg-white" aria-labelledby="story1-heading">
+  <div class="container">
+    <div class="story-inner">
+
+      <div class="story-text">
+        <p class="story-tag">Story 01</p>
+        <p class="story-industry">Irish Health &amp; Wellness Brand &nbsp;·&nbsp; Founder</p>
+        <h2 class="story-heading" id="story1-heading">Other 3PLs said it wasn't possible.<br><em>2Flow made it work.</em></h2>
+
+        <div class="story-acts">
+          <div class="act">
+            <p class="act-label">Before</p>
+            <p>The brand was scaling fast and needed a fulfilment partner who could handle a specific requirement: refrigerated storage for probiotic and supplement products. They went through the market. Most 3PLs either weren't set up for cold chain, or made it sound like a months-long undertaking to find out if they could accommodate it at all.</p>
+          </div>
+          <div class="act">
+            <p class="act-label">The switch</p>
+            <p>When they contacted 2Flow, the response was immediate and the answer was yes. The setup was in place within the week. That willingness to find a way - rather than reach for a reason to say no - was the deciding factor.</p>
+          </div>
+          <div class="act act-after">
+            <p class="act-label">After</p>
+            <p>The founder now runs the business remotely from abroad - an arrangement that only works because he trusts 2Flow completely. His Trustpilot rating sits at 4.9 stars, which he attributes directly to 2Flow's dispatch speed. Orders placed after the 1pm cutoff sometimes go out anyway. Customers told to expect Wednesday find the package at their door on Tuesday. The reviews reflect it. He recommends 2Flow to every founder he meets who sells physical goods.</p>
+          </div>
+        </div>
+
+        <div class="outcome-chip" aria-label="Outcome">
+          <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+          4.9-star Trustpilot rating, attributed directly to dispatch speed
+        </div>
+      </div>
+
+      <div class="quote-stack">
+        <div class="story-quote">
+          <p class="story-quote-text">"Speed of service and customer service - those are the two items. Orders dispatch unbelievably fast. That results in 5-star Trustpilot reviews for me."</p>
+        </div>
+        <div class="story-quote">
+          <p class="story-quote-text">"My entire business is on them. If there was a problem with them, it directly impacts me. So their success is my success."</p>
+        </div>
+        <div class="story-quote">
+          <p class="story-quote-text">"I would never go backwards to packing boxes again. I'd recommend it to anyone selling physical goods."</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- STORY 2: LIFESTYLE BRAND FOUNDER -->
+<section class="story-section bg-light" aria-labelledby="story2-heading">
+  <div class="container">
+    <div class="story-inner reverse">
+
+      <div class="story-text">
+        <p class="story-tag">Story 02</p>
+        <p class="story-industry">Irish Lifestyle Brand &nbsp;·&nbsp; Founder</p>
+        <h2 class="story-heading" id="story2-heading">Living room carnage.<br><em>There had to be a better way.</em></h2>
+
+        <div class="story-acts">
+          <div class="act">
+            <p class="act-label">Before</p>
+            <p>Their first Christmas nearly broke them. Orders were piling up, they were packing and embossing around the clock, and there was no room to move in the house. The founder had built his own Shopify integration just to manage the volume. It was unsustainable and everyone knew it.</p>
+          </div>
+          <div class="act">
+            <p class="act-label">The switch</p>
+            <p>He went looking for a solution and found 2Flow. Around the same time, a competitor was recommended by a contact - but that launch went catastrophically wrong due to a stock sync bug. Watching that unfold validated the instinct to go with 2Flow instead.</p>
+          </div>
+          <div class="act act-after">
+            <p class="act-label">After</p>
+            <p>Several years in. The brand has grown significantly and sells internationally. The founder describes 2Flow not as a vendor but as a partner - the kind where, when something unusual comes up, he can reach someone he knows and get it sorted. He has turned up unannounced with an urgent request and been accommodated. He recommends 2Flow openly in his ecommerce peer network, without hesitation.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="quote-stack">
+        <div class="story-quote">
+          <p class="story-quote-text">"When you've got an issue, you like to know that there's a human whose name you recognise who can say, 'I know it's important to you, I can get this sorted.' The 2Flow guys have always done that."</p>
+        </div>
+        <div class="story-quote">
+          <p class="story-quote-text">"They've always tried their hardest. Sometimes we make mistakes, sometimes they make mistakes - but it's the integrity. It feels like a partner."</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- STORY 3: COSMETICS BRAND -->
+<section class="story-section bg-white" aria-labelledby="story3-heading">
+  <div class="container">
+    <div class="story-inner">
+
+      <div class="story-text">
+        <p class="story-tag">Story 03</p>
+        <p class="story-industry">Irish Cosmetics Brand &nbsp;·&nbsp; Founder</p>
+        <h2 class="story-heading" id="story3-heading">Monday backlogs. Price hikes.<br><em>Then a decision that changed everything.</em></h2>
+
+        <div class="story-acts">
+          <div class="act">
+            <p class="act-label">Before</p>
+            <p>Their previous fulfilment company had a Monday problem: weekend orders couldn't ship, and the backlog regularly spilled into Tuesday. On top of the delays, prices were creeping up. When issues arose, nobody took ownership. "Whenever we needed something, they'd always point to someone else on the team." The brand was growing across four markets - Ireland, UK, US and Canada - and the operation couldn't keep up.</p>
+          </div>
+          <div class="act">
+            <p class="act-label">The switch</p>
+            <p>The founder searched for Dublin-based alternatives. When he reached out to 2Flow, the response was quick - that speed was a signal in itself. He visited the warehouse, met the team, and made the call on instinct. 2Flow was the clear option.</p>
+          </div>
+          <div class="act act-after">
+            <p class="act-label">After</p>
+            <p>The business has more than doubled since joining 2Flow. Their first Black Friday on the new setup came in above projections - no issues. The founder barely needs to get involved day-to-day, which he describes as the true measure of whether a partner is doing their job. "When I don't have to get involved a lot, that means everything is working."</p>
+          </div>
+        </div>
+
+        <div class="outcome-chip" aria-label="Outcome">
+          <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+          Business more than doubled since switching
+        </div>
+      </div>
+
+      <div class="quote-stack">
+        <div class="story-quote">
+          <p class="story-quote-text">"Peace of mind. When I don't have to get involved a lot, that means everything is working. I'm not worried one bit about them."</p>
+        </div>
+        <div class="story-quote">
+          <p class="story-quote-text">"They're easy to deal with, they're fast and efficient, any issues they're always there to support. I'm not worried about them one bit."</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- STORY 4: LUXURY FRAGRANCE -->
+<section class="story-section bg-light" aria-labelledby="story4-heading">
+  <div class="container">
+    <div class="story-inner reverse">
+
+      <div class="story-text">
+        <p class="story-tag">Story 04</p>
+        <p class="story-industry">Luxury Fragrance Brand &nbsp;·&nbsp; Country Manager</p>
+        <h2 class="story-heading" id="story4-heading">Dangerous goods. Glass bottles.<br><em>When trust is the only thing that matters.</em></h2>
+
+        <div class="story-acts">
+          <div class="act">
+            <p class="act-label">The operation</p>
+            <p>The brand is a niche luxury fragrance house, distributed globally. The Irish operation handles products classified as dangerous goods - alcohol-based fragrances in glass bottles, limited-quantity shipping, routes to the US, Middle East, and across Europe. Getting this wrong isn't just a customer service problem. It carries compliance implications. When the brand decided to expand this side of the operation, the founder came to visit 2Flow personally before committing.</p>
+          </div>
+          <div class="act act-after">
+            <p class="act-label">Three years in</p>
+            <p>The relationship is built entirely on trust. The country manager has real-time stock visibility through the platform at any moment - a capability the brand doesn't have with its other operations, where stock is still counted manually. Response times from the 2Flow team average under an hour. 2Flow also handles laser engraving for bottle caps - a specialist value-add that required custom setup. When a carrier issue emerged, the team worked through a solution proactively rather than waiting to be pushed.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="quote-stack">
+        <div class="story-quote">
+          <p class="story-quote-text">"Trust is huge. You're trusting a company with all of your stock, all of your growth, and the whole team there."</p>
+        </div>
+        <div class="story-quote">
+          <p class="story-quote-text">"Trust in the sense that you know your stock is safe there. And trust that you know they're going to do what you ask them to do - no questions asked, just get on with it."</p>
+        </div>
+        <div class="story-quote">
+          <p class="story-quote-text">"I'm never waiting any longer than an hour to get an answer back from them."</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- MORE STORIES GRID -->
+<section class="more-section" aria-labelledby="more-heading">
+  <div class="container">
+    <div class="more-header">
+      <p class="more-label">More from our customers</p>
+      <h2 id="more-heading">More stories</h2>
+      <p>Further snapshots from brands at different stages, in different categories, facing different problems.</p>
+    </div>
+
+    <div class="story-cards">
+
+      <!-- Emma / Skin Shop -->
+      <div class="story-card">
+        <p class="card-tag">Irish Skincare Retailer &nbsp;·&nbsp; Commercial Manager</p>
+        <p class="card-narrative">With over 2,500 active SKUs, managing their own fulfilment had long since become unworkable. Their previous partner was outside Dublin - the extra transit day and the cumbersome system for adding new products were constant friction. Three years into the relationship with 2Flow, the commercial manager describes the decision as one she doesn't second-guess. The owner went two and a half years before even visiting the warehouse. That's not disengagement. That's trust.</p>
+        <hr class="card-divider">
+        <p class="card-quote-mark">"</p>
+        <p class="card-quote-text">"They take a huge weight off our plates. Even though a big portion of our monthly revenue goes into paying their invoice, it's something we're happy with."</p>
+        <p class="card-attr">Commercial Manager</p>
+        <p class="card-brand">Irish Skincare Retailer</p>
+      </div>
+
+      <!-- Dee / health brand -->
+      <div class="story-card">
+        <p class="card-tag">Irish Consumer Brand &nbsp;·&nbsp; Customer Service Manager</p>
+        <p class="card-narrative">Their previous fulfilment partner was sending damaged customer returns back out to new customers. The team had no visibility and no recourse. Brand reputation was being compromised by someone else's carelessness. The switch to 2Flow changed that completely - and the difference showed up immediately in how rarely the team needed to pick up the phone.</p>
+        <hr class="card-divider">
+        <p class="card-quote-mark">"</p>
+        <p class="card-quote-text">"Their communication is the best thing about them - they're super fast at getting back to us, really efficient with any requests."</p>
+        <p class="card-attr">Customer Service Manager</p>
+        <p class="card-brand">Irish Consumer Brand</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- CTA -->
+<section class="cta-section" aria-labelledby="cta-heading">
+  <div class="container">
+    <h2 id="cta-heading">See if 2Flow is the right fit for your brand</h2>
+    <p>A 30-minute call. No commitment. We'll tell you honestly whether we're the right partner for where you are.</p>
+    <div class="cta-btns">
+      <a href="/book-a-call/" class="btn-primary">Book a Call</a>
+      <a href="/why-2flow/our-difference/" class="btn-ghost">Read Our Difference</a>
+    </div>
+    <p class="cta-note">Dublin-based team &nbsp;·&nbsp; Same-day dispatch &nbsp;·&nbsp; 27 EU countries</p>
+  </div>
+</section>
+
+</main>
+
+<!-- FAQ -->
+<section class="faq-section" aria-labelledby="faq-heading">
+  <div class="faq-container">
+    <div class="faq-header">
+      <p class="section-label">Common questions</p>
+      <h2 id="faq-heading">Before you make the switch</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false" aria-controls="faq-a-1">
+          <span class="faq-q-text">What types of brands does 2Flow work with?</span>
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-a" id="faq-a-1">
+          <p>2Flow works with Irish DTC brands across health, beauty, wellness, skincare, fragrance and lifestyle. Most are Shopify-based and sell across Ireland, the UK and the EU.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false" aria-controls="faq-a-2">
+          <span class="faq-q-text">How long does it take to transition fulfilment to 2Flow?</span>
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-a" id="faq-a-2">
+          <p>Most brands are onboarded within a few weeks. The process involves a stock transfer, integration setup and a test period before going fully live.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false" aria-controls="faq-a-3">
+          <span class="faq-q-text">What happens when my brand grows quickly?</span>
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-a" id="faq-a-3">
+          <p>The 2Flow operation is set up to absorb growth. Brands in these stories doubled and more in volume without needing to change their fulfilment setup.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false" aria-controls="faq-a-4">
+          <span class="faq-q-text">Can 2Flow handle peak periods like Black Friday?</span>
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-a" id="faq-a-4">
+          <p>Yes. 2Flow processes peak volume for multiple brands simultaneously. The operation is built for it and brands report consistent service through their highest-traffic periods.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div id="site-footer"></div>
+<script src="/js/footer.js"></script>
+
+<script>
+  document.querySelectorAll('.faq-q').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var item = btn.closest('.faq-item');
+      item.classList.toggle('open');
+      btn.setAttribute('aria-expanded', item.classList.contains('open') ? 'true' : 'false');
+    });
+  });
+</script>
+
+</body>
+</html>
