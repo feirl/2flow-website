@@ -98,32 +98,12 @@
       position: relative;
       overflow: hidden;
     }
-    .hero-feature-bg {
-      position: absolute; inset: 0;
-      width: 100%; height: 100%;
-      object-fit: cover; object-position: center;
-      z-index: 0; pointer-events: none;
-    }
-    .hero-feature::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      z-index: 1;
-      background:
-        linear-gradient(100deg,
-          rgba(13,26,46,0.74) 0%,
-          rgba(13,26,46,0.60) 35%,
-          rgba(13,26,46,0.36) 65%,
-          rgba(13,26,46,0.12) 100%);
-      pointer-events: none;
-    }
     .hero-feature-inner {
       max-width: 1080px;
       margin: 0 auto;
       position: relative;
-      z-index: 2;
     }
-    .hero-text-col { max-width: 648px; }
+    .hero-text-col { max-width: 820px; }
     .hero-breadcrumb {
       display: flex; align-items: center; gap: 6px;
       font-size: 12px; color: rgba(255,255,255,0.45);
@@ -344,14 +324,6 @@
 
 <!-- ── HERO ── -->
 <section class="hero-feature" aria-labelledby="hero-heading">
-  <video
-    class="hero-feature-bg"
-    autoplay loop muted playsinline
-    preload="auto" disablepictureinpicture
-    aria-hidden="true"
-  >
-    <source src="/Images/marciano.mp4" type="video/mp4">
-  </video>
   <div class="hero-feature-inner">
     <div class="hero-text-col">
       <nav class="hero-breadcrumb" aria-label="Breadcrumb">
