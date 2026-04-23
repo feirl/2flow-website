@@ -94,87 +94,8 @@
     .stat-num { font-size: clamp(28px, 3.5vw, 40px); font-weight: 800; color: #0D1A2E; line-height: 1; margin-bottom: 6px; letter-spacing: -0.02em; }
     .stat-label { font-size: 13px; color: rgba(13,26,46,0.65); font-weight: 600; line-height: 1.4; }
 
-    /* ── WHAT YOU'LL SEE ── */
-    .see-section { background: var(--bg-white); padding: 88px 40px; }
     .container { max-width: 1080px; margin: 0 auto; }
     .section-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; color: var(--brand-primary); margin-bottom: 12px; }
-
-    .see-inner {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 72px;
-      align-items: start;
-    }
-    .see-text h2 { margin-top: 8px; margin-bottom: 20px; }
-    .see-text p { font-size: 16px; color: var(--text-secondary); line-height: 1.8; }
-    .see-text p + p { margin-top: 14px; }
-
-    .see-list { display: flex; flex-direction: column; gap: 0; margin-top: 32px; }
-    .see-item {
-      display: flex; align-items: flex-start; gap: 16px;
-      padding: 18px 0;
-      border-bottom: 1px solid var(--border-light);
-    }
-    .see-item:first-child { border-top: 1px solid var(--border-light); }
-    .see-num {
-      font-size: 12px; font-weight: 800; color: var(--brand-primary);
-      background: rgba(92,184,0,0.1); border-radius: 6px;
-      width: 28px; height: 28px; flex-shrink: 0;
-      display: flex; align-items: center; justify-content: center;
-    }
-    .see-item-title { font-size: 14px; font-weight: 700; color: var(--text-primary); margin-bottom: 4px; }
-    .see-item-desc { font-size: 13px; color: var(--text-secondary); line-height: 1.65; }
-
-    /* Engraving highlight */
-    .see-item.highlight {
-      background: rgba(92,184,0,0.07);
-      border-top: 1px solid rgba(92,184,0,0.25) !important;
-      border-bottom: 1px solid rgba(92,184,0,0.25);
-      border-radius: 10px;
-      padding: 18px 16px;
-      margin: 4px 0;
-    }
-    .see-item.highlight .see-num {
-      background: var(--brand-primary);
-      color: white;
-    }
-    .see-item.highlight .see-item-title { color: var(--text-primary); }
-    .timestamp-tag {
-      display: inline-flex; align-items: center; gap: 5px;
-      font-size: 11px; font-weight: 700; color: var(--brand-primary);
-      background: rgba(92,184,0,0.12); border-radius: 4px;
-      padding: 2px 7px; margin-top: 6px;
-      text-decoration: none; letter-spacing: 0.02em;
-    }
-    .timestamp-tag:hover { background: rgba(92,184,0,0.22); }
-    .timestamp-tag svg { flex-shrink: 0; }
-
-    /* Image grid */
-    .image-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: auto auto;
-      gap: 12px;
-    }
-    .image-grid-item {
-      border-radius: 12px;
-      overflow: hidden;
-      background: var(--bg-light);
-    }
-    .image-grid-item.tall { grid-row: span 2; }
-    .image-grid-item img {
-      width: 100%; height: 100%;
-      object-fit: cover; display: block;
-      min-height: 160px;
-    }
-    .image-grid-item.placeholder {
-      min-height: 200px;
-      background: #0D1A2E;
-      display: flex; align-items: center; justify-content: center;
-      flex-direction: column; gap: 12px;
-    }
-    .image-grid-item.placeholder svg { color: rgba(92,184,0,0.4); }
-    .image-grid-item.placeholder span { font-size: 12px; color: rgba(255,255,255,0.3); font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; }
 
     /* ── CAPABILITIES ── */
     .cap-section { background: var(--bg-light); padding: 88px 40px; }
@@ -234,8 +155,6 @@
     /* ── RESPONSIVE ── */
     @media (max-width: 960px) {
       .stats-inner { grid-template-columns: repeat(2, 1fr); }
-      .see-inner { grid-template-columns: 1fr; }
-      .image-grid { display: none; }
       .visit-inner { grid-template-columns: 1fr; gap: 48px; }
       .cap-grid { grid-template-columns: 1fr 1fr; }
     }
@@ -245,7 +164,7 @@
       .video-wrap { padding: 0 20px; }
       .stats-section { padding: 32px 20px; }
       .stats-inner { grid-template-columns: repeat(2, 1fr); gap: 16px; }
-      .see-section, .cap-section, .visit-section { padding: 60px 20px; }
+      .cap-section, .visit-section { padding: 60px 20px; }
       .cap-grid { grid-template-columns: 1fr; }
     }
   </style>
@@ -312,86 +231,6 @@
     </div>
   </div>
 </div>
-
-
-<!-- WHAT YOU'LL SEE -->
-<section class="see-section" aria-labelledby="see-heading">
-  <div class="container">
-    <div class="see-inner">
-
-      <div class="see-text">
-        <p class="section-label">What's in the video</p>
-        <h2 id="see-heading">A working warehouse, not a showroom.</h2>
-        <p>The video shows the 2Flow operation as it actually runs — the team picking and packing orders, the technology in use, the process from order received to label printed to carrier collected.</p>
-        <p>Most brands visit us before they commit, and most leave surprised by how much is happening and how smoothly it runs. The video gives you the same view before you pick up the phone.</p>
-
-        <div class="see-list" role="list">
-          <div class="see-item" role="listitem">
-            <div class="see-num" aria-hidden="true">01</div>
-            <div>
-              <div class="see-item-title">The team at work</div>
-              <div class="see-item-desc">The people who pick, pack and dispatch your orders — working the floor, handling the volume.</div>
-            </div>
-          </div>
-          <div class="see-item" role="listitem">
-            <div class="see-num" aria-hidden="true">02</div>
-            <div>
-              <div class="see-item-title">Order processing in real time</div>
-              <div class="see-item-desc">From order received to label printed — the full picking and packing workflow as it runs for every order, every day.</div>
-            </div>
-          </div>
-          <div class="see-item highlight" role="listitem">
-            <div class="see-num" aria-hidden="true">03</div>
-            <div>
-              <div class="see-item-title">Laser engraving — live</div>
-              <div class="see-item-desc">A capability most 3PLs don't offer at all. Watch the engraver running on-site — bottle caps, product lids, bespoke personalisation handled in the same building your stock lives in.</div>
-              <a class="timestamp-tag" href="https://www.youtube.com/watch?v=JD7wH4dtuww&t=46" target="_blank" rel="noopener noreferrer" aria-label="Jump to engraving scene at 0:46 in the video">
-                <svg width="10" height="10" fill="currentColor" viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-                Watch at 0:46
-              </a>
-            </div>
-          </div>
-          <div class="see-item" role="listitem">
-            <div class="see-num" aria-hidden="true">04</div>
-            <div>
-              <div class="see-item-title">The warehouse floor</div>
-              <div class="see-item-desc">Racking, storage, packing stations — a well-organised operation built to handle multiple brands simultaneously without cross-contamination.</div>
-            </div>
-          </div>
-          <div class="see-item" role="listitem">
-            <div class="see-num" aria-hidden="true">05</div>
-            <div>
-              <div class="see-item-title">Technology in use</div>
-              <div class="see-item-desc">Barcode scanning, label printing, the warehouse management system — the tools that make accuracy and speed possible at scale.</div>
-            </div>
-          </div>
-          <div class="see-item" role="listitem">
-            <div class="see-num" aria-hidden="true">06</div>
-            <div>
-              <div class="see-item-title">Ready for dispatch</div>
-              <div class="see-item-desc">The carrier collection point — orders packed, labelled and ready to move. Every day before the cut-off.</div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Image grid -->
-      <div class="image-grid" aria-hidden="true">
-        <div class="image-grid-item tall">
-          <img src="/Images/hero-pick-pack.jpg" alt="2Flow team member packing an order" loading="lazy">
-        </div>
-        <div class="image-grid-item">
-          <img src="/Images/hero-editorial.jpg" alt="2Flow warehouse" loading="lazy">
-        </div>
-        <div class="image-grid-item placeholder">
-          <svg width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
-          <span>Dispatch</span>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
 
 
 <!-- CAPABILITIES -->
