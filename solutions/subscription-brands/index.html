@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Subscription Brand Fulfilment | 2Flow Ireland</title>
+  <meta name="description" content="Fulfilment built for subscription brands. Billing cycle dispatch, ReCharge integration, batch kitting, and the systems to keep every subscriber order right, every time.">
+  <meta name="keywords" content="subscription fulfilment Ireland, subscription box 3PL, ReCharge fulfilment, subscription ecommerce Ireland, recurring order fulfilment Dublin, subscription brand 3PL Ireland">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://2flow.ie/solutions/subscription-brands/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Subscription Brand Fulfilment | 2Flow">
+  <meta property="og:description" content="Fulfilment built around billing cycles, not random order flow. ReCharge integration, batch kitting, and same-day dispatch from Dublin.">
+  <meta property="og:url" content="https://2flow.ie/solutions/subscription-brands/">
+  <meta property="og:site_name" content="2Flow">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Subscription Brand Fulfilment | 2Flow">
+  <meta name="twitter:description" content="Fulfilment built for subscription brands in Ireland. Billing cycle sync, ReCharge integration, batch kitting.">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="ai-content-declaration" content="This page describes 2Flow's fulfilment services for subscription eCommerce brands. Key topics: ReCharge integration, billing cycle dispatch, batch kitting, subscription box fulfilment Ireland.">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Service",
+        "@id": "https://2flow.ie/solutions/subscription-brands/#service",
+        "name": "Subscription Brand Fulfilment",
+        "description": "Specialist eCommerce fulfilment for subscription brands. Billing cycle dispatch, ReCharge integration, batch kitting, personalisation at scale and same-day dispatch from Dublin.",
+        "provider": {
+          "@type": "LocalBusiness",
+          "name": "2Flow",
+          "url": "https://2flow.ie"
+        },
+        "areaServed": ["Ireland", "European Union", "United Kingdom"],
+        "serviceType": "eCommerce Fulfilment"
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    /* ── HERO ── */
+    .hero-feature {
+      background: #0D1A2E;
+      padding: calc(var(--nav-height) + 80px) 40px 80px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-feature-bg {
+      position: absolute; inset: 0;
+      width: 100%; height: 100%;
+      object-fit: cover; object-position: center;
+      z-index: 0; pointer-events: none;
+    }
+    .hero-feature::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      background:
+        linear-gradient(100deg,
+          rgba(13,26,46,0.74) 0%,
+          rgba(13,26,46,0.60) 35%,
+          rgba(13,26,46,0.36) 65%,
+          rgba(13,26,46,0.12) 100%);
+      pointer-events: none;
+    }
+    .hero-feature-inner {
+      max-width: 1080px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 2;
+    }
+    .hero-text-col { max-width: 648px; }
+    .hero-breadcrumb {
+      display: flex; align-items: center; gap: 6px;
+      font-size: 12px; color: rgba(255,255,255,0.45);
+      margin-bottom: 20px; flex-wrap: wrap;
+    }
+    .hero-breadcrumb a { color: rgba(255,255,255,0.45); text-decoration: none; transition: color 0.15s; }
+    .hero-breadcrumb a:hover { color: var(--brand-primary); }
+    .hero-breadcrumb span { color: rgba(255,255,255,0.25); }
+    .hero-feature h1 { color: white; margin-bottom: 20px; }
+    .hero-feature h1 em { font-style: normal; color: var(--brand-primary); }
+    .hero-feature-sub { font-size: 17px; line-height: 1.7; color: rgba(255,255,255,0.7); }
+    .hero-btns { display: flex; gap: 12px; margin-top: 32px; flex-wrap: wrap; }
+    .hero-badges { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 24px; }
+    .trust-badge {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 99px; padding: 5px 14px;
+      font-size: 12px; color: rgba(255,255,255,0.75); font-weight: 500;
+    }
+    .trust-badge svg { flex-shrink: 0; }
+
+    /* ── WHY SUBSCRIPTIONS (insight strip) ── */
+    .insight-strip {
+      background: #f8f9fb;
+      border-bottom: 1px solid var(--border-light);
+      padding: 56px 40px;
+    }
+    .insight-inner {
+      max-width: 1080px; margin: 0 auto;
+      display: grid; grid-template-columns: 1fr 2fr; gap: 64px; align-items: center;
+    }
+    .insight-left h2 { font-size: 28px; line-height: 1.25; margin-bottom: 16px; }
+    .insight-left h2 em { font-style: normal; color: var(--brand-primary); }
+    .insight-left p { font-size: 15px; color: var(--text-secondary); line-height: 1.7; }
+    .insight-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .insight-stat { background: white; border: 1px solid var(--border-light); border-radius: 12px; padding: 28px; }
+    .insight-stat .stat-num { font-size: 36px; font-weight: 700; color: var(--brand-primary); line-height: 1; margin-bottom: 8px; }
+    .insight-stat .stat-desc { font-size: 13px; color: var(--text-secondary); line-height: 1.5; }
+    .insight-stat .stat-source { font-size: 11px; color: var(--text-tertiary); margin-top: 8px; }
+
+    /* ── LOGO BAR ── */
+    .logo-bar-section { background: var(--bg-white); border-bottom: 1px solid var(--border-light); padding: 40px; }
+    .logo-bar-inner { max-width: 1080px; margin: 0 auto; display: flex; align-items: center; gap: 24px; flex-wrap: wrap; }
+    .logo-bar-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-tertiary); white-space: nowrap; flex-shrink: 0; }
+    .logo-bar-divider { width: 1px; height: 24px; background: var(--border-light); flex-shrink: 0; }
+    .logo-bar-brands { display: flex; align-items: center; gap: 0; flex-wrap: wrap; flex: 1; }
+    .brand-name { font-size: 15px; font-weight: 600; color: var(--text-secondary); padding: 8px 24px; border-right: 1px solid var(--border-light); white-space: nowrap; transition: color 0.15s; }
+    .brand-name:last-child { border-right: none; }
+    .brand-name:hover { color: var(--text-primary); }
+
+    /* ── CHALLENGES ── */
+    .challenges-section { background: var(--bg-white); padding: 80px 40px; }
+    .container { max-width: 1080px; margin: 0 auto; }
+    .challenges-header { max-width: 640px; margin-bottom: 56px; }
+    .challenges-header p { font-size: 16px; color: var(--text-secondary); line-height: 1.7; margin-top: 14px; }
+    .challenges-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+    .challenge-card { border: 1px solid var(--border-light); border-radius: 12px; padding: 32px; transition: all 0.2s; }
+    .challenge-card:hover { border-color: var(--brand-primary); box-shadow: 0 4px 24px rgba(92,184,0,0.10); transform: translateY(-2px); }
+    .challenge-icon { width: 48px; height: 48px; background: rgba(92,184,0,0.10); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: var(--brand-primary); margin-bottom: 20px; }
+    .challenge-card h3 { font-size: 18px; margin-bottom: 12px; }
+    .challenge-card p { font-size: 14px; color: var(--text-secondary); line-height: 1.7; }
+
+    /* ── HOW WE HANDLE IT ── */
+    .how-section { background: var(--bg-light); padding: 80px 40px; }
+    .how-header { max-width: 640px; margin-bottom: 56px; }
+    .how-header p { font-size: 16px; color: var(--text-secondary); line-height: 1.7; margin-top: 14px; }
+    .how-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+    .how-card {
+      background: white; border: 1px solid var(--border-light); border-radius: 12px; padding: 32px;
+      display: grid; grid-template-columns: 48px 1fr; gap: 20px; align-items: start;
+      transition: all 0.2s;
+    }
+    .how-card:hover { border-color: var(--brand-primary); box-shadow: 0 4px 24px rgba(92,184,0,0.10); }
+    .how-icon { width: 48px; height: 48px; background: rgba(92,184,0,0.10); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: var(--brand-primary); flex-shrink: 0; }
+    .how-text h3 { font-size: 17px; font-weight: 600; margin-bottom: 10px; }
+    .how-text p { font-size: 14px; color: var(--text-secondary); line-height: 1.7; }
+
+    /* ── CAPABILITIES ── */
+    .capabilities-section { background: var(--bg-white); padding: 80px 40px; }
+    .capabilities-header { max-width: 640px; margin-bottom: 56px; }
+    .capabilities-header p { font-size: 16px; color: var(--text-secondary); line-height: 1.7; margin-top: 14px; }
+    .capabilities-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .capability-item { display: flex; align-items: flex-start; gap: 12px; background: var(--bg-white); border: 1px solid var(--border-light); border-radius: 10px; padding: 20px; transition: all 0.2s; }
+    .capability-item:hover { border-color: var(--brand-primary); box-shadow: 0 2px 12px rgba(92,184,0,0.10); }
+    .capability-icon { width: 36px; height: 36px; flex-shrink: 0; background: rgba(92,184,0,0.10); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: var(--brand-primary); }
+    .capability-text h4 { font-size: 14px; font-weight: 600; margin-bottom: 4px; }
+    .capability-text p { font-size: 13px; color: var(--text-secondary); line-height: 1.5; }
+
+    /* ── METRICS STRIP ── */
+    .metrics-strip { background: #111111; padding: 64px 40px; }
+    .metrics-inner { max-width: 1080px; margin: 0 auto; display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; }
+    .metric-item { text-align: center; padding: 0 32px; border-right: 1px solid rgba(255,255,255,0.1); }
+    .metric-item:last-child { border-right: none; }
+    .metric-num { font-size: 48px; font-weight: 700; color: var(--brand-primary); line-height: 1; margin-bottom: 10px; }
+    .metric-label { font-size: 14px; color: rgba(255,255,255,0.55); line-height: 1.5; }
+
+    /* ── AMAZON CALLOUT ── */
+    .callout-section { background: var(--bg-light); padding: 64px 40px; }
+    .callout-inner {
+      max-width: 1080px; margin: 0 auto;
+      background: white; border: 1px solid var(--border-light); border-radius: 16px;
+      padding: 48px; display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center;
+    }
+    .callout-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--brand-primary); margin-bottom: 12px; }
+    .callout-inner h2 { font-size: 26px; line-height: 1.3; margin-bottom: 16px; }
+    .callout-inner p { font-size: 15px; color: var(--text-secondary); line-height: 1.7; margin-bottom: 24px; }
+    .callout-right { display: flex; flex-direction: column; gap: 16px; }
+    .callout-point { display: flex; align-items: flex-start; gap: 12px; }
+    .callout-point-icon { width: 28px; height: 28px; background: rgba(92,184,0,0.12); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: var(--brand-primary); flex-shrink: 0; margin-top: 2px; }
+    .callout-point-text strong { font-size: 14px; font-weight: 600; display: block; margin-bottom: 4px; }
+    .callout-point-text p { font-size: 13px; color: var(--text-secondary); line-height: 1.5; margin: 0; }
+
+    /* ── QUOTES ── */
+    .proof-section { background: #0D1A2E; padding: 80px 40px; }
+    .proof-header { text-align: center; max-width: 560px; margin: 0 auto 56px; }
+    .proof-header .section-label { color: rgba(92,184,0,0.9); }
+    .proof-header h2 { color: white; }
+    .quotes-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; max-width: 1080px; margin: 0 auto; }
+    .quote-card { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.10); border-radius: 12px; padding: 32px; }
+    .quote-mark { font-size: 40px; color: var(--brand-primary); line-height: 1; margin-bottom: 16px; font-family: Georgia, serif; }
+    .quote-text { font-size: 15px; color: rgba(255,255,255,0.80); line-height: 1.75; font-style: italic; margin-bottom: 20px; }
+    .quote-source { font-size: 12px; color: rgba(255,255,255,0.40); text-transform: uppercase; letter-spacing: 0.08em; font-weight: 600; }
+    .quote-brand { font-size: 12px; color: rgba(92,184,0,0.7); font-weight: 600; margin-top: 4px; }
+
+    /* ── RELATED SERVICES ── */
+    .related-section { background: var(--bg-white); padding: 80px 40px; }
+    .related-header { max-width: 560px; margin-bottom: 48px; }
+    .related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .related-card { background: var(--bg-white); border: 1px solid var(--border-light); border-radius: 12px; padding: 32px; text-decoration: none; display: block; transition: all 0.2s; }
+    .related-card:hover { border-color: var(--brand-primary); box-shadow: 0 4px 24px rgba(92,184,0,0.12); transform: translateY(-2px); }
+    .related-card-icon { width: 44px; height: 44px; background: rgba(92,184,0,0.10); border-radius: 10px; display: flex; align-items: center; justify-content: center; color: var(--brand-primary); margin-bottom: 18px; }
+    .related-card h3 { font-size: 17px; margin-bottom: 8px; color: var(--text-primary); }
+    .related-card p { font-size: 14px; color: var(--text-secondary); line-height: 1.6; }
+    .related-card-link { display: inline-flex; align-items: center; gap: 4px; color: var(--brand-primary); font-size: 13px; font-weight: 600; margin-top: 16px; }
+
+    /* ── CTA ── */
+    .cta-section { background: #0D1A2E; padding: 80px 40px; text-align: center; }
+    .cta-section h2 { color: white; margin-bottom: 16px; }
+    .cta-section p { color: rgba(255,255,255,0.65); font-size: 17px; margin-bottom: 36px; max-width: 520px; margin-left: auto; margin-right: auto; }
+    .cta-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+    .cta-note { margin-top: 20px; font-size: 13px; color: rgba(255,255,255,0.35); }
+    .cta-section .btn-ghost { color: white; border-color: rgba(255,255,255,0.3); }
+    .cta-section .btn-ghost:hover { border-color: white; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 1024px) {
+      .insight-inner { grid-template-columns: 1fr; gap: 40px; }
+      .insight-stats { grid-template-columns: repeat(3, 1fr); }
+      .challenges-grid { grid-template-columns: 1fr 1fr; }
+      .how-grid { grid-template-columns: 1fr; }
+      .capabilities-grid { grid-template-columns: 1fr 1fr; }
+      .metrics-inner { grid-template-columns: repeat(2, 1fr); gap: 32px; }
+      .metric-item { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.1); padding: 24px 0; }
+      .metric-item:nth-child(even) { border-bottom: none; }
+      .callout-inner { grid-template-columns: 1fr; }
+      .quotes-grid { grid-template-columns: 1fr 1fr; }
+      .related-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 768px) {
+      .hero-feature { padding: calc(var(--nav-height) + 48px) 20px 56px; }
+      .hero-btns { flex-direction: column; }
+      .hero-btns a { text-align: center; }
+      .insight-strip { padding: 48px 20px; }
+      .insight-stats { grid-template-columns: 1fr; }
+      .logo-bar-section { padding: 28px 20px; }
+      .brand-name { padding: 6px 14px; font-size: 14px; border-right: none; border-bottom: 1px solid var(--border-light); width: 100%; }
+      .brand-name:last-child { border-bottom: none; }
+      .challenges-section, .capabilities-section, .how-section, .proof-section, .related-section, .cta-section, .callout-section { padding: 56px 20px; }
+      .metrics-strip { padding: 48px 20px; }
+      .challenges-grid { grid-template-columns: 1fr; }
+      .capabilities-grid { grid-template-columns: 1fr; }
+      .metrics-inner { grid-template-columns: 1fr 1fr; gap: 24px; }
+      .metric-item { padding: 16px 0; border-right: none; border-bottom: none; }
+      .callout-inner { padding: 32px 24px; }
+      .quotes-grid { grid-template-columns: 1fr; }
+      .related-grid { grid-template-columns: 1fr; }
+      .cta-btns { flex-direction: column; align-items: center; }
+    }
+  </style>
+  <link rel="stylesheet" href="/css/site.css">
+
+  <script type="text/plain" data-consent="analytics" async
+    src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script type="text/plain" data-consent="analytics">
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+
+  <script type="text/plain" data-consent="advertising">
+    _linkedin_partner_id = "LI-XXXXXXX";
+    window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
+    window._linkedin_data_partner_ids.push(_linkedin_partner_id);
+  </script>
+  <script type="text/plain" data-consent="advertising">
+    (function(l) {
+      if (!l){window.lintrk = function(a,b){window.lintrk.q.push([a,b])};
+        window.lintrk.q=[]}
+      var s = document.getElementsByTagName("script")[0];
+      var b = document.createElement("script");
+      b.type = "text/javascript"; b.async = true;
+      b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js";
+      s.parentNode.insertBefore(b, s);
+    })(window.lintrk);
+  </script>
+</head>
+<body>
+
+<a href="#main-content" class="skip-link">Skip to content</a>
+
+<!-- ── NAV ── -->
+<div id="site-nav"></div>
+<script src="/js/nav.js"></script>
+
+<main id="main-content">
+
+<!-- ── HERO ── -->
+<section class="hero-feature" aria-labelledby="hero-heading">
+  <video
+    class="hero-feature-bg"
+    autoplay loop muted playsinline
+    preload="auto" disablepictureinpicture
+    aria-hidden="true"
+  >
+    <source src="/Images/marciano.mp4" type="video/mp4">
+  </video>
+  <div class="hero-feature-inner">
+    <div class="hero-text-col">
+      <nav class="hero-breadcrumb" aria-label="Breadcrumb">
+        <a href="/solutions/">Solutions For</a>
+        <span aria-hidden="true">›</span>
+        <span aria-current="page">Subscription Brands</span>
+      </nav>
+      <h1 id="hero-heading">Subscriptions run on precision.<br><em>So does our operation.</em></h1>
+      <p class="hero-feature-sub" style="margin-top:18px;">Billing cycle dispatch, batch kitting, ReCharge integration, and a WMS built for recurring volume. 2Flow is optimised for subscription brands because our operation was designed around the same predictable, repeating demand that makes subscriptions work.</p>
+      <div class="hero-btns">
+        <a href="/#contact" class="btn-primary">Book a Call</a>
+        <a href="/deliver/" class="btn-ghost btn-ghost-light">Explore Services</a>
+      </div>
+      <div class="hero-badges">
+        <span class="trust-badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="13" height="13"><polyline points="20 6 9 17 4 12"/></svg>
+          ReCharge integrated
+        </span>
+        <span class="trust-badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="13" height="13"><polyline points="20 6 9 17 4 12"/></svg>
+          Billing cycle dispatch
+        </span>
+        <span class="trust-badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="13" height="13"><polyline points="20 6 9 17 4 12"/></svg>
+          Batch kitting
+        </span>
+        <span class="trust-badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="13" height="13"><polyline points="20 6 9 17 4 12"/></svg>
+          Same-day dispatch
+        </span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── WHY SUBSCRIPTIONS INSIGHT STRIP ── -->
+<section class="insight-strip" aria-labelledby="insight-heading">
+  <div class="insight-inner">
+    <div class="insight-left">
+      <h2 id="insight-heading">Why subscriptions are the <em>best business</em> in eCommerce</h2>
+      <p>The brands winning in Irish eCommerce right now are the ones with predictable, recurring revenue. Subscriptions change the economics entirely. Less spent on acquisition. More revenue per customer. A base of income that compounds rather than resets each month.</p>
+    </div>
+    <div class="insight-stats">
+      <div class="insight-stat">
+        <div class="stat-num">3-5x</div>
+        <div class="stat-desc">More lifetime revenue from subscription customers vs. one-time buyers</div>
+        <div class="stat-source">Swell, 2025</div>
+      </div>
+      <div class="insight-stat">
+        <div class="stat-num">1 in 4</div>
+        <div class="stat-desc">Irish consumers already hold a product or service subscription</div>
+        <div class="stat-source">Autofulfil / CSO, 2024</div>
+      </div>
+      <div class="insight-stat">
+        <div class="stat-num">70%</div>
+        <div class="stat-desc">Higher customer lifetime value for subscription brands vs. transactional businesses</div>
+        <div class="stat-source">Industry benchmark</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── LOGO BAR ── -->
+<section class="logo-bar-section" aria-label="Subscription categories we serve">
+  <div class="logo-bar-inner">
+    <span class="logo-bar-label">Categories we serve</span>
+    <div class="logo-bar-divider" aria-hidden="true"></div>
+    <div class="logo-bar-brands">
+      <span class="brand-name">Health &amp; supplements</span>
+      <span class="brand-name">Beauty &amp; skincare</span>
+      <span class="brand-name">Food &amp; drink</span>
+      <span class="brand-name">Wellness &amp; fitness</span>
+      <span class="brand-name">Pet &amp; lifestyle</span>
+    </div>
+  </div>
+</section>
+
+<!-- ── CHALLENGES ── -->
+<section class="challenges-section" aria-labelledby="challenges-heading">
+  <div class="container">
+    <div class="challenges-header">
+      <div class="section-label">The Fulfilment Problem</div>
+      <h2 id="challenges-heading">Why subscription fulfilment breaks standard 3PLs</h2>
+      <p>Standard eCommerce is random order flow. Subscription fulfilment is something completely different. It runs on billing cycles, batch windows, and a level of operational precision that most warehouses are not built for.</p>
+    </div>
+    <div class="challenges-grid">
+
+      <div class="challenge-card">
+        <div class="challenge-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        </div>
+        <h3>Billing day creates a surge most warehouses are not built for</h3>
+        <p>Every billing cycle, hundreds or thousands of orders land simultaneously. A 3PL built for steady-state eCommerce flow will either fall behind, cut corners, or batch-skip late-recovered payments. 2Flow plans around your billing date. The surge is expected, staffed, and dispatched on time.</p>
+      </div>
+
+      <div class="challenge-card">
+        <div class="challenge-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+        </div>
+        <h3>A wrong box doesn't lose one order, it loses the subscriber</h3>
+        <p>In standard eCommerce, a mispick is a bad day for one customer. In subscriptions, that same error is replicated across the entire batch before anyone notices. And a subscriber who gets the wrong box after being charged has far less patience than someone who ordered once. Accuracy isn't a KPI here, it's the product.</p>
+      </div>
+
+      <div class="challenge-card">
+        <div class="challenge-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <h3>Failed payment recoveries need a defined process, not an ad-hoc fix</h3>
+        <p>Up to 40% of subscriber churn comes from failed payments rather than intentional cancellations. When dunning recovers a payment after the main batch has shipped, the fulfilment partner needs a defined process for that subscriber. Without it, they fall through. With 2Flow, late-recovered orders have a clear re-fulfilment path.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── HOW WE HANDLE IT ── -->
+<section class="how-section" aria-labelledby="how-heading">
+  <div class="container">
+    <div class="how-header">
+      <div class="section-label">How We Handle It</div>
+      <h2 id="how-heading">The systems and process behind subscription fulfilment at 2Flow</h2>
+      <p>We are optimised for subscriptions. That is not a marketing line. It is reflected in how our WMS is configured, how we staff for billing cycles, and how our integrations are built.</p>
+    </div>
+    <div class="how-grid">
+
+      <div class="how-card">
+        <div class="how-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 014-4h14"/><polyline points="7 23 3 19 7 15"/><path d="M21 13v2a4 4 0 01-4 4H3"/></svg>
+        </div>
+        <div class="how-text">
+          <h3>ReCharge &amp; Shopify integration</h3>
+          <p>2Flow integrates directly with ReCharge and Shopify through Mintsoft WMS. Subscription orders sync automatically, inventory updates in real time, and billing cycle orders flow into our pick queue without manual intervention. No spreadsheets. No lag.</p>
+        </div>
+      </div>
+
+      <div class="how-card">
+        <div class="how-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        </div>
+        <div class="how-text">
+          <h3>Billing cycle planning</h3>
+          <p>We plan labour and kit assembly around your billing date, not around our standard daily throughput. Your cycle is built into our operational calendar. The batch does not compete with regular order flow for capacity or staff. It has its own window.</p>
+        </div>
+      </div>
+
+      <div class="how-card">
+        <div class="how-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg>
+        </div>
+        <div class="how-text">
+          <h3>Batch kitting and scan-verified assembly</h3>
+          <p>Every subscription box is assembled to a pick list and scan-verified before it leaves. Variable contents month to month are managed in WMS, not on paper. When your box changes, we update the kit spec in the system and the new build is enforced from the first unit.</p>
+        </div>
+      </div>
+
+      <div class="how-card">
+        <div class="how-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+        </div>
+        <div class="how-text">
+          <h3>Per-subscriber personalisation</h3>
+          <p>Tiered boxes, preference-based contents, anniversary inserts, gifting rules. All managed at SKU level in the WMS. Each subscriber gets the right box based on their profile, not on who picked it that day. Personalisation at scale works because it is system-driven, not instruction-driven.</p>
+        </div>
+      </div>
+
+      <div class="how-card">
+        <div class="how-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0114.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0020.49 15"/></svg>
+        </div>
+        <div class="how-text">
+          <h3>Late payment re-fulfilment process</h3>
+          <p>Failed payment recoveries that arrive after the main batch has shipped get a defined re-fulfilment path, not a shrug. We maintain the kitting spec and buffer stock beyond the cycle window specifically so subscribers recovered by your dunning workflow still get their box.</p>
+        </div>
+      </div>
+
+      <div class="how-card">
+        <div class="how-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+        </div>
+        <div class="how-text">
+          <h3>Real-time inventory visibility</h3>
+          <p>Live stock counts through the Mintsoft client portal. Before every billing cycle you can see exactly what is on hand, what is allocated, and what needs to be replenished. No daily download requests. No spreadsheet emailed to you on request. Just a dashboard you can check at any time.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── CAPABILITIES ── -->
+<section class="capabilities-section" aria-labelledby="capabilities-heading">
+  <div class="container">
+    <div class="capabilities-header">
+      <div class="section-label">What We Do For You</div>
+      <h2 id="capabilities-heading">Every subscription capability, standard</h2>
+      <p>These are not add-ons. Every capability below is built into how 2Flow operates for subscription clients from day one.</p>
+    </div>
+    <div class="capabilities-grid">
+
+      <div class="capability-item">
+        <div class="capability-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 014-4h14"/><polyline points="7 23 3 19 7 15"/><path d="M21 13v2a4 4 0 01-4 4H3"/></svg>
+        </div>
+        <div class="capability-text">
+          <h4>ReCharge &amp; Shopify Integration</h4>
+          <p>Subscription orders sync directly from ReCharge through Mintsoft. No manual order entry. No sync delays between billing and fulfilment.</p>
+        </div>
+      </div>
+
+      <div class="capability-item">
+        <div class="capability-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg>
+        </div>
+        <div class="capability-text">
+          <h4>Batch Kitting &amp; Assembly</h4>
+          <p>Multi-SKU subscription boxes assembled to spec, scan-verified, with variable monthly contents managed in WMS.</p>
+        </div>
+      </div>
+
+      <div class="capability-item">
+        <div class="capability-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        </div>
+        <div class="capability-text">
+          <h4>Billing Cycle Dispatch Planning</h4>
+          <p>Labour and capacity allocated to your billing date in advance. Your batch has its own window, not a slot in the daily queue.</p>
+        </div>
+      </div>
+
+      <div class="capability-item">
+        <div class="capability-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+        </div>
+        <div class="capability-text">
+          <h4>Branded Packaging &amp; Inserts</h4>
+          <p>Custom tissue paper, branded boxes, personalised inserts and gift messaging applied per subscriber. The unboxing is part of what they are paying for.</p>
+        </div>
+      </div>
+
+      <div class="capability-item">
+        <div class="capability-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0114.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0020.49 15"/></svg>
+        </div>
+        <div class="capability-text">
+          <h4>Failed Payment Re-fulfilment</h4>
+          <p>A defined process for subscribers recovered after the main batch. Kit spec and buffer stock held beyond the cycle window.</p>
+        </div>
+      </div>
+
+      <div class="capability-item">
+        <div class="capability-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+        </div>
+        <div class="capability-text">
+          <h4>Ireland, EU &amp; UK Dispatch</h4>
+          <p>Same-day dispatch for qualifying orders. Next-day Ireland and UK available. EU-wide carrier management handled by 2Flow.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── METRICS STRIP ── */-->
+<section class="metrics-strip" aria-label="Performance metrics">
+  <div class="metrics-inner">
+    <div class="metric-item">
+      <div class="metric-num">ReCharge</div>
+      <div class="metric-label">Direct integration with the leading subscription management platform</div>
+    </div>
+    <div class="metric-item">
+      <div class="metric-num">Same Day</div>
+      <div class="metric-label">Dispatch for billing cycle orders received before cut-off</div>
+    </div>
+    <div class="metric-item">
+      <div class="metric-num">Scan</div>
+      <div class="metric-label">Every subscription box scan-verified before dispatch. No batch errors.</div>
+    </div>
+    <div class="metric-item">
+      <div class="metric-num">Live</div>
+      <div class="metric-label">Real-time inventory visibility through the Mintsoft client portal, 24/7</div>
+    </div>
+  </div>
+</section>
+
+<!-- ── AMAZON SUBSCRIBE & SAVE CALLOUT ── -->
+<section class="callout-section" aria-labelledby="callout-heading">
+  <div class="callout-inner">
+    <div>
+      <div class="callout-label">Coming Soon</div>
+      <h2 id="callout-heading">Amazon Subscribe &amp; Save is coming to amazon.ie</h2>
+      <p>Amazon is launching its Subscribe &amp; Save programme on amazon.ie in 2026. For subscription brands in health, supplements and beauty, this opens a significant recurring revenue channel directly on Amazon Ireland. 2Flow is already positioned to support clients through this launch.</p>
+      <a href="/deliver/amazon-fulfilment/" class="btn-primary">Amazon Fulfilment at 2Flow</a>
+    </div>
+    <div class="callout-right">
+      <div class="callout-point">
+        <div class="callout-point-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><polyline points="20 6 9 17 4 12"/></svg>
+        </div>
+        <div class="callout-point-text">
+          <strong>Already an Amazon FBM and FBA partner</strong>
+          <p>2Flow handles FBM 24-hour dispatch and FBA prep today. Subscribe &amp; Save is a natural extension.</p>
+        </div>
+      </div>
+      <div class="callout-point">
+        <div class="callout-point-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><polyline points="20 6 9 17 4 12"/></svg>
+        </div>
+        <div class="callout-point-text">
+          <strong>Exclusive Amazon Ireland onboarding access</strong>
+          <p>2Flow clients get access to a dedicated Amazon Ireland onboarding programme, including up to 12 months of fee support.</p>
+        </div>
+      </div>
+      <div class="callout-point">
+        <div class="callout-point-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><polyline points="20 6 9 17 4 12"/></svg>
+        </div>
+        <div class="callout-point-text">
+          <strong>Ideal for repeat-purchase categories</strong>
+          <p>Supplements, beauty, household and wellness products are exactly what Amazon wants on the programme. Your products are a natural fit.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── QUOTES ── -->
+<section class="proof-section" aria-labelledby="proof-heading">
+  <div class="proof-header">
+    <div class="section-label">What Our Clients Say</div>
+    <h2 id="proof-heading">Straight from the brands we serve</h2>
+  </div>
+  <div class="quotes-grid">
+
+    <div class="quote-card">
+      <div class="quote-mark">"</div>
+      <p class="quote-text">Since we moved to 2Flow, the number of times we need to contact the fulfilment centre has dramatically decreased. It just saves time for everybody.</p>
+      <div class="quote-source">Operations Lead</div>
+      <div class="quote-brand">Irish subscription brand</div>
+    </div>
+
+    <div class="quote-card">
+      <div class="quote-mark">"</div>
+      <p class="quote-text">Orders dispatch unbelievably fast. That results in five-star Trustpilot reviews for us. The speed of service is the thing that keeps our subscribers happy.</p>
+      <div class="quote-source">Founder</div>
+      <div class="quote-brand">Irish health brand</div>
+    </div>
+
+    <div class="quote-card">
+      <div class="quote-mark">"</div>
+      <p class="quote-text">My entire business runs on them. They understand that the subscription cycle is not something you can slip on. They get it right.</p>
+      <div class="quote-source">Founder</div>
+      <div class="quote-brand">Irish direct-to-consumer brand</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ── RELATED SERVICES ── -->
+<section class="related-section" aria-labelledby="related-heading">
+  <div class="container">
+    <div class="related-header">
+      <div class="section-label">Key Services</div>
+      <h2 id="related-heading">The operations behind subscription fulfilment</h2>
+    </div>
+    <div class="related-grid">
+
+      <a href="/deliver/kitting-bundling/" class="related-card">
+        <div class="related-card-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+        </div>
+        <h3>Kitting &amp; Bundling</h3>
+        <p>Multi-SKU assembly for subscription boxes, gift sets, and monthly bundles. Variable contents managed in WMS, not on paper.</p>
+        <span class="related-card-link">Learn more &#8594;</span>
+      </a>
+
+      <a href="/deliver/dtc-fulfilment/" class="related-card">
+        <div class="related-card-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+        </div>
+        <h3>eCommerce &amp; DTC Fulfilment</h3>
+        <p>Shopify-native fulfilment with 15-minute order sync, automatic tracking updates, and real-time inventory visibility.</p>
+        <span class="related-card-link">Learn more &#8594;</span>
+      </a>
+
+      <a href="/deliver/finishing-personalisation/" class="related-card">
+        <div class="related-card-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+        </div>
+        <h3>Finishing &amp; Personalisation</h3>
+        <p>Branded inserts, custom tissue, gift messaging and engraving. The unboxing experience that keeps subscription customers subscribed.</p>
+        <span class="related-card-link">Learn more &#8594;</span>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── CTA ── -->
+<section class="cta-section" aria-labelledby="cta-heading">
+  <div class="container">
+    <div class="section-label" style="color:rgba(92,184,0,0.9);">Get Started</div>
+    <h2 id="cta-heading">Ready to fulfil your subscribers right?</h2>
+    <p>Most subscription brands switch 3PL after a billing cycle goes wrong. Don't wait for that. Talk to 2Flow now and move before the next batch.</p>
+    <div class="cta-btns">
+      <a href="/#contact" class="btn-primary">Book a Call</a>
+      <a href="/solutions/" class="btn-ghost">All Solutions</a>
+    </div>
+    <p class="cta-note">No commitment required &nbsp;&middot;&nbsp; Tailored to your subscription volume and cycle frequency</p>
+  </div>
+</section>
+
+</main>
+
+<!-- ── FOOTER ── -->
+<div id="site-footer"></div>
+<script src="/js/footer.js"></script>
+
+</body>
+</html>
