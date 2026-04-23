@@ -69,18 +69,57 @@
   }
   </script>
 
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What compliance preparation services does 2Flow offer?",
+        "acceptedAnswer": { "@type": "Answer", "text": "2Flow handles regulated labelling, batch and lot control, FIFO stock rotation, cold-chain handling, market-specific re-labelling, and compliance documentation. These services are used by health supplement, cosmetic, medical and food brands to meet Irish, EU and UK regulatory requirements." }
+      },
+      {
+        "@type": "Question",
+        "name": "Does 2Flow handle EU and UK compliance labelling?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. 2Flow applies market-specific labelling for the EU and UK at the fulfilment stage. Re-labelling for different markets is handled in-house, meaning brands do not need to maintain a separate SKU per market." }
+      },
+      {
+        "@type": "Question",
+        "name": "Does 2Flow offer batch and lot tracking for regulated products?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. Every inbound delivery of regulated product is logged at batch level. Lot numbers are recorded and tied to each dispatch, providing full traceability from receipt to customer. This is essential for product recalls and compliance audits." }
+      },
+      {
+        "@type": "Question",
+        "name": "Can 2Flow handle cold-chain compliance for regulated products?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. 2Flow has refrigerated storage on-site for cold-chain regulated products including temperature-sensitive supplements, probiotics and medical products. Cold receipt, cold storage, cold pick and cold dispatch are all available." }
+      }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://2flow.ie/"},
+      {"@type": "ListItem", "position": 2, "name": "What We Deliver", "item": "https://2flow.ie/deliver/"},
+      {"@type": "ListItem", "position": 3, "name": "Compliance Preparation", "item": "https://2flow.ie/deliver/compliance-preparation/"}
+    ]
+  }
+  </script>
+
   <link rel="stylesheet" href="/css/site.css">
   <style>
     /* ── HERO ── */
-    .hero-feature { background: #0D1A2E; padding: calc(var(--nav-height) + 104px) 40px 104px; min-height: 834px; position: relative; overflow: hidden; }
-    .hero-feature-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; z-index: 0; pointer-events: none; }
-    .hero-feature::before { content: ''; position: absolute; inset: 0; z-index: 1; background: linear-gradient(100deg, rgba(13,26,46,0.90) 0%, rgba(13,26,46,0.85) 20%, rgba(13,26,46,0.60) 45%, rgba(13,26,46,0.15) 65%, rgba(13,26,46,0.00) 100%); pointer-events: none; }
+    .hero-feature { background: #0D1A2E; padding: calc(var(--nav-height) + 80px) 40px 80px; position: relative; overflow: hidden; }
+    .hero-feature::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 70% 60% at 80% 50%, rgba(133,176,32,0.07) 0%, transparent 70%); pointer-events: none; }
     .hero-feature-inner { max-width: 1080px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
     .hero-breadcrumb { display: flex; align-items: center; gap: 6px; font-size: 12px; color: rgba(255,255,255,0.45); margin-bottom: 20px; flex-wrap: wrap; }
     .hero-breadcrumb a { color: rgba(255,255,255,0.45); text-decoration: none; transition: color 0.15s; }
     .hero-breadcrumb a:hover { color: var(--brand-primary); }
     .hero-breadcrumb span { color: rgba(255,255,255,0.25); }
-    .hero-text-col { max-width: 500px; }
     .hero-feature h1 { color: white; margin-bottom: 20px; }
     .hero-feature h1 em { font-style: normal; color: var(--brand-primary); }
     .hero-feature-sub { font-size: 17px; line-height: 1.7; color: rgba(255,255,255,0.7); }
@@ -261,9 +300,8 @@
 
 <!-- ── HERO ── -->
 <section class="hero-feature" aria-labelledby="hero-h1">
-  <img class="hero-feature-bg" src="/Images/prep.jpg" alt="" aria-hidden="true" loading="eager" fetchpriority="high">
-  <div class="hero-feature-inner" style="position:relative;z-index:2;">
-    <div class="hero-text-col">
+  <div class="hero-feature-inner">
+    <div>
       <nav class="hero-breadcrumb" aria-label="Breadcrumb">
         <span>eCommerce Fulfilment</span>
         <span aria-hidden="true">›</span>

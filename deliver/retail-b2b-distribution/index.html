@@ -69,14 +69,55 @@
   }
   </script>
 
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is retail and B2B distribution fulfilment?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Retail and B2B distribution fulfilment involves preparing and shipping orders to retail buyers, wholesalers and trade partners rather than end consumers. This includes compliance-ready packing, EDI integration, retail labelling standards, and pallet or case-pack configurations. 2Flow handles retail prep for Irish and international retail buyers from the same operation as DTC fulfilment." }
+      },
+      {
+        "@type": "Question",
+        "name": "Does 2Flow handle retail compliance labelling?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. 2Flow applies retail-standard labelling including barcode labels, carton marks, pallet labels and any buyer-specific requirements. Compliance preparation is handled in-house to avoid chargebacks from retail buyers." }
+      },
+      {
+        "@type": "Question",
+        "name": "Can 2Flow fulfil both DTC and retail orders from the same stock?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. 2Flow operates a single-inventory model where the same stock can be allocated to DTC, retail and B2B orders. Brands do not need to split inventory across separate facilities or maintain separate retail and DTC stocks." }
+      },
+      {
+        "@type": "Question",
+        "name": "Does 2Flow support EDI for retail orders?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. 2Flow supports EDI integration for retail and wholesale order management. Purchase orders from retail buyers are received electronically and processed through Mintsoft WMS." }
+      }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://2flow.ie/"},
+      {"@type": "ListItem", "position": 2, "name": "What We Deliver", "item": "https://2flow.ie/deliver/"},
+      {"@type": "ListItem", "position": 3, "name": "Retail and B2B Distribution", "item": "https://2flow.ie/deliver/retail-b2b-distribution/"}
+    ]
+  }
+  </script>
+
   <link rel="stylesheet" href="/css/site.css">
   <style>
     /* ── HERO ── */
-    .hero-feature { background: #0D1A2E; padding: calc(var(--nav-height) + 104px) 40px 104px; min-height: 834px; position: relative; overflow: hidden; min-height: 834px; display: flex; align-items: center; }
+    .hero-feature { background: #0D1A2E; padding: calc(var(--nav-height) + 80px) 40px 80px; position: relative; overflow: hidden; min-height: 600px; display: flex; align-items: center; }
     .hero-feature::before { content: ''; position: absolute; inset: 0; z-index: 1; background: linear-gradient(100deg, rgba(13,26,46,0.88) 0%, rgba(13,26,46,0.68) 35%, rgba(13,26,46,0.38) 65%, rgba(13,26,46,0.12) 100%); pointer-events: none; }
     .hero-feature-inner { max-width: 1080px; margin: 0 auto; width: 100%; position: relative; z-index: 2; }
     .hero-video-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; z-index: 0; }
-    .hero-text-col { max-width: 500px; }
+    .hero-text-col { max-width: 648px; }
     .hero-breadcrumb { display: flex; align-items: center; gap: 6px; font-size: 12px; color: rgba(255,255,255,0.45); margin-bottom: 20px; flex-wrap: wrap; }
     .hero-breadcrumb a { color: rgba(255,255,255,0.45); text-decoration: none; transition: color 0.15s; }
     .hero-breadcrumb a:hover { color: var(--brand-primary); }
