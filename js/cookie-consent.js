@@ -1,5 +1,5 @@
 /* ============================================================
-   2Flow — GDPR Cookie Consent
+   2Flow, GDPR Cookie Consent
    Self-contained. No external libraries. No global pollution
    except window.twoflowOpenCookieModal.
    ============================================================ */
@@ -182,7 +182,7 @@
   // Expose modal opener globally for footer "Change cookie preferences" link
   window.twoflowOpenCookieModal = openModal;
 
-  // Footer is injected dynamically — wait for DOM + give footer.js a tick
+  // Footer is injected dynamically, wait for DOM + give footer.js a tick
   function boot() {
     // If banner isn't in DOM yet, poll briefly for footer.js injection
     var tries = 0;
