@@ -209,27 +209,6 @@
       padding-top: 56px;
     }
 
-    /* Sticky header above calendar */
-    .cal-header {
-      background: #0D1A2E;
-      border-radius: 10px 10px 0 0;
-      padding: 24px 28px 20px;
-      display: flex; align-items: center; gap: 14px;
-    }
-    .cal-header-icon {
-      width: 44px; height: 44px; background: rgba(92,184,0,0.15);
-      border-radius: 12px; display: flex; align-items: center; justify-content: center;
-      color: var(--brand-primary); flex-shrink: 0;
-    }
-    .cal-header-text h3 {
-      font-size: 16px; font-weight: 700; color: white; line-height: 1.2;
-    }
-    .cal-header-text p {
-      font-size: 12px; color: rgba(255,255,255,0.5); margin-top: 3px;
-    }
-    .cal-body {
-      overflow: hidden;
-    }
     .meetings-iframe-container { min-height: 680px; }
     .meetings-iframe-container iframe { border: 0 !important; }
 
@@ -247,7 +226,6 @@
       .hero { padding: calc(var(--nav-height) + 32px) 20px 36px; }
       .booking { padding: 0 20px 56px; }
       .stats-grid { grid-template-columns: 1fr 1fr; }
-      .cal-header { border-radius: 12px 12px 0 0; padding: 20px; }
     }
   </style>
   <link rel="stylesheet" href="/css/site.css">
@@ -374,20 +352,9 @@
 
     <!-- RIGHT: calendar -->
     <div class="right-col">
-      <div class="cal-header">
-        <div class="cal-header-icon" aria-hidden="true">
-          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-        </div>
-        <div class="cal-header-text">
-          <h3>Pick a time that works for you</h3>
-          <p>30 minutes · Video call · Brendan Hughes, 2Flow</p>
-        </div>
-      </div>
-      <div class="cal-body">
-        <!-- HubSpot Meetings Embed -->
-        <div class="meetings-iframe-container" data-src="https://meetings-eu1.hubspot.com/brendan-hughes1/brendan-test?embed=true"></div>
-        <script type="text/javascript" src="https://static.hsappstatic.net/MeetingsEmbed/ex/MeetingsEmbedCode.js"></script>
-      </div>
+      <!-- HubSpot Meetings Embed -->
+      <div class="meetings-iframe-container" data-src="https://meetings-eu1.hubspot.com/brendan-hughes1/brendan-test?embed=true"></div>
+      <script type="text/javascript" src="https://static.hsappstatic.net/MeetingsEmbed/ex/MeetingsEmbedCode.js"></script>
     </div>
 
   </div>
