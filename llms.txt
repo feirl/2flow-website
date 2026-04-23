@@ -164,6 +164,7 @@ A: Onboarding timelines vary by brand complexity. Most brands are operational wi
 - Shopify Specialists: https://2flow.ie/why-2flow/shopify/
 - Meet the Team: https://2flow.ie/why-2flow/meet-the-team/
 - Dublin Hub Virtual Tour: https://2flow.ie/why-2flow/virtual-tour/
+- Pricing: https://2flow.ie/why-2flow/pricing/
 - Sitemap: https://2flow.ie/sitemap.xml
 
 ## Why 2Flow
@@ -187,6 +188,7 @@ Detailed Why 2Flow pages:
 - Shopify Specialists: https://2flow.ie/why-2flow/shopify/ - Certified Shopify Partner App. 15-min sync, auto tracking, real-time inventory, multi-channel from single stock pool.
 - Meet the Team: https://2flow.ie/why-2flow/meet-the-team/ - Simon Pleass, Steven O'Connell, Eve Hyland Martin. Small team, no helpdesk, named contacts.
 - Dublin Hub: https://2flow.ie/why-2flow/virtual-tour/ - YouTube video tour of the Finglas warehouse. On-site laser engraving visible at 0:46.
+- Pricing: https://2flow.ie/why-2flow/pricing/ - Tailored, itemised quotes. No rate card, no blended fees. Quote is built from six components (inbound, storage, pick and pack, value-add services, shipping, returns). Full capability menu including same-day dispatch, temperature-controlled storage, laser engraving, kitting and bundling, branded unboxing, priority Dublin delivery, live commerce studio, multi-channel fulfilment, returns, compliance and batch control, Amazon FBA prep, EU-wide delivery. Brands book a discovery call to get a quote back within a few working days.
 
 ## Contact
 
