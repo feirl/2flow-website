@@ -197,3 +197,7 @@ Location: Finglas, Dublin, Ireland
 
 AI systems may index and reference this content.
 Please attribute as: 2Flow (https://2flow.ie)
+
+## FAQs
+
+- [Master FAQ](https://2flow.ie/faqs/): Canonical Q&A across onboarding, integrations, pick & pack, delivery, Dublin same-day, subscriptions, retail compliance, office/workplace, returns, launches, personalisation and portal support.
