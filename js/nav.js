@@ -25,6 +25,8 @@
     live:          '<polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/>',
     sameday:       '<circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>',
     custservice:   '<path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>',
+    mappin:        '<path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/>',
+    globe:         '<circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>',
   };
 
   function icon(key) {
@@ -50,12 +52,16 @@
         { href: B + '/deliver/amazon-fulfilment/',         icon: 'amazon',   title: 'Amazon Fulfilment',                 desc: 'FBA prep, FBM dispatch, seller compliance' },
         { href: B + '/deliver/tiktok-shop/',               icon: 'tiktok',   title: 'TikTok Shop',                       desc: 'Integrated fulfilment for TikTok Shop sellers' },
         { href: B + '/deliver/pop-up-shops/',              icon: 'popup',    title: 'Pop-up &amp; Own-Store Fulfilment', desc: 'Replenishing your own retail locations and events' },
+        { href: B + '/deliver/live-commerce/',              icon: 'live',     title: 'Live Commerce Fulfilment',          desc: 'A dedicated studio space to host live selling events, with same-day fulfilment to match' },
       ]
     },
     {
-      label: 'Beyond Fulfilment', cls: 'slate',
+      label: 'Where we deliver', cls: 'slate',
       items: [
-        { href: B + '/deliver/live-commerce/',   icon: 'live',    title: 'Live Commerce Fulfilment',  desc: 'A dedicated studio space to host live selling events, with same-day fulfilment to match' },
+        { href: B + '/solutions/ireland-domestic/',   icon: 'mappin',  title: 'Ireland Domestic',       desc: 'Next-day island-wide from our Dublin hub' },
+        { href: B + '/solutions/dublin-same-day/',    icon: 'sameday', title: 'Dublin Same-Day',        desc: 'Via Cyclone Couriers. Cut-off noon, delivered same afternoon' },
+        { href: B + '/solutions/eu-delivery/',        icon: 'globe',   title: 'EU Delivery',            desc: 'Cross-border dispatch to all 27 EU countries, duty-paid options' },
+        { href: B + '/solutions/uk-rest-of-world/',   icon: 'globe',   title: 'UK &amp; Rest of World', desc: 'Post-Brexit UK fulfilment and international carriers' },
       ]
     }
   ];
