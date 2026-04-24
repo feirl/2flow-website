@@ -11,24 +11,50 @@
   /* ── Footer data ───────────────────────────────────────── */
 
   const deliverLinks = [
-    { href: BASE + '/deliver/pick-and-pack/',          label: 'Pick &amp; Pack' },
-    { href: BASE + '/deliver/kitting-bundling/',       label: 'Kitting &amp; Bundling' },
-    { href: BASE + '/deliver/returns-refurbishment/',  label: 'Returns &amp; Refurbishment' },
-    { href: BASE + '/deliver/finishing-personalisation/', label: 'Finishing &amp; Personalisation' },
-    { href: BASE + '/deliver/compliance-preparation/', label: 'Compliance Preparation' },
+    { href: BASE + '/deliver/pick-and-pack/',            label: 'Pick &amp; Pack' },
+    { href: BASE + '/deliver/kitting-bundling/',         label: 'Kitting &amp; Bundling' },
+    { href: BASE + '/deliver/returns-refurbishment/',    label: 'Returns &amp; Refurbishment' },
+    { href: BASE + '/deliver/finishing-personalisation/',label: 'Finishing &amp; Personalisation' },
+    { href: BASE + '/deliver/compliance-preparation/',   label: 'Compliance Preparation' },
+    { href: BASE + '/deliver/dtc-fulfilment/',           label: 'eCommerce &amp; DTC' },
+    { href: BASE + '/deliver/retail-b2b-distribution/',  label: 'Retail &amp; B2B Distribution' },
+    { href: BASE + '/deliver/amazon-fulfilment/',        label: 'Amazon Fulfilment' },
+    { href: BASE + '/deliver/tiktok-shop/',              label: 'TikTok Shop' },
+    { href: BASE + '/deliver/same-day-dublin/',          label: 'Same-Day Dublin' },
   ];
 
   const solutionLinks = [
-    { href: BASE + '/solutions/beauty-personal-care/', label: 'Beauty &amp; Personal Care' },
-    { href: BASE + '/solutions/health-supplements/',   label: 'Health &amp; Supplements' },
-    { href: BASE + '/solutions/home-lifestyle/',       label: 'Home &amp; Lifestyle' },
-    { href: BASE + '/solutions/dtc-brands-scaling/',  label: 'DTC Brands Scaling' },
+    { href: BASE + '/solutions/beauty-personal-care/',  label: 'Beauty &amp; Personal Care' },
+    { href: BASE + '/solutions/health-supplements/',    label: 'Health &amp; Supplements' },
+    { href: BASE + '/solutions/medical-healthcare/',    label: 'Medical &amp; Healthcare' },
+    { href: BASE + '/solutions/home-lifestyle/',        label: 'Home &amp; Lifestyle' },
+    { href: BASE + '/solutions/consumer-electronics/',  label: 'Consumer Electronics' },
+    { href: BASE + '/solutions/subscription-brands/',   label: 'Subscription Brands' },
+    { href: BASE + '/solutions/dtc-brands-scaling/',    label: 'DTC Brands Scaling' },
+    { href: BASE + '/solutions/brand-product-launch/',  label: 'Brand / Product Launch' },
+    { href: BASE + '/solutions/eu-delivery/',           label: 'EU Delivery' },
+    { href: BASE + '/solutions/uk-rest-of-world/',      label: 'UK &amp; Rest of World' },
+  ];
+
+  const whyLinks = [
+    { href: BASE + '/why-2flow/our-difference/',   label: 'Our Difference' },
+    { href: BASE + '/why-2flow/customer-stories/', label: 'Customer Stories' },
+    { href: BASE + '/why-2flow/platform/',         label: 'Our Platform' },
+    { href: BASE + '/why-2flow/integrations/',     label: 'Integrations' },
+    { href: BASE + '/why-2flow/shopify/',          label: 'Shopify Specialists' },
+    { href: BASE + '/why-2flow/meet-the-team/',    label: 'Meet the Team' },
+    { href: BASE + '/why-2flow/virtual-tour/',     label: 'Visit our Dublin Hub' },
   ];
 
   const companyLinks = [
-    { href: BASE + '/#about',   label: 'About 2Flow' },
-    { href: BASE + '/#contact', label: 'Contact Us' },
-    { href: BASE + '/#careers', label: 'Careers' },
+    { href: BASE + '/pricing/',     label: 'Pricing' },
+    { href: BASE + '/book-a-call/', label: 'Book a Call' },
+    { href: BASE + '/contact/',     label: 'Contact Us' },
+    { href: BASE + '/why-2flow/meet-the-team/', label: 'Careers' },
+  ];
+
+  const socialLinks = [
+    { href: 'https://www.linkedin.com/company/2flow', label: 'LinkedIn', svg: '<svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.05-1.86-3.05-1.86 0-2.15 1.45-2.15 2.95v5.67H9.34V9h3.41v1.56h.05c.48-.9 1.64-1.86 3.38-1.86 3.61 0 4.28 2.38 4.28 5.47v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/></svg>' },
   ];
 
   /* ── Build HTML ─────────────────────────────────────────── */
@@ -47,6 +73,9 @@
                    height="30" style="filter:brightness(0) invert(1);">
             </a>
             <p>Ireland's eCommerce fulfilment partner. Pick &amp; pack, kitting, returns, and value-add services from our Dublin warehouse.</p>
+            <div class="footer-social">
+              ${socialLinks.map(s => `<a href="${s.href}" target="_blank" rel="noopener" aria-label="${s.label}">${s.svg}</a>`).join('')}
+            </div>
           </div>
 
           <div class="footer-col">
@@ -60,16 +89,36 @@
           </div>
 
           <div class="footer-col">
+            <h5>Why 2Flow</h5>
+            ${linkList(whyLinks)}
+          </div>
+
+          <div class="footer-col footer-col-contact">
             <h5>Company</h5>
             ${linkList(companyLinks)}
+            <div class="footer-address">
+              <h5>Visit Us</h5>
+              <address>
+                2Flow Fulfilment<br>
+                Unit 9/11 North Park<br>
+                Finglas, Dublin 11<br>
+                D11 TD8Y, Ireland
+              </address>
+              <p class="footer-contact-line">
+                <a href="tel:1800532532">1800 532 532</a><br>
+                <a href="mailto:hello@2flow.ie">hello@2flow.ie</a>
+              </p>
+            </div>
           </div>
 
         </div>
         <div class="footer-bottom">
-          <span>© ${new Date().getFullYear()} 2Flow Fulfilment Ltd. All rights reserved.</span>
+          <span>&copy; ${new Date().getFullYear()} 2Flow Fulfilment Ltd. All rights reserved.</span>
           <div class="footer-bottom-links">
-            <a href="${BASE}/privacy/">Privacy Policy</a>
+            <a href="${BASE}/privacy-policy/">Privacy Policy</a>
             <a href="${BASE}/terms/">Terms of Service</a>
+            <a href="${BASE}/cookie-policy/">Cookie Policy</a>
+            <a href="${BASE}/gdpr/">GDPR</a>
             <a href="#" data-cc-action="manage">Cookie Preferences</a>
           </div>
         </div>
