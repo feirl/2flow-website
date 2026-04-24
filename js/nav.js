@@ -80,8 +80,8 @@
     { href: B + '/solutions/subscription-brands/',  label: 'Subscription Brands' },
     { href: B + '/solutions/dtc-brands-scaling/',   label: 'DTC Brands Scaling' },
     { href: B + '/solutions/brand-product-launch/', label: 'Brand / Product Launch' },
-    { label: "B2B / Retail", href: "/solutions/b2b-retail/" },
-    { label: "Office & Business", href: "/solutions/office-business/" },
+    { href: B + '/solutions/b2b-retail/',           label: 'B2B / Retail' },
+    { href: B + '/solutions/office-business/',      label: 'Office & Business' },
 ];
 
   var WHY_LINKS = [
