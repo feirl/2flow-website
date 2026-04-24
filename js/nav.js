@@ -80,7 +80,9 @@
     { href: B + '/solutions/subscription-brands/',  label: 'Subscription Brands' },
     { href: B + '/solutions/dtc-brands-scaling/',   label: 'DTC Brands Scaling' },
     { href: B + '/solutions/brand-product-launch/', label: 'Brand / Product Launch' },
-  ];
+    { label: "B2B / Retail", href: "/solutions/b2b-retail/" },
+    { label: "Office & Business", href: "/solutions/office-business/" },
+];
 
   var WHY_LINKS = [
     { href: B + '/why-2flow/our-difference',   label: 'Our Difference' },
