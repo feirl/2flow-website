@@ -56,7 +56,6 @@
       label: 'Beyond Fulfilment', cls: 'slate',
       items: [
         { href: B + '/deliver/live-commerce/',   icon: 'live',    title: 'Live Commerce Fulfilment',  desc: 'A dedicated studio space to host live selling events, with same-day fulfilment to match' },
-        { href: B + '/deliver/same-day-dublin/', icon: 'sameday', title: 'Same-Day Dublin Delivery',  desc: 'Via Cyclone Couriers. Cut-off noon, delivered same afternoon. Ideal for urgent, cold-chain and medical' },
       ]
     }
   ];
