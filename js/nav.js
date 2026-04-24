@@ -170,7 +170,7 @@
   var NAV_HTML =
     '<nav id="mainNav" role="navigation" aria-label="Main navigation">' +
       '<a href="' + B + '/" class="nav-logo" aria-label="2Flow home">' +
-        '<img src="' + B + '/Images/2flow-logo.png" alt="2Flow" width="120" height="34">' +
+        '<img src="' + B + '/Images/2flow-ireland-3pl-cl.png" alt="2Flow | Ireland 3PL" width="140" height="38">' +
       '</a>' +
       '<div class="nav-links" id="navLinks">' +
 

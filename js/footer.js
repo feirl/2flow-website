@@ -85,8 +85,8 @@
 
           <div class="footer-brand">
             <a href="${BASE}/" aria-label="2Flow home">
-              <img src="${BASE}/Images/2flow-logo.png" alt="2Flow"
-                   height="30" style="filter:brightness(0) invert(1);">
+              <img src="${BASE}/Images/2flow-ireland-3pl-wh.png" alt="2Flow | Ireland 3PL"
+                   height="34">
             </a>
             <p>Ireland's eCommerce fulfilment partner. Pick &amp; pack, kitting, returns, and value-add services from our Dublin warehouse.</p>
             <div class="footer-social">
