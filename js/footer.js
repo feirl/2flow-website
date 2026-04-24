@@ -10,30 +10,45 @@
 
   /* ── Footer data ───────────────────────────────────────── */
 
-  const deliverLinks = [
-    { href: BASE + '/deliver/pick-and-pack/',            label: 'Pick &amp; Pack' },
-    { href: BASE + '/deliver/kitting-bundling/',         label: 'Kitting &amp; Bundling' },
-    { href: BASE + '/deliver/returns-refurbishment/',    label: 'Returns &amp; Refurbishment' },
-    { href: BASE + '/deliver/finishing-personalisation/',label: 'Finishing &amp; Personalisation' },
-    { href: BASE + '/deliver/compliance-preparation/',   label: 'Compliance Preparation' },
-    { href: BASE + '/deliver/dtc-fulfilment/',           label: 'eCommerce &amp; DTC' },
-    { href: BASE + '/deliver/retail-b2b-distribution/',  label: 'Retail &amp; B2B Distribution' },
-    { href: BASE + '/deliver/amazon-fulfilment/',        label: 'Amazon Fulfilment' },
-    { href: BASE + '/deliver/tiktok-shop/',              label: 'TikTok Shop' },
-    { href: BASE + '/solutions/dublin-same-day/',          label: 'Same-Day Dublin' },
+  // Mirrors the top-nav "What We Deliver" mega: Services, OmniChannel, Where we deliver
+  const deliverServicesLinks = [
+    { href: BASE + '/deliver/pick-and-pack/',             label: 'Pick &amp; Pack' },
+    { href: BASE + '/deliver/kitting-bundling/',          label: 'Kitting &amp; Bundling' },
+    { href: BASE + '/deliver/returns-refurbishment/',     label: 'Returns &amp; Refurbishment' },
+    { href: BASE + '/deliver/finishing-personalisation/', label: 'Finishing &amp; Personalisation' },
+    { href: BASE + '/deliver/compliance-preparation/',    label: 'Compliance Preparation' },
+  ];
+  const deliverOmnichannelLinks = [
+    { href: BASE + '/deliver/dtc-fulfilment/',            label: 'eCommerce &amp; DTC' },
+    { href: BASE + '/deliver/retail-b2b-distribution/',   label: 'Retail &amp; B2B Distribution' },
+    { href: BASE + '/deliver/amazon-fulfilment/',         label: 'Amazon Fulfilment' },
+    { href: BASE + '/deliver/tiktok-shop/',               label: 'TikTok Shop' },
+    { href: BASE + '/deliver/pop-up-shops/',              label: 'Pop-up &amp; Own-Store' },
+    { href: BASE + '/deliver/live-commerce/',             label: 'Live Commerce' },
+  ];
+  const deliverWhereLinks = [
+    { href: BASE + '/solutions/ireland-domestic/',        label: 'Ireland Domestic' },
+    { href: BASE + '/solutions/dublin-same-day/',         label: 'Dublin Same-Day' },
+    { href: BASE + '/solutions/eu-delivery/',             label: 'EU Delivery' },
+    { href: BASE + '/solutions/uk-rest-of-world/',        label: 'UK &amp; Rest of World' },
   ];
 
-  const solutionLinks = [
+  // Mirrors the top-nav "Solutions For" mega: By Sector, By Need
+  const solutionSectorLinks = [
     { href: BASE + '/solutions/beauty-personal-care/',  label: 'Beauty &amp; Personal Care' },
     { href: BASE + '/solutions/health-supplements/',    label: 'Health &amp; Supplements' },
     { href: BASE + '/solutions/medical-healthcare/',    label: 'Medical &amp; Healthcare' },
     { href: BASE + '/solutions/home-lifestyle/',        label: 'Home &amp; Lifestyle' },
     { href: BASE + '/solutions/consumer-electronics/',  label: 'Consumer Electronics' },
+    { href: BASE + '/solutions/office-products/',       label: 'Office Products' },
+    { href: BASE + '/solutions/industrial-scientific/', label: 'Industrial &amp; Scientific' },
+  ];
+  const solutionNeedLinks = [
     { href: BASE + '/solutions/subscription-brands/',   label: 'Subscription Brands' },
     { href: BASE + '/solutions/dtc-brands-scaling/',    label: 'DTC Brands Scaling' },
     { href: BASE + '/solutions/brand-product-launch/',  label: 'Brand / Product Launch' },
-    { href: BASE + '/solutions/eu-delivery/',           label: 'EU Delivery' },
-    { href: BASE + '/solutions/uk-rest-of-world/',      label: 'UK &amp; Rest of World' },
+    { href: BASE + '/solutions/b2b-retail/',            label: 'B2B / Retail' },
+    { href: BASE + '/solutions/office-business/',       label: 'Office &amp; Business' },
   ];
 
   const whyLinks = [
@@ -44,6 +59,7 @@
     { href: BASE + '/why-2flow/shopify/',          label: 'Shopify Specialists' },
     { href: BASE + '/why-2flow/meet-the-team/',    label: 'Meet the Team' },
     { href: BASE + '/why-2flow/virtual-tour/',     label: 'Visit our Dublin Hub' },
+    { href: BASE + '/faqs/',                       label: 'FAQs' },
   ];
 
   const companyLinks = [
@@ -80,12 +96,20 @@
 
           <div class="footer-col">
             <h5>What We Deliver</h5>
-            ${linkList(deliverLinks)}
+            <p class="footer-subhead">Services</p>
+            ${linkList(deliverServicesLinks)}
+            <p class="footer-subhead">OmniChannel</p>
+            ${linkList(deliverOmnichannelLinks)}
+            <p class="footer-subhead">Where we deliver</p>
+            ${linkList(deliverWhereLinks)}
           </div>
 
           <div class="footer-col">
             <h5>Solutions For</h5>
-            ${linkList(solutionLinks)}
+            <p class="footer-subhead">By Sector</p>
+            ${linkList(solutionSectorLinks)}
+            <p class="footer-subhead">By Need</p>
+            ${linkList(solutionNeedLinks)}
           </div>
 
           <div class="footer-col">

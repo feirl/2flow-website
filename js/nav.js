@@ -92,7 +92,7 @@
     { href: B + '/why-2flow/shopify',          label: 'Shopify Specialists' },
     { href: B + '/why-2flow/meet-the-team',    label: 'Meet the Team' },
     { href: B + '/why-2flow/virtual-tour',     label: 'Visit our Dublin Hub' },
-    { href: B + '/why-2flow/faqs',             label: 'FAQs' },
+    { href: B + '/faqs/',                     label: 'FAQs' },
   ];
 
   /* ── Build HTML ──────────────────────────────────────────── */
