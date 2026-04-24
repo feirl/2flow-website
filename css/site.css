@@ -147,21 +147,23 @@ h4 { font-size: 16px; font-weight: 700; line-height: 1.40; color: var(--text-pri
 
 /* ── MEGA MENUS ── */
 .mega-menu {
-  display: none; position: fixed; left: 0; right: 0;
+  display: none; position: absolute;
   top: var(--nav-height);
+  left: 50%; transform: translateX(-50%);
   background: white;
-  border-bottom: 1px solid var(--border-light);
-  box-shadow: 0 8px 32px rgba(0,0,0,0.08);
+  border: 1px solid var(--border-light);
+  border-radius: 10px;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.12);
   z-index: 200;
 }
+.nav-item-has-mega { position: relative; }
 .mega-menu.active { display: block; }
 .mega-inner {
-  max-width: 1080px; margin: 0 auto;
-  display: grid; padding: 28px 40px;
+  margin: 0; display: grid; padding: 20px 24px;
 }
-.mega-inner.deliver-grid   { grid-template-columns: repeat(3, 1fr); gap: 0; }
-.mega-inner.solutions-grid { grid-template-columns: repeat(2, 1fr); gap: 48px; }
-.mega-inner.why-grid { grid-template-columns: 1fr; max-width: 480px; }
+.mega-inner.deliver-grid   { width: 820px; grid-template-columns: repeat(3, 1fr); gap: 4px; }
+.mega-inner.solutions-grid { width: 520px; grid-template-columns: repeat(2, 1fr); gap: 32px; }
+.mega-inner.why-grid       { width: 320px; grid-template-columns: 1fr; }
 .mega-col { padding: 0 32px 0 0; }
 .mega-col:last-child { padding-right: 0; }
 .mega-col-label {
@@ -374,3 +376,18 @@ footer { background: #0D0D0D; padding: 56px 40px 32px; }
 /* ---- Non-clickable top nav triggers (2026-04-24) ---- */
 .nav-item > a.nav-trigger { cursor: pointer; user-select: none; }
 .nav-item > a.nav-trigger:focus-visible { outline: 2px solid var(--brand-primary); outline-offset: 2px; }
+
+/* ---- Mobile: override desktop mega positioning (2026-04-24) ---- */
+@media (max-width: 768px) {
+  .mega-menu {
+    position: static !important;
+    transform: none !important;
+    left: auto !important;
+    top: auto !important;
+    border-radius: 6px !important;
+  }
+  .mega-inner,
+  .mega-inner.deliver-grid,
+  .mega-inner.solutions-grid,
+  .mega-inner.why-grid { width: auto !important; }
+}
