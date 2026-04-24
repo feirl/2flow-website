@@ -155,9 +155,17 @@
     return links;
   }
 
-  var inDeliver  = path.indexOf('/deliver/')   !== -1;
-  var inSolution = path.indexOf('/solutions/') !== -1;
-  var inWhy      = path.indexOf('/why-2flow')  !== -1;
+  // "Where we deliver" pages live under /solutions/ but conceptually belong to "What We Deliver"
+  var WHERE_WE_DELIVER_PATHS = [
+    '/solutions/ireland-domestic/',
+    '/solutions/dublin-same-day/',
+    '/solutions/eu-delivery/',
+    '/solutions/uk-rest-of-world/'
+  ];
+  var inWhereWeDeliver = WHERE_WE_DELIVER_PATHS.some(function (p) { return path.indexOf(p) === 0; });
+  var inDeliver  = path.indexOf('/deliver/') !== -1 || inWhereWeDeliver;
+  var inSolution = path.indexOf('/solutions/') !== -1 && !inWhereWeDeliver;
+  var inWhy      = path.indexOf('/why-2flow') !== -1;
 
   var NAV_HTML =
     '<nav id="mainNav" role="navigation" aria-label="Main navigation">' +
