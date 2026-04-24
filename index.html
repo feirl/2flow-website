@@ -54,6 +54,16 @@
       object-position: 65% center;
       z-index: 0;
     }
+    .hero-video-mobile {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: 50% center;
+      z-index: 0;
+      display: none;
+    }
 
     /* Poster image sits behind the video. Shown while video loads or on reduced-motion */
     .hero-poster {
@@ -253,7 +263,7 @@
 
     /* ── REDUCED MOTION: pause video, show poster ── */
     @media (prefers-reduced-motion: reduce) {
-      .hero-video { display: none; }
+      .hero-video, .hero-video-mobile { display: none; }
     }
 
     /* ── RESPONSIVE ── */
@@ -266,7 +276,8 @@
         flex-direction: column;
         align-items: stretch;
       }
-      .hero-video,
+      .hero-video { display: none; }
+      .hero-video-mobile { display: block; }
       .hero-poster { object-position: 60% center; }
       .hero-overlay {
         background: linear-gradient(
@@ -536,6 +547,20 @@
     aria-hidden="true"
   >
     <source src="Images/2flow-moment.mp4" type="video/mp4">
+  </video>
+
+  <video
+    class="hero-video-mobile"
+    autoplay
+    loop
+    muted
+    playsinline
+    preload="auto"
+    disablepictureinpicture
+    poster="Images/hero-video-poster.jpg"
+    aria-hidden="true"
+  >
+    <source src="Images/2flow-hero-mobile.mp4" type="video/mp4">
   </video>
 
   <div class="hero-overlay" aria-hidden="true"></div>
