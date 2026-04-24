@@ -80,10 +80,6 @@
     { href: B + '/solutions/subscription-brands/',  label: 'Subscription Brands' },
     { href: B + '/solutions/dtc-brands-scaling/',   label: 'DTC Brands Scaling' },
     { href: B + '/solutions/brand-product-launch/', label: 'Brand / Product Launch' },
-    { href: B + '/solutions/ireland-domestic/',     label: 'Ireland Domestic' },
-    { href: B + '/solutions/dublin-same-day/',      label: 'Dublin Same-Day' },
-    { href: B + '/solutions/eu-delivery/',          label: 'EU Delivery' },
-    { href: B + '/solutions/uk-rest-of-world/',     label: 'UK &amp; Rest of World' },
   ];
 
   var WHY_LINKS = [
@@ -137,6 +133,18 @@
       '</div></div>';
   }
 
+  function buildWhyMega() {
+    var links = '';
+    for (var i = 0; i < WHY_LINKS.length; i++) {
+      var l = WHY_LINKS[i];
+      links += '<a href="' + l.href + '" class="mega-link' + active(l.href) + '"><strong>' + l.label + '</strong></a>';
+    }
+    return '<div id="whyMega" class="mega-menu">' +
+      '<div class="mega-inner why-grid">' +
+      '<div class="mega-col"><div class="mega-group-title">Why 2Flow</div>' + links + '</div>' +
+      '</div></div>';
+  }
+
   function buildWhyDropdown() {
     var links = '';
     for (var i = 0; i < WHY_LINKS.length; i++) {
@@ -157,22 +165,21 @@
       '<div class="nav-links" id="navLinks">' +
 
         '<div class="nav-item" id="js-deliver-trigger">' +
-          '<a href="' + B + '/deliver/"' + (inDeliver ? ' class="nav-active"' : '') + '>' +
+          '<a role="button" tabindex="0" class="nav-trigger' + (inDeliver ? ' nav-active' : '') + '" aria-haspopup="true" aria-expanded="false">' +
             'What We Deliver <span class="nav-chevron">&#9662;</span>' +
           '</a>' +
         '</div>' +
 
         '<div class="nav-item" id="js-solutions-trigger">' +
-          '<a href="' + B + '/solutions/"' + (inSolution ? ' class="nav-active"' : '') + '>' +
+          '<a role="button" tabindex="0" class="nav-trigger' + (inSolution ? ' nav-active' : '') + '" aria-haspopup="true" aria-expanded="false">' +
             'Solutions For <span class="nav-chevron">&#9662;</span>' +
           '</a>' +
         '</div>' +
 
-        '<div class="nav-item has-dropdown">' +
-          '<a href="' + B + '/why-2flow/"' + (inWhy ? ' class="nav-active"' : '') + '>' +
+        '<div class="nav-item" id="js-why-trigger">' +
+          '<a role="button" tabindex="0" class="nav-trigger' + (inWhy ? ' nav-active' : '') + '" aria-haspopup="true" aria-expanded="false">' +
             'Why 2Flow <span class="nav-chevron">&#9662;</span>' +
           '</a>' +
-          '<div class="dropdown">' + buildWhyDropdown() + '</div>' +
         '</div>' +
 
         '<div class="nav-item"><a href="' + B + '/pricing/">Pricing</a></div>' +
@@ -186,7 +193,8 @@
       '</button>' +
     '</nav>' +
     buildDeliverMega() +
-    buildSolutionsMega();
+    buildSolutionsMega() +
+    buildWhyMega();
 
   /* ── Inject ──────────────────────────────────────────────── */
   var placeholder = document.getElementById('site-nav');
@@ -201,6 +209,8 @@
   var solutionsTrig = document.getElementById('js-solutions-trigger');
   var deliverMega   = document.getElementById('deliverMega');
   var solutionsMega = document.getElementById('solutionsMega');
+  var whyTrig      = document.getElementById('js-why-trigger');
+  var whyMega      = document.getElementById('whyMega');
 
   /* ── Hover mega menu logic ───────────────────────────────── */
   var currentMega = null;
@@ -241,29 +251,29 @@
 
   wireHover(deliverTrig, deliverMega);
   wireHover(solutionsTrig, solutionsMega);
+  wireHover(whyTrig, whyMega);
 
   // Also support click/tap (for keyboard and touch users)
   function bindClick(trigger, mega) {
     if (!trigger || !mega) return;
     trigger.querySelector('a').addEventListener('click', function(e) {
-      if (window.innerWidth < 1024) {
-        e.preventDefault();
-        var isOpen = mega.style.display === 'block';
-        if (currentMega) { currentMega.style.display = 'none'; currentMega = null; }
-        if (!isOpen) { mega.style.display = 'block'; currentMega = mega; }
-      }
+      e.preventDefault();
+      var isOpen = mega.style.display === 'block';
+      if (currentMega) { currentMega.style.display = 'none'; currentMega = null; }
+      if (!isOpen) { mega.style.display = 'block'; currentMega = mega; }
     });
   }
 
   bindClick(deliverTrig, deliverMega);
   bindClick(solutionsTrig, solutionsMega);
+  bindClick(whyTrig, whyMega);
 
   // Close on outside click
   document.addEventListener('click', function(e) {
     if (!currentMega) return;
     var node = e.target;
     while (node) {
-      if (node === deliverTrig || node === solutionsTrig || node === deliverMega || node === solutionsMega) return;
+      if (node === deliverTrig || node === solutionsTrig || node === whyTrig || node === deliverMega || node === solutionsMega || node === whyMega) return;
       node = node.parentNode;
     }
     if (currentMega) { currentMega.style.display = 'none'; currentMega = null; }
