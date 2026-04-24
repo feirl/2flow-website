@@ -164,22 +164,25 @@
       '</a>' +
       '<div class="nav-links" id="navLinks">' +
 
-        '<div class="nav-item" id="js-deliver-trigger">' +
+        '<div class="nav-item nav-item-has-mega" id="js-deliver-trigger">' +
           '<a role="button" tabindex="0" class="nav-trigger' + (inDeliver ? ' nav-active' : '') + '" aria-haspopup="true" aria-expanded="false">' +
             'What We Deliver <span class="nav-chevron">&#9662;</span>' +
           '</a>' +
+          buildDeliverMega() +
         '</div>' +
 
-        '<div class="nav-item" id="js-solutions-trigger">' +
+        '<div class="nav-item nav-item-has-mega" id="js-solutions-trigger">' +
           '<a role="button" tabindex="0" class="nav-trigger' + (inSolution ? ' nav-active' : '') + '" aria-haspopup="true" aria-expanded="false">' +
             'Solutions For <span class="nav-chevron">&#9662;</span>' +
           '</a>' +
+          buildSolutionsMega() +
         '</div>' +
 
-        '<div class="nav-item" id="js-why-trigger">' +
+        '<div class="nav-item nav-item-has-mega" id="js-why-trigger">' +
           '<a role="button" tabindex="0" class="nav-trigger' + (inWhy ? ' nav-active' : '') + '" aria-haspopup="true" aria-expanded="false">' +
             'Why 2Flow <span class="nav-chevron">&#9662;</span>' +
           '</a>' +
+          buildWhyMega() +
         '</div>' +
 
         '<div class="nav-item"><a href="' + B + '/pricing/">Pricing</a></div>' +
@@ -191,10 +194,7 @@
       '<button class="hamburger" id="js-hamburger" aria-label="Open menu" aria-expanded="false">' +
         '<span></span><span></span><span></span>' +
       '</button>' +
-    '</nav>' +
-    buildDeliverMega() +
-    buildSolutionsMega() +
-    buildWhyMega();
+    '</nav>';
 
   /* ── Inject ──────────────────────────────────────────────── */
   var placeholder = document.getElementById('site-nav');
