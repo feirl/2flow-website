@@ -391,3 +391,14 @@ footer { background: #0D0D0D; padding: 56px 40px 32px; }
   .mega-inner.solutions-grid,
   .mega-inner.why-grid { width: auto !important; }
 }
+
+/* Footer sub-headings within grouped columns */
+.footer-subhead {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: rgba(255,255,255,0.42);
+  margin: 18px 0 8px;
+}
+.footer-col .footer-subhead:first-child { margin-top: 0; }
