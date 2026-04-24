@@ -280,4 +280,18 @@
     <priority>0.5</priority>
   </url>
 
+  <url>
+    <loc>https://2flow.ie/solutions/b2b-retail/</loc>
+    <lastmod>2026-04-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://2flow.ie/solutions/office-business/</loc>
+    <lastmod>2026-04-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
 </urlset>
