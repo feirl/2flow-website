@@ -161,6 +161,7 @@ h4 { font-size: 16px; font-weight: 700; line-height: 1.40; color: var(--text-pri
 }
 .mega-inner.deliver-grid   { grid-template-columns: repeat(3, 1fr); gap: 0; }
 .mega-inner.solutions-grid { grid-template-columns: repeat(2, 1fr); gap: 48px; }
+.mega-inner.why-grid { grid-template-columns: 1fr; max-width: 480px; }
 .mega-col { padding: 0 32px 0 0; }
 .mega-col:last-child { padding-right: 0; }
 .mega-col-label {
@@ -285,7 +286,36 @@ footer { background: #0D0D0D; padding: 56px 40px 32px; }
     border-bottom: 1px solid rgba(255,255,255,0.1);
     width: 100%;
   }
-  .mega-menu   { display: none !important; }
+  .mega-menu {
+    position: static; top: auto; left: auto; right: auto;
+    box-shadow: none; border: none;
+    background: rgba(255,255,255,0.04);
+    border-radius: 6px;
+    margin: 4px 0 10px;
+    width: 100%;
+    /* default hidden via base rule; JS toggles inline display:block */
+  }
+  .mega-inner,
+  .mega-inner.deliver-grid,
+  .mega-inner.solutions-grid,
+  .mega-inner.why-grid {
+    grid-template-columns: 1fr;
+    padding: 12px 14px;
+    gap: 10px;
+    max-width: none;
+  }
+  .mega-col { padding: 0; }
+  .mega-col-label, .mega-group-title {
+    color: rgba(255,255,255,0.5);
+    border-bottom-color: rgba(255,255,255,0.12);
+  }
+  .mega-link { border-bottom-color: rgba(255,255,255,0.08); padding: 10px 0; }
+  .mega-link strong { color: white; }
+  .mega-link:hover strong { color: var(--brand-primary); }
+  .mega-item { padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.08); }
+  .mega-item:last-child { border-bottom: none; }
+  .mega-item-text h4 { color: white; }
+  .mega-item-text p { color: rgba(255,255,255,0.55); font-size: 12px; }
   .nav-cta-wrap { display: none; }
   h1 { font-size: 30px; }
   h2 { font-size: 24px; }
@@ -340,3 +370,7 @@ footer { background: #0D0D0D; padding: 56px 40px 32px; }
   .footer-top { grid-template-columns: 1fr !important; }
   .footer-col-contact { grid-column: auto; }
 }
+
+/* ---- Non-clickable top nav triggers (2026-04-24) ---- */
+.nav-item > a.nav-trigger { cursor: pointer; user-select: none; }
+.nav-item > a.nav-trigger:focus-visible { outline: 2px solid var(--brand-primary); outline-offset: 2px; }
