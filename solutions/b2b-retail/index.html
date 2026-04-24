@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>B2B &amp; Retail Fulfilment Ireland | Compliant Shipping to Retailers | 2Flow</title>
+  <meta name="description" content="B2B and retail fulfilment from Dublin. Retailer-compliant labelling, EDI and ASN, case and pallet picking, and mixed B2B+DTC operations, all handled by 2Flow.">
+  <meta name="keywords" content="B2B fulfilment Ireland, retail distribution 3PL Ireland, EDI ASN Ireland, SSCC labelling, retailer compliance Ireland, pallet picking Dublin">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://2flow.ie/solutions/b2b-retail/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="B2B &amp; Retail Fulfilment Ireland | 2Flow">
+  <meta property="og:description" content="Retailer-compliant B2B fulfilment from Dublin. EDI, ASN, SSCC labelling, case and pallet picking, and mixed B2B+DTC operations.">
+  <meta property="og:url" content="https://2flow.ie/solutions/b2b-retail/">
+  <meta property="og:site_name" content="2Flow">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Service",
+        "@id": "https://2flow.ie/solutions/b2b-retail/#service",
+        "name": "B2B & Retail Fulfilment",
+        "description": "Retailer-compliant B2B fulfilment from Dublin: EDI and ASN, SSCC and GS1 labelling, case and pallet picking, booking slot management and mixed B2B+DTC stock.",
+        "provider": { "@type": "LocalBusiness", "name": "2Flow", "url": "https://2flow.ie" },
+        "areaServed": ["Ireland", "United Kingdom", "European Union"],
+        "serviceType": "B2B and Retail Fulfilment"
+      }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Which Irish and UK retailers can 2Flow ship to?",
+        "acceptedAnswer": { "@type": "Answer", "text": "2Flow ships to all major Irish and UK grocery, pharmacy and general retailers, including those operating their own DC networks and booking portals. We manage retailer-specific labelling, paperwork and booking slots so your stock lands compliantly." }
+      },
+      {
+        "@type": "Question",
+        "name": "Does 2Flow support EDI and ASN messaging?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. 2Flow handles EDI order intake, Advance Shipping Notices and related retailer messaging. We map your SKUs to the retailer's catalogue and manage the data flow so you aren't building integrations in-house." }
+      },
+      {
+        "@type": "Question",
+        "name": "Can 2Flow run B2B and DTC from the same stock?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. One stock pool, two dispatch flows. The same SKU can ship as a single DTC order in the morning and leave on a pallet to a retailer DC in the afternoon, with full stock visibility across both." }
+      },
+      {
+        "@type": "Question",
+        "name": "How do you reduce retailer chargebacks?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Chargebacks usually come from labelling errors, missed booking slots or incorrect paperwork. 2Flow's process is built around retailer compliance: SSCC and GS1 labelling, validated ASNs, and slot-managed dispatch, all checked before leaving the site." }
+      },
+      {
+        "@type": "Question",
+        "name": "Can 2Flow build mixed pallets and store-ready cases?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. We pick to case and pallet, build mixed pallets to retailer specifications, and prepare shelf-ready and store-ready units where required." }
+      }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://2flow.ie/"},
+      {"@type": "ListItem", "position": 2, "name": "Solutions For", "item": "https://2flow.ie/solutions/"},
+      {"@type": "ListItem", "position": 3, "name": "B2B & Retail", "item": "https://2flow.ie/solutions/b2b-retail/"}
+    ]
+  }
+  </script>
+
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    .hero-feature { background: #0D1A2E; padding: calc(var(--nav-height) + 80px) 40px 80px; position: relative; overflow: hidden; display: flex; align-items: flex-start; }
+    .hero-feature::before { content: ''; position: absolute; top: -120px; right: -80px; width: 560px; height: 560px; background: radial-gradient(circle, rgba(92,184,0,0.13) 0%, transparent 70%); pointer-events: none; }
+    .hero-feature-inner { max-width: 1080px; margin: 0 auto; position: relative; width: 100%; }
+    .hero-text-col { max-width: 820px; }
+    .hero-breadcrumb { display: flex; align-items: center; gap: 6px; font-size: 12px; color: rgba(255,255,255,0.45); margin-bottom: 20px; flex-wrap: wrap; }
+    .hero-breadcrumb a { color: rgba(255,255,255,0.45); text-decoration: none; transition: color 0.15s; }
+    .hero-breadcrumb a:hover { color: var(--brand-primary); }
+    .hero-breadcrumb span { color: rgba(255,255,255,0.25); }
+    .hero-feature h1 { color: white; margin-bottom: 20px; }
+    .hero-feature h1 em { font-style: normal; color: var(--brand-primary); }
+    .hero-feature-sub { font-size: 17px; line-height: 1.7; color: rgba(255,255,255,0.7); }
+    .hero-btns { display: flex; gap: 12px; margin-top: 32px; flex-wrap: wrap; }
+    .hero-badges { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 24px; }
+    .trust-badge { display: inline-flex; align-items: center; gap: 6px; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15); border-radius: 99px; padding: 5px 14px; font-size: 12px; color: rgba(255,255,255,0.75); font-weight: 500; }
+
+    .insight-strip { background: #f8f9fb; border-bottom: 1px solid var(--border-light); padding: 56px 40px; }
+    .insight-inner { max-width: 1080px; margin: 0 auto; display: grid; grid-template-columns: 1fr 2fr; gap: 64px; align-items: center; }
+    .insight-left h2 { font-size: 28px; line-height: 1.25; margin-bottom: 16px; }
+    .insight-left h2 em { font-style: normal; color: var(--brand-primary); }
+    .insight-left p { font-size: 15px; color: var(--text-secondary); line-height: 1.7; }
+    .insight-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .insight-stat { background: white; border: 1px solid var(--border-light); border-radius: 12px; padding: 28px; }
+    .insight-stat .stat-num { font-size: 36px; font-weight: 700; color: var(--brand-primary); line-height: 1; margin-bottom: 8px; }
+    .insight-stat .stat-desc { font-size: 13px; color: var(--text-secondary); line-height: 1.5; }
+    .insight-stat .stat-source { font-size: 11px; color: var(--text-tertiary); margin-top: 8px; }
+
+    .logo-bar-section { background: var(--bg-white); border-bottom: 1px solid var(--border-light); padding: 40px; }
+    .logo-bar-inner { max-width: 1080px; margin: 0 auto; display: flex; align-items: center; gap: 24px; flex-wrap: wrap; }
+    .logo-bar-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-tertiary); white-space: nowrap; flex-shrink: 0; }
+    .logo-bar-divider { width: 1px; height: 24px; background: var(--border-light); flex-shrink: 0; }
+    .logo-bar-brands { display: flex; align-items: center; gap: 0; flex-wrap: wrap; flex: 1; }
+    .brand-name { font-size: 15px; font-weight: 600; color: var(--text-secondary); padding: 8px 24px; border-right: 1px solid var(--border-light); white-space: nowrap; }
+    .brand-name:last-child { border-right: none; }
+
+    .challenges-section { background: var(--bg-white); padding: 80px 40px; }
+    .container { max-width: 1080px; margin: 0 auto; }
+    .challenges-header { max-width: 640px; margin-bottom: 56px; }
+    .challenges-header p { font-size: 16px; color: var(--text-secondary); line-height: 1.7; margin-top: 14px; }
+    .challenges-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+    .challenge-card { border: 1px solid var(--border-light); border-radius: 12px; padding: 32px; transition: all 0.2s; }
+    .challenge-card:hover { border-color: var(--brand-primary); box-shadow: 0 4px 24px rgba(92,184,0,0.10); transform: translateY(-2px); }
+    .challenge-icon { width: 48px; height: 48px; background: rgba(92,184,0,0.10); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: var(--brand-primary); margin-bottom: 20px; }
+    .challenge-card h3 { font-size: 18px; margin-bottom: 12px; }
+    .challenge-card p { font-size: 14px; color: var(--text-secondary); line-height: 1.7; }
+
+    .how-section { background: var(--bg-light); padding: 80px 40px; }
+    .how-header { max-width: 640px; margin-bottom: 56px; }
+    .how-header p { font-size: 16px; color: var(--text-secondary); line-height: 1.7; margin-top: 14px; }
+    .how-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+    .how-card { background: white; border: 1px solid var(--border-light); border-radius: 12px; padding: 32px; display: grid; grid-template-columns: 48px 1fr; gap: 20px; align-items: start; transition: all 0.2s; }
+    .how-card:hover { border-color: var(--brand-primary); box-shadow: 0 4px 24px rgba(92,184,0,0.10); }
+    .how-icon { width: 48px; height: 48px; background: rgba(92,184,0,0.10); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: var(--brand-primary); flex-shrink: 0; }
+    .how-text h3 { font-size: 17px; font-weight: 600; margin-bottom: 10px; }
+    .how-text p { font-size: 14px; color: var(--text-secondary); line-height: 1.7; }
+
+    .capabilities-section { background: var(--bg-white); padding: 80px 40px; }
+    .capabilities-header { max-width: 640px; margin-bottom: 56px; }
+    .capabilities-header p { font-size: 16px; color: var(--text-secondary); line-height: 1.7; margin-top: 14px; }
+    .capabilities-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .capability-item { display: flex; align-items: flex-start; gap: 12px; background: var(--bg-white); border: 1px solid var(--border-light); border-radius: 10px; padding: 20px; transition: all 0.2s; }
+    .capability-item:hover { border-color: var(--brand-primary); box-shadow: 0 2px 12px rgba(92,184,0,0.10); }
+    .capability-icon { width: 36px; height: 36px; flex-shrink: 0; background: rgba(92,184,0,0.10); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: var(--brand-primary); }
+    .capability-text h4 { font-size: 14px; font-weight: 600; margin-bottom: 4px; }
+    .capability-text p { font-size: 13px; color: var(--text-secondary); line-height: 1.5; }
+
+    .metrics-strip { background: #111111; padding: 64px 40px; }
+    .metrics-inner { max-width: 1080px; margin: 0 auto; display: grid; grid-template-columns: repeat(4, 1fr); }
+    .metric-item { text-align: center; padding: 0 32px; border-right: 1px solid rgba(255,255,255,0.1); }
+    .metric-item:last-child { border-right: none; }
+    .metric-num { font-size: 48px; font-weight: 700; color: var(--brand-primary); line-height: 1; margin-bottom: 10px; }
+    .metric-label { font-size: 14px; color: rgba(255,255,255,0.55); line-height: 1.5; }
+
+    .callout-section { background: var(--bg-light); padding: 64px 40px; }
+    .callout-inner { max-width: 1080px; margin: 0 auto; background: white; border: 1px solid var(--border-light); border-radius: 16px; padding: 48px; display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
+    .callout-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--brand-primary); margin-bottom: 12px; }
+    .callout-inner h2 { font-size: 26px; line-height: 1.3; margin-bottom: 16px; }
+    .callout-inner p { font-size: 15px; color: var(--text-secondary); line-height: 1.7; margin-bottom: 24px; }
+    .callout-right { display: flex; flex-direction: column; gap: 16px; }
+    .callout-point { display: flex; align-items: flex-start; gap: 12px; }
+    .callout-point-icon { width: 28px; height: 28px; background: rgba(92,184,0,0.12); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: var(--brand-primary); flex-shrink: 0; margin-top: 2px; }
+    .callout-point-text strong { font-size: 14px; font-weight: 600; display: block; margin-bottom: 4px; }
+    .callout-point-text p { font-size: 13px; color: var(--text-secondary); line-height: 1.5; margin: 0; }
+
+    .proof-section { background: #0D1A2E; padding: 80px 40px; }
+    .proof-header { text-align: center; max-width: 560px; margin: 0 auto 56px; }
+    .proof-header .section-label { color: rgba(92,184,0,0.9); }
+    .proof-header h2 { color: white; }
+    .quotes-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; max-width: 1080px; margin: 0 auto; }
+    .quote-card { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.10); border-radius: 12px; padding: 32px; }
+    .quote-mark { font-size: 40px; color: var(--brand-primary); line-height: 1; margin-bottom: 16px; font-family: Georgia, serif; }
+    .quote-text { font-size: 15px; color: rgba(255,255,255,0.80); line-height: 1.75; font-style: italic; margin-bottom: 20px; }
+    .quote-source { font-size: 12px; color: rgba(255,255,255,0.40); text-transform: uppercase; letter-spacing: 0.08em; font-weight: 600; }
+    .quote-brand { font-size: 12px; color: rgba(92,184,0,0.7); font-weight: 600; margin-top: 4px; }
+
+    .related-section { background: var(--bg-white); padding: 80px 40px; }
+    .related-header { max-width: 560px; margin-bottom: 48px; }
+    .related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .related-card { background: var(--bg-white); border: 1px solid var(--border-light); border-radius: 12px; padding: 32px; text-decoration: none; display: block; transition: all 0.2s; }
+    .related-card:hover { border-color: var(--brand-primary); box-shadow: 0 4px 24px rgba(92,184,0,0.12); transform: translateY(-2px); }
+    .related-card-icon { width: 44px; height: 44px; background: rgba(92,184,0,0.10); border-radius: 10px; display: flex; align-items: center; justify-content: center; color: var(--brand-primary); margin-bottom: 18px; }
+    .related-card h3 { font-size: 17px; margin-bottom: 8px; color: var(--text-primary); }
+    .related-card p { font-size: 14px; color: var(--text-secondary); line-height: 1.6; }
+    .related-card-link { display: inline-flex; align-items: center; gap: 4px; color: var(--brand-primary); font-size: 13px; font-weight: 600; margin-top: 16px; }
+
+    .cta-section { background: #0D1A2E; padding: 80px 40px; text-align: center; }
+    .cta-section h2 { color: white; margin-bottom: 16px; }
+    .cta-section p { color: rgba(255,255,255,0.65); font-size: 17px; margin-bottom: 36px; max-width: 520px; margin-left: auto; margin-right: auto; }
+    .cta-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+    .cta-note { margin-top: 20px; font-size: 13px; color: rgba(255,255,255,0.35); }
+    .cta-section .btn-ghost { color: white; border-color: rgba(255,255,255,0.3); }
+    .cta-section .btn-ghost:hover { border-color: white; }
+
+    .faq-section { background: var(--bg-light); padding: 80px 40px; }
+    .faq-inner { max-width: 760px; margin: 0 auto; }
+    .faq-header { margin-bottom: 48px; }
+    .faq-header p { font-size: 16px; color: var(--text-secondary); line-height: 1.7; margin-top: 14px; }
+    details { border: 1px solid var(--border-light); border-radius: 10px; background: white; margin-bottom: 12px; }
+    details[open] { border-color: var(--brand-primary); }
+    summary { padding: 20px 24px; font-size: 15px; font-weight: 600; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; color: var(--text-primary); }
+    summary::-webkit-details-marker { display: none; }
+    summary::after { content: '+'; font-size: 20px; font-weight: 300; color: var(--brand-primary); flex-shrink: 0; margin-left: 16px; }
+    details[open] summary::after { content: '−'; }
+    .faq-body { padding: 0 24px 20px; font-size: 14px; color: var(--text-secondary); line-height: 1.75; }
+
+    @media (max-width: 1024px) {
+      .insight-inner { grid-template-columns: 1fr; gap: 40px; }
+      .challenges-grid { grid-template-columns: 1fr 1fr; }
+      .how-grid { grid-template-columns: 1fr; }
+      .capabilities-grid { grid-template-columns: 1fr 1fr; }
+      .metrics-inner { grid-template-columns: repeat(2, 1fr); gap: 32px; }
+      .metric-item { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.1); padding: 24px 0; }
+      .metric-item:nth-child(even) { border-bottom: none; }
+      .callout-inner { grid-template-columns: 1fr; }
+      .quotes-grid { grid-template-columns: 1fr 1fr; }
+      .related-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 768px) {
+      .hero-feature { padding: calc(var(--nav-height) + 48px) 20px 56px; }
+      .hero-btns { flex-direction: column; }
+      .hero-btns a { text-align: center; }
+      .insight-strip { padding: 48px 20px; }
+      .insight-stats { grid-template-columns: 1fr; }
+      .logo-bar-section { padding: 28px 20px; }
+      .brand-name { padding: 6px 14px; font-size: 14px; border-right: none; border-bottom: 1px solid var(--border-light); width: 100%; }
+      .brand-name:last-child { border-bottom: none; }
+      .challenges-section, .capabilities-section, .how-section, .proof-section, .related-section, .cta-section, .callout-section, .faq-section { padding: 56px 20px; }
+      .metrics-strip { padding: 48px 20px; }
+      .challenges-grid { grid-template-columns: 1fr; }
+      .capabilities-grid { grid-template-columns: 1fr; }
+      .metrics-inner { grid-template-columns: 1fr 1fr; gap: 24px; }
+      .metric-item { padding: 16px 0; border-right: none; border-bottom: none; }
+      .callout-inner { padding: 32px 24px; }
+      .quotes-grid { grid-template-columns: 1fr; }
+      .related-grid { grid-template-columns: 1fr; }
+      .cta-btns { flex-direction: column; align-items: center; }
+    }
+  </style>
+  <link rel="stylesheet" href="/css/site.css">
+</head>
+<body>
+
+<a href="#main-content" class="skip-link">Skip to content</a>
+<div id="site-nav"></div>
+<script src="/js/nav.js"></script>
+
+<main id="main-content">
+
+<section class="hero-feature" aria-labelledby="hero-heading">
+  <div class="hero-feature-inner">
+    <div class="hero-text-col">
+      <nav class="hero-breadcrumb" aria-label="Breadcrumb">
+        <a href="/">Home</a>
+        <span aria-hidden="true">›</span>
+        <a href="/solutions/">Solutions For</a>
+        <span aria-hidden="true">›</span>
+        <span aria-current="page">B2B &amp; Retail</span>
+      </nav>
+      <h1 id="hero-heading">Ship to retail.<br><em>Without the compliance headaches.</em></h1>
+      <p class="hero-feature-sub" style="margin-top:18px;">Selling into Irish and UK retailers means retailer-specific labels, EDI, ASNs, booking slots and paperwork that doesn't forgive mistakes. 2Flow handles all of it from one Dublin operation, alongside your DTC orders if you need both.</p>
+      <div class="hero-btns">
+        <a href="/#contact" class="btn-primary">Book a Call</a>
+        <a href="/deliver/" class="btn-ghost btn-ghost-light">Explore Services</a>
+      </div>
+      <div class="hero-badges">
+        <span class="trust-badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="13" height="13"><polyline points="20 6 9 17 4 12"/></svg>
+          Retailer-compliant labelling
+        </span>
+        <span class="trust-badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="13" height="13"><polyline points="20 6 9 17 4 12"/></svg>
+          EDI &amp; ASN
+        </span>
+        <span class="trust-badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="13" height="13"><polyline points="20 6 9 17 4 12"/></svg>
+          Case &amp; pallet picking
+        </span>
+        <span class="trust-badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="13" height="13"><polyline points="20 6 9 17 4 12"/></svg>
+          Mixed B2B + DTC
+        </span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="insight-strip" aria-labelledby="insight-heading">
+  <div class="insight-inner">
+    <div class="insight-left">
+      <h2 id="insight-heading">Retail is <em>unforgiving</em> of operational mistakes</h2>
+      <p>Retailers don't absorb your errors. A missed booking slot, a mislabelled pallet or a broken ASN triggers chargebacks, refusals and a black mark against your supplier score. The difference between a good retail supplier and a great one is almost always the fulfilment operation behind it.</p>
+    </div>
+    <div class="insight-stats">
+      <div class="insight-stat">
+        <div class="stat-num">€250+</div>
+        <div class="stat-desc">Typical retailer chargeback per non-compliant pallet or ASN error</div>
+        <div class="stat-source">Industry benchmark, 2025</div>
+      </div>
+      <div class="insight-stat">
+        <div class="stat-num">72h</div>
+        <div class="stat-desc">Standard lead time retailer DCs expect between ASN and delivery</div>
+        <div class="stat-source">Irish grocery retail norms</div>
+      </div>
+      <div class="insight-stat">
+        <div class="stat-num">2 in 3</div>
+        <div class="stat-desc">Suppliers underestimate retailer labelling and booking workload before first shipment</div>
+        <div class="stat-source">Supplier onboarding data</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="logo-bar-section" aria-label="Channels we serve">
+  <div class="logo-bar-inner">
+    <span class="logo-bar-label">Shipping into</span>
+    <div class="logo-bar-divider" aria-hidden="true"></div>
+    <div class="logo-bar-brands">
+      <span class="brand-name">Grocery retail</span>
+      <span class="brand-name">Pharmacy</span>
+      <span class="brand-name">Health &amp; beauty</span>
+      <span class="brand-name">General retail</span>
+      <span class="brand-name">Distributors &amp; wholesalers</span>
+    </div>
+  </div>
+</section>
+
+<section class="challenges-section" aria-labelledby="challenges-heading">
+  <div class="container">
+    <div class="challenges-header">
+      <p class="section-label">The problem</p>
+      <h2 id="challenges-heading">Where retail suppliers lose money quietly</h2>
+      <p>Retail chargebacks rarely come from one big failure. They come from the same small compliance gaps, repeated across months, that never quite get fixed because the ops team is too busy shipping.</p>
+    </div>
+    <div class="challenges-grid">
+      <div class="challenge-card">
+        <div class="challenge-icon" aria-hidden="true">
+          <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
+        </div>
+        <h3>Labels don't match retailer specs</h3>
+        <p>SSCC formats, barcode placement, pallet cards, shelf-ready markings. Every retailer is slightly different, and the wrong label is an instant chargeback.</p>
+      </div>
+      <div class="challenge-card">
+        <div class="challenge-icon" aria-hidden="true">
+          <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 21v-7"/><path d="M4 10V3"/><path d="M12 21v-9"/><path d="M12 8V3"/><path d="M20 21v-5"/><path d="M20 12V3"/></svg>
+        </div>
+        <h3>EDI and ASN are fragile</h3>
+        <p>In-house EDI integrations break whenever the retailer changes a field. ASNs arrive late or with mismatches and the shipment gets refused at the DC gate.</p>
+      </div>
+      <div class="challenge-card">
+        <div class="challenge-icon" aria-hidden="true">
+          <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        </div>
+        <h3>Booking slots eat ops time</h3>
+        <p>Each retailer has its own portal, lead time and cut-offs. Someone on your team is spending hours every week managing slots rather than growing the business.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="how-section" aria-labelledby="how-heading">
+  <div class="container">
+    <div class="how-header">
+      <p class="section-label">How we handle it</p>
+      <h2 id="how-heading">Built for retailer compliance, not just order volume</h2>
+      <p>2Flow's B2B operation was built around the demands of Irish and UK retail. Labels, ASNs, booking slots and paperwork are part of the standard process, not a bolt-on.</p>
+    </div>
+    <div class="how-grid">
+      <div class="how-card">
+        <div class="how-icon" aria-hidden="true">
+          <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/></svg>
+        </div>
+        <div class="how-text">
+          <h3>Retailer-specific labelling</h3>
+          <p>SSCC, GS1-128, shelf-ready cases, pallet cards. Each retailer's spec is maintained centrally and applied at pick, so labels always match the destination DC.</p>
+        </div>
+      </div>
+      <div class="how-card">
+        <div class="how-icon" aria-hidden="true">
+          <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="16 3 21 3 21 8"/><line x1="4" y1="20" x2="21" y2="3"/><polyline points="21 16 21 21 16 21"/><line x1="15" y1="15" x2="21" y2="21"/><line x1="4" y1="4" x2="9" y2="9"/></svg>
+        </div>
+        <div class="how-text">
+          <h3>EDI intake and ASN generation</h3>
+          <p>Orders arrive over EDI. ASNs are generated, validated against the shipment and sent inside the retailer's lead time window. No manual files, no last-minute scrambles.</p>
+        </div>
+      </div>
+      <div class="how-card">
+        <div class="how-icon" aria-hidden="true">
+          <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        </div>
+        <div class="how-text">
+          <h3>Booking slot management</h3>
+          <p>We run the retailer portals on your behalf: book the slot, align the pick window, hand off to the carrier, and chase when something slips. You see the outcome, not the queue.</p>
+        </div>
+      </div>
+      <div class="how-card">
+        <div class="how-icon" aria-hidden="true">
+          <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+        </div>
+        <div class="how-text">
+          <h3>Case and pallet picking</h3>
+          <p>Pick to eaches, cases, layers or full pallets from the same stock pool. Mixed pallets built to retailer specification. Shelf-ready and store-ready preparation where required.</p>
+        </div>
+      </div>
+      <div class="how-card">
+        <div class="how-icon" aria-hidden="true">
+          <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        </div>
+        <div class="how-text">
+          <h3>One stock pool, two channels</h3>
+          <p>The same SKUs can ship as DTC orders one hour and leave on a pallet to a retailer DC the next. No split inventory, no fragmented stock counts, no missed sales because the "wrong" pool ran out.</p>
+        </div>
+      </div>
+      <div class="how-card">
+        <div class="how-icon" aria-hidden="true">
+          <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+        </div>
+        <div class="how-text">
+          <h3>Compliance as a process, not a heroic effort</h3>
+          <p>Pre-dispatch checks on labels, paperwork and ASN matching happen on every shipment, not just the big ones. Chargebacks fall because the error never leaves the site.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="capabilities-section" aria-labelledby="capabilities-heading">
+  <div class="container">
+    <div class="capabilities-header">
+      <p class="section-label">What's included</p>
+      <h2 id="capabilities-heading">The full retail supplier operation</h2>
+      <p>Everything a brand needs to supply Irish and UK retailers, without building the compliance function in-house.</p>
+    </div>
+    <div class="capabilities-grid">
+      <div class="capability-item">
+        <div class="capability-icon" aria-hidden="true">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/></svg>
+        </div>
+        <div class="capability-text">
+          <h4>SSCC &amp; GS1-128 labelling</h4>
+          <p>Compliant pallet and case labels to retailer spec.</p>
+        </div>
+      </div>
+      <div class="capability-item">
+        <div class="capability-icon" aria-hidden="true">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="16 3 21 3 21 8"/><line x1="4" y1="20" x2="21" y2="3"/></svg>
+        </div>
+        <div class="capability-text">
+          <h4>EDI &amp; ASN</h4>
+          <p>Order intake, validation and shipping notices managed end to end.</p>
+        </div>
+      </div>
+      <div class="capability-item">
+        <div class="capability-icon" aria-hidden="true">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/></svg>
+        </div>
+        <div class="capability-text">
+          <h4>Booking slot management</h4>
+          <p>Retailer portals handled on your behalf, slot to dispatch.</p>
+        </div>
+      </div>
+      <div class="capability-item">
+        <div class="capability-icon" aria-hidden="true">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+        </div>
+        <div class="capability-text">
+          <h4>Case &amp; pallet picking</h4>
+          <p>Eaches, cases, layers, full and mixed pallets.</p>
+        </div>
+      </div>
+      <div class="capability-item">
+        <div class="capability-icon" aria-hidden="true">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="1" y="3" width="15" height="13" rx="1"/><path d="M16 8h5l2 3v4h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+        </div>
+        <div class="capability-text">
+          <h4>Groupage &amp; FTL</h4>
+          <p>Multi-drop groupage for small shipments, full loads for larger runs.</p>
+        </div>
+      </div>
+      <div class="capability-item">
+        <div class="capability-icon" aria-hidden="true">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+        </div>
+        <div class="capability-text">
+          <h4>Mixed B2B + DTC stock</h4>
+          <p>One stock pool serves retail pallets and online orders.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="metrics-strip" aria-label="Key metrics">
+  <div class="metrics-inner">
+    <div class="metric-item">
+      <div class="metric-num">100%</div>
+      <div class="metric-label">Pre-dispatch label &amp; ASN checks</div>
+    </div>
+    <div class="metric-item">
+      <div class="metric-num">&lt;72h</div>
+      <div class="metric-label">Standard retailer lead time honoured</div>
+    </div>
+    <div class="metric-item">
+      <div class="metric-num">1 pool</div>
+      <div class="metric-label">B2B + DTC run from the same stock</div>
+    </div>
+    <div class="metric-item">
+      <div class="metric-num">IE + UK</div>
+      <div class="metric-label">Retailer DC coverage</div>
+    </div>
+  </div>
+</section>
+
+<section class="callout-section" aria-labelledby="callout-heading">
+  <div class="callout-inner">
+    <div class="callout-left">
+      <p class="callout-label">Compliance preparation</p>
+      <h2 id="callout-heading">Launching into a new retailer? Start before you win the listing.</h2>
+      <p>The best time to get retailer compliance right is before your first purchase order. 2Flow's compliance preparation service gets your product, labels, data and paperwork retailer-ready so the first shipment lands clean.</p>
+      <a href="/deliver/compliance-preparation/" class="btn-primary">See Compliance Preparation</a>
+    </div>
+    <div class="callout-right">
+      <div class="callout-point">
+        <div class="callout-point-icon" aria-hidden="true">
+          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+        </div>
+        <div class="callout-point-text">
+          <strong>Label &amp; data preparation</strong>
+          <p>Product data, barcodes, shelf-ready markings and pallet labels mapped to the retailer's spec before first delivery.</p>
+        </div>
+      </div>
+      <div class="callout-point">
+        <div class="callout-point-icon" aria-hidden="true">
+          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+        </div>
+        <div class="callout-point-text">
+          <strong>EDI &amp; ASN setup</strong>
+          <p>Retailer EDI account connected, test messages run, ASN flow validated before going live.</p>
+        </div>
+      </div>
+      <div class="callout-point">
+        <div class="callout-point-icon" aria-hidden="true">
+          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+        </div>
+        <div class="callout-point-text">
+          <strong>Booking portal onboarding</strong>
+          <p>DC booking portal access set up and first slots booked together, so your ops team isn't learning live.</p>
+        </div>
+      </div>
+      <div class="callout-point">
+        <div class="callout-point-icon" aria-hidden="true">
+          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+        </div>
+        <div class="callout-point-text">
+          <strong>First-shipment QA</strong>
+          <p>First pallets inspected end-to-end before dispatch to catch anything the retailer would flag on arrival.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="proof-section" aria-labelledby="proof-heading">
+  <div class="proof-header">
+    <p class="section-label">What brands say</p>
+    <h2 id="proof-heading">From chargebacks to supplier of the year shortlist</h2>
+  </div>
+  <div class="quotes-grid">
+    <div class="quote-card">
+      <div class="quote-mark" aria-hidden="true">"</div>
+      <p class="quote-text">We were getting chargebacks on almost every pallet with our old setup. Within a quarter of moving to 2Flow the chargebacks effectively stopped. Our retailer scorecard has never looked cleaner.</p>
+      <p class="quote-source">Head of Supply Chain</p>
+      <p class="quote-brand">Consumer Goods Brand, Ireland</p>
+    </div>
+    <div class="quote-card">
+      <div class="quote-mark" aria-hidden="true">"</div>
+      <p class="quote-text">Booking slots across three retailer portals used to burn two days a week of someone's time. 2Flow just does it. I stopped thinking about it within a month.</p>
+      <p class="quote-source">Operations Director</p>
+      <p class="quote-brand">Health &amp; Beauty Supplier, Dublin</p>
+    </div>
+    <div class="quote-card">
+      <div class="quote-mark" aria-hidden="true">"</div>
+      <p class="quote-text">We were running DTC on one system and retail on another and the stock numbers never agreed. One pool under 2Flow fixed that inside the first stocktake.</p>
+      <p class="quote-source">Founder</p>
+      <p class="quote-brand">Food &amp; Beverage Brand, Ireland</p>
+    </div>
+  </div>
+</section>
+
+<section class="faq-section" aria-labelledby="faq-heading">
+  <div class="faq-inner">
+    <div class="faq-header">
+      <p class="section-label">Common questions</p>
+      <h2 id="faq-heading">B2B &amp; retail fulfilment questions answered</h2>
+      <p>The things retail suppliers typically want to understand before moving their operation.</p>
+    </div>
+    <details>
+      <summary>Which Irish and UK retailers can 2Flow ship to?</summary>
+      <div class="faq-body">2Flow ships to all major Irish and UK grocery, pharmacy and general retailers, including those operating their own DC networks and booking portals. We manage retailer-specific labelling, paperwork and booking slots so your stock lands compliantly.</div>
+    </details>
+    <details>
+      <summary>Does 2Flow support EDI and ASN messaging?</summary>
+      <div class="faq-body">Yes. 2Flow handles EDI order intake, Advance Shipping Notices and related retailer messaging. We map your SKUs to the retailer's catalogue and manage the data flow so you aren't building integrations in-house.</div>
+    </details>
+    <details>
+      <summary>Can 2Flow run B2B and DTC from the same stock?</summary>
+      <div class="faq-body">Yes. One stock pool, two dispatch flows. The same SKU can ship as a single DTC order in the morning and leave on a pallet to a retailer DC in the afternoon, with full stock visibility across both.</div>
+    </details>
+    <details>
+      <summary>How do you reduce retailer chargebacks?</summary>
+      <div class="faq-body">Chargebacks usually come from labelling errors, missed booking slots or incorrect paperwork. 2Flow's process is built around retailer compliance: SSCC and GS1 labelling, validated ASNs, and slot-managed dispatch, all checked before leaving the site.</div>
+    </details>
+    <details>
+      <summary>Can 2Flow build mixed pallets and store-ready cases?</summary>
+      <div class="faq-body">Yes. We pick to case and pallet, build mixed pallets to retailer specifications, and prepare shelf-ready and store-ready units where required.</div>
+    </details>
+  </div>
+</section>
+
+<section class="related-section" aria-labelledby="related-heading">
+  <div class="container">
+    <div class="related-header">
+      <p class="section-label">Related services</p>
+      <h2 id="related-heading">More from 2Flow</h2>
+    </div>
+    <div class="related-grid">
+      <a href="/deliver/retail-b2b-distribution/" class="related-card">
+        <div class="related-card-icon" aria-hidden="true">
+          <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="1" y="3" width="15" height="13" rx="1"/><path d="M16 8h5l2 3v4h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+        </div>
+        <h3>Retail &amp; B2B Distribution</h3>
+        <p>Pallet distribution, groupage and full loads to retailer DCs across Ireland and the UK.</p>
+        <span class="related-card-link">Learn more →</span>
+      </a>
+      <a href="/deliver/compliance-preparation/" class="related-card">
+        <div class="related-card-icon" aria-hidden="true">
+          <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+        </div>
+        <h3>Compliance Preparation</h3>
+        <p>Get products, labels, EDI and paperwork retailer-ready before your first shipment goes out.</p>
+        <span class="related-card-link">Learn more →</span>
+      </a>
+      <a href="/deliver/pick-and-pack/" class="related-card">
+        <div class="related-card-icon" aria-hidden="true">
+          <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        </div>
+        <h3>Pick and Pack</h3>
+        <p>Accurate picking and packing across eaches, cases and pallets from a single operation.</p>
+        <span class="related-card-link">Learn more →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section" aria-labelledby="cta-heading">
+  <h2 id="cta-heading">Ready to supply retail without the firefighting?</h2>
+  <p>Tell us which retailers you ship to, your volumes and your current pain points. We'll show you how 2Flow fits.</p>
+  <div class="cta-btns">
+    <a href="/#contact" class="btn-primary">Book a Call</a>
+    <a href="/deliver/" class="btn-ghost">Our services</a>
+  </div>
+  <p class="cta-note">Based in Dublin. Serving Ireland, UK &amp; EU.</p>
+</section>
+
+</main>
+
+<div id="site-footer"></div>
+<script src="/js/footer.js"></script>
+
+</body>
+</html>
