@@ -80,13 +80,6 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-  <url>
-    <loc>https://2flow.ie/deliver/same-day-dublin/</loc>
-    <lastmod>2026-04-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
   <!-- ── Solutions: By Sector ── -->
   <url>
     <loc>https://2flow.ie/solutions/beauty-personal-care/</loc>

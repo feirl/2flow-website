@@ -20,7 +20,7 @@
     { href: BASE + '/deliver/retail-b2b-distribution/',  label: 'Retail &amp; B2B Distribution' },
     { href: BASE + '/deliver/amazon-fulfilment/',        label: 'Amazon Fulfilment' },
     { href: BASE + '/deliver/tiktok-shop/',              label: 'TikTok Shop' },
-    { href: BASE + '/deliver/same-day-dublin/',          label: 'Same-Day Dublin' },
+    { href: BASE + '/solutions/dublin-same-day/',          label: 'Same-Day Dublin' },
   ];
 
   const solutionLinks = [
