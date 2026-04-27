@@ -481,8 +481,12 @@
           <p class="form-section-label">Your details</p>
           <div class="form-row">
             <div class="form-group">
-              <label class="form-label" for="q-name">Name <span class="req">*</span></label>
-              <input class="form-input" type="text" id="q-name" name="name" placeholder="First name" required autocomplete="given-name">
+              <label class="form-label" for="q-firstname">First name <span class="req">*</span></label>
+              <input class="form-input" type="text" id="q-firstname" name="firstname" placeholder="First name" required autocomplete="given-name">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="q-lastname">Last name <span class="req">*</span></label>
+              <input class="form-input" type="text" id="q-lastname" name="lastname" placeholder="Last name" required autocomplete="family-name">
             </div>
             <div class="form-group">
               <label class="form-label" for="q-company">Brand / Company <span class="req">*</span></label>
@@ -631,7 +635,8 @@
         .map(function (c) { return c.value; }).join(', ');
     }
 
-    var name     = val('#q-name');
+    var firstname = val('#q-firstname');
+    var lastname  = val('#q-lastname');
     var company  = val('#q-company');
     var email    = val('#q-email');
     var phone    = val('#q-phone');
@@ -645,7 +650,8 @@
     // contact properties. Custom quote fields will be added once custom
     // properties are created in HubSpot (Settings → Properties).
     var fields = [
-      { name: 'firstname',       value: name },
+      { name: 'firstname',       value: firstname },
+      { name: 'lastname',        value: lastname },
       { name: 'company',         value: company },
       { name: 'email',           value: email },
       { name: 'phone',           value: phone },
