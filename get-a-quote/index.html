@@ -688,26 +688,29 @@
     var timeline = val('#q-timeline');
     var notes    = val('#q-notes');
 
-    // Format all quote details into the message field
-    var lines = [
-      'Monthly orders: ' + orders,
-      'SKU count: '      + skus,
-      'Product category: '+ category,
+    // Build the fields array — only submit confirmed standard HubSpot
+    // contact properties. Custom quote fields will be added once custom
+    // properties are created in HubSpot (Settings → Properties).
+    var fields = [
+      { name: 'firstname',       value: name },
+      { name: 'company',         value: company },
+      { name: 'email',           value: email },
+      { name: 'phone',           value: phone },
+      { name: 'lifecyclestage',  value: 'lead' }
     ];
-    if (shipsTo)  lines.push('Ships to: '              + shipsTo);
-    if (reqs)     lines.push('Special requirements: '  + reqs);
-    if (timeline) lines.push('Timeline: '              + timeline);
-    if (notes)    lines.push('Notes: '                 + notes);
-    var message = lines.join('\n');
+
+    // Append custom property fields as they are created in HubSpot.
+    // Each line below is safe to uncomment once the property exists:
+    // { name: 'monthly_order_volume', value: orders },
+    // { name: 'sku_count',            value: skus },
+    // { name: 'product_category',     value: category },
+    // { name: 'ships_to',             value: shipsTo },
+    // { name: 'special_requirements', value: reqs },
+    // { name: 'fulfilment_timeline',  value: timeline },
+    // { name: 'quote_notes',          value: notes },
 
     var payload = {
-      fields: [
-        { name: 'firstname', value: name },
-        { name: 'company',   value: company },
-        { name: 'email',     value: email },
-        { name: 'phone',     value: phone },
-        { name: 'message',   value: message }
-      ],
+      fields: fields,
       context: {
         pageUri:  window.location.href,
         pageName: 'Get A Quote'
@@ -723,20 +726,35 @@
       body: JSON.stringify(payload)
     })
     .then(function (r) {
-      if (r.ok || r.status === 200) {
-        if (typeof gtag !== 'undefined') {
-          gtag('event', 'quote_request', { event_category: 'conversion', event_label: company });
+      return r.json().then(function (body) {
+        if (r.ok) {
+          if (typeof gtag !== 'undefined') {
+            gtag('event', 'quote_request', { event_category: 'conversion', event_label: company });
+          }
+          window.location.href = '/get-a-quote/thank-you/';
+        } else {
+          // Surface the exact HubSpot error so we can diagnose it
+          var msg = (body.errors && body.errors[0] && body.errors[0].message)
+            || body.message || ('HTTP ' + r.status);
+          console.error('HubSpot API error:', JSON.stringify(body));
+          throw new Error(msg);
         }
-        window.location.href = '/get-a-quote/thank-you/';
-      } else {
-        return r.json().then(function (d) { throw new Error(d.message || r.status); });
-      }
+      });
     })
     .catch(function (err) {
-      console.error('HubSpot submit error:', err);
+      console.error('Quote submit error:', err.message);
       btn.disabled    = false;
       btn.textContent = 'Get my indicative quote \u2192';
-      alert('Something went wrong — please email CustomerService@2flow.ie or call 1800 532 532.');
+      // Show the actual error beneath the button for easy diagnosis
+      var errEl = document.getElementById('submit-error');
+      if (!errEl) {
+        errEl = document.createElement('p');
+        errEl.id = 'submit-error';
+        errEl.style.cssText = 'color:#e53e3e;font-size:13px;margin-top:10px;line-height:1.5;';
+        btn.parentNode.insertBefore(errEl, btn.nextSibling);
+      }
+      errEl.textContent = 'Submission error: ' + err.message
+        + ' — please email CustomerService@2flow.ie or call 1800 532 532.';
     });
   });
 })();
