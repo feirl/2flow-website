@@ -675,7 +675,7 @@
       { objectTypeId: '0-1', name: 'email',                value: email },
       { objectTypeId: '0-1', name: 'phone',                value: phone },
       { objectTypeId: '0-1', name: 'lifecyclestage',       value: 'lead' },
-      { objectTypeId: '0-1', name: 'monthly_order_volume', value: orders },
+      { name: 'monthly_order_volume', value: orders },
       { objectTypeId: '0-1', name: 'sku_count',            value: skus },
       { objectTypeId: '0-1', name: 'number_of_pallets',    value: pallets },
       { objectTypeId: '0-1', name: 'product_category',     value: category },
@@ -700,6 +700,8 @@
     })
     .then(function (r) {
       return r.json().then(function (body) {
+        // Log full body always — HubSpot hides per-field errors inside 200 OK
+        console.log('HubSpot response (' + r.status + '):', JSON.stringify(body));
         if (r.ok) {
           if (typeof gtag !== 'undefined') {
             gtag('event', 'quote_request', { event_category: 'conversion', event_label: company });
