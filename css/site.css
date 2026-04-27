@@ -83,8 +83,8 @@ h4 { font-size: 16px; font-weight: 700; line-height: 1.40; color: var(--text-pri
 }
 .btn-ghost:hover { border-color: var(--text-primary); }
 
-.btn-ghost-light { color: white !important; border-color: rgba(255,255,255,0.45) !important; }
-.btn-ghost-light:hover { border-color: white !important; }
+.btn-ghost-light { color: white !important; border-color: rgba(255,255,255,0.45) !important; background: rgba(255,255,255,0.12) !important; }
+.btn-ghost-light:hover { border-color: white !important; background: rgba(255,255,255,0.20) !important; }
 
 /* ── TOP NAV ── */
 #mainNav {
@@ -103,7 +103,7 @@ h4 { font-size: 16px; font-weight: 700; line-height: 1.40; color: var(--text-pri
   box-shadow: 0 2px 16px rgba(0,0,0,0.06);
 }
 .nav-logo { text-decoration: none; display: inline-flex; align-items: center; }
-.nav-logo img { height: 32px; width: auto; display: block; transition: opacity 0.25s ease; }
+.nav-logo img { height: 34px; display: block; transition: opacity 0.25s ease; }
 .nav-logo .nav-logo-top { filter: brightness(0) invert(1); }
 .nav-logo .nav-logo-scrolled { display: none; }
 #mainNav.nav-scrolled .nav-logo .nav-logo-top { display: none; }
