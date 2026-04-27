@@ -163,9 +163,6 @@
     .logo-bar-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-tertiary); white-space: nowrap; flex-shrink: 0; }
     .logo-bar-divider { width: 1px; height: 24px; background: var(--border-light); flex-shrink: 0; }
     .logo-bar-brands { display: flex; align-items: center; gap: 0; flex-wrap: wrap; flex: 1; }
-    .brand-name { font-size: 15px; font-weight: 600; color: var(--text-secondary); padding: 8px 24px; border-right: 1px solid var(--border-light); white-space: nowrap; transition: color 0.15s; }
-    .brand-name:last-child { border-right: none; }
-    .brand-name:hover { color: var(--text-primary); }
 
     /* ── CHALLENGES ── */
     .challenges-section { background: var(--bg-white); padding: 80px 40px; }
@@ -295,8 +292,6 @@
       .insight-strip { padding: 48px 20px; }
       .insight-stats { grid-template-columns: 1fr; }
       .logo-bar-section { padding: 28px 20px; }
-      .brand-name { padding: 6px 14px; font-size: 14px; border-right: none; border-bottom: 1px solid var(--border-light); width: 100%; }
-      .brand-name:last-child { border-bottom: none; }
       .challenges-section, .capabilities-section, .how-section, .proof-section, .related-section, .cta-section, .callout-section, .faq-section { padding: 56px 20px; }
       .metrics-strip { padding: 48px 20px; }
       .challenges-grid { grid-template-columns: 1fr; }
@@ -416,12 +411,31 @@
   <div class="logo-bar-inner">
     <span class="logo-bar-label">Trusted by</span>
     <div class="logo-bar-divider" aria-hidden="true"></div>
-    <div class="logo-bar-brands">
-      <span class="brand-name">Shopify brands</span>
-      <span class="brand-name">Health &amp; wellness</span>
-      <span class="brand-name">Beauty &amp; personal care</span>
-      <span class="brand-name">Home &amp; lifestyle</span>
-      <span class="brand-name">Consumer electronics</span>
+    <div class="logo-bar-brands logo-bar-clients">
+      <a href="https://www.theheadplan.com/" class="client-logo" target="_blank" rel="noopener" aria-label="The Head Plan">
+        <img src="/Images/clients/theheadplan.png" alt="The Head Plan" loading="lazy">
+      </a>
+      <a href="https://www.pocobeauty.com/" class="client-logo" target="_blank" rel="noopener" aria-label="Poco Beauty">
+        <img src="/Images/clients/pocobeauty.svg" alt="Poco Beauty" loading="lazy">
+      </a>
+      <a href="https://keyforher.com/" class="client-logo" target="_blank" rel="noopener" aria-label="Key For Her">
+        <img src="/Images/clients/keyforher.png" alt="Key For Her" loading="lazy">
+      </a>
+      <a href="https://ancestralcosmetics.com/" class="client-logo" target="_blank" rel="noopener" aria-label="Ancestral Cosmetics">
+        <img src="/Images/clients/ancestralcosmetics.png" alt="Ancestral Cosmetics" loading="lazy">
+      </a>
+      <a href="https://www.thermomix.com/" class="client-logo" target="_blank" rel="noopener" aria-label="Thermomix">
+        <img src="/Images/clients/thermomix.svg" alt="Thermomix" loading="lazy">
+      </a>
+      <a href="https://hnbcosmetics.co.uk/" class="client-logo" target="_blank" rel="noopener" aria-label="HNB Cosmetics">
+        <img src="/Images/clients/hnbcosmetics.png" alt="HNB Cosmetics" loading="lazy">
+      </a>
+      <a href="https://probiotic.ie/" class="client-logo" target="_blank" rel="noopener" aria-label="Probiotic IE">
+        <img src="/Images/clients/probiotic.png" alt="Probiotic IE" loading="lazy">
+      </a>
+      <a href="https://ditsybits.com/" class="client-logo" target="_blank" rel="noopener" aria-label="Ditsy Bits">
+        <img src="/Images/clients/ditsybits.png" alt="Ditsy Bits" loading="lazy">
+      </a>
     </div>
   </div>
 </section>
