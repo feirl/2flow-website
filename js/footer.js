@@ -64,6 +64,7 @@
 
   const companyLinks = [
     { href: BASE + '/pricing/',     label: 'Pricing' },
+    { href: BASE + '/get-a-quote/', label: 'Get a Quote' },
     { href: BASE + '/book-a-call/', label: 'Book a Call' },
     { href: BASE + '/contact/',     label: 'Contact Us' },
     { href: BASE + '/careers/', label: 'Careers' },
