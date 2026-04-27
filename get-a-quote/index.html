@@ -519,9 +519,10 @@
               <label class="form-label" for="q-skus">Number of SKUs <span class="req">*</span></label>
               <select class="form-select" id="q-skus" name="sku_count" required>
                 <option value="" disabled selected>Select range</option>
-                <option value="1-10">1 – 10</option>
-                <option value="11-50">11 – 50</option>
-                <option value="51-200">51 – 200</option>
+                <option value="1 - 10">1 - 10</option>
+                <option value="11 - 50">11 - 50</option>
+                <option value="50-100">50-100</option>
+                <option value="100-200">100-200</option>
                 <option value="200+">200+</option>
               </select>
             </div>
@@ -701,7 +702,7 @@
     // Append custom property fields as they are created in HubSpot.
     // Each line below is safe to uncomment once the property exists:
       { name: 'monthly_order_volume', value: orders },
-    // { name: 'sku_count',            value: skus },
+      { name: 'sku_count',            value: skus },
     // { name: 'product_category',     value: category },
     // { name: 'ships_to',             value: shipsTo },
     // { name: 'special_requirements', value: reqs },
