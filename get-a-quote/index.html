@@ -556,52 +556,6 @@
           </div>
 
           <hr class="form-divider">
-          <p class="form-section-label">Where you ship</p>
-
-          <div class="form-group">
-            <div class="check-group" role="group" aria-label="Shipping destinations">
-              <label class="check-item">
-                <input type="checkbox" name="ships_to" value="ireland"> Ireland
-              </label>
-              <label class="check-item">
-                <input type="checkbox" name="ships_to" value="eu"> EU (cross-border)
-              </label>
-              <label class="check-item">
-                <input type="checkbox" name="ships_to" value="uk"> UK
-              </label>
-              <label class="check-item">
-                <input type="checkbox" name="ships_to" value="global"> Rest of World
-              </label>
-            </div>
-          </div>
-
-          <hr class="form-divider">
-          <p class="form-section-label">Special requirements</p>
-
-          <div class="form-group">
-            <div class="check-group" role="group" aria-label="Special handling requirements">
-              <label class="check-item">
-                <input type="checkbox" name="requirements" value="subscription"> Subscription / auto-replenish
-              </label>
-              <label class="check-item">
-                <input type="checkbox" name="requirements" value="kitting"> Kitting &amp; bundling
-              </label>
-              <label class="check-item">
-                <input type="checkbox" name="requirements" value="cold-chain"> Cold chain / temperature control
-              </label>
-              <label class="check-item">
-                <input type="checkbox" name="requirements" value="compliance"> Regulated / compliance labelling
-              </label>
-              <label class="check-item">
-                <input type="checkbox" name="requirements" value="branded-packaging"> Branded packaging / inserts
-              </label>
-              <label class="check-item">
-                <input type="checkbox" name="requirements" value="returns"> Returns processing
-              </label>
-            </div>
-          </div>
-
-          <hr class="form-divider">
 
           <div class="form-group">
             <label class="form-label" for="q-timeline">When do you want to be live?</label>
@@ -612,16 +566,6 @@
               <option value="3-6-months">3 – 6 months</option>
               <option value="exploring">Just exploring options</option>
             </select>
-          </div>
-
-          <div class="form-group">
-            <label class="form-label" for="q-notes">Anything else we should know?</label>
-            <textarea class="form-textarea" id="q-notes" name="notes" placeholder="Current setup, pain points, anything specific you'd like priced..."></textarea>
-          </div>
-
-          <!-- Cloudflare Turnstile -->
-          <div class="turnstile-wrap">
-            <div class="cf-turnstile" data-sitekey="0x4AAAAAACLfqn_7qS6om0pj" data-theme="light"></div>
           </div>
 
           <button type="submit" class="form-submit" id="submitBtn">
@@ -695,10 +639,7 @@
     var skus     = val('#q-skus');
     var pallets  = val('#q-pallets');
     var category = val('#q-category');
-    var shipsTo  = checked('ships_to');
-    var reqs     = checked('requirements');
     var timeline = val('#q-timeline');
-    var notes    = val('#q-notes');
 
     // Build the fields array — only submit confirmed standard HubSpot
     // contact properties. Custom quote fields will be added once custom
@@ -717,10 +658,7 @@
       { name: 'sku_count',            value: skus },
       { name: 'number_of_pallets',    value: pallets },
       { name: 'product_category',     value: category },
-    // { name: 'ships_to',             value: shipsTo },
-    // { name: 'special_requirements', value: reqs },
     // { name: 'fulfilment_timeline',  value: timeline },
-    // { name: 'quote_notes',          value: notes },
 
     var payload = {
       fields: fields,
