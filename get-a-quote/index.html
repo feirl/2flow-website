@@ -529,6 +529,18 @@
           </div>
 
           <div class="form-group">
+            <label class="form-label" for="q-pallets">Number of pallets (storage estimate) <span class="req">*</span></label>
+            <select class="form-select" id="q-pallets" name="pallets" required>
+              <option value="" disabled selected>Select range</option>
+              <option value="1 - 5">1 - 5</option>
+              <option value="5 - 10">5 - 10</option>
+              <option value="10 - 20">10 - 20</option>
+              <option value="20 - 40">20 - 40</option>
+              <option value="40+">40+</option>
+            </select>
+          </div>
+
+          <div class="form-group">
             <label class="form-label" for="q-category">Product category <span class="req">*</span></label>
             <select class="form-select" id="q-category" name="product_category" required>
               <option value="" disabled selected>What do you sell?</option>
@@ -682,6 +694,7 @@
     var phone    = val('#q-phone');
     var orders   = val('#q-orders');
     var skus     = val('#q-skus');
+    var pallets  = val('#q-pallets');
     var category = val('#q-category');
     var shipsTo  = checked('ships_to');
     var reqs     = checked('requirements');
@@ -703,6 +716,7 @@
     // Each line below is safe to uncomment once the property exists:
       { name: 'monthly_order_volume', value: orders },
       { name: 'sku_count',            value: skus },
+      { name: 'number_of_pallets',    value: pallets },
     // { name: 'product_category',     value: category },
     // { name: 'ships_to',             value: shipsTo },
     // { name: 'special_requirements', value: reqs },
