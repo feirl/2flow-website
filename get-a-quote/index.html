@@ -668,18 +668,18 @@
     // contact properties. Custom quote fields will be added once custom
     // properties are created in HubSpot (Settings → Properties).
     var fields = [
-      { name: 'firstname',            value: firstname },
-      { name: 'lastname',             value: lastname },
-      { name: 'company',              value: company },
-      { name: 'website',              value: website },
-      { name: 'email',                value: email },
-      { name: 'phone',                value: phone },
-      { name: 'lifecyclestage',       value: 'lead' },
-      { name: 'monthly_order_volume', value: orders },
-      { name: 'sku_count',            value: skus },
-      { name: 'number_of_pallets',    value: pallets },
-      { name: 'product_category',     value: category },
-      { name: 'fulfilment_timeline',  value: timeline }
+      { objectTypeId: '0-1', name: 'firstname',            value: firstname },
+      { objectTypeId: '0-1', name: 'lastname',             value: lastname },
+      { objectTypeId: '0-1', name: 'company',              value: company },
+      { objectTypeId: '0-1', name: 'website',              value: website },
+      { objectTypeId: '0-1', name: 'email',                value: email },
+      { objectTypeId: '0-1', name: 'phone',                value: phone },
+      { objectTypeId: '0-1', name: 'lifecyclestage',       value: 'lead' },
+      { objectTypeId: '0-1', name: 'monthly_order_volume', value: orders },
+      { objectTypeId: '0-1', name: 'sku_count',            value: skus },
+      { objectTypeId: '0-1', name: 'number_of_pallets',    value: pallets },
+      { objectTypeId: '0-1', name: 'product_category',     value: category },
+      { objectTypeId: '0-1', name: 'fulfilment_timeline',  value: timeline }
     ];
 
     var payload = {
