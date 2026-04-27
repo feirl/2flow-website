@@ -419,7 +419,7 @@
             <div class="call-point-icon" aria-hidden="true">
               <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
             </div>
-            Our team reviews your profile and calls you back — usually same day — with an indicative per-order price.
+            Our team reviews your profile and calls you back, usually same day, with an indicative per-order price.
           </div>
           <div class="call-point">
             <div class="call-point-icon" aria-hidden="true">
@@ -474,7 +474,7 @@
     <div class="right-col">
       <div class="form-card">
         <h2 class="form-card-title">Tell us about your brand</h2>
-        <p class="form-card-sub">We'll review your details and call you back with an indicative price — usually same day.</p>
+        <p class="form-card-sub">We'll review your details and call you back with an indicative price, usually same day.</p>
 
         <form id="quoteForm" novalidate>
 
@@ -491,6 +491,10 @@
             <div class="form-group">
               <label class="form-label" for="q-company">Brand / Company <span class="req">*</span></label>
               <input class="form-input" type="text" id="q-company" name="company" placeholder="Your brand name" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="q-website">Website URL <span class="req">*</span></label>
+              <input class="form-input" type="url" id="q-website" name="website" placeholder="https://yourbrand.com" required>
             </div>
           </div>
           <div class="form-row">
@@ -587,7 +591,7 @@
             <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
           </div>
           <h3>Quote request received.</h3>
-          <p>We'll review your details and call you back — usually same day. Keep your phone close.</p>
+          <p>We'll review your details and call you back, usually same day. Keep your phone close.</p>
         </div>
 
       </div>
@@ -638,6 +642,7 @@
     var firstname = val('#q-firstname');
     var lastname  = val('#q-lastname');
     var company  = val('#q-company');
+    var website  = val('#q-website');
     var email    = val('#q-email');
     var phone    = val('#q-phone');
     var orders   = val('#q-orders');
@@ -650,21 +655,19 @@
     // contact properties. Custom quote fields will be added once custom
     // properties are created in HubSpot (Settings → Properties).
     var fields = [
-      { name: 'firstname',       value: firstname },
-      { name: 'lastname',        value: lastname },
-      { name: 'company',         value: company },
-      { name: 'email',           value: email },
-      { name: 'phone',           value: phone },
-      { name: 'lifecyclestage',  value: 'lead' }
-    ];
-
-    // Append custom property fields as they are created in HubSpot.
-    // Each line below is safe to uncomment once the property exists:
+      { name: 'firstname',            value: firstname },
+      { name: 'lastname',             value: lastname },
+      { name: 'company',              value: company },
+      { name: 'website',              value: website },
+      { name: 'email',                value: email },
+      { name: 'phone',                value: phone },
+      { name: 'lifecyclestage',       value: 'lead' },
       { name: 'monthly_order_volume', value: orders },
       { name: 'sku_count',            value: skus },
       { name: 'number_of_pallets',    value: pallets },
       { name: 'product_category',     value: category },
-      { name: 'fulfilment_timeline',  value: timeline },
+      { name: 'fulfilment_timeline',  value: timeline }
+    ];
 
     var payload = {
       fields: fields,
@@ -711,7 +714,7 @@
         btn.parentNode.insertBefore(errEl, btn.nextSibling);
       }
       errEl.textContent = 'Submission error: ' + err.message
-        + ' — please email CustomerService@2flow.ie or call 1800 532 532.';
+        + ' - please email CustomerService@2flow.ie or call 1800 532 532.';
     });
   });
 })();
