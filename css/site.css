@@ -404,20 +404,21 @@ footer { background: #0D0D0D; padding: 56px 40px 32px; }
 
 
 /* ── CLIENT LOGO BAR ── */
-.logo-bar-clients { gap: 0; flex-wrap: wrap; }
+.logo-bar-clients { gap: 0; flex-wrap: nowrap; overflow-x: auto; }
 .client-logo {
   display: inline-flex; align-items: center; justify-content: center;
-  padding: 10px 24px; border-right: 1px solid var(--border-light);
+  flex-shrink: 0;
+  padding: 8px 16px; border-right: 1px solid var(--border-light);
   text-decoration: none;
 }
 .client-logo:last-child { border-right: none; }
 .client-logo img {
-  height: 30px; width: auto; max-width: 120px; object-fit: contain;
+  height: 26px; width: auto; max-width: 96px; object-fit: contain;
   filter: grayscale(100%) opacity(0.5);
   transition: filter 0.3s ease;
 }
 .client-logo:hover img { filter: grayscale(0%) opacity(1); }
 @media (max-width: 768px) {
-  .client-logo { padding: 8px 16px; }
-  .client-logo img { height: 24px; max-width: 90px; }
+  .client-logo { padding: 6px 12px; }
+  .client-logo img { height: 22px; max-width: 80px; }
 }
