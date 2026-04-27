@@ -137,8 +137,11 @@
     }
     .hero-logos-inner { max-width: 1080px; margin: 0 auto; text-align: center; }
     .hero-logos-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: rgba(255,255,255,0.40); margin-bottom: 14px; }
-    .hero-logo-items { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
-    .logo-item { padding: 7px 18px; border: 1px solid rgba(255,255,255,0.15); border-radius: 6px; font-size: 13px; color: rgba(255,255,255,0.55); font-weight: 500; }
+    .hero-logo-items { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 4px; }
+    .hero-client-logo { display: inline-flex; align-items: center; justify-content: center; padding: 8px 18px; border: 1px solid rgba(255,255,255,0.15); border-radius: 6px; text-decoration: none; transition: border-color 0.25s; }
+    .hero-client-logo:hover { border-color: rgba(255,255,255,0.45); }
+    .hero-client-logo img { height: 24px; width: auto; max-width: 100px; object-fit: contain; filter: brightness(0) invert(1); opacity: 0.5; transition: filter 0.3s ease, opacity 0.3s ease; }
+    .hero-client-logo:hover img { filter: none; opacity: 1; }
 
     /* ── STATS STRIP ── */
     .stats-strip { background: var(--bg-white); padding: 80px 40px; border-bottom: 1px solid var(--border-light); }
@@ -307,7 +310,8 @@
         padding: 18px 20px 24px;
       }
       .hero-logos-label { font-size: 10px; margin-bottom: 10px; }
-      .logo-item { padding: 5px 12px; font-size: 11px; }
+      .hero-client-logo { padding: 6px 12px; }
+      .hero-client-logo img { height: 20px; max-width: 80px; }
 
       .stats-strip { padding: 48px 20px; }
       .stat-grid { grid-template-columns: 1fr; gap: 32px; }
@@ -591,12 +595,30 @@
     <div class="hero-logos-inner">
       <div class="hero-logos-label">Trusted by Ireland's fastest-growing brands</div>
       <div class="hero-logo-items">
-        <span class="logo-item">Consumer health</span>
-        <span class="logo-item">Skincare</span>
-        <span class="logo-item">Beauty &amp; cosmetics</span>
-        <span class="logo-item">Health supplements</span>
-        <span class="logo-item">Medical distribution</span>
-        <span class="logo-item">Luxury fragrance</span>
+        <a href="https://www.theheadplan.com/" class="hero-client-logo" target="_blank" rel="noopener" aria-label="The Head Plan">
+          <img src="/Images/clients/theheadplan.png" alt="The Head Plan" loading="lazy">
+        </a>
+        <a href="https://www.pocobeauty.com/" class="hero-client-logo" target="_blank" rel="noopener" aria-label="Poco Beauty">
+          <img src="/Images/clients/pocobeauty.svg" alt="Poco Beauty" loading="lazy">
+        </a>
+        <a href="https://keyforher.com/" class="hero-client-logo" target="_blank" rel="noopener" aria-label="Key For Her">
+          <img src="/Images/clients/keyforher.png" alt="Key For Her" loading="lazy">
+        </a>
+        <a href="https://ancestralcosmetics.com/" class="hero-client-logo" target="_blank" rel="noopener" aria-label="Ancestral Cosmetics">
+          <img src="/Images/clients/ancestralcosmetics.png" alt="Ancestral Cosmetics" loading="lazy">
+        </a>
+        <a href="https://www.thermomix.com/" class="hero-client-logo" target="_blank" rel="noopener" aria-label="Thermomix">
+          <img src="/Images/clients/thermomix.svg" alt="Thermomix" loading="lazy">
+        </a>
+        <a href="https://hnbcosmetics.co.uk/" class="hero-client-logo" target="_blank" rel="noopener" aria-label="HNB Cosmetics">
+          <img src="/Images/clients/hnbcosmetics.png" alt="HNB Cosmetics" loading="lazy">
+        </a>
+        <a href="https://probiotic.ie/" class="hero-client-logo" target="_blank" rel="noopener" aria-label="Probiotic IE">
+          <img src="/Images/clients/probiotic.png" alt="Probiotic IE" loading="lazy">
+        </a>
+        <a href="https://ditsybits.com/" class="hero-client-logo" target="_blank" rel="noopener" aria-label="Ditsy Bits">
+          <img src="/Images/clients/ditsybits.png" alt="Ditsy Bits" loading="lazy">
+        </a>
       </div>
     </div>
   </div>
