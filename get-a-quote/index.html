@@ -651,75 +651,93 @@
   var success = document.getElementById('formSuccess');
   var btn     = document.getElementById('submitBtn');
 
-  // ── Form submission ──────────────────────────────────────────────────────
-  // Collects all field values and POSTs as JSON to CustomerService@2flow.ie
-  // via Formspree. Replace FORM_ID with your Formspree form ID once created.
-  // Free tier at https://formspree.io — takes 2 minutes to set up.
-  var ENDPOINT = 'https://formspree.io/f/REPLACE_WITH_FORM_ID';
+  var PORTAL_ID = '148100795';
+  var FORM_GUID  = 'c8e9218c-1704-49b6-bac5-9ae1fcc05a2e';
+  var ENDPOINT   = 'https://api.hsforms.com/submissions/v3/integration/submit/' + PORTAL_ID + '/' + FORM_GUID;
 
   form.addEventListener('submit', function (e) {
     e.preventDefault();
 
-    // Basic required-field check
+    // Required-field validation
     var required = form.querySelectorAll('[required]');
     var valid = true;
     required.forEach(function (el) {
       el.style.borderColor = '';
-      if (!el.value.trim()) {
-        el.style.borderColor = '#e53e3e';
-        valid = false;
-      }
+      if (!el.value.trim()) { el.style.borderColor = '#e53e3e'; valid = false; }
     });
     if (!valid) {
-      form.querySelector('[required]:invalid, [required][style*="e53e3e"]').focus();
+      form.querySelector('[style*="e53e3e"]').focus();
       return;
     }
 
-    // Gather checkbox values
-    function getChecked(name) {
+    function val(id)  { return (form.querySelector(id) || {}).value || ''; }
+    function checked(name) {
       return Array.from(form.querySelectorAll('input[name="' + name + '"]:checked'))
         .map(function (c) { return c.value; }).join(', ');
     }
 
+    var name     = val('#q-name');
+    var company  = val('#q-company');
+    var email    = val('#q-email');
+    var phone    = val('#q-phone');
+    var orders   = val('#q-orders');
+    var skus     = val('#q-skus');
+    var category = val('#q-category');
+    var shipsTo  = checked('ships_to');
+    var reqs     = checked('requirements');
+    var timeline = val('#q-timeline');
+    var notes    = val('#q-notes');
+
+    // Format all quote details into the message field
+    var lines = [
+      'Monthly orders: ' + orders,
+      'SKU count: '      + skus,
+      'Product category: '+ category,
+    ];
+    if (shipsTo)  lines.push('Ships to: '              + shipsTo);
+    if (reqs)     lines.push('Special requirements: '  + reqs);
+    if (timeline) lines.push('Timeline: '              + timeline);
+    if (notes)    lines.push('Notes: '                 + notes);
+    var message = lines.join('\n');
+
     var payload = {
-      name:             form.querySelector('#q-name').value,
-      company:          form.querySelector('#q-company').value,
-      email:            form.querySelector('#q-email').value,
-      phone:            form.querySelector('#q-phone').value,
-      monthly_orders:   form.querySelector('#q-orders').value,
-      sku_count:        form.querySelector('#q-skus').value,
-      product_category: form.querySelector('#q-category').value,
-      ships_to:         getChecked('ships_to'),
-      requirements:     getChecked('requirements'),
-      timeline:         form.querySelector('#q-timeline').value,
-      notes:            form.querySelector('#q-notes').value,
-      _subject:         'New quote request from ' + form.querySelector('#q-company').value
+      fields: [
+        { name: 'firstname', value: name },
+        { name: 'company',   value: company },
+        { name: 'email',     value: email },
+        { name: 'phone',     value: phone },
+        { name: 'message',   value: message }
+      ],
+      context: {
+        pageUri:  window.location.href,
+        pageName: 'Get A Quote'
+      }
     };
 
-    btn.disabled = true;
-    btn.textContent = 'Sending…';
+    btn.disabled    = true;
+    btn.textContent = 'Sending\u2026';
 
     fetch(ENDPOINT, {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(payload)
     })
     .then(function (r) {
-      if (r.ok) {
-        form.style.display = 'none';
+      if (r.ok || r.status === 200) {
+        form.style.display    = 'none';
         success.style.display = 'block';
-        // GA event
         if (typeof gtag !== 'undefined') {
-          gtag('event', 'quote_request', { event_category: 'conversion', event_label: payload.company });
+          gtag('event', 'quote_request', { event_category: 'conversion', event_label: company });
         }
       } else {
-        throw new Error('Network response not ok');
+        return r.json().then(function (d) { throw new Error(d.message || r.status); });
       }
     })
-    .catch(function () {
-      btn.disabled = false;
-      btn.textContent = 'Get my indicative quote →';
-      alert('Something went wrong. Please email CustomerService@2flow.ie directly.');
+    .catch(function (err) {
+      console.error('HubSpot submit error:', err);
+      btn.disabled    = false;
+      btn.textContent = 'Get my indicative quote \u2192';
+      alert('Something went wrong — please email CustomerService@2flow.ie or call 1800 532 532.');
     });
   });
 })();
