@@ -208,13 +208,20 @@
       padding: 36px 32px 32px;
       box-shadow: 0 4px 24px rgba(0,0,0,0.05);
     }
-    .form-card-icon {
-  display: block;
-  margin-bottom: 16px;
+    .form-card-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 20px;
+}
+.form-card-icon {
+  height: 56px;
+  width: auto;
+  flex-shrink: 0;
 }
 .form-card-title {
-      font-size: 18px; font-weight: 700; color: var(--text-primary);
-      margin-bottom: 6px;
+      font-size: 22px; font-weight: 700; color: var(--green);
+      margin: 0;
     }
     .form-card-sub {
       font-size: 13px; color: var(--text-secondary);
@@ -477,9 +484,10 @@
     <!-- RIGHT: quote form -->
     <div class="right-col">
       <div class="form-card">
-        <img src="/img/icons/quote-icon.png" alt="Get a quote" class="form-card-icon" width="72" height="60">
-        <h2 class="form-card-title">Tell us about your brand</h2>
-        <p class="form-card-sub">We'll review your details and call you back with an indicative price, usually same day.</p>
+        <div class="form-card-header">
+          <img src="/img/icons/quote-icon.png" alt="Get a quote" class="form-card-icon">
+          <h2 class="form-card-title">Get A Quote</h2>
+        </div>
 
         <form id="quoteForm" novalidate>
 
