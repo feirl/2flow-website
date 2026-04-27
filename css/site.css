@@ -422,3 +422,29 @@ footer { background: #0D0D0D; padding: 56px 40px 32px; }
   .client-logo { padding: 6px 12px; }
   .client-logo img { height: 22px; max-width: 80px; }
 }
+/* ── Mobile nav: mega menu drops below trigger (not beside it) ── */
+@media (max-width: 768px) {
+  .nav-item-has-mega {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .nav-item-has-mega > a {
+    width: 100%;
+  }
+}
+
+/* ── Cookie banner size cap ── */
+.cmplz-cookiebanner {
+  max-width: 420px !important;
+  max-height: 80vh !important;
+  overflow-y: auto !important;
+}
+@media (max-width: 768px) {
+  .cmplz-cookiebanner {
+    max-width: 100% !important;
+    max-height: 55vh !important;
+    font-size: 13px !important;
+  }
+  .cmplz-cookiebanner .cmplz-header { font-size: 15px !important; }
+  .cmplz-cookiebanner .cmplz-body   { font-size: 13px !important; }
+}
