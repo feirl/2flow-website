@@ -724,11 +724,10 @@
     })
     .then(function (r) {
       if (r.ok || r.status === 200) {
-        form.style.display    = 'none';
-        success.style.display = 'block';
         if (typeof gtag !== 'undefined') {
           gtag('event', 'quote_request', { event_category: 'conversion', event_label: company });
         }
+        window.location.href = '/get-a-quote/thank-you/';
       } else {
         return r.json().then(function (d) { throw new Error(d.message || r.status); });
       }
