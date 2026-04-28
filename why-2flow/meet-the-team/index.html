@@ -12,6 +12,7 @@
   <meta property="og:type" content="website">
   <meta property="og:title" content="Meet the Team | 2Flow">
   <meta property="og:description" content="The people behind your fulfilment. A small, dedicated team who know your brand and pick up the phone.">
+  <meta property="og:image" content="https://2flow.ie/Images/og-image.jpg">
   <meta property="og:url" content="https://2flow.ie/why-2flow/meet-the-team">
   <meta property="og:site_name" content="2Flow">
   <meta http-equiv="X-Content-Type-Options" content="nosniff">
@@ -84,7 +85,11 @@
     * { box-sizing: border-box; margin: 0; padding: 0; }
 
     /* ── HERO ── */
-    .hero-feature {
+    .hero-feature-bg {
+  position: absolute; inset: 0; width: 100%; height: 100%;
+  object-fit: cover; object-position: center top; z-index: 0;
+}
+.hero-feature {
       background: #0D1A2E;
       padding: calc(var(--nav-height) + 80px) 40px 80px;
       position: relative; overflow: hidden;
@@ -300,6 +305,7 @@
 
 <!-- HERO -->
 <section class="hero-feature" aria-labelledby="hero-heading">
+<img class="hero-feature-bg" src="/Images/2flow-team.png" alt="" aria-hidden="true" loading="eager" fetchpriority="high" style="object-position:center top;">
   <div class="hero-feature-inner">
     <div class="hero-text-col">
       <nav class="hero-breadcrumb" aria-label="Breadcrumb">
