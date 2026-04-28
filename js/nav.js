@@ -250,28 +250,39 @@
     clearTimeout(closeTimer);
   }
 
+  function isMobile() { return window.innerWidth <= 900; }
+
   function wireHover(trigger, mega) {
     if (!trigger || !mega) return;
-
-    trigger.addEventListener('mouseenter', function() { openMega(mega); });
-    trigger.addEventListener('mouseleave', scheduleClose);
-
-    mega.addEventListener('mouseenter', cancelClose);
-    mega.addEventListener('mouseleave', scheduleClose);
+    trigger.addEventListener('mouseenter', function() { if (!isMobile()) openMega(mega); });
+    trigger.addEventListener('mouseleave', function() { if (!isMobile()) scheduleClose(); });
+    mega.addEventListener('mouseenter',    function() { if (!isMobile()) cancelClose(); });
+    mega.addEventListener('mouseleave',    function() { if (!isMobile()) scheduleClose(); });
   }
 
   wireHover(deliverTrig, deliverMega);
   wireHover(solutionsTrig, solutionsMega);
   wireHover(whyTrig, whyMega);
 
-  // Also support click/tap (for keyboard and touch users)
+  // Click/tap handler — mobile uses class toggle, desktop uses style.display
+  var allMegas = [];  // populated after bindClick calls
   function bindClick(trigger, mega) {
     if (!trigger || !mega) return;
     trigger.querySelector('a').addEventListener('click', function(e) {
       e.preventDefault();
-      var isOpen = mega.style.display === 'block';
-      if (currentMega) { currentMega.style.display = 'none'; currentMega = null; }
-      if (!isOpen) { mega.style.display = 'block'; currentMega = mega; }
+      e.stopPropagation(); // prevent document outside-click handler firing
+      if (isMobile()) {
+        var isOpen = mega.classList.contains('mob-open');
+        // Close all mobile-open megas
+        [deliverMega, solutionsMega, whyMega].forEach(function(m) {
+          if (m) m.classList.remove('mob-open');
+        });
+        if (!isOpen) mega.classList.add('mob-open');
+      } else {
+        var isOpen = mega.style.display === 'block';
+        if (currentMega) { currentMega.style.display = 'none'; currentMega = null; }
+        if (!isOpen) { mega.style.display = 'block'; currentMega = mega; }
+      }
     });
   }
 
@@ -299,6 +310,12 @@
     hamburger.addEventListener('click', function() {
       var open = navLinks.classList.toggle('open');
       hamburger.setAttribute('aria-expanded', String(open));
+      // Close any open sub-menus when hamburger closes
+      if (!open) {
+        [deliverMega, solutionsMega, whyMega].forEach(function(m) {
+          if (m) m.classList.remove('mob-open');
+        });
+      }
     });
   }
 
