@@ -448,3 +448,45 @@ footer { background: #0D0D0D; padding: 56px 40px 32px; }
   .cmplz-cookiebanner .cmplz-header { font-size: 15px !important; }
   .cmplz-cookiebanner .cmplz-body   { font-size: 13px !important; }
 }
+
+/* ── Mobile sub-menu expand (mob-open class toggled by JS) ── */
+@media (max-width: 900px) {
+  .mega-menu.mob-open {
+    display: block !important;
+    position: static !important;
+    width: 100% !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    border: none !important;
+    background: transparent !important;
+    padding: 4px 0 8px 12px !important;
+    margin-top: 0 !important;
+  }
+  .mega-menu.mob-open .mega-inner {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 0 !important;
+  }
+  .mega-menu.mob-open .mega-col {
+    width: 100% !important;
+  }
+  .mega-menu.mob-open .mega-col-label,
+  .mega-menu.mob-open .mega-group-title {
+    font-size: 11px;
+    padding: 8px 0 4px;
+    opacity: 0.6;
+  }
+  .mega-menu.mob-open .mega-item,
+  .mega-menu.mob-open .mega-link {
+    padding: 9px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.07);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: rgba(255,255,255,0.85);
+    text-decoration: none;
+    font-size: 14px;
+  }
+  .mega-menu.mob-open .mega-item-text p { display: none; }
+  .mega-menu.mob-open .mega-item-icon { width: 28px; height: 28px; flex-shrink: 0; }
+}
