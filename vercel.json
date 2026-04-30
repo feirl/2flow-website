@@ -1,4 +1,8 @@
 {
   "cleanUrls": true,
-  "trailingSlash": false
+  "trailingSlash": false,
+  "redirects": [
+    { "source": "/solutions/office-products", "destination": "/solutions/office-electronics", "permanent": true },
+    { "source": "/solutions/office-products/", "destination": "/solutions/office-electronics/", "permanent": true }
+  ]
 }
