@@ -2,8 +2,6 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <link rel="icon" type="image/png" href="/favicon.png">
-  <link rel="apple-touch-icon" href="/favicon.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Healthcare Fulfilment | 2Flow Ireland</title>
   <meta name="description" content="Specialist fulfilment for healthcare brands in Ireland. Batch tracking, compliance labelling, cold chain awareness, lot control and same-day dispatch from Dublin.">
@@ -13,7 +11,6 @@
   <meta property="og:type" content="website">
   <meta property="og:title" content="Healthcare Fulfilment | 2Flow">
   <meta property="og:description" content="Compliance-ready fulfilment for healthcare brands. Batch tracking, lot control, compliance labelling and same-day dispatch from Dublin.">
-  <meta property="og:image" content="https://2flow.ie/Images/og-image.jpg">
   <meta property="og:url" content="https://2flow.ie/solutions/healthcare/">
   <meta property="og:site_name" content="2Flow">
   <meta name="twitter:card" content="summary_large_image">
@@ -112,6 +109,9 @@
     .logo-bar-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-tertiary); white-space: nowrap; flex-shrink: 0; }
     .logo-bar-divider { width: 1px; height: 24px; background: var(--border-light); flex-shrink: 0; }
     .logo-bar-brands { display: flex; align-items: center; gap: 0; flex-wrap: wrap; flex: 1; }
+    .brand-name { font-size: 15px; font-weight: 600; color: var(--text-secondary); padding: 8px 24px; border-right: 1px solid var(--border-light); white-space: nowrap; transition: color 0.15s; }
+    .brand-name:last-child { border-right: none; }
+    .brand-name:hover { color: var(--text-primary); }
 
     /* ── CHALLENGES ── */
     .challenges-section { background: var(--bg-white); padding: 80px 40px; }
@@ -195,6 +195,8 @@
       .hero-btns { flex-direction: column; }
       .hero-btns a { text-align: center; }
       .logo-bar-section { padding: 28px 20px; }
+      .brand-name { padding: 6px 14px; font-size: 14px; border-right: none; border-bottom: 1px solid var(--border-light); width: 100%; }
+      .brand-name:last-child { border-bottom: none; }
       .challenges-section, .capabilities-section, .proof-section, .related-section, .cta-section { padding: 56px 20px; }
       .metrics-strip { padding: 48px 20px; }
       .challenges-grid { grid-template-columns: 1fr; }
@@ -239,14 +241,6 @@
       s.parentNode.insertBefore(b, s);
     })(window.lintrk);
   </script>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=GT-MJM434ZF"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'GT-MJM434ZF');
-</script>
 </head>
 <body>
 
@@ -266,7 +260,7 @@
     preload="auto" disablepictureinpicture
     aria-hidden="true"
   >
-    <source src="/Images/healthcare.mp4" type="video/mp4">
+    <source src="/Images/hero-healthcare.mp4" type="video/mp4">
   </video>
   <div class="hero-feature-inner">
     <div class="hero-text-col">
@@ -278,8 +272,8 @@
       <h1 id="hero-heading">Healthcare fulfilment where<br><em>compliance is the baseline.</em></h1>
       <p class="hero-feature-sub" style="margin-top:18px;">Lot tracking, batch control, compliance labelling, and traceable sample dispatch. 2Flow has built the operational rigour that healthcare brands need to dispatch with confidence and scale without compromise.</p>
       <div class="hero-btns">
-        <a href="/#contact" class="btn-primary">Book a Call</a>
-        <a href="/get-a-quote/" class="btn-ghost btn-ghost-light">Get a Quote</a>
+        <a href="/book-a-call/" class="btn-primary">Book a Call</a>
+        <a href="/deliver/" class="btn-ghost btn-ghost-light">Explore Services</a>
       </div>
       <div class="hero-badges">
         <span class="trust-badge">
@@ -308,31 +302,8 @@
   <div class="logo-bar-inner">
     <span class="logo-bar-label">Trusted by</span>
     <div class="logo-bar-divider" aria-hidden="true"></div>
-    <div class="logo-bar-brands logo-bar-clients">
-      <a href="https://www.theheadplan.com/" class="client-logo" target="_blank" rel="noopener" aria-label="The Head Plan">
-        <img src="/Images/clients/theheadplan.png" alt="The Head Plan" loading="lazy">
-      </a>
-      <a href="https://www.pocobeauty.com/" class="client-logo" target="_blank" rel="noopener" aria-label="Poco Beauty">
-        <img src="/Images/clients/pocobeauty.svg" alt="Poco Beauty" loading="lazy">
-      </a>
-      <a href="https://keyforher.com/" class="client-logo" target="_blank" rel="noopener" aria-label="Key For Her">
-        <img src="/Images/clients/keyforher.png" alt="Key For Her" loading="lazy">
-      </a>
-      <a href="https://ancestralcosmetics.com/" class="client-logo" target="_blank" rel="noopener" aria-label="Ancestral Cosmetics">
-        <img src="/Images/clients/ancestralcosmetics.png" alt="Ancestral Cosmetics" loading="lazy">
-      </a>
-      <a href="https://www.thermomix.com/" class="client-logo" target="_blank" rel="noopener" aria-label="Thermomix">
-        <img src="/Images/clients/thermomix.svg" alt="Thermomix" loading="lazy">
-      </a>
-      <a href="https://hnbcosmetics.co.uk/" class="client-logo" target="_blank" rel="noopener" aria-label="HNB Cosmetics">
-        <img src="/Images/clients/hnbcosmetics.png" alt="HNB Cosmetics" loading="lazy">
-      </a>
-      <a href="https://probiotic.ie/" class="client-logo" target="_blank" rel="noopener" aria-label="Probiotic IE">
-        <img src="/Images/clients/probiotic.png" alt="Probiotic IE" loading="lazy">
-      </a>
-      <a href="https://ditsybits.com/" class="client-logo" target="_blank" rel="noopener" aria-label="Ditsy Bits">
-        <img src="/Images/clients/ditsybits.png" alt="Ditsy Bits" loading="lazy">
-      </a>      <span class="brand-name">Pharmaceutical samples</span>
+    <div class="logo-bar-brands">
+      <span class="brand-name">Pharmaceutical samples</span>
       <span class="brand-name">Consumer healthcare</span>
       <span class="brand-name">Nutritional &amp; wellness</span>
       <span class="brand-name">Medical trial dispatch</span>
@@ -534,7 +505,7 @@
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
         </div>
         <h3>DTC &amp; eCommerce Fulfilment</h3>
-        <p>Shopify-native healthcare fulfilment with instant order sync, automatic tracking updates, and real-time inventory visibility.</p>
+        <p>Shopify-native healthcare fulfilment with 15-minute order sync, automatic tracking updates, and real-time inventory visibility.</p>
         <span class="related-card-link">Learn more &#8594;</span>
       </a>
 
@@ -549,8 +520,8 @@
     <h2 id="cta-heading">Ready to fulfil with the compliance your category demands?</h2>
     <p>Most brands take three to six months to make the switch. Start the conversation now. So your next audit, recall, or regulatory review isn't the one that exposes your fulfilment partner's limits.</p>
     <div class="cta-btns">
-      <a href="/#contact" class="btn-primary">Book a Call</a>
-      <a href="/get-a-quote/" class="btn-ghost">Get a Quote</a>
+      <a href="/book-a-call/" class="btn-primary">Book a Call</a>
+      <a href="/sectors/" class="btn-ghost">All Sectors</a>
     </div>
     <p class="cta-note">No commitment required &nbsp;&middot;&nbsp; Tailored to your compliance requirements and order volume</p>
   </div>
@@ -562,8 +533,5 @@
 <div id="site-footer"></div>
 <script src="/js/footer.js"></script>
 
-<!-- Start of HubSpot Embed Code -->
-<script type="text/javascript" id="hs-script-loader" async defer src="//js-eu1.hs-scripts.com/148100795.js"></script>
-<!-- End of HubSpot Embed Code -->
 </body>
 </html>
