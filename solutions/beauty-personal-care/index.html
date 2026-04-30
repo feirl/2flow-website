@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <link rel="icon" href="/favicon.png" type="image/png">
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="apple-touch-icon" href="/favicon.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Beauty &amp; Personal Care Fulfilment | 3PL Ireland | 2Flow</title>
   <meta name="description" content="3PL fulfillment for beauty and personal care brands in Ireland. Fragile goods handling, gift set assembly, engraving, dangerous goods compliance. Dublin warehousing.">
@@ -12,6 +13,7 @@
   <meta property="og:type" content="website">
   <meta property="og:title" content="Beauty &amp; Personal Care Fulfilment | 2Flow">
   <meta property="og:description" content="Fulfilment built for beauty and personal care brands in Ireland. Fragile goods, gift sets, engraving, dangerous goods compliance.">
+  <meta property="og:image" content="https://2flow.ie/Images/og-image.jpg">
   <meta property="og:url" content="https://2flow.ie/solutions/beauty-personal-care/">
   <meta property="og:site_name" content="2Flow">
   <meta name="twitter:card" content="summary_large_image">
@@ -166,17 +168,6 @@
       flex-wrap: wrap;
       flex: 1;
     }
-    .brand-name {
-      font-size: 15px;
-      font-weight: 600;
-      color: var(--text-secondary);
-      padding: 8px 24px;
-      border-right: 1px solid var(--border-light);
-      white-space: nowrap;
-      transition: color 0.15s;
-    }
-    .brand-name:last-child { border-right: none; }
-    .brand-name:hover { color: var(--text-primary); }
 
     /* ── CHALLENGES ── */
     .challenges-section { background: var(--bg-white); padding: 80px 40px; }
@@ -333,8 +324,6 @@
       .logo-bar-section { padding: 28px 20px; }
       .logo-bar-inner { gap: 12px; }
       .logo-bar-divider { display: none; }
-      .brand-name { padding: 6px 14px; font-size: 14px; border-right: none; border-bottom: 1px solid var(--border-light); width: 100%; }
-      .brand-name:last-child { border-bottom: none; }
       .challenges-section, .capabilities-section, .proof-section, .related-section, .cta-section { padding: 56px 20px; }
       .metrics-strip { padding: 48px 20px; }
       .challenges-grid { grid-template-columns: 1fr; }
@@ -350,18 +339,18 @@
   <link rel="stylesheet" href="/css/site.css">
 
   <!-- ANALYTICS & ADVERTISING. managed by cookie-consent.js.
-       Replace G-Z9GDV1BHWM with GA4 Measurement ID.
+       Replace G-XXXXXXXXXX with GA4 Measurement ID.
        Replace LI-XXXXXXX  with LinkedIn Partner ID.
        These scripts are inert (type="text/plain") until the
        user grants consent via the cookie banner / preferences modal. -->
 
   <script type="text/plain" data-consent="analytics" async
-    src="https://www.googletagmanager.com/gtag/js?id=G-Z9GDV1BHWM"></script>
+    src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
   <script type="text/plain" data-consent="analytics">
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'G-Z9GDV1BHWM');
+    gtag('config', 'G-XXXXXXXXXX');
   </script>
 
   <script type="text/plain" data-consent="advertising">
@@ -380,6 +369,14 @@
       s.parentNode.insertBefore(b, s);
     })(window.lintrk);
   </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=GT-MJM434ZF"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'GT-MJM434ZF');
+</script>
 </head>
 <body>
 
@@ -394,7 +391,7 @@
 <!-- ── SECTION 1: HERO ── -->
 <section class="hero-feature" aria-labelledby="hero-heading">
   <video class="hero-feature-bg" autoplay loop muted playsinline preload="auto" disablepictureinpicture aria-hidden="true">
-    <source src="/Images/lipgloss.mp4" type="video/mp4">
+    <source src="/Images/perfume.mp4" type="video/mp4">
   </video>
   <div class="hero-feature-inner" style="position:relative;z-index:2;">
     <div class="hero-text-col">
@@ -403,11 +400,11 @@
         <span aria-hidden="true">›</span>
         <span aria-current="page">Beauty &amp; Personal Care</span>
       </nav>
-      <h1 id="hero-heading">Your customers care about unboxing as much as what's inside.<br><em>We make sure it lands right.</em></h1>
+      <h1 id="hero-heading">Beautiful, flawless <em>delivery</em></h1>
       <p class="hero-feature-sub" style="margin-top:18px;">Fragile cosmetics, luxury fragrance, gift sets at scale. 2Flow has built the operational depth that beauty brands need, and a track record with some of Ireland's fastest-growing names in the category.</p>
       <div class="hero-btns">
         <a href="/book-a-call" class="btn-primary">Book a Call</a>
-        <a href="/pricing" class="btn-ghost btn-ghost-light">View Pricing</a>
+        <a href="/get-a-quote/" class="btn-ghost btn-ghost-light">Get a Quote</a>
       </div>
       <div class="hero-badges">
         <span class="trust-badge">
@@ -436,11 +433,31 @@
   <div class="logo-bar-inner">
     <span class="logo-bar-label">Trusted by</span>
     <div class="logo-bar-divider" aria-hidden="true"></div>
-    <div class="logo-bar-brands">
-      <span class="brand-name">Beauty &amp; cosmetics</span>
-      <span class="brand-name">Skincare retailer</span>
-      <span class="brand-name">Natural cosmetics</span>
-      <span class="brand-name">Luxury fragrance</span>
+    <div class="logo-bar-brands logo-bar-clients">
+      <a href="https://www.theheadplan.com/" class="client-logo" target="_blank" rel="noopener" aria-label="The Head Plan">
+        <img src="/Images/clients/theheadplan.png" alt="The Head Plan" loading="lazy">
+      </a>
+      <a href="https://www.pocobeauty.com/" class="client-logo" target="_blank" rel="noopener" aria-label="Poco Beauty">
+        <img src="/Images/clients/pocobeauty.svg" alt="Poco Beauty" loading="lazy">
+      </a>
+      <a href="https://keyforher.com/" class="client-logo" target="_blank" rel="noopener" aria-label="Key For Her">
+        <img src="/Images/clients/keyforher.png" alt="Key For Her" loading="lazy">
+      </a>
+      <a href="https://ancestralcosmetics.com/" class="client-logo" target="_blank" rel="noopener" aria-label="Ancestral Cosmetics">
+        <img src="/Images/clients/ancestralcosmetics.png" alt="Ancestral Cosmetics" loading="lazy">
+      </a>
+      <a href="https://www.thermomix.com/" class="client-logo" target="_blank" rel="noopener" aria-label="Thermomix">
+        <img src="/Images/clients/thermomix.svg" alt="Thermomix" loading="lazy">
+      </a>
+      <a href="https://hnbcosmetics.co.uk/" class="client-logo" target="_blank" rel="noopener" aria-label="HNB Cosmetics">
+        <img src="/Images/clients/hnbcosmetics.png" alt="HNB Cosmetics" loading="lazy">
+      </a>
+      <a href="https://probiotic.ie/" class="client-logo" target="_blank" rel="noopener" aria-label="Probiotic IE">
+        <img src="/Images/clients/probiotic.png" alt="Probiotic IE" loading="lazy">
+      </a>
+      <a href="https://ditsybits.com/" class="client-logo" target="_blank" rel="noopener" aria-label="Ditsy Bits">
+        <img src="/Images/clients/ditsybits.png" alt="Ditsy Bits" loading="lazy">
+      </a>
     </div>
   </div>
 </section>
@@ -571,6 +588,10 @@
 <section class="metrics-strip" aria-label="Performance metrics">
   <div class="metrics-inner">
     <div class="metric-item">
+      <div class="metric-num">4</div>
+      <div class="metric-label">Named beauty &amp; personal care brands actively fulfilled</div>
+    </div>
+    <div class="metric-item">
       <div class="metric-num">9/10</div>
       <div class="metric-label">Average NPS across beauty clients. Consistent across DTC and luxury</div>
     </div>
@@ -579,7 +600,7 @@
       <div class="metric-label">Gift sets assembled in a single peak season for one beauty brand</div>
     </div>
     <div class="metric-item">
-      <div class="metric-num">75k+</div>
+      <div class="metric-num">9k+</div>
       <div class="metric-label">Orders dispatched in a single month at category peak</div>
     </div>
   </div>
@@ -635,7 +656,7 @@
         <span class="related-card-link">Learn more &#8594;</span>
       </a>
 
-      <a href="/deliver/kitting-bundling/" class="related-card">
+      <a href="/deliver/kitting-bundles" class="related-card">
         <div class="related-card-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
         </div>
@@ -665,7 +686,7 @@
     <p>Most brands take three to six months to make the switch. Start the conversation now. So your next launch or peak season isn't the one where fulfilment lets you down.</p>
     <div class="cta-btns">
       <a href="/book-a-call" class="btn-primary">Book a Call</a>
-      <a href="/pricing" class="btn-ghost">View Pricing</a>
+      <a href="/get-a-quote/" class="btn-ghost">Get a Quote</a>
     </div>
     <p class="cta-note">No commitment required &nbsp;&middot;&nbsp; Tailored to your order volume and category</p>
   </div>
@@ -725,5 +746,8 @@
     }
   });
 </script>
+<!-- Start of HubSpot Embed Code -->
+<script type="text/javascript" id="hs-script-loader" async defer src="//js-eu1.hs-scripts.com/148100795.js"></script>
+<!-- End of HubSpot Embed Code -->
 </body>
 </html>
