@@ -100,13 +100,11 @@ h4 { font-size: 16px; font-weight: 700; line-height: 1.40; color: var(--text-pri
   box-shadow: 0 2px 16px rgba(0,0,0,0.06);
 }
 .nav-logo { text-decoration: none; }
-.nav-logo img {
-  height: 40px; width: auto; display: block;
-  filter: brightness(0) invert(1);
-  transition: filter 0.25s ease;
-}
-.nav-logo-img { display: block; }
-#mainNav.nav-scrolled .nav-logo img { filter: none; }
+.nav-logo img { height: 40px; width: auto; display: block; }
+.nav-logo-dark  { display: none; }
+.nav-logo-light { display: block; filter: brightness(0) invert(1); }
+#mainNav.nav-scrolled .nav-logo-light { display: none; }
+#mainNav.nav-scrolled .nav-logo-dark  { display: block; }
 
 .nav-links { display: flex; align-items: stretch; height: var(--nav-height); }
 .nav-item  { display: flex; align-items: center; position: static; }
