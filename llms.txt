@@ -45,7 +45,7 @@ to customer delivery and returns — so brands can scale without managing wareho
 - Medical and Healthcare: Temperature-sensitive products, regulated handling, traceability
 - Home and Lifestyle: Premium home goods, gifting, fragile items, branded packaging
 - Consumer Electronics: High-value items, anti-static packaging, serial number tracking, returns grading
-- Office Products: B2B distribution, retail prep, DTC from single operation
+- Office Electronics: B2B distribution, retail prep, DTC from single operation
 - Industrial and Scientific: Lot tracking, hazmat compliance, trade documentation
 
 ### By Business Need
@@ -147,7 +147,7 @@ A: Onboarding timelines vary by brand complexity. Most brands are operational wi
 - Medical and Healthcare: https://2flow.ie/solutions/medical-healthcare/
 - Home and Lifestyle: https://2flow.ie/solutions/home-lifestyle/
 - Consumer Electronics: https://2flow.ie/solutions/consumer-electronics/
-- Office Products: https://2flow.ie/solutions/office-products/
+- Office Electronics: https://2flow.ie/solutions/office-products/
 - Industrial and Scientific: https://2flow.ie/solutions/industrial-scientific/
 - Subscription Brands: https://2flow.ie/solutions/subscription-brands/
 - DTC Brands Scaling: https://2flow.ie/solutions/dtc-brands-scaling/
