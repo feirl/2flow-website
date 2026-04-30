@@ -2,7 +2,76 @@
   "cleanUrls": true,
   "trailingSlash": false,
   "redirects": [
-    { "source": "/solutions/office-products", "destination": "/solutions/office-electronics", "permanent": true },
-    { "source": "/solutions/office-products/", "destination": "/solutions/office-electronics/", "permanent": true }
+
+    { "source": "/solutions/office-products",  "destination": "/solutions/office-electronics", "permanent": true },
+    { "source": "/solutions/office-products/", "destination": "/solutions/office-electronics/", "permanent": true },
+
+    { "source": "/contact-us",               "destination": "/contact",                        "permanent": true },
+    { "source": "/contact-us/",              "destination": "/contact/",                       "permanent": true },
+    { "source": "/contact.html",             "destination": "/contact",                        "permanent": true },
+
+    { "source": "/services",                 "destination": "/deliver/pick-and-pack",          "permanent": true },
+    { "source": "/services/",               "destination": "/deliver/pick-and-pack/",          "permanent": true },
+
+    { "source": "/360-tour",                "destination": "/why-2flow/virtual-tour",           "permanent": true },
+    { "source": "/360-tour/",               "destination": "/why-2flow/virtual-tour/",          "permanent": true },
+    { "source": "/facility-tour",           "destination": "/why-2flow/virtual-tour",           "permanent": true },
+    { "source": "/facility-tour/",          "destination": "/why-2flow/virtual-tour/",          "permanent": true },
+
+    { "source": "/case-studies",            "destination": "/why-2flow/customer-stories",       "permanent": true },
+    { "source": "/case-studies/",           "destination": "/why-2flow/customer-stories/",      "permanent": true },
+    { "source": "/case-studies/:path*",     "destination": "/why-2flow/customer-stories",       "permanent": true },
+    { "source": "/spotlight-oral-case-study","destination": "/why-2flow/customer-stories",      "permanent": true },
+
+    { "source": "/our-staff",               "destination": "/why-2flow/meet-the-team",          "permanent": true },
+    { "source": "/our-staff/",              "destination": "/why-2flow/meet-the-team/",         "permanent": true },
+    { "source": "/to-those-who-make-it-happen", "destination": "/why-2flow/meet-the-team",     "permanent": true },
+
+    { "source": "/scaling-your-ecommerce",  "destination": "/solutions/dtc-brands-scaling",    "permanent": true },
+    { "source": "/scaling-your-ecommerce/", "destination": "/solutions/dtc-brands-scaling/",   "permanent": true },
+
+    { "source": "/onboarding",              "destination": "/get-a-quote",                      "permanent": true },
+    { "source": "/onboarding/",             "destination": "/get-a-quote/",                     "permanent": true },
+    { "source": "/quick-quote",             "destination": "/get-a-quote",                      "permanent": true },
+    { "source": "/quick-quote/",            "destination": "/get-a-quote/",                     "permanent": true },
+    { "source": "/questionnaire",           "destination": "/get-a-quote",                      "permanent": true },
+    { "source": "/free-consultation",       "destination": "/book-a-call",                      "permanent": true },
+    { "source": "/free-consultation/",      "destination": "/book-a-call/",                     "permanent": true },
+
+    { "source": "/how-it-works",            "destination": "/why-2flow/our-difference",         "permanent": true },
+    { "source": "/how-it-works/",           "destination": "/why-2flow/our-difference/",        "permanent": true },
+    { "source": "/about",                   "destination": "/why-2flow/our-difference",         "permanent": true },
+    { "source": "/about-us",               "destination": "/why-2flow/our-difference",          "permanent": true },
+
+    { "source": "/thank-you",              "destination": "/get-a-quote/thank-you",             "permanent": true },
+    { "source": "/thank-you/",             "destination": "/get-a-quote/thank-you",             "permanent": true },
+
+    { "source": "/cookie-policy-eu",        "destination": "/cookie-policy",                   "permanent": true },
+    { "source": "/cookie-policy-eu/",       "destination": "/cookie-policy/",                  "permanent": true },
+    { "source": "/privacy-statement.html",  "destination": "/privacy-policy",                  "permanent": true },
+    { "source": "/privacy-policy",          "destination": "/privacy-policy",                  "permanent": false },
+
+    { "source": "/solutions/office-business",   "destination": "/solutions/office-electronics","permanent": true },
+    { "source": "/solutions/office-business/",  "destination": "/solutions/office-electronics/","permanent": true },
+    { "source": "/solutions/medical-healthcare","destination": "/solutions/healthcare",          "permanent": true },
+    { "source": "/solutions/medical-healthcare/","destination": "/solutions/healthcare/",       "permanent": true },
+
+    { "source": "/partners",               "destination": "/why-2flow/integrations",            "permanent": true },
+    { "source": "/technology-partners",    "destination": "/why-2flow/integrations",            "permanent": true },
+    { "source": "/it-services",            "destination": "/solutions/office-electronics",      "permanent": true },
+    { "source": "/managed-services",       "destination": "/",                                  "permanent": true },
+
+    { "source": "/news-and-blog/:path*",   "destination": "/",                                  "permanent": true },
+    { "source": "/guides/:path*",          "destination": "/",                                  "permanent": true },
+    { "source": "/2025/:path*",            "destination": "/why-2flow/customer-stories",        "permanent": true },
+
+    { "source": "/3pl-services.html",               "destination": "/",                         "permanent": true },
+    { "source": "/ecommerce-fulfillment-services.html","destination": "/deliver/dtc-fulfilment","permanent": true },
+    { "source": "/fulfillment.html",                "destination": "/",                          "permanent": true },
+    { "source": "/logistics.html",                  "destination": "/",                          "permanent": true },
+    { "source": "/order-processing.html",           "destination": "/deliver/pick-and-pack",    "permanent": true },
+    { "source": "/support-services.html",           "destination": "/",                          "permanent": true },
+    { "source": "/what-we-do.html",                 "destination": "/",                          "permanent": true }
+
   ]
 }
