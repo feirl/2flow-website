@@ -72,7 +72,7 @@
     { href: B + '/solutions/medical-healthcare/',    label: 'Medical &amp; Healthcare' },
     { href: B + '/solutions/home-lifestyle/',        label: 'Home &amp; Lifestyle' },
     { href: B + '/solutions/consumer-electronics/',  label: 'Consumer Electronics' },
-    { href: B + '/solutions/office-electronics/',    label: 'Office Electronics' },
+    { href: B + '/solutions/office-products/',       label: 'Office Electronics' },
     { href: B + '/solutions/industrial-scientific/', label: 'Industrial &amp; Scientific' },
   ];
 
@@ -200,7 +200,6 @@
 
       '</div>' +
       '<div class="nav-cta-wrap">' +
-        '<a href="' + B + '/get-a-quote/" class="nav-cta nav-cta-secondary">Get a Quote</a>' +
         '<a href="' + B + '/book-a-call/" class="nav-cta">Book a Call</a>' +
       '</div>' +
       '<button class="hamburger" id="js-hamburger" aria-label="Open menu" aria-expanded="false">' +
