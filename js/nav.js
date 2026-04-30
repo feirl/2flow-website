@@ -72,7 +72,7 @@
     { href: B + '/solutions/medical-healthcare/',    label: 'Medical &amp; Healthcare' },
     { href: B + '/solutions/home-lifestyle/',        label: 'Home &amp; Lifestyle' },
     { href: B + '/solutions/consumer-electronics/',  label: 'Consumer Electronics' },
-    { href: B + '/solutions/office-products/',       label: 'Office Electronics' },
+    { href: B + '/solutions/office-electronics/',    label: 'Office Electronics' },
     { href: B + '/solutions/industrial-scientific/', label: 'Industrial &amp; Scientific' },
   ];
 
