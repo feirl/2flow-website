@@ -191,7 +191,8 @@
   var NAV_HTML =
     '<nav id="mainNav" role="navigation" aria-label="Main navigation">' +
       '<a href="' + B + '/" class="nav-logo" aria-label="2Flow home">' +
-        '<img class="nav-logo-img" src="' + B + '/Images/2flow-ireland-3pl-cl.png" alt="2Flow | Ireland 3PL">' +
+        '<img class="nav-logo-light" src="' + B + '/Images/2flow-ireland-3pl-cl.png" alt="2Flow | Ireland 3PL">' +
+        '<img class="nav-logo-dark"  src="' + B + '/Images/2flow-ireland-3pl-dublin.png" alt="2Flow | Ireland 3PL">' +
       '</a>' +
       '<div class="nav-links" id="navLinks">' +
 
