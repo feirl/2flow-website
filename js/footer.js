@@ -46,9 +46,11 @@
   const solutionNeedLinks = [
     { href: BASE + '/solutions/subscription-brands/',   label: 'Subscription Brands' },
     { href: BASE + '/solutions/dtc-brands-scaling/',    label: 'DTC Brands Scaling' },
-    { href: BASE + '/solutions/brand-product-launch/',  label: 'Brand / Product Launch' },
-    { href: BASE + '/solutions/b2b-retail/',            label: 'B2B / Retail' },
-    { href: BASE + '/solutions/office-business/',       label: 'Office &amp; Business' },
+    { href: BASE + '/solutions/brand-product-launch/',  label: 'Brand &amp; Product Launch' },
+    { href: BASE + '/solutions/ireland-domestic/',      label: 'Ireland Domestic' },
+    { href: BASE + '/solutions/dublin-same-day/',       label: 'Dublin Same-Day' },
+    { href: BASE + '/solutions/eu-delivery/',           label: 'EU Delivery' },
+    { href: BASE + '/solutions/uk-rest-of-world/',      label: 'UK &amp; Rest of World' },
   ];
 
   const whyLinks = [
@@ -106,7 +108,7 @@
           </div>
 
           <div class="footer-col">
-            <h5>Solutions For</h5>
+            <h5>Solutions</h5>
             <p class="footer-subhead">By Sector</p>
             ${linkList(solutionSectorLinks)}
             <p class="footer-subhead">By Need</p>
