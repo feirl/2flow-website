@@ -126,8 +126,10 @@
     }
     .hero-logos-inner { max-width: 1080px; margin: 0 auto; text-align: center; }
     .hero-logos-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: rgba(255,255,255,0.40); margin-bottom: 14px; }
-    .hero-logo-items { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
-    .logo-item { padding: 7px 18px; border: 1px solid rgba(255,255,255,0.15); border-radius: 6px; font-size: 13px; color: rgba(255,255,255,0.55); font-weight: 500; }
+    .hero-logo-items { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 32px; }
+    .hero-client-logo { display: flex; align-items: center; opacity: 0.55; transition: opacity 0.15s; }
+    .hero-client-logo:hover { opacity: 0.85; }
+    .hero-client-logo img { height: 28px; width: auto; max-width: 120px; object-fit: contain; filter: brightness(0) invert(1); }
 
     /* ── STATS STRIP ── */
     .stats-strip { background: var(--bg-white); padding: 80px 40px; border-bottom: 1px solid var(--border-light); }
@@ -295,7 +297,8 @@
         padding: 18px 20px 24px;
       }
       .hero-logos-label { font-size: 10px; margin-bottom: 10px; }
-      .logo-item { padding: 5px 12px; font-size: 11px; }
+      .hero-logo-items { gap: 20px; }
+      .hero-client-logo img { height: 22px; }
 
       .stats-strip { padding: 48px 20px; }
       .stat-grid { grid-template-columns: 1fr; gap: 32px; }
@@ -565,13 +568,27 @@
     <div class="hero-logos-inner">
       <div class="hero-logos-label">Trusted by Ireland's fastest-growing brands</div>
       <div class="hero-logo-items">
-        <span class="logo-item">The Head Plan</span>
-        <span class="logo-item">Poco Beauty</span>
-        <span class="logo-item">Key For Her</span>
-        <span class="logo-item">Ancestral Cosmetics</span>
-        <span class="logo-item">Thermomix</span>
-        <span class="logo-item">HNB Cosmetics</span>
-        <span class="logo-item">Probiotic.ie</span>
+        <a href="https://www.theheadplan.com/" class="hero-client-logo" target="_blank" rel="noopener" aria-label="The Head Plan">
+          <img src="/Images/clients/theheadplan.png" alt="The Head Plan" loading="lazy">
+        </a>
+        <a href="https://www.pocobeauty.com/" class="hero-client-logo" target="_blank" rel="noopener" aria-label="Poco Beauty">
+          <img src="/Images/clients/pocobeauty.svg" alt="Poco Beauty" loading="lazy">
+        </a>
+        <a href="https://keyforher.com/" class="hero-client-logo" target="_blank" rel="noopener" aria-label="Key For Her">
+          <img src="/Images/clients/keyforher.png" alt="Key For Her" loading="lazy">
+        </a>
+        <a href="https://ancestralcosmetics.com/" class="hero-client-logo" target="_blank" rel="noopener" aria-label="Ancestral Cosmetics">
+          <img src="/Images/clients/ancestralcosmetics.png" alt="Ancestral Cosmetics" loading="lazy">
+        </a>
+        <a href="https://www.thermomix.com/" class="hero-client-logo" target="_blank" rel="noopener" aria-label="Thermomix">
+          <img src="/Images/clients/thermomix.svg" alt="Thermomix" loading="lazy">
+        </a>
+        <a href="https://hnbcosmetics.co.uk/" class="hero-client-logo" target="_blank" rel="noopener" aria-label="HNB Cosmetics">
+          <img src="/Images/clients/hnbcosmetics.png" alt="HNB Cosmetics" loading="lazy">
+        </a>
+        <a href="https://probiotic.ie/" class="hero-client-logo" target="_blank" rel="noopener" aria-label="Probiotic">
+          <img src="/Images/clients/probiotic.png" alt="Probiotic.ie" loading="lazy">
+        </a>
       </div>
     </div>
   </div>
