@@ -80,8 +80,8 @@ h4 { font-size: 16px; font-weight: 700; line-height: 1.40; color: var(--text-pri
 }
 .btn-ghost:hover { border-color: var(--text-primary); }
 
-.btn-ghost-light { color: white !important; border-color: rgba(255,255,255,0.45) !important; }
-.btn-ghost-light:hover { border-color: white !important; }
+.btn-ghost-light { color: white !important; border-color: rgba(255,255,255,0.45) !important; background: rgba(255,255,255,0.12); }
+.btn-ghost-light:hover { border-color: white !important; background: rgba(255,255,255,0.20); }
 
 /* ── TOP NAV ── */
 #mainNav {
