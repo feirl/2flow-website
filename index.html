@@ -2,8 +2,6 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <link rel="icon" type="image/png" href="/favicon.png">
-  <link rel="apple-touch-icon" href="/favicon.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>2Flow | Ireland's eCommerce Fulfilment Partner</title>
   <meta name="description" content="Ireland's specialist eCommerce fulfilment partner. Full ownership from inbound stock to delivered order. Next-day Ireland, 1-hour Dublin, EU-wide.">
@@ -55,16 +53,6 @@
       object-fit: cover;
       object-position: 65% center;
       z-index: 0;
-    }
-    .hero-video-mobile {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: 50% center;
-      z-index: 0;
-      display: none;
     }
 
     /* Poster image sits behind the video. Shown while video loads or on reduced-motion */
@@ -133,15 +121,12 @@
       bottom: 0; left: 0; right: 0;
       z-index: 2;
       padding: 20px 40px 32px;
-      background: linear-gradient(to top, rgba(5,15,25,0.82) 0%, rgba(5,15,25,0.60) 60%, rgba(5,15,25,0) 100%);
+      border-top: 1px solid rgba(255,255,255,0.10);
     }
     .hero-logos-inner { max-width: 1080px; margin: 0 auto; text-align: center; }
-    .hero-logos-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: rgba(255,255,255,0.55); margin-bottom: 14px; }
-    .hero-logo-items { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 4px; }
-    .hero-client-logo { display: inline-flex; align-items: center; justify-content: center; padding: 8px 18px; border: 1px solid rgba(255,255,255,0.18); border-radius: 6px; text-decoration: none; background: rgba(255,255,255,0.06); transition: border-color 0.25s, background 0.25s; }
-    .hero-client-logo:hover { border-color: rgba(255,255,255,0.5); background: rgba(255,255,255,0.12); }
-    .hero-client-logo img { height: 24px; width: auto; max-width: 100px; object-fit: contain; filter: brightness(0) invert(1); opacity: 0.75; transition: filter 0.3s ease, opacity 0.3s ease; }
-    .hero-client-logo:hover img { filter: none; opacity: 1; }
+    .hero-logos-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: rgba(255,255,255,0.40); margin-bottom: 14px; }
+    .hero-logo-items { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
+    .logo-item { padding: 7px 18px; border: 1px solid rgba(255,255,255,0.15); border-radius: 6px; font-size: 13px; color: rgba(255,255,255,0.55); font-weight: 500; }
 
     /* ── STATS STRIP ── */
     .stats-strip { background: var(--bg-white); padding: 80px 40px; border-bottom: 1px solid var(--border-light); }
@@ -268,7 +253,7 @@
 
     /* ── REDUCED MOTION: pause video, show poster ── */
     @media (prefers-reduced-motion: reduce) {
-      .hero-video, .hero-video-mobile { display: none; }
+      .hero-video { display: none; }
     }
 
     /* ── RESPONSIVE ── */
@@ -281,8 +266,7 @@
         flex-direction: column;
         align-items: stretch;
       }
-      .hero-video { display: none; }
-      .hero-video-mobile { display: block; }
+      .hero-video,
       .hero-poster { object-position: 60% center; }
       .hero-overlay {
         background: linear-gradient(
@@ -310,8 +294,7 @@
         padding: 18px 20px 24px;
       }
       .hero-logos-label { font-size: 10px; margin-bottom: 10px; }
-      .hero-client-logo { padding: 6px 12px; }
-      .hero-client-logo img { height: 20px; max-width: 80px; }
+      .logo-item { padding: 5px 12px; font-size: 11px; }
 
       .stats-strip { padding: 48px 20px; }
       .stat-grid { grid-template-columns: 1fr; gap: 32px; }
@@ -424,7 +407,7 @@
             "name": "Does 2Flow integrate with Shopify?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Yes. 2Flow has a native Shopify integration through Mintsoft WMS with instant order sync, automatic tracking updates and real-time inventory visibility. We also integrate with WooCommerce, Amazon, TikTok Shop and ReCharge."
+              "text": "Yes. 2Flow has a native Shopify integration through Mintsoft WMS with 15-minute order sync, automatic tracking updates and real-time inventory visibility. We also integrate with WooCommerce, Amazon, TikTok Shop and ReCharge."
             }
           },
           {
@@ -513,14 +496,6 @@
       s.parentNode.insertBefore(b, s);
     })(window.lintrk);
   </script>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=GT-MJM434ZF"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'GT-MJM434ZF');
-</script>
 </head>
 <body>
 
@@ -563,20 +538,6 @@
     <source src="Images/2flow-moment.mp4" type="video/mp4">
   </video>
 
-  <video
-    class="hero-video-mobile"
-    autoplay
-    loop
-    muted
-    playsinline
-    preload="auto"
-    disablepictureinpicture
-    poster="Images/hero-video-poster.jpg"
-    aria-hidden="true"
-  >
-    <source src="Images/2flow-hero-mobile.mp4" type="video/mp4">
-  </video>
-
   <div class="hero-overlay" aria-hidden="true"></div>
   <div class="hero-video-fade" aria-hidden="true"></div>
 
@@ -589,7 +550,7 @@
       </p>
       <div class="hero-btns">
         <a href="/book-a-call" class="btn-primary">Book a Call</a>
-        <a href="/get-a-quote/" class="btn-ghost btn-ghost-light">Get a Quote</a>
+        <a href="/deliver" class="btn-ghost btn-ghost-light">Explore What We Deliver</a>
       </div>
       <div class="hero-badges">
         <span class="trust-badge"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#85B020" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Full-service fulfilment</span>
@@ -603,30 +564,12 @@
     <div class="hero-logos-inner">
       <div class="hero-logos-label">Trusted by Ireland's fastest-growing brands</div>
       <div class="hero-logo-items">
-        <a href="https://www.theheadplan.com/" class="hero-client-logo" target="_blank" rel="noopener" aria-label="The Head Plan">
-          <img src="/Images/clients/theheadplan.png" alt="The Head Plan" loading="lazy">
-        </a>
-        <a href="https://www.pocobeauty.com/" class="hero-client-logo" target="_blank" rel="noopener" aria-label="Poco Beauty">
-          <img src="/Images/clients/pocobeauty.svg" alt="Poco Beauty" loading="lazy">
-        </a>
-        <a href="https://keyforher.com/" class="hero-client-logo" target="_blank" rel="noopener" aria-label="Key For Her">
-          <img src="/Images/clients/keyforher.png" alt="Key For Her" loading="lazy">
-        </a>
-        <a href="https://ancestralcosmetics.com/" class="hero-client-logo" target="_blank" rel="noopener" aria-label="Ancestral Cosmetics">
-          <img src="/Images/clients/ancestralcosmetics.png" alt="Ancestral Cosmetics" loading="lazy">
-        </a>
-        <a href="https://www.thermomix.com/" class="hero-client-logo" target="_blank" rel="noopener" aria-label="Thermomix">
-          <img src="/Images/clients/thermomix.svg" alt="Thermomix" loading="lazy">
-        </a>
-        <a href="https://hnbcosmetics.co.uk/" class="hero-client-logo" target="_blank" rel="noopener" aria-label="HNB Cosmetics">
-          <img src="/Images/clients/hnbcosmetics.png" alt="HNB Cosmetics" loading="lazy">
-        </a>
-        <a href="https://probiotic.ie/" class="hero-client-logo" target="_blank" rel="noopener" aria-label="Probiotic IE">
-          <img src="/Images/clients/probiotic.png" alt="Probiotic IE" loading="lazy">
-        </a>
-        <a href="https://ditsybits.com/" class="hero-client-logo" target="_blank" rel="noopener" aria-label="Ditsy Bits">
-          <img src="/Images/clients/ditsybits.png" alt="Ditsy Bits" loading="lazy">
-        </a>
+        <span class="logo-item">Consumer health</span>
+        <span class="logo-item">Skincare</span>
+        <span class="logo-item">Beauty &amp; cosmetics</span>
+        <span class="logo-item">Health supplements</span>
+        <span class="logo-item">Medical distribution</span>
+        <span class="logo-item">Luxury fragrance</span>
       </div>
     </div>
   </div>
@@ -705,7 +648,7 @@
         <div class="card-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg></div>
         <h4>Kitting &amp; Bundles</h4>
         <p style="font-size:14px; color:var(--text-secondary); margin-top:8px; line-height:1.6;">Gift sets, subscription boxes, multi-SKU bundles and promotional packs, assembled with precision and ready for launch.</p>
-        <a href="/deliver/kitting-bundles" class="card-link">Learn more &#8594;</a>
+        <a href="/deliver/kitting-bundling/" class="card-link">Learn more &#8594;</a>
       </div>
       <div class="card">
         <div class="card-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
@@ -729,7 +672,7 @@
         <div class="card-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg></div>
         <h4>Product Finishing &amp; Value-Add</h4>
         <p style="font-size:14px; color:var(--text-secondary); margin-top:8px; line-height:1.6;">Engraving, inserts, custom labelling, compliance prep and retail-ready presentation. The positive complexity we thrive on.</p>
-        <a href="/deliver/product-finishing" class="card-link">Learn more &#8594;</a>
+        <a href="/deliver/finishing-personalisation/" class="card-link">Learn more &#8594;</a>
       </div>
     </div>
   </div>
@@ -774,7 +717,7 @@
     <p class="big-quote">2Flow handles the complexity that would otherwise slow us down. We focus on building the brand. They make sure every order lands perfectly.</p>
     <p class="quote-attr"><strong>Founder, Irish DTC Beauty Brand</strong> &nbsp;|&nbsp; 2Flow Customer</p>
     <div style="margin-top:32px;">
-      <a href="/proof" class="btn-primary">Read Customer Stories</a>
+      <a href="/why-2flow/customer-stories/" class="btn-primary">Read Customer Stories</a>
     </div>
   </div>
 </section>
@@ -873,7 +816,7 @@
           Does 2Flow integrate with Shopify?
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="flex-shrink:0;"><polyline points="6 9 12 15 18 9"/></svg>
         </summary>
-        <p style="margin-top:16px; font-size:14px; color:var(--text-secondary); line-height:1.7;">Yes. We have a native Shopify integration through Mintsoft WMS with instant order sync, automatic tracking updates and real-time inventory visibility. We also integrate with WooCommerce, Amazon, TikTok Shop, ReCharge and other platforms.</p>
+        <p style="margin-top:16px; font-size:14px; color:var(--text-secondary); line-height:1.7;">Yes. We have a native Shopify integration through Mintsoft WMS with 15-minute order sync, automatic tracking updates and real-time inventory visibility. We also integrate with WooCommerce, Amazon, TikTok Shop, ReCharge and other platforms.</p>
       </details>
 
       <details style="background:white; border:1px solid var(--border-light); border-radius:12px; padding:24px 28px; cursor:pointer;">
@@ -926,7 +869,7 @@
   <p>Tell us about your brand, your products and your volumes. We'll show you exactly how 2Flow would handle it.</p>
   <div class="cta-btns">
     <a href="/book-a-call" class="btn-primary">Book a Call</a>
-    <a href="/get-a-quote/" class="btn-ghost">Get a Quote</a>
+    <a href="/pricing" class="btn-ghost">See Pricing</a>
   </div>
   <p class="cta-note">No commitment required &bull; Tailored to your product and volumes &bull; Dublin-based team</p>
 </section>
@@ -1119,8 +1062,5 @@
     });
   }
 </script>
-<!-- Start of HubSpot Embed Code -->
-<script type="text/javascript" id="hs-script-loader" async defer src="//js-eu1.hs-scripts.com/148100795.js"></script>
-<!-- End of HubSpot Embed Code -->
 </body>
 </html>
