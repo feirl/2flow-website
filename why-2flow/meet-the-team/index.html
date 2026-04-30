@@ -5,13 +5,14 @@
   <link rel="icon" href="/favicon.png" type="image/png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Meet the Team | 2Flow eCommerce Fulfilment Ireland</title>
-  <meta name="description" content="Meet the 2Flow team. Simon Pleass, Steven O'Connell and Eve Hyland Martin are the people behind Ireland's specialist eCommerce fulfilment operation.">
+  <meta name="description" content="Meet the 2Flow team. Eve Hyland Martin, Simon Pleass, Steven O'Connell and Claire Caldwell — the people behind Ireland's specialist eCommerce fulfilment operation.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://2flow.ie/why-2flow/meet-the-team">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Meet the Team | 2Flow">
   <meta property="og:description" content="The people behind your fulfilment. A small, dedicated team who know your brand and pick up the phone.">
   <meta property="og:url" content="https://2flow.ie/why-2flow/meet-the-team">
+  <meta property="og:image" content="https://2flow.ie/Images/team-leadership-2026.jpg">
   <meta property="og:site_name" content="2Flow">
   <meta http-equiv="X-Content-Type-Options" content="nosniff">
   <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
@@ -38,6 +39,11 @@
     "employee": [
       {
         "@type": "Person",
+        "name": "Eve Hyland Martin",
+        "jobTitle": "Head of Brand Partnerships"
+      },
+      {
+        "@type": "Person",
         "name": "Simon Pleass",
         "jobTitle": "Managing Director"
       },
@@ -48,8 +54,8 @@
       },
       {
         "@type": "Person",
-        "name": "Eve Hyland Martin",
-        "jobTitle": "Head of Brand Partnerships"
+        "name": "Claire Caldwell",
+        "jobTitle": "Customer Service Manager"
       }
     ]
   }
@@ -63,12 +69,12 @@
       {
         "@type": "Question",
         "name": "Who will I deal with at 2Flow day to day?",
-        "acceptedAnswer": { "@type": "Answer", "text": "You will deal directly with Simon Pleass (Managing Director), Steven O'Connell (Operations Manager) and Eve Hyland Martin (Head of Brand Partnerships). There is no helpdesk or rotating account manager." }
+        "acceptedAnswer": { "@type": "Answer", "text": "You will deal directly with Eve Hyland Martin (Head of Brand Partnerships), Simon Pleass (Managing Director), Steven O'Connell (Operations Manager) and Claire Caldwell (Customer Service Manager). There is no helpdesk or rotating account manager." }
       },
       {
         "@type": "Question",
         "name": "Is 2Flow a large company?",
-        "acceptedAnswer": { "@type": "Answer", "text": "2Flow is a deliberately focused operation. The team is small by design - it means every client has direct access to the people running their fulfilment, not a support queue." }
+        "acceptedAnswer": { "@type": "Answer", "text": "2Flow is a deliberately focused operation. The team is small by design — it means every client has direct access to the people running their fulfilment, not a support queue." }
       },
       {
         "@type": "Question",
@@ -112,10 +118,24 @@
     .team-section { background: var(--bg-white); padding: 88px 40px; }
     .container { max-width: 1080px; margin: 0 auto; }
 
+    /* Group photo */
+    .team-group-photo {
+      margin-bottom: 64px;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 8px 40px rgba(13,26,46,0.12);
+    }
+    .team-group-photo img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* Bio grid — 2×2 */
     .team-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 32px;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 28px;
     }
 
     .team-card {
@@ -126,52 +146,24 @@
       display: flex;
       flex-direction: column;
       transition: box-shadow 0.2s, transform 0.2s;
+      position: relative;
+    }
+    .team-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: var(--brand-primary);
+      border-radius: 20px 20px 0 0;
     }
     .team-card:hover {
       box-shadow: 0 12px 40px rgba(13,26,46,0.1);
       transform: translateY(-3px);
     }
 
-    /* Photo area */
-    .team-photo {
-      width: 100%;
-      aspect-ratio: 4 / 5;
-      overflow: hidden;
-      background: var(--bg-light);
-      position: relative;
-    }
-    .team-photo img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center top;
-      display: block;
-    }
-
-    /* Initials avatar for no-photo */
-    .team-photo-initials {
-      width: 100%;
-      aspect-ratio: 4 / 5;
-      background: linear-gradient(145deg, #0D1A2E 0%, #162840 100%);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 0;
-    }
-    .initials-circle {
-      width: 96px; height: 96px;
-      border-radius: 50%;
-      background: rgba(92,184,0,0.15);
-      border: 2px solid rgba(92,184,0,0.3);
-      display: flex; align-items: center; justify-content: center;
-      font-size: 32px; font-weight: 700; color: var(--brand-primary);
-      letter-spacing: -0.02em;
-    }
-
     /* Card body */
     .team-body {
-      padding: 28px 28px 32px;
+      padding: 32px 32px 36px;
       display: flex;
       flex-direction: column;
       flex: 1;
@@ -183,7 +175,7 @@
     }
     .team-name {
       font-size: 22px; font-weight: 700; color: var(--text-primary);
-      line-height: 1.2; margin-bottom: 16px;
+      line-height: 1.2; margin-bottom: 18px;
     }
     .team-bio {
       font-size: 14px; color: var(--text-secondary); line-height: 1.8;
@@ -193,7 +185,7 @@
 
     .team-divider {
       border: none; border-top: 1px solid var(--border-light);
-      margin: 20px 0;
+      margin: 22px 0;
     }
     .team-contact {
       display: flex; align-items: center; gap: 8px;
@@ -240,18 +232,6 @@
     .cta-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
     .cta-note { margin-top: 18px; font-size: 13px; color: var(--text-tertiary); }
 
-    /* ── RESPONSIVE ── */
-    @media (max-width: 960px) {
-      .team-grid { grid-template-columns: 1fr 1fr; }
-      .values-inner { grid-template-columns: 1fr; gap: 40px; }
-    }
-    @media (max-width: 768px) {
-      .hero-feature { padding: calc(var(--nav-height) + 48px) 20px 56px; }
-      .team-section, .values-section, .quote-section, .cta-section { padding: 60px 20px; }
-      .team-grid { grid-template-columns: 1fr; max-width: 420px; margin: 0 auto; }
-      .values-grid { grid-template-columns: 1fr; }
-    }
-
     /* ── FAQ ── */
     .faq-section { background: var(--bg-white); padding: 88px 40px; border-top: 1px solid var(--border-light); }
     .faq-container { max-width: 1080px; margin: 0 auto; }
@@ -277,7 +257,19 @@
     .faq-a { display: none; padding-bottom: 22px; }
     .faq-item.open .faq-a { display: block; }
     .faq-a p { font-size: 15px; color: var(--text-secondary); line-height: 1.85; }
-    @media (max-width: 768px) { .faq-section { padding: 60px 20px; } }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 960px) {
+      .values-inner { grid-template-columns: 1fr; gap: 40px; }
+    }
+    @media (max-width: 768px) {
+      .hero-feature { padding: calc(var(--nav-height) + 48px) 20px 56px; }
+      .team-section, .values-section, .quote-section, .cta-section, .faq-section { padding: 60px 20px; }
+      .team-group-photo { margin-bottom: 40px; border-radius: 14px; }
+      .team-grid { grid-template-columns: 1fr; }
+      .team-body { padding: 24px 24px 28px; }
+      .values-grid { grid-template-columns: 1fr; }
+    }
   </style>
   <link rel="stylesheet" href="/css/site.css">
 </head>
@@ -313,23 +305,46 @@
 <section class="team-section" aria-labelledby="team-heading">
   <div class="container">
 
+    <!-- Group photo -->
+    <div class="team-group-photo">
+      <img
+        src="/Images/team-leadership-2026.jpg"
+        alt="The 2Flow leadership team: Eve Hyland Martin, Simon Pleass, Steven O'Connell and Claire Caldwell"
+        loading="eager"
+        fetchpriority="high"
+        width="1516"
+        height="1037"
+      >
+    </div>
+
+    <!-- Bio cards -->
     <div class="team-grid">
+
+      <!-- Eve Hyland Martin -->
+      <article class="team-card">
+        <div class="team-body">
+          <p class="team-role">Head of Brand Partnerships</p>
+          <h2 class="team-name">Eve Hyland Martin</h2>
+          <div class="team-bio">
+            <p>Eve is the person most 2Flow clients speak to day-to-day. She manages the brand relationships — onboarding new clients, handling queries, and making sure the operation stays aligned with each brand's needs as they grow.</p>
+            <p>Brands consistently describe her response times as the benchmark for what good communication looks like. When something needs resolving, Eve is usually ahead of it before it becomes a problem.</p>
+          </div>
+          <hr class="team-divider">
+          <div class="team-contact">
+            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Dublin, Ireland
+          </div>
+        </div>
+      </article>
 
       <!-- Simon Pleass -->
       <article class="team-card">
-        <div class="team-photo">
-          <img
-            src="/Images/team-simon.png"
-            alt="Simon Pleass, Managing Director at 2Flow"
-            loading="eager"
-          >
-        </div>
         <div class="team-body">
           <p class="team-role">Managing Director</p>
           <h2 class="team-name">Simon Pleass</h2>
           <div class="team-bio">
             <p>Simon founded 2Flow with a clear belief: that Irish eCommerce brands deserved a fulfilment partner who treated their operation with the same care they did themselves.</p>
-            <p>He is the person brands speak to first, and often the person they call when something matters. That direct relationship - knowing the MD by name, knowing he'll engage personally when it counts - is something clients consistently tell us they value.</p>
+            <p>He is the person brands speak to first, and often the person they call when something matters. That direct relationship — knowing the MD by name, knowing he'll engage personally when it counts — is something clients consistently tell us they value.</p>
           </div>
           <hr class="team-divider">
           <div class="team-contact">
@@ -341,18 +356,11 @@
 
       <!-- Steven O'Connell -->
       <article class="team-card">
-        <div class="team-photo">
-          <img
-            src="/Images/team-steven.png"
-            alt="Steven O'Connell, Operations Manager at 2Flow"
-            loading="lazy"
-          >
-        </div>
         <div class="team-body">
           <p class="team-role">Operations Manager</p>
           <h2 class="team-name">Steven O'Connell</h2>
           <div class="team-bio">
-            <p>Steven keeps the warehouse floor running smoothly day in, day out. Working alongside a dedicated team, he makes sure every inbound, pick, pack and dispatch is handled on time; giving brands the confidence to rely on 2Flow's same-day cut-off, even when volumes spike.</p>
+            <p>Steven keeps the warehouse floor running smoothly day in, day out. Working alongside a dedicated team, he makes sure every inbound, pick, pack and dispatch is handled on time — giving brands the confidence to rely on 2Flow's same-day cut-off, even when volumes spike.</p>
             <p>Steven's job is to make sure the operation absorbs it without service dropping.</p>
           </div>
           <hr class="team-divider">
@@ -363,21 +371,14 @@
         </div>
       </article>
 
-      <!-- Eve Hyland Martin -->
+      <!-- Claire Caldwell -->
       <article class="team-card">
-        <div class="team-photo">
-          <img
-            src="/Images/team-eve.png"
-            alt="Eve Hyland Martin, Head of Brand Partnerships at 2Flow"
-            loading="eager"
-          >
-        </div>
         <div class="team-body">
-          <p class="team-role">Head of Brand Partnerships</p>
-          <h2 class="team-name">Eve Hyland Martin</h2>
+          <p class="team-role">Customer Service Manager</p>
+          <h2 class="team-name">Claire Caldwell</h2>
           <div class="team-bio">
-            <p>Eve is the person most 2Flow clients speak to day-to-day. She manages the brand relationships - onboarding new clients, handling queries, and making sure the operation stays aligned with each brand's needs as they grow.</p>
-            <p>Brands consistently describe her response times as the benchmark for what good communication looks like. When something needs resolving, Eve is usually ahead of it before it becomes a problem.</p>
+            <p>In addition to delivering great service to our customers, Claire is also the Assistant Operations Manager. This means that you can expect the highest service from someone at the coalface — someone who doesn't just see the query, but understands exactly what's happening on the floor behind it.</p>
+            <p>When Claire tells you an order is sorted, she knows it is. That combination of customer-facing warmth and operational depth is rare, and it shows in how clients experience the day-to-day.</p>
           </div>
           <hr class="team-divider">
           <div class="team-contact">
@@ -473,6 +474,17 @@
 
 <div id="site-footer"></div>
 <script src="/js/footer.js"></script>
+
+<script>
+  document.querySelectorAll('.faq-q').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var item = btn.closest('.faq-item');
+      var isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(function(i) { i.classList.remove('open'); });
+      if (!isOpen) item.classList.add('open');
+    });
+  });
+</script>
 
 </body>
 </html>
