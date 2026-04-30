@@ -121,6 +121,7 @@
             ${linkList(companyLinks)}
             <div class="footer-address">
               <h5>Visit Us</h5>
+              <a href="${BASE}/contact/">Contact Us</a>
               <address>
                 2Flow Fulfilment<br>
                 Unit 9/11 North Park<br>
