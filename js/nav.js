@@ -25,6 +25,8 @@
     live:          '<polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/>',
     sameday:       '<circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>',
     custservice:   '<path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>',
+    mappin:        '<path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/>',
+    globe:         '<circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>',
   };
 
   function icon(key) {
@@ -50,13 +52,16 @@
         { href: B + '/deliver/amazon-fulfilment/',         icon: 'amazon',   title: 'Amazon Fulfilment',                 desc: 'FBA prep, FBM dispatch, seller compliance' },
         { href: B + '/deliver/tiktok-shop/',               icon: 'tiktok',   title: 'TikTok Shop',                       desc: 'Integrated fulfilment for TikTok Shop sellers' },
         { href: B + '/deliver/pop-up-shops/',              icon: 'popup',    title: 'Pop-up &amp; Own-Store Fulfilment', desc: 'Replenishing your own retail locations and events' },
+        { href: B + '/deliver/live-commerce/',              icon: 'live',     title: 'Live Commerce Fulfilment',          desc: 'A dedicated studio space to host live selling events, with same-day fulfilment to match' },
       ]
     },
     {
-      label: 'Beyond Fulfilment', cls: 'slate',
+      label: 'Where we deliver', cls: 'slate',
       items: [
-        { href: B + '/deliver/live-commerce/',   icon: 'live',    title: 'Live Commerce Fulfilment',  desc: 'A dedicated studio space to host live selling events, with same-day fulfilment to match' },
-        { href: B + '/deliver/same-day-dublin/', icon: 'sameday', title: 'Same-Day Dublin Delivery',  desc: 'Via Cyclone Couriers. Cut-off noon, delivered same afternoon. Ideal for urgent, cold-chain and medical' },
+        { href: B + '/solutions/ireland-domestic/',   icon: 'mappin',  title: 'Ireland Domestic',       desc: 'Next-day island-wide from our Dublin hub' },
+        { href: B + '/solutions/dublin-same-day/',    icon: 'sameday', title: 'Dublin Same-Day',        desc: 'Via Cyclone Couriers. Cut-off noon, delivered same afternoon' },
+        { href: B + '/solutions/eu-delivery/',        icon: 'globe',   title: 'EU Delivery',            desc: 'Cross-border dispatch to all 27 EU countries, duty-paid options' },
+        { href: B + '/solutions/uk-rest-of-world/',   icon: 'globe',   title: 'UK &amp; Rest of World', desc: 'Post-Brexit UK fulfilment and international carriers' },
       ]
     }
   ];
@@ -75,11 +80,9 @@
     { href: B + '/solutions/subscription-brands/',  label: 'Subscription Brands' },
     { href: B + '/solutions/dtc-brands-scaling/',   label: 'DTC Brands Scaling' },
     { href: B + '/solutions/brand-product-launch/', label: 'Brand / Product Launch' },
-    { href: B + '/solutions/ireland-domestic/',     label: 'Ireland Domestic' },
-    { href: B + '/solutions/dublin-same-day/',      label: 'Dublin Same-Day' },
-    { href: B + '/solutions/eu-delivery/',          label: 'EU Delivery' },
-    { href: B + '/solutions/uk-rest-of-world/',     label: 'UK &amp; Rest of World' },
-  ];
+    { href: B + '/solutions/b2b-retail/',           label: 'B2B / Retail' },
+    { href: B + '/solutions/office-business/',      label: 'Office & Business' },
+];
 
   var WHY_LINKS = [
     { href: B + '/why-2flow/our-difference',   label: 'Our Difference' },
@@ -89,7 +92,7 @@
     { href: B + '/why-2flow/shopify',          label: 'Shopify Specialists' },
     { href: B + '/why-2flow/meet-the-team',    label: 'Meet the Team' },
     { href: B + '/why-2flow/virtual-tour',     label: 'Visit our Dublin Hub' },
-    { href: B + '/faqs/',             label: 'FAQs' },
+    { href: B + '/faqs/',                     label: 'FAQs' },
   ];
 
   /* ── Build HTML ──────────────────────────────────────────── */
@@ -132,6 +135,18 @@
       '</div></div>';
   }
 
+  function buildWhyMega() {
+    var links = '';
+    for (var i = 0; i < WHY_LINKS.length; i++) {
+      var l = WHY_LINKS[i];
+      links += '<a href="' + l.href + '" class="mega-link' + active(l.href) + '"><strong>' + l.label + '</strong></a>';
+    }
+    return '<div id="whyMega" class="mega-menu">' +
+      '<div class="mega-inner why-grid">' +
+      '<div class="mega-col"><div class="mega-group-title">Why 2Flow</div>' + links + '</div>' +
+      '</div></div>';
+  }
+
   function buildWhyDropdown() {
     var links = '';
     for (var i = 0; i < WHY_LINKS.length; i++) {
@@ -140,48 +155,58 @@
     return links;
   }
 
-  var inDeliver  = path.indexOf('/deliver/')   !== -1;
-  var inSolution = path.indexOf('/solutions/') !== -1;
-  var inWhy      = path.indexOf('/why-2flow')  !== -1;
+  // "Where we deliver" pages live under /solutions/ but conceptually belong to "What We Deliver"
+  var WHERE_WE_DELIVER_PATHS = [
+    '/solutions/ireland-domestic/',
+    '/solutions/dublin-same-day/',
+    '/solutions/eu-delivery/',
+    '/solutions/uk-rest-of-world/'
+  ];
+  var inWhereWeDeliver = WHERE_WE_DELIVER_PATHS.some(function (p) { return path.indexOf(p) === 0; });
+  var inDeliver  = path.indexOf('/deliver/') !== -1 || inWhereWeDeliver;
+  var inSolution = path.indexOf('/solutions/') !== -1 && !inWhereWeDeliver;
+  var inWhy      = path.indexOf('/why-2flow') !== -1;
 
   var NAV_HTML =
     '<nav id="mainNav" role="navigation" aria-label="Main navigation">' +
       '<a href="' + B + '/" class="nav-logo" aria-label="2Flow home">' +
-        '<img src="' + B + '/Images/2flow-logo.png" alt="2Flow" width="120" height="34">' +
+        '<img class="nav-logo-top" src="' + B + '/Images/2flow-ireland-3pl-cl.png" alt="2Flow | Ireland 3PL">' +
+        '<img class="nav-logo-scrolled" src="' + B + '/Images/2flow-ireland-3pl-dublin.png" alt="2Flow | Ireland 3PL Dublin">' +
       '</a>' +
       '<div class="nav-links" id="navLinks">' +
 
-        '<div class="nav-item" id="js-deliver-trigger">' +
-          '<span' + (inDeliver ? ' class="nav-active"' : '') + '>' +
+        '<div class="nav-item nav-item-has-mega" id="js-deliver-trigger">' +
+          '<a role="button" tabindex="0" class="nav-trigger' + (inDeliver ? ' nav-active' : '') + '" aria-haspopup="true" aria-expanded="false">' +
             'What We Deliver <span class="nav-chevron">&#9662;</span>' +
-          '</span>' +
+          '</a>' +
+          buildDeliverMega() +
         '</div>' +
 
-        '<div class="nav-item" id="js-solutions-trigger">' +
-          '<span' + (inSolution ? ' class="nav-active"' : '') + '>' +
+        '<div class="nav-item nav-item-has-mega" id="js-solutions-trigger">' +
+          '<a role="button" tabindex="0" class="nav-trigger' + (inSolution ? ' nav-active' : '') + '" aria-haspopup="true" aria-expanded="false">' +
             'Solutions For <span class="nav-chevron">&#9662;</span>' +
-          '</span>' +
+          '</a>' +
+          buildSolutionsMega() +
         '</div>' +
 
-        '<div class="nav-item has-dropdown">' +
-          '<a href="' + B + '/why-2flow/"' + (inWhy ? ' class="nav-active"' : '') + '>' +
+        '<div class="nav-item nav-item-has-mega" id="js-why-trigger">' +
+          '<a role="button" tabindex="0" class="nav-trigger' + (inWhy ? ' nav-active' : '') + '" aria-haspopup="true" aria-expanded="false">' +
             'Why 2Flow <span class="nav-chevron">&#9662;</span>' +
           '</a>' +
-          '<div class="dropdown">' + buildWhyDropdown() + '</div>' +
+          buildWhyMega() +
         '</div>' +
 
         '<div class="nav-item"><a href="' + B + '/pricing/">Pricing</a></div>' +
 
       '</div>' +
       '<div class="nav-cta-wrap">' +
+        '<a href="' + B + '/get-a-quote/" class="nav-cta nav-cta-secondary">Get a Quote</a>' +
         '<a href="' + B + '/book-a-call/" class="nav-cta">Book a Call</a>' +
       '</div>' +
       '<button class="hamburger" id="js-hamburger" aria-label="Open menu" aria-expanded="false">' +
         '<span></span><span></span><span></span>' +
       '</button>' +
-    '</nav>' +
-    buildDeliverMega() +
-    buildSolutionsMega();
+    '</nav>';
 
   /* ── Inject ──────────────────────────────────────────────── */
   var placeholder = document.getElementById('site-nav');
@@ -196,6 +221,8 @@
   var solutionsTrig = document.getElementById('js-solutions-trigger');
   var deliverMega   = document.getElementById('deliverMega');
   var solutionsMega = document.getElementById('solutionsMega');
+  var whyTrig      = document.getElementById('js-why-trigger');
+  var whyMega      = document.getElementById('whyMega');
 
   /* ── Hover mega menu logic ───────────────────────────────── */
   var currentMega = null;
@@ -224,25 +251,35 @@
     clearTimeout(closeTimer);
   }
 
+  function isMobile() { return window.innerWidth <= 900; }
+
   function wireHover(trigger, mega) {
     if (!trigger || !mega) return;
-
-    trigger.addEventListener('mouseenter', function() { openMega(mega); });
-    trigger.addEventListener('mouseleave', scheduleClose);
-
-    mega.addEventListener('mouseenter', cancelClose);
-    mega.addEventListener('mouseleave', scheduleClose);
+    trigger.addEventListener('mouseenter', function() { if (!isMobile()) openMega(mega); });
+    trigger.addEventListener('mouseleave', function() { if (!isMobile()) scheduleClose(); });
+    mega.addEventListener('mouseenter',    function() { if (!isMobile()) cancelClose(); });
+    mega.addEventListener('mouseleave',    function() { if (!isMobile()) scheduleClose(); });
   }
 
   wireHover(deliverTrig, deliverMega);
   wireHover(solutionsTrig, solutionsMega);
+  wireHover(whyTrig, whyMega);
 
-  // Also support click/tap (for keyboard and touch users)
+  // Click/tap handler — mobile uses class toggle, desktop uses style.display
+  var allMegas = [];  // populated after bindClick calls
   function bindClick(trigger, mega) {
     if (!trigger || !mega) return;
     trigger.querySelector('a').addEventListener('click', function(e) {
-      if (window.innerWidth < 1024) {
-        e.preventDefault();
+      e.preventDefault();
+      e.stopPropagation(); // prevent document outside-click handler firing
+      if (isMobile()) {
+        var isOpen = mega.classList.contains('mob-open');
+        // Close all mobile-open megas
+        [deliverMega, solutionsMega, whyMega].forEach(function(m) {
+          if (m) m.classList.remove('mob-open');
+        });
+        if (!isOpen) mega.classList.add('mob-open');
+      } else {
         var isOpen = mega.style.display === 'block';
         if (currentMega) { currentMega.style.display = 'none'; currentMega = null; }
         if (!isOpen) { mega.style.display = 'block'; currentMega = mega; }
@@ -252,13 +289,14 @@
 
   bindClick(deliverTrig, deliverMega);
   bindClick(solutionsTrig, solutionsMega);
+  bindClick(whyTrig, whyMega);
 
   // Close on outside click
   document.addEventListener('click', function(e) {
     if (!currentMega) return;
     var node = e.target;
     while (node) {
-      if (node === deliverTrig || node === solutionsTrig || node === deliverMega || node === solutionsMega) return;
+      if (node === deliverTrig || node === solutionsTrig || node === whyTrig || node === deliverMega || node === solutionsMega || node === whyMega) return;
       node = node.parentNode;
     }
     if (currentMega) { currentMega.style.display = 'none'; currentMega = null; }
@@ -273,6 +311,12 @@
     hamburger.addEventListener('click', function() {
       var open = navLinks.classList.toggle('open');
       hamburger.setAttribute('aria-expanded', String(open));
+      // Close any open sub-menus when hamburger closes
+      if (!open) {
+        [deliverMega, solutionsMega, whyMega].forEach(function(m) {
+          if (m) m.classList.remove('mob-open');
+        });
+      }
     });
   }
 
