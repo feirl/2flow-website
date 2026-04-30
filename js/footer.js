@@ -128,7 +128,8 @@
                 D11 TD8Y, Ireland
               </address>
               <p class="footer-contact-line">
-                <a href="tel:1800532532">1800 532 532</a> <span style="color:rgba(255,255,255,0.3)">·</span> <a href="tel:+35318643280">+353 1864 3280</a><br>
+                <a href="tel:1800532532">1800 532 532</a><br>
+                <a href="tel:+35318643280">+353 1864 3280</a><br>
                 <a href="mailto:CustomerService@2flow.ie">CustomerService@2flow.ie</a>
               </p>
             </div>
