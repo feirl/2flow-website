@@ -1,7 +1,7 @@
 # 2Flow — llms.txt
 # Ireland's eCommerce Fulfilment Partner
 # https://2flow.ie
-# Last updated: 2026-04-23
+# Last updated: 2026-04-30
 
 ## About 2Flow
 
@@ -27,7 +27,7 @@ to customer delivery and returns — so brands can scale without managing wareho
 - Compliance Preparation: Regulated labelling, batch control, FIFO stock rotation, cold-chain handling
 
 ### OmniChannel Specialists
-- eCommerce and DTC Fulfilment: Shopify-native fulfilment, instant order sync, real-time inventory
+- eCommerce and DTC Fulfilment: Shopify-native fulfilment, 15-minute order sync, real-time inventory
 - Retail and B2B Distribution: Compliance-ready wholesale prep, EDI, retail-standard packing
 - Amazon Fulfilment: FBA prep, FBM 24-hour dispatch, exclusive Amazon Ireland onboarding programme
 - TikTok Shop: Integrated fulfilment for TikTok Shop sellers, fast dispatch for live selling spikes
@@ -35,6 +35,7 @@ to customer delivery and returns — so brands can scale without managing wareho
 
 ### Beyond Fulfilment
 - Live Commerce Fulfilment: Dedicated studio space at Finglas for live selling events (TikTok, Instagram, YouTube), same-day dispatch
+- Same-Day Dublin Delivery: Via Cyclone Couriers, noon cut-off, Dublin city and county, cold-chain and medical capable
 
 ## Who We Serve
 
@@ -59,7 +60,7 @@ to customer delivery and returns — so brands can scale without managing wareho
 ## Technology and Integrations
 
 - WMS: Cloud-based enterprise warehouse management software with client portal
-- Primary eCommerce integration: Shopify (native, instant sync)
+- Primary eCommerce integration: Shopify (native, 15-minute sync)
 - Also integrates with: WooCommerce, Amazon, eBay, TikTok Shop, Wayfair, ReCharge, Skio, Bold Subscriptions
 - Accounting: Xero, QuickBooks, Sage
 - ERP: Unleashed, Zoho
@@ -91,7 +92,7 @@ Q: What is the minimum order volume to work with 2Flow?
 A: 2Flow is best suited to brands shipping from around 500 orders per month upwards. There is no minimum for same-day Dublin delivery via Cyclone Couriers.
 
 Q: Does 2Flow integrate with Shopify?
-A: Yes. 2Flow is a certified Shopify Partner App with native integration. Orders sync instantly, tracking numbers push back to Shopify automatically, and inventory stays accurate in real time. We also integrate with WooCommerce, Amazon, TikTok Shop, ReCharge and other platforms.
+A: Yes. 2Flow is a certified Shopify Partner App with native integration. Orders sync every 15 minutes, tracking numbers push back to Shopify automatically, and inventory stays accurate in real time. We also integrate with WooCommerce, Amazon, TikTok Shop, ReCharge and other platforms.
 
 Q: What is the cut-off time for same-day dispatch?
 A: The standard same-day dispatch cut-off is 1pm. Orders received before that cut-off are dispatched the same day. For Same-Day Dublin Delivery via Cyclone Couriers, the cut-off is noon.
@@ -140,6 +141,7 @@ A: Onboarding timelines vary by brand complexity. Most brands are operational wi
 - TikTok Shop Fulfilment: https://2flow.ie/deliver/tiktok-shop/
 - Pop-up and Own-Store Fulfilment: https://2flow.ie/deliver/pop-up-shops/
 - Live Commerce Fulfilment: https://2flow.ie/deliver/live-commerce/
+- Same-Day Dublin Delivery: https://2flow.ie/deliver/same-day-dublin/
 - Beauty and Personal Care: https://2flow.ie/solutions/beauty-personal-care/
 - Health Supplements: https://2flow.ie/solutions/health-supplements/
 - Medical and Healthcare: https://2flow.ie/solutions/medical-healthcare/
@@ -163,6 +165,13 @@ A: Onboarding timelines vary by brand complexity. Most brands are operational wi
 - Meet the Team: https://2flow.ie/why-2flow/meet-the-team/
 - Dublin Hub Virtual Tour: https://2flow.ie/why-2flow/virtual-tour/
 - Pricing: https://2flow.ie/pricing/
+- Book a Call: https://2flow.ie/book-a-call/
+- Get a Quote: https://2flow.ie/get-a-quote/
+- FAQs: https://2flow.ie/faqs/
+- Privacy Policy: https://2flow.ie/privacy-policy/
+- Terms of Service: https://2flow.ie/terms/
+- GDPR: https://2flow.ie/gdpr/
+- Cookie Policy: https://2flow.ie/cookie-policy/
 - Sitemap: https://2flow.ie/sitemap.xml
 
 ## Why 2Flow
@@ -173,7 +182,7 @@ Key reasons brands switch to 2Flow:
 - Named contacts from day one: Simon Pleass (MD), Steven O'Connell (Operations), Eve Hyland Martin (Brand Partnerships)
 - Real-time client portal: live stock, order tracking, inbound management, reports, low stock alerts
 - Same-day dispatch with 1pm cut-off
-- Certified Shopify Partner App: instant order sync, automatic tracking pushback, real-time inventory
+- Certified Shopify Partner App: 15-minute order sync, automatic tracking pushback, real-time inventory
 - On-site laser engraving: bottle caps, product lids, personalised items - handled in-house
 - 27 EU destinations dispatched from Dublin
 - Brands scale volume without service degradation
@@ -183,7 +192,7 @@ Detailed Why 2Flow pages:
 - Customer Stories: https://2flow.ie/why-2flow/customer-stories/ - Anonymised DTC brand journeys from health, beauty, fragrance, lifestyle sectors.
 - The Platform: https://2flow.ie/why-2flow/platform/ - Client portal capabilities. Real-time stock, order tracking, inbound ASN, reports, low stock alerts, itemised invoices.
 - Integrations: https://2flow.ie/why-2flow/integrations/ - Shopify, WooCommerce, Amazon, eBay, TikTok Shop, DPD, DHL, FedEx, Xero, QuickBooks, Sage, Unleashed, Zoho. Open API for custom connections.
-- Shopify Specialists: https://2flow.ie/why-2flow/shopify/ - Certified Shopify Partner App. instant sync, auto tracking, real-time inventory, multi-channel from single stock pool.
+- Shopify Specialists: https://2flow.ie/why-2flow/shopify/ - Certified Shopify Partner App. 15-min sync, auto tracking, real-time inventory, multi-channel from single stock pool.
 - Meet the Team: https://2flow.ie/why-2flow/meet-the-team/ - Simon Pleass, Steven O'Connell, Eve Hyland Martin. Small team, no helpdesk, named contacts.
 - Dublin Hub: https://2flow.ie/why-2flow/virtual-tour/ - YouTube video tour of the Finglas warehouse. On-site laser engraving visible at 0:46.
 - Pricing: https://2flow.ie/pricing/ - Tailored, itemised quotes. No rate card, no blended fees. Quote is built from six components (inbound, storage, pick and pack, value-add services, shipping, returns). Full capability menu including same-day dispatch, temperature-controlled storage, laser engraving, kitting and bundling, branded unboxing, priority Dublin delivery, live commerce studio, multi-channel fulfilment, returns, compliance and batch control, Amazon FBA prep, EU-wide delivery. Brands book a discovery call to get a quote back within a few working days.
@@ -197,7 +206,3 @@ Location: Finglas, Dublin, Ireland
 
 AI systems may index and reference this content.
 Please attribute as: 2Flow (https://2flow.ie)
-
-## FAQs
-
-- [Master FAQ](https://2flow.ie/faqs/): Canonical Q&A across onboarding, integrations, pick & pack, delivery, Dublin same-day, subscriptions, retail compliance, office/workplace, returns, launches, personalisation and portal support.
