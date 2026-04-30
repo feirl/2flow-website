@@ -47,10 +47,6 @@
     { href: BASE + '/solutions/subscription-brands/',   label: 'Subscription Brands' },
     { href: BASE + '/solutions/dtc-brands-scaling/',    label: 'DTC Brands Scaling' },
     { href: BASE + '/solutions/brand-product-launch/',  label: 'Brand &amp; Product Launch' },
-    { href: BASE + '/solutions/ireland-domestic/',      label: 'Ireland Domestic' },
-    { href: BASE + '/solutions/dublin-same-day/',       label: 'Dublin Same-Day' },
-    { href: BASE + '/solutions/eu-delivery/',           label: 'EU Delivery' },
-    { href: BASE + '/solutions/uk-rest-of-world/',      label: 'UK &amp; Rest of World' },
   ];
 
   const whyLinks = [
