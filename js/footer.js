@@ -40,7 +40,7 @@
     { href: BASE + '/solutions/medical-healthcare/',    label: 'Medical &amp; Healthcare' },
     { href: BASE + '/solutions/home-lifestyle/',        label: 'Home &amp; Lifestyle' },
     { href: BASE + '/solutions/consumer-electronics/',  label: 'Consumer Electronics' },
-    { href: BASE + '/solutions/office-products/',       label: 'Office Products' },
+    { href: BASE + '/solutions/office-products/',       label: 'Office Electronics' },
     { href: BASE + '/solutions/industrial-scientific/', label: 'Industrial &amp; Scientific' },
   ];
   const solutionNeedLinks = [
