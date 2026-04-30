@@ -266,6 +266,26 @@ footer { background: #0D0D0D; padding: 56px 40px 32px; }
 .footer-bottom a:hover { color: white; }
 .footer-bottom-links { display: flex; gap: 24px; }
 
+/* ── FOOTER ADDRESS BLOCK ── */
+.footer-address { margin-top: 20px; padding-top: 16px; border-top: 1px solid rgba(255,255,255,0.08); }
+.footer-address h5 { margin-bottom: 8px; }
+.footer-address address {
+  font-style: normal;
+  font-size: 13px; line-height: 1.7;
+  color: rgba(255,255,255,0.45);
+}
+.footer-contact-line {
+  margin-top: 12px;
+  font-size: 13px; line-height: 1.8;
+  color: rgba(255,255,255,0.45);
+}
+.footer-contact-line a {
+  color: rgba(255,255,255,0.55) !important;
+  padding: 0 !important;
+  display: inline !important;
+}
+.footer-contact-line a:hover { color: var(--brand-primary) !important; }
+
 /* ── RESPONSIVE ── */
 @media (max-width: 1024px) {
   h1 { font-size: 36px; }
