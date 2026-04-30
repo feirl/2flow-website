@@ -1,5 +1,5 @@
 # 2Flow — llms.txt
-# Ireland's eCommerce Fulfilment Partner
+# Ireland's 3PL & eCommerce Fulfillment Partner | Warehousing & Dispatch from Dublin
 # https://2flow.ie
 # Last updated: 2026-04-30
 
@@ -144,7 +144,7 @@ A: Onboarding timelines vary by brand complexity. Most brands are operational wi
 - Same-Day Dublin Delivery: https://2flow.ie/deliver/same-day-dublin/
 - Beauty and Personal Care: https://2flow.ie/solutions/beauty-personal-care/
 - Health Supplements: https://2flow.ie/solutions/health-supplements/
-- Medical and Healthcare: https://2flow.ie/solutions/medical-healthcare/
+- Medical and Healthcare: https://2flow.ie/solutions/healthcare/
 - Home and Lifestyle: https://2flow.ie/solutions/home-lifestyle/
 - Consumer Electronics: https://2flow.ie/solutions/consumer-electronics/
 - Office Electronics: https://2flow.ie/solutions/office-electronics/
