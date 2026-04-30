@@ -105,6 +105,10 @@ h4 { font-size: 16px; font-weight: 700; line-height: 1.40; color: var(--text-pri
   filter: brightness(0) invert(1);
   transition: filter 0.25s ease;
 }
+.nav-logo-scrolled { display: none; }
+.nav-logo-top      { display: block; }
+#mainNav.nav-scrolled .nav-logo-top      { display: none; }
+#mainNav.nav-scrolled .nav-logo-scrolled { display: block; filter: none; }
 #mainNav.nav-scrolled .nav-logo img { filter: none; }
 
 .nav-links { display: flex; align-items: stretch; height: var(--nav-height); }
