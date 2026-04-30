@@ -200,7 +200,6 @@
 
       '</div>' +
       '<div class="nav-cta-wrap">' +
-        '<a href="' + B + '/get-a-quote/" class="nav-cta nav-cta-secondary">Get a Quote</a>' +
         '<a href="' + B + '/book-a-call/" class="nav-cta">Book a Call</a>' +
       '</div>' +
       '<button class="hamburger" id="js-hamburger" aria-label="Open menu" aria-expanded="false">' +
