@@ -271,7 +271,7 @@
     clearTimeout(closeTimer);
   }
 
-  function isMobile() { return window.innerWidth <= 900; }
+  function isMobile() { return window.innerWidth <= 768; }
 
   function wireHover(trigger, mega) {
     if (!trigger || !mega) return;
@@ -296,9 +296,16 @@
         var isOpen = mega.classList.contains('mob-open');
         // Close all mobile-open megas
         [deliverMega, solutionsMega, whyMega].forEach(function(m) {
-          if (m) m.classList.remove('mob-open');
+          if (m) {
+            m.classList.remove('mob-open');
+            m.style.cssText = '';
+          }
         });
-        if (!isOpen) mega.classList.add('mob-open');
+        if (!isOpen) {
+          mega.classList.add('mob-open');
+          mega.style.position = 'static';
+          mega.style.display  = 'block';
+        }
       } else {
         var isOpen = mega.style.display === 'block';
         if (currentMega) { currentMega.style.display = 'none'; currentMega = null; }
