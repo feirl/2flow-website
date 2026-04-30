@@ -27,6 +27,16 @@
     custservice:   '<path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>',
     mappin:        '<path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/>',
     globe:         '<circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>',
+    beauty:        '<path d="M12 2a5 5 0 0 1 5 5c0 3-2 5.5-5 8-3-2.5-5-5-5-8a5 5 0 0 1 5-5z"/><path d="M12 15c0 3 1.5 5 3 6M12 15c0 3-1.5 5-3 6"/>',
+    health:        '<path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>',
+    medical:       '<rect x="3" y="3" width="18" height="18" rx="2"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/>',
+    homelife:      '<path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/>',
+    electronics:   '<rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/>',
+    officeelec:    '<rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/><circle cx="12" cy="10" r="2"/>',
+    industrial:    '<path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>',
+    subscription:  '<polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><polyline points="7 23 3 19 7 15"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/>',
+    scaling:       '<polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/>',
+    launch:        '<path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="M12 15l-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/>',
   };
 
   function icon(key) {
@@ -66,23 +76,32 @@
     }
   ];
 
-  var SOLUTION_SECTORS = [
-    { href: B + '/solutions/beauty-personal-care/',  label: 'Beauty &amp; Personal Care' },
-    { href: B + '/solutions/health-supplements/',    label: 'Health &amp; Supplements' },
-    { href: B + '/solutions/medical-healthcare/',    label: 'Medical &amp; Healthcare' },
-    { href: B + '/solutions/home-lifestyle/',        label: 'Home &amp; Lifestyle' },
-    { href: B + '/solutions/consumer-electronics/',  label: 'Consumer Electronics' },
-    { href: B + '/solutions/office-products/',       label: 'Office Electronics' },
-    { href: B + '/solutions/industrial-scientific/', label: 'Industrial &amp; Scientific' },
+  var SOLUTION_COLS = [
+    {
+      label: 'By Sector', cls: 'green',
+      items: [
+        { href: B + '/solutions/beauty-personal-care/',  icon: 'beauty',      title: 'Beauty &amp; Personal Care', desc: 'Subscription boxes, gift sets, branded unboxing' },
+        { href: B + '/solutions/health-supplements/',    icon: 'health',      title: 'Health &amp; Supplements',   desc: 'Batch tracking, FIFO, compliance labelling' },
+        { href: B + '/solutions/medical-healthcare/',    icon: 'medical',     title: 'Medical &amp; Healthcare',   desc: 'Temperature-sensitive, regulated handling' },
+        { href: B + '/solutions/home-lifestyle/',        icon: 'homelife',    title: 'Home &amp; Lifestyle',       desc: 'Premium home goods, gifting, fragile items' },
+        { href: B + '/solutions/consumer-electronics/',  icon: 'electronics', title: 'Consumer Electronics',       desc: 'High-value, anti-static, serial number tracking' },
+        { href: B + '/solutions/office-electronics/',    icon: 'officeelec',  title: 'Office Electronics',         desc: 'B2B distribution, retail prep, DTC from one operation' },
+        { href: B + '/solutions/industrial-scientific/', icon: 'industrial',  title: 'Industrial &amp; Scientific',desc: 'Lot tracking, hazmat compliance, trade documentation' },
+      ]
+    },
+    {
+      label: 'By Need', cls: 'navy',
+      items: [
+        { href: B + '/solutions/subscription-brands/',  icon: 'subscription', title: 'Subscription Brands',       desc: 'Billing cycle dispatch, batch kitting, personalisation' },
+        { href: B + '/solutions/dtc-brands-scaling/',   icon: 'scaling',      title: 'DTC Brands Scaling',         desc: 'Shopify-native, same-day dispatch, real-time inventory' },
+        { href: B + '/solutions/brand-product-launch/', icon: 'launch',       title: 'Brand &amp; Product Launch', desc: 'Fast onboarding, flexible capacity, launch kitting' },
+        { href: B + '/solutions/ireland-domestic/',     icon: 'mappin',       title: 'Ireland Domestic',           desc: 'Next-day island-wide via DPD and An Post' },
+        { href: B + '/solutions/dublin-same-day/',      icon: 'sameday',      title: 'Dublin Same-Day',            desc: 'Via Cyclone Couriers. Noon cut-off, same afternoon' },
+        { href: B + '/solutions/eu-delivery/',          icon: 'globe',        title: 'EU Delivery',                desc: '27 destinations dispatched from Dublin' },
+        { href: B + '/solutions/uk-rest-of-world/',     icon: 'globe',        title: 'UK &amp; Rest of World',     desc: 'Post-Brexit UK fulfilment, international carriers' },
+      ]
+    }
   ];
-
-  var SOLUTION_NEEDS = [
-    { href: B + '/solutions/subscription-brands/',  label: 'Subscription Brands' },
-    { href: B + '/solutions/dtc-brands-scaling/',   label: 'DTC Brands Scaling' },
-    { href: B + '/solutions/brand-product-launch/', label: 'Brand / Product Launch' },
-    { href: B + '/solutions/b2b-retail/',           label: 'B2B / Retail' },
-    { href: B + '/solutions/office-business/',      label: 'Office & Business' },
-];
 
   var WHY_LINKS = [
     { href: B + '/why-2flow/our-difference',   label: 'Our Difference' },
@@ -119,20 +138,22 @@
   }
 
   function buildSolutionsMega() {
-    var s1 = '', s2 = '';
-    for (var i = 0; i < SOLUTION_SECTORS.length; i++) {
-      var l = SOLUTION_SECTORS[i];
-      s1 += '<a href="' + l.href + '" class="mega-link' + active(l.href) + '"><strong>' + l.label + '</strong></a>';
-    }
-    for (var i = 0; i < SOLUTION_NEEDS.length; i++) {
-      var l = SOLUTION_NEEDS[i];
-      s2 += '<a href="' + l.href + '" class="mega-link' + active(l.href) + '"><strong>' + l.label + '</strong></a>';
+    var cols = '';
+    for (var i = 0; i < SOLUTION_COLS.length; i++) {
+      var col = SOLUTION_COLS[i];
+      var items = '';
+      for (var j = 0; j < col.items.length; j++) {
+        var l = col.items[j];
+        items += '<a href="' + l.href + '" class="mega-item' + active(l.href) + '">' +
+          '<div class="mega-item-icon ' + col.cls + '-bg">' + icon(l.icon) + '</div>' +
+          '<div class="mega-item-text"><h4>' + l.title + '</h4><p>' + l.desc + '</p></div>' +
+          '</a>';
+      }
+      cols += '<div class="mega-col"><div class="mega-col-label ' + col.cls + '">' + col.label + '</div>' + items + '</div>';
     }
     return '<div id="solutionsMega" class="mega-menu">' +
-      '<div class="mega-inner solutions-grid">' +
-      '<div class="mega-col"><div class="mega-group-title">By Sector</div>' + s1 + '</div>' +
-      '<div class="mega-col"><div class="mega-group-title">By Need</div>' + s2 + '</div>' +
-      '</div></div>';
+      '<div class="mega-inner solutions-grid">' + cols + '</div>' +
+      '</div>';
   }
 
   function buildWhyMega() {
