@@ -175,18 +175,18 @@
       '</a>' +
       '<div class="nav-links" id="navLinks">' +
 
+        '<div class="nav-item nav-item-has-mega" id="js-solutions-trigger">' +
+          '<a role="button" tabindex="0" class="nav-trigger' + (inSolution ? ' nav-active' : '') + '" aria-haspopup="true" aria-expanded="false">' +
+            'Solutions <span class="nav-chevron">&#9662;</span>' +
+          '</a>' +
+          buildSolutionsMega() +
+        '</div>' +
+
         '<div class="nav-item nav-item-has-mega" id="js-deliver-trigger">' +
           '<a role="button" tabindex="0" class="nav-trigger' + (inDeliver ? ' nav-active' : '') + '" aria-haspopup="true" aria-expanded="false">' +
             'What We Deliver <span class="nav-chevron">&#9662;</span>' +
           '</a>' +
           buildDeliverMega() +
-        '</div>' +
-
-        '<div class="nav-item nav-item-has-mega" id="js-solutions-trigger">' +
-          '<a role="button" tabindex="0" class="nav-trigger' + (inSolution ? ' nav-active' : '') + '" aria-haspopup="true" aria-expanded="false">' +
-            'Solutions For <span class="nav-chevron">&#9662;</span>' +
-          '</a>' +
-          buildSolutionsMega() +
         '</div>' +
 
         '<div class="nav-item nav-item-has-mega" id="js-why-trigger">' +
