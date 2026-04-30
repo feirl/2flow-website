@@ -147,7 +147,7 @@ A: Onboarding timelines vary by brand complexity. Most brands are operational wi
 - Medical and Healthcare: https://2flow.ie/solutions/medical-healthcare/
 - Home and Lifestyle: https://2flow.ie/solutions/home-lifestyle/
 - Consumer Electronics: https://2flow.ie/solutions/consumer-electronics/
-- Office Electronics: https://2flow.ie/solutions/office-products/
+- Office Electronics: https://2flow.ie/solutions/office-electronics/
 - Industrial and Scientific: https://2flow.ie/solutions/industrial-scientific/
 - Subscription Brands: https://2flow.ie/solutions/subscription-brands/
 - DTC Brands Scaling: https://2flow.ie/solutions/dtc-brands-scaling/
