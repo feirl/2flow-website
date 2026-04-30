@@ -157,6 +157,7 @@ h4 { font-size: 16px; font-weight: 700; line-height: 1.40; color: var(--text-pri
 }
 .mega-inner.deliver-grid   { grid-template-columns: repeat(3, 1fr); gap: 0; }
 .mega-inner.solutions-grid { grid-template-columns: repeat(2, 1fr); gap: 0; }
+.mega-inner.why-grid       { grid-template-columns: repeat(4, 1fr); gap: 0; max-width: 900px; }
 .mega-col { padding: 0 32px 0 0; }
 .mega-col:last-child { padding-right: 0; }
 .mega-col-label {
