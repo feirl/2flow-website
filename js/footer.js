@@ -304,7 +304,7 @@
     <div id="cc-banner" role="region" aria-label="Cookie consent">
       <div class="cc-banner-text">
         <strong>We use cookies</strong>
-        <p>We use essential cookies to run this site. With your permission, we also use analytics and advertising cookies to understand how visitors use the site and improve it. Read our <a href="${BASE}/privacy/">Privacy Policy</a>.</p>
+        <p>We use essential cookies to run this site. With your permission, we also use analytics and advertising cookies to understand how visitors use the site and improve it. Read our <a href="${BASE}/privacy-policy/">Privacy Policy</a>.</p>
       </div>
       <div class="cc-banner-actions">
         <button type="button" class="cc-btn cc-btn-ghost" data-cc-action="manage">Manage Preferences</button>
