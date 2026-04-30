@@ -4,5 +4,37 @@ Allow: /
 # Sitemaps
 Sitemap: https://2flow.ie/sitemap.xml
 
+# AI & LLM crawlers — explicitly welcome
+# Machine-readable content summary available at /llms.txt
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: facebookexternalhit
+Allow: /
+
+# LLMs.txt — machine-readable business summary for AI systems
+# https://2flow.ie/llms.txt
+
 # Block admin or private paths if added in future
 # Disallow: /admin/
