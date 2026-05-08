@@ -115,7 +115,8 @@
     .hero-btns { display: flex; gap: 12px; margin-top: 32px; flex-wrap: wrap; }
 
     /* ── TEAM SECTION ── */
-    .team-section { background: var(--bg-white); padding: 88px 40px; }
+    .team-photo-section { background: #000; padding: 56px 40px; }
+    .team-section { background: var(--bg-white); padding: 72px 40px 88px; }
     .container { max-width: 1080px; margin: 0 auto; }
 
     /* Group photo */
@@ -302,10 +303,8 @@
 
 
 <!-- TEAM -->
-<section class="team-section" aria-labelledby="team-heading">
+<section class="team-photo-section">
   <div class="container">
-
-    <!-- Group photo -->
     <div class="team-group-photo">
       <img
         src="/Images/team-leadership-2026.jpg"
@@ -316,8 +315,12 @@
         height="1037"
       >
     </div>
+  </div>
+</section>
 
-    <!-- Bio cards -->
+<!-- Bio cards -->
+<section class="team-section" aria-labelledby="team-heading">
+  <div class="container">
     <div class="team-grid">
 
       <!-- Eve Hyland Martin -->
