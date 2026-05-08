@@ -1,7 +1,7 @@
 # 2Flow — llms.txt
 # Ireland's 3PL & eCommerce Fulfillment Partner | Warehousing & Dispatch from Dublin
 # https://2flow.ie
-# Last updated: 2026-04-30
+# Last updated: 2026-05-08
 
 ## About 2Flow
 
@@ -168,6 +168,12 @@ A: Onboarding timelines vary by brand complexity. Most brands are operational wi
 - Book a Call: https://2flow.ie/book-a-call/
 - Get a Quote: https://2flow.ie/get-a-quote/
 - FAQs: https://2flow.ie/faqs/
+- Contact: https://2flow.ie/contact/
+- Careers: https://2flow.ie/careers/
+- B2B & Retail Fulfilment: https://2flow.ie/solutions/b2b-retail/
+- Office & Business Fulfilment: https://2flow.ie/solutions/office-business/
+- Sectors Overview: https://2flow.ie/sectors/
+- Health & Beauty Sector: https://2flow.ie/sectors/health-beauty/
 - Privacy Policy: https://2flow.ie/privacy-policy/
 - Terms of Service: https://2flow.ie/terms/
 - GDPR: https://2flow.ie/gdpr/
