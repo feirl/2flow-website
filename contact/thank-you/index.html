@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="apple-touch-icon" href="/favicon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Message Sent | 2Flow Ireland</title>
+  <meta name="description" content="Thanks for getting in touch. We'll reply within one working day.">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="canonical" href="https://2flow.ie/contact/thank-you/">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    /* CONFIRMATION HERO */
+    .confirm-hero {
+      background: #0D1A2E;
+      padding: calc(var(--nav-height) + 72px) 40px 80px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .confirm-hero::before {
+      content: '';
+      position: absolute;
+      top: -100px; left: 50%; transform: translateX(-50%);
+      width: 600px; height: 600px;
+      background: radial-gradient(circle, rgba(92,184,0,0.12) 0%, transparent 65%);
+      pointer-events: none;
+    }
+    .confirm-inner {
+      max-width: 640px;
+      margin: 0 auto;
+      position: relative;
+    }
+
+    /* Animated tick */
+    .tick-wrap {
+      width: 72px; height: 72px;
+      border-radius: 50%;
+      background: rgba(92,184,0,0.15);
+      border: 2px solid rgba(92,184,0,0.35);
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 28px;
+      animation: tickPop 0.4s cubic-bezier(0.34,1.56,0.64,1) both;
+    }
+    @keyframes tickPop {
+      from { opacity: 0; transform: scale(0.5); }
+      to   { opacity: 1; transform: scale(1); }
+    }
+    .tick-wrap svg { color: var(--brand-primary); }
+
+    .confirm-label {
+      font-size: 11px; font-weight: 700; text-transform: uppercase;
+      letter-spacing: 0.14em; color: var(--brand-primary);
+      margin-bottom: 16px;
+    }
+    .confirm-hero h1 {
+      color: white;
+      font-size: clamp(28px, 4vw, 44px);
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+      margin-bottom: 18px;
+    }
+    .confirm-hero h1 em { font-style: normal; color: var(--brand-primary); }
+    .confirm-hero p {
+      font-size: 16px; color: rgba(255,255,255,0.65);
+      line-height: 1.75; max-width: 480px; margin: 0 auto 32px;
+    }
+
+    /* What happens next pills */
+    .next-steps {
+      display: flex; gap: 12px; justify-content: center;
+      flex-wrap: wrap; margin-top: 8px;
+    }
+    .next-step {
+      display: flex; align-items: center; gap: 8px;
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 99px;
+      padding: 8px 16px;
+      font-size: 13px; color: rgba(255,255,255,0.7); font-weight: 500;
+    }
+    .next-step svg { color: var(--brand-primary); flex-shrink: 0; }
+
+    /* NEXT LINKS */
+    .links-section {
+      background: var(--bg-white);
+      padding: 80px 40px;
+    }
+    .links-inner {
+      max-width: 960px;
+      margin: 0 auto;
+    }
+    .links-heading {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+    .links-heading p {
+      font-size: 11px; font-weight: 700; text-transform: uppercase;
+      letter-spacing: 0.12em; color: var(--brand-primary); margin-bottom: 10px;
+    }
+    .links-heading h2 {
+      font-size: clamp(22px, 3vw, 32px);
+      font-weight: 700; color: var(--text-primary);
+      line-height: 1.2;
+    }
+
+    .next-cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+    .next-card {
+      display: flex; flex-direction: column;
+      border: 1.5px solid var(--border-light);
+      border-radius: 16px;
+      padding: 32px 28px;
+      text-decoration: none;
+      transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
+      background: var(--bg-white);
+    }
+    .next-card:hover {
+      border-color: var(--brand-primary);
+      box-shadow: 0 8px 28px rgba(92,184,0,0.1);
+      transform: translateY(-3px);
+    }
+    .next-card-icon {
+      width: 48px; height: 48px;
+      border-radius: 12px;
+      background: rgba(92,184,0,0.1);
+      display: flex; align-items: center; justify-content: center;
+      color: var(--brand-primary);
+      margin-bottom: 20px;
+      flex-shrink: 0;
+    }
+    .next-card-tag {
+      font-size: 10px; font-weight: 700; text-transform: uppercase;
+      letter-spacing: 0.1em; color: var(--text-tertiary);
+      margin-bottom: 8px;
+    }
+    .next-card h3 {
+      font-size: 17px; font-weight: 700; color: var(--text-primary);
+      margin-bottom: 10px; line-height: 1.3;
+    }
+    .next-card p {
+      font-size: 14px; color: var(--text-secondary);
+      line-height: 1.65; flex: 1;
+    }
+    .next-card-cta {
+      margin-top: 20px;
+      font-size: 13px; font-weight: 600;
+      color: var(--brand-primary);
+      display: flex; align-items: center; gap: 4px;
+    }
+
+    @media (max-width: 768px) {
+      .confirm-hero { padding: calc(var(--nav-height) + 48px) 20px 56px; }
+      .links-section { padding: 56px 20px; }
+      .next-cards { grid-template-columns: 1fr; }
+      .next-step { font-size: 12px; }
+    }
+    @media (max-width: 600px) {
+      .next-steps { flex-direction: column; align-items: center; }
+    }
+  </style>
+  <link rel="stylesheet" href="/css/site.css">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=GT-MJM434ZF"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'GT-MJM434ZF');
+  gtag('event', 'conversion', { event_category: 'contact', event_label: 'message_sent' });
+</script>
+</head>
+<body>
+
+<a href="#main-content" class="skip-link">Skip to content</a>
+<div id="site-nav"></div>
+<script src="/js/nav.js"></script>
+
+<main id="main-content">
+
+<!-- CONFIRMATION HERO -->
+<section class="confirm-hero">
+  <div class="confirm-inner">
+
+    <div class="tick-wrap" aria-hidden="true">
+      <svg width="32" height="32" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+        <polyline points="20 6 9 17 4 12"/>
+      </svg>
+    </div>
+
+    <p class="confirm-label">Message received</p>
+    <h1>We've got it. <em>We'll be in touch.</em></h1>
+    <p>One of the team will reply within one working day. If it's urgent, give us a call on 1800 532 532.</p>
+
+    <div class="next-steps">
+      <div class="next-step">
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        Reply within one working day
+      </div>
+      <div class="next-step">
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.4 2 2 0 0 1 3.58 1.22h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.96a16 16 0 0 0 6.13 6.13l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        Or call 1800 532 532
+      </div>
+      <div class="next-step">
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+        No hard sell, just straight answers
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- USEFUL LINKS -->
+<section class="links-section">
+  <div class="links-inner">
+
+    <div class="links-heading">
+      <p>While you wait</p>
+      <h2>Get to know 2Flow</h2>
+    </div>
+
+    <div class="next-cards">
+
+      <a href="/why-2flow/virtual-tour/" class="next-card">
+        <div class="next-card-icon" aria-hidden="true">
+          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+            <polyline points="9 22 9 12 15 12 15 22"/>
+          </svg>
+        </div>
+        <p class="next-card-tag">See the operation</p>
+        <h3>Tour our Dublin hub</h3>
+        <p>Walk the warehouse floor without leaving your desk. See how we pick, pack, kit and dispatch at scale.</p>
+        <span class="next-card-cta">Take the virtual tour &rarr;</span>
+      </a>
+
+      <a href="/why-2flow/customer-stories/" class="next-card">
+        <div class="next-card-icon" aria-hidden="true">
+          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+            <circle cx="9" cy="7" r="4"/>
+            <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+          </svg>
+        </div>
+        <p class="next-card-tag">Brands like yours</p>
+        <h3>Customer stories</h3>
+        <p>See how Irish eCommerce brands have moved their fulfilment to 2Flow and what the transition actually looked like.</p>
+        <span class="next-card-cta">Read the stories &rarr;</span>
+      </a>
+
+      <a href="/get-a-quote/" class="next-card">
+        <div class="next-card-icon" aria-hidden="true">
+          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+          </svg>
+        </div>
+        <p class="next-card-tag">Ready to go further</p>
+        <h3>Get a quote</h3>
+        <p>If you already know your volumes, skip straight to a quote. Takes two minutes and gets you numbers fast.</p>
+        <span class="next-card-cta">Get a quote &rarr;</span>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+</main>
+
+<div id="site-footer"></div>
+<script src="/js/footer.js"></script>
+
+<!-- Start of HubSpot Embed Code -->
+<script type="text/javascript" id="hs-script-loader" async defer src="//js-eu1.hs-scripts.com/148100795.js"></script>
+<!-- End of HubSpot Embed Code -->
+</body>
+</html>

@@ -101,7 +101,7 @@
 
     /* ── QUICK CONTACT STRIP ── */
     .quick-strip { background: var(--bg-light); border-top: 3px solid var(--brand-primary); padding: 40px 40px; }
-    .quick-inner { max-width: 1080px; margin: 0 auto; display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .quick-inner { max-width: 1080px; margin: 0 auto; display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
     .quick-item { display: flex; gap: 14px; align-items: flex-start; }
     .quick-icon {
       width: 40px; height: 40px; flex-shrink: 0;
@@ -148,40 +148,6 @@
     }
     .map-wrap iframe { width: 100%; height: 100%; border: 0; display: block; }
 
-    /* ── DEPARTMENTS ── */
-    .dept-section { background: var(--bg-light); padding: 96px 40px; }
-    .dept-container { max-width: 1080px; margin: 0 auto; }
-    .dept-header { max-width: 620px; margin-bottom: 48px; }
-    .dept-header .section-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; color: var(--brand-primary); margin-bottom: 12px; }
-    .dept-header h2 { margin-top: 8px; margin-bottom: 18px; }
-    .dept-header h2 em { font-style: normal; color: var(--brand-primary); }
-    .dept-header p { font-size: 16px; color: var(--text-secondary); line-height: 1.7; }
-
-    .dept-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
-    .dept-card {
-      background: var(--bg-white);
-      border: 1px solid var(--border-light);
-      border-radius: 14px;
-      padding: 28px 26px;
-      transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
-    }
-    .dept-card:hover {
-      border-color: var(--brand-primary);
-      transform: translateY(-2px);
-      box-shadow: 0 10px 30px rgba(13,26,46,0.06);
-    }
-    .dept-icon {
-      width: 40px; height: 40px; border-radius: 10px;
-      background: rgba(92,184,0,0.1);
-      display: flex; align-items: center; justify-content: center;
-      color: var(--brand-primary); margin-bottom: 18px;
-    }
-    .dept-card h3 { font-size: 16px; font-weight: 700; color: var(--text-primary); margin-bottom: 8px; }
-    .dept-card p { font-size: 14px; color: var(--text-secondary); line-height: 1.65; margin-bottom: 16px; }
-    .dept-contact { font-size: 14px; line-height: 1.65; }
-    .dept-contact a { color: var(--text-primary); text-decoration: none; border-bottom: 1px solid var(--border-light); font-weight: 500; transition: color 0.15s, border-color 0.15s; }
-    .dept-contact a:hover { color: var(--brand-primary); border-bottom-color: var(--brand-primary); }
-
     /* ── DELIVERY INFO ── */
     .delivery-section { background: var(--bg-white); padding: 96px 40px; }
     .delivery-container { max-width: 1080px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 48px; }
@@ -217,7 +183,7 @@
     }
     @media (max-width: 768px) {
       .hero-feature { padding: calc(var(--nav-height) + 40px) 20px 56px; }
-      .quick-strip, .location-section, .dept-section, .delivery-section, .cta-section { padding: 64px 20px; }
+      .quick-strip, .location-section, .delivery-section, .cta-section { padding: 64px 20px; }
       .hero-btns { flex-direction: column; }
       .hero-btns a { text-align: center; }
     }
@@ -229,10 +195,6 @@
     .form-intro h2 { margin-top: 8px; margin-bottom: 16px; }
     .form-intro h2 em { font-style: normal; color: var(--brand-primary); }
     .form-intro p { font-size: 16px; color: var(--text-secondary); line-height: 1.75; margin-bottom: 0; }
-    .form-intro .form-reassure { margin-top: 28px; display: flex; flex-direction: column; gap: 10px; }
-    .form-reassure-item { display: flex; align-items: center; gap: 10px; font-size: 14px; color: var(--text-secondary); }
-    .form-reassure-item svg { color: var(--brand-primary); flex-shrink: 0; }
-
     .cf { display: flex; flex-direction: column; gap: 0; }
     .cf-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px; }
     .cf-group { display: flex; flex-direction: column; gap: 6px; margin-bottom: 16px; }
@@ -247,15 +209,6 @@
     .cf-group input.error, .cf-group textarea.error { border-color: #e53e3e; }
     .cf-group textarea { resize: vertical; min-height: 120px; line-height: 1.6; }
     .cf-submit { margin-top: 8px; }
-    .cf-success {
-      display: none; background: rgba(92,184,0,0.08);
-      border: 1.5px solid rgba(92,184,0,0.3); border-radius: 12px;
-      padding: 28px 24px; text-align: center;
-    }
-    .cf-success svg { color: var(--brand-primary); margin-bottom: 12px; }
-    .cf-success h3 { font-size: 18px; font-weight: 700; color: var(--text-primary); margin-bottom: 8px; }
-    .cf-success p { font-size: 14px; color: var(--text-secondary); line-height: 1.65; margin: 0; }
-
     @media (max-width: 900px) {
       .contact-form-inner { grid-template-columns: 1fr; gap: 40px; }
     }
@@ -316,16 +269,7 @@
         <div class="quick-sub" style="margin-top:4px;"><a href="tel:+35318643280" style="color:inherit;text-decoration:none;">+353 1864 3280</a> &nbsp;International / Customer Service</div>
       </div>
     </div>
-    <div class="quick-item">
-      <div class="quick-icon" aria-hidden="true">
-        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-      </div>
-      <div>
-        <div class="quick-label">Customer Service</div>
-        <div class="quick-value"><a href="mailto:CustomerService@2flow.ie">CustomerService@2flow.ie</a></div>
-        <div class="quick-sub">Replies within one working day</div>
-      </div>
-    </div>
+
     <div class="quick-item">
       <div class="quick-icon" aria-hidden="true">
         <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
@@ -347,8 +291,6 @@
       <p class="section-label">Find us</p>
       <h2 id="location-heading">One Dublin hub. <em>Built for brands.</em></h2>
       <p>Our fulfilment hub sits in North Park, Finglas, minutes from the M50 and the Dublin Port Tunnel. Brands, couriers and visiting teams can reach us easily from the city, the airport or the motorway network.</p>
-      <p>Drop in to meet the team, take a tour, or walk through a sample onboarding. We love showing people around.</p>
-
       <div class="address-block">
         <p>
           <strong>2Flow Fulfilment Hub</strong>
@@ -375,84 +317,6 @@
 </section>
 
 
-<!-- DEPARTMENT CONTACTS -->
-<section class="dept-section" aria-labelledby="dept-heading">
-  <div class="dept-container">
-    <div class="dept-header">
-      <p class="section-label">Get the right person</p>
-      <h2 id="dept-heading">Direct lines to the <em>team you need.</em></h2>
-      <p>Your question gets to the right person faster when you start in the right place.</p>
-    </div>
-    <div class="dept-grid">
-      <div class="dept-card">
-        <div class="dept-icon" aria-hidden="true">
-          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-        </div>
-        <h3>New business &amp; quotes</h3>
-        <p>Exploring 2Flow, requesting a quote, or ready to onboard a brand. Fastest path is a 30-minute discovery call.</p>
-        <div class="dept-contact">
-          <a href="/book-a-call/">Book a Call</a><br>
-          <a href="mailto:hello@2flow.ie">hello@2flow.ie</a>
-        </div>
-      </div>
-      <div class="dept-card">
-        <div class="dept-icon" aria-hidden="true">
-          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-        </div>
-        <h3>Existing clients</h3>
-        <p>Account queries, stock movements, integrations and day-to-day operations. Your named contact is your fastest route.</p>
-        <div class="dept-contact">
-          <a href="mailto:hello@2flow.ie">hello@2flow.ie</a><br>
-          <a href="tel:1800532532">1800 532 532</a>
-        </div>
-      </div>
-      <div class="dept-card">
-        <div class="dept-icon" aria-hidden="true">
-          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
-        </div>
-        <h3>Deliveries &amp; couriers</h3>
-        <p>Inbound stock, pallet deliveries, and courier collections.</p>
-        <div class="dept-contact">
-          <a href="mailto:hello@2flow.ie">hello@2flow.ie</a><br>
-          <a href="tel:1800532532">1800 532 532</a>
-        </div>
-      </div>
-      <div class="dept-card">
-        <div class="dept-icon" aria-hidden="true">
-          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
-        </div>
-        <h3>Careers</h3>
-        <p>Interested in joining the team. We hire across operations, client services, tech and leadership.</p>
-        <div class="dept-contact">
-          <a href="mailto:hello@2flow.ie">hello@2flow.ie</a>
-        </div>
-      </div>
-      <div class="dept-card">
-        <div class="dept-icon" aria-hidden="true">
-          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
-        </div>
-        <h3>Press &amp; partnerships</h3>
-        <p>Media, podcasts, events, and partnership opportunities. We are happy to talk eCommerce fulfilment in Ireland.</p>
-        <div class="dept-contact">
-          <a href="mailto:hello@2flow.ie">hello@2flow.ie</a>
-        </div>
-      </div>
-      <div class="dept-card">
-        <div class="dept-icon" aria-hidden="true">
-          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-        </div>
-        <h3>Data &amp; privacy</h3>
-        <p>Data processing enquiries, subject access requests and compliance. We treat these with priority.</p>
-        <div class="dept-contact">
-          <a href="mailto:hello@2flow.ie">hello@2flow.ie</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-
 <!-- CONTACT FORM -->
 <section class="contact-form-section" aria-labelledby="contact-form-heading">
   <div class="contact-form-inner">
@@ -461,20 +325,7 @@
       <p class="section-label">Send a message</p>
       <h2 id="contact-form-heading">Not sure where<br>to start? <em>Just ask.</em></h2>
       <p>Fill in the form and we'll get back to you within one working day.</p>
-      <div class="form-reassure">
-        <div class="form-reassure-item">
-          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-          Reply within one working day
-        </div>
-        <div class="form-reassure-item">
-          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-          No hard sell — just honest answers
-        </div>
-        <div class="form-reassure-item">
-          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-          Or call us: <a href="tel:1800532532" style="color:var(--brand-primary);margin-left:4px">1800 532 532</a>
-        </div>
-      </div>
+
     </div>
 
     <div>
@@ -508,11 +359,6 @@
         </div>
       </form>
 
-      <div id="cfSuccess" class="cf-success" aria-live="polite">
-        <svg width="40" height="40" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="20 6 9 17 4 12"/></svg>
-        <h3>Message sent</h3>
-        <p>Thanks for getting in touch. We'll reply within one working day.</p>
-      </div>
     </div>
 
   </div>
@@ -521,7 +367,6 @@
 <script>
 (function () {
   var form    = document.getElementById('contactForm');
-  var success = document.getElementById('cfSuccess');
   var btn     = document.getElementById('cfBtn');
   if (!form) return;
 
@@ -552,11 +397,10 @@
     })
     .then(function (r) {
       if (r.ok) {
-        form.style.display = 'none';
-        success.style.display = 'block';
         if (typeof gtag !== 'undefined') {
           gtag('event', 'contact_form', { event_category: 'conversion', event_label: company || name });
         }
+        window.location.href = '/contact/thank-you/';
       } else {
         throw new Error('Server error');
       }
@@ -564,7 +408,7 @@
     .catch(function () {
       btn.disabled    = false;
       btn.textContent = 'Send message →';
-      alert('Something went wrong. Please email CustomerService@2flow.ie or call 1800 532 532.');
+      alert('Something went wrong. Please try again or call us on 1800 532 532.');
     });
   });
 })();
@@ -592,3 +436,4 @@
 <!-- End of HubSpot Embed Code -->
 </body>
 </html>
+
