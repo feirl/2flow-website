@@ -22,6 +22,8 @@
     { "source": "/case-studies/",           "destination": "/why-2flow/customer-stories/",      "permanent": true },
     { "source": "/case-studies/:path*",     "destination": "/why-2flow/customer-stories",       "permanent": true },
     { "source": "/spotlight-oral-case-study","destination": "/why-2flow/customer-stories",      "permanent": true },
+    { "source": "/copy-of-case-studies",    "destination": "/why-2flow/customer-stories",       "permanent": true },
+    { "source": "/copy-of-case-studies/",   "destination": "/why-2flow/customer-stories/",      "permanent": true },
 
     { "source": "/our-staff",               "destination": "/why-2flow/meet-the-team",          "permanent": true },
     { "source": "/our-staff/",              "destination": "/why-2flow/meet-the-team/",         "permanent": true },
@@ -29,6 +31,8 @@
 
     { "source": "/scaling-your-ecommerce",  "destination": "/solutions/dtc-brands-scaling",    "permanent": true },
     { "source": "/scaling-your-ecommerce/", "destination": "/solutions/dtc-brands-scaling/",   "permanent": true },
+    { "source": "/scalingyourecommerce",    "destination": "/solutions/dtc-brands-scaling",    "permanent": true },
+    { "source": "/scalingyourecommerce/",   "destination": "/solutions/dtc-brands-scaling/",   "permanent": true },
 
     { "source": "/onboarding",              "destination": "/get-a-quote",                      "permanent": true },
     { "source": "/onboarding/",             "destination": "/get-a-quote/",                     "permanent": true },
@@ -42,6 +46,11 @@
     { "source": "/how-it-works/",           "destination": "/why-2flow/our-difference/",        "permanent": true },
     { "source": "/about",                   "destination": "/why-2flow/our-difference",         "permanent": true },
     { "source": "/about-us",               "destination": "/why-2flow/our-difference",          "permanent": true },
+    { "source": "/why-outsource.html",      "destination": "/why-2flow/our-difference",         "permanent": true },
+    { "source": "/why-outsource",           "destination": "/why-2flow/our-difference",         "permanent": true },
+
+    { "source": "/technology.html",         "destination": "/why-2flow/platform",               "permanent": true },
+    { "source": "/technology",              "destination": "/why-2flow/platform",               "permanent": true },
 
     { "source": "/thank-you",              "destination": "/get-a-quote/thank-you",             "permanent": true },
     { "source": "/thank-you/",             "destination": "/get-a-quote/thank-you",             "permanent": true },
@@ -61,17 +70,25 @@
     { "source": "/it-services",            "destination": "/solutions/office-electronics",      "permanent": true },
     { "source": "/managed-services",       "destination": "/",                                  "permanent": true },
 
-    { "source": "/news-and-blog/:path*",   "destination": "/",                                  "permanent": true },
-    { "source": "/guides/:path*",          "destination": "/",                                  "permanent": true },
+    { "source": "/news-and-blog",          "destination": "/why-2flow/customer-stories",        "permanent": true },
+    { "source": "/news-and-blog/",         "destination": "/why-2flow/customer-stories/",       "permanent": true },
+    { "source": "/news-and-blog.html",     "destination": "/why-2flow/customer-stories",        "permanent": true },
+    { "source": "/news-and-blog/:path*",   "destination": "/why-2flow/customer-stories",        "permanent": true },
+    { "source": "/guides/:path*",          "destination": "/why-2flow/our-difference",          "permanent": true },
     { "source": "/2025/:path*",            "destination": "/why-2flow/customer-stories",        "permanent": true },
 
-    { "source": "/3pl-services.html",               "destination": "/",                         "permanent": true },
+    { "source": "/3pl-services.html",               "destination": "/deliver",                  "permanent": true },
     { "source": "/ecommerce-fulfillment-services.html","destination": "/deliver/dtc-fulfilment","permanent": true },
-    { "source": "/fulfillment.html",                "destination": "/",                          "permanent": true },
-    { "source": "/logistics.html",                  "destination": "/",                          "permanent": true },
+    { "source": "/fulfillment.html",                "destination": "/deliver",                  "permanent": true },
+    { "source": "/logistics.html",                  "destination": "/deliver",                  "permanent": true },
     { "source": "/order-processing.html",           "destination": "/deliver/pick-and-pack",    "permanent": true },
-    { "source": "/support-services.html",           "destination": "/",                          "permanent": true },
-    { "source": "/what-we-do.html",                 "destination": "/",                          "permanent": true }
+    { "source": "/pick-and-pack.html",              "destination": "/deliver/pick-and-pack",    "permanent": true },
+    { "source": "/warehousing.html",                "destination": "/deliver",                  "permanent": true },
+    { "source": "/support-services.html",           "destination": "/contact",                  "permanent": true },
+    { "source": "/what-we-do.html",                 "destination": "/deliver",                  "permanent": true },
+
+    { "source": "/deliver/kitting-bundles",  "destination": "/deliver/kitting-bundling",        "permanent": true },
+    { "source": "/deliver/kitting-bundles/", "destination": "/deliver/kitting-bundling/",       "permanent": true }
 
   ]
 }
