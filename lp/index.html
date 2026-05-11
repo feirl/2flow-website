@@ -305,14 +305,19 @@
   /* ── LP NAV ── */
   .lp-nav {
     position: fixed; top: 0; left: 0; right: 0; height: 64px;
-    background: white; border-bottom: 1px solid var(--border-light);
-    z-index: 200; box-shadow: 0 1px 8px rgba(0,0,0,0.06);
+    background: transparent; border-bottom: 1px solid transparent;
+    z-index: 200; transition: background 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+  }
+  .lp-nav.lp-nav-scrolled {
+    background: white; border-bottom-color: var(--border-light);
+    box-shadow: 0 1px 8px rgba(0,0,0,0.06);
   }
   .lp-nav-inner {
     max-width: 1080px; margin: 0 auto; padding: 0 40px;
     height: 100%; display: flex; align-items: center; justify-content: space-between;
   }
-  .lp-nav-logo img { height: 34px; width: auto; display: block; }
+  .lp-nav-logo img { height: 34px; width: auto; display: block; filter: brightness(0) invert(1); transition: filter 0.25s ease; }
+  .lp-nav.lp-nav-scrolled .lp-nav-logo img { filter: none; }
   .lp-nav-ctas { display: flex; gap: 10px; align-items: center; }
   .lp-footer { background: var(--bg-dark); padding: 22px 40px; }
   .lp-footer-inner {
@@ -775,6 +780,23 @@
 </footer>
 
 <script>
+  // ── LP Nav: transparent → white on scroll ──
+  (function () {
+    var lpNav = document.querySelector('.lp-nav');
+    if (!lpNav) return;
+    function updateLpNav() {
+      lpNav.classList.toggle('lp-nav-scrolled', window.scrollY > 40);
+    }
+    window.addEventListener('scroll', updateLpNav, { passive: true });
+    updateLpNav();
+  }());
+
+  // ── Reduced motion: pause video ──
+  var heroVideo = document.querySelector('.hero-video');
+  if (heroVideo && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    heroVideo.pause();
+  }
+
     // ── Stat count-up on scroll into view ──
   (function () {
     const statNums = Array.from(document.querySelectorAll('.stat-num[data-target]'));
