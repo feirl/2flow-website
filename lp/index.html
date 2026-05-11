@@ -393,6 +393,18 @@
   .lp-nav-logo img { height: 34px; width: auto; display: block; filter: brightness(0) invert(1); transition: filter 0.25s ease; }
   .lp-nav.lp-nav-scrolled .lp-nav-logo img { filter: none; }
   .lp-nav-ctas { display: flex; gap: 10px; align-items: center; }
+  /* Nav ghost button: white on transparent nav, dark on scrolled white nav */
+  .lp-nav-book {
+    color: white !important;
+    border-color: rgba(255,255,255,0.55) !important;
+    transition: color 0.25s ease, border-color 0.25s ease;
+  }
+  .lp-nav-book:hover { border-color: white !important; }
+  .lp-nav.lp-nav-scrolled .lp-nav-book {
+    color: var(--text-primary) !important;
+    border-color: var(--border-medium) !important;
+  }
+  .lp-nav.lp-nav-scrolled .lp-nav-book:hover { border-color: var(--text-primary) !important; }
   .lp-footer { background: var(--bg-dark); padding: 22px 40px; }
   .lp-footer-inner {
     max-width: 1080px; margin: 0 auto; display: flex;
@@ -463,7 +475,7 @@
       <img src="/Images/2flow-logo.png" alt="2Flow">
     </a>
     <div class="lp-nav-ctas">
-      <a href="/lp/book-a-call/" class="btn-ghost" style="font-size:13px;padding:8px 16px;">Book a Call</a>
+      <a href="/lp/book-a-call/" class="btn-ghost lp-nav-book" style="font-size:13px;padding:8px 16px;">Book a Call</a>
       <a href="/lp/get-a-quote/" class="btn-primary" style="font-size:13px;padding:8px 16px;">Get a Quote</a>
     </div>
   </div>
