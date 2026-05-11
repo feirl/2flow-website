@@ -1,3 +1,4 @@
+// notify.js — resend ready, env var configured
 module.exports = async function handler(req, res) {
   if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" });
 
@@ -8,10 +9,10 @@ module.exports = async function handler(req, res) {
   let subject, html;
 
   if (d.type === "quote") {
-    subject = "New Quote Request — " + (d.company || "Unknown");
+    subject = "New Quote Request: " + (d.company || "Unknown");
     html = quoteHtml(d);
   } else if (d.type === "contact") {
-    subject = "New Contact Form — " + (d.name || "Unknown");
+    subject = "New Contact Form: " + (d.name || "Unknown");
     html = contactHtml(d);
   } else {
     return res.status(400).json({ error: "Unknown notification type" });
@@ -22,8 +23,8 @@ module.exports = async function handler(req, res) {
       method: "POST",
       headers: { "Authorization": "Bearer " + key, "Content-Type": "application/json" },
       body: JSON.stringify({
-        from: "2Flow Website <noreply@2flow.ie>",
-        to:   ["eve.martin@2flow.ie"],
+        from: "2Flow Website <noreply@updates.2flow.ie>",
+        to:   ["brendan.hughes@2flow.ie", "eve.martin@2flow.ie", "joe.pleass@cyclone.ie"],
         reply_to: d.email || undefined,
         subject,
         html,
