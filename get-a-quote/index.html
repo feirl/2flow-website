@@ -709,6 +709,19 @@
         // Log full body always — HubSpot hides per-field errors inside 200 OK
         console.log('HubSpot response (' + r.status + '):', JSON.stringify(body));
         if (r.ok) {
+          // Fire internal notification (non-blocking)
+          fetch('/api/notify', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              type: 'quote',
+              firstname: firstname, lastname: lastname, company: company,
+              website: website, email: email, phone: phone,
+              orders: orders, skus: skus, pallets: pallets,
+              category: category, timeline: timeline
+            })
+          }).catch(function() {});
+
           if (typeof gtag !== 'undefined') {
             gtag('event', 'quote_request', { event_category: 'conversion', event_label: company });
           }

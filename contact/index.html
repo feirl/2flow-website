@@ -221,6 +221,48 @@
       .hero-btns { flex-direction: column; }
       .hero-btns a { text-align: center; }
     }
+
+    /* ── CONTACT FORM ── */
+    .contact-form-section { background: var(--bg-light); padding: 96px 40px; }
+    .contact-form-inner { max-width: 1080px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1.6fr; gap: 64px; align-items: start; }
+    .form-intro .section-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; color: var(--brand-primary); margin-bottom: 12px; }
+    .form-intro h2 { margin-top: 8px; margin-bottom: 16px; }
+    .form-intro h2 em { font-style: normal; color: var(--brand-primary); }
+    .form-intro p { font-size: 16px; color: var(--text-secondary); line-height: 1.75; margin-bottom: 0; }
+    .form-intro .form-reassure { margin-top: 28px; display: flex; flex-direction: column; gap: 10px; }
+    .form-reassure-item { display: flex; align-items: center; gap: 10px; font-size: 14px; color: var(--text-secondary); }
+    .form-reassure-item svg { color: var(--brand-primary); flex-shrink: 0; }
+
+    .cf { display: flex; flex-direction: column; gap: 0; }
+    .cf-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px; }
+    .cf-group { display: flex; flex-direction: column; gap: 6px; margin-bottom: 16px; }
+    .cf-group label { font-size: 13px; font-weight: 600; color: var(--text-primary); }
+    .cf-group input, .cf-group textarea {
+      padding: 11px 14px; border: 1.5px solid var(--border-light);
+      border-radius: 8px; font-size: 15px; font-family: inherit;
+      color: var(--text-primary); background: var(--bg-white);
+      transition: border-color 0.15s; outline: none; width: 100%; box-sizing: border-box;
+    }
+    .cf-group input:focus, .cf-group textarea:focus { border-color: var(--brand-primary); }
+    .cf-group input.error, .cf-group textarea.error { border-color: #e53e3e; }
+    .cf-group textarea { resize: vertical; min-height: 120px; line-height: 1.6; }
+    .cf-submit { margin-top: 8px; }
+    .cf-success {
+      display: none; background: rgba(92,184,0,0.08);
+      border: 1.5px solid rgba(92,184,0,0.3); border-radius: 12px;
+      padding: 28px 24px; text-align: center;
+    }
+    .cf-success svg { color: var(--brand-primary); margin-bottom: 12px; }
+    .cf-success h3 { font-size: 18px; font-weight: 700; color: var(--text-primary); margin-bottom: 8px; }
+    .cf-success p { font-size: 14px; color: var(--text-secondary); line-height: 1.65; margin: 0; }
+
+    @media (max-width: 900px) {
+      .contact-form-inner { grid-template-columns: 1fr; gap: 40px; }
+    }
+    @media (max-width: 600px) {
+      .cf-row { grid-template-columns: 1fr; gap: 0; }
+      .contact-form-section { padding: 64px 20px; }
+    }
   </style>
   <link rel="stylesheet" href="/css/site.css">
 <!-- Google tag (gtag.js) -->
@@ -409,6 +451,124 @@
   </div>
 </section>
 
+
+
+<!-- CONTACT FORM -->
+<section class="contact-form-section" aria-labelledby="contact-form-heading">
+  <div class="contact-form-inner">
+
+    <div class="form-intro">
+      <p class="section-label">Send a message</p>
+      <h2 id="contact-form-heading">Not sure where<br>to start? <em>Just ask.</em></h2>
+      <p>Fill in the form and we'll get back to you within one working day.</p>
+      <div class="form-reassure">
+        <div class="form-reassure-item">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          Reply within one working day
+        </div>
+        <div class="form-reassure-item">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          No hard sell — just honest answers
+        </div>
+        <div class="form-reassure-item">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          Or call us: <a href="tel:1800532532" style="color:var(--brand-primary);margin-left:4px">1800 532 532</a>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <form id="contactForm" class="cf" novalidate>
+        <div class="cf-row">
+          <div class="cf-group">
+            <label for="c-name">Name *</label>
+            <input type="text" id="c-name" name="name" required placeholder="Your name" autocomplete="name">
+          </div>
+          <div class="cf-group">
+            <label for="c-email">Email *</label>
+            <input type="email" id="c-email" name="email" required placeholder="you@company.ie" autocomplete="email">
+          </div>
+        </div>
+        <div class="cf-row">
+          <div class="cf-group">
+            <label for="c-phone">Phone</label>
+            <input type="tel" id="c-phone" name="phone" placeholder="+353 1 xxx xxxx" autocomplete="tel">
+          </div>
+          <div class="cf-group">
+            <label for="c-company">Company</label>
+            <input type="text" id="c-company" name="company" placeholder="Your company" autocomplete="organization">
+          </div>
+        </div>
+        <div class="cf-group">
+          <label for="c-message">Message *</label>
+          <textarea id="c-message" name="message" required placeholder="How can we help?" rows="5"></textarea>
+        </div>
+        <div class="cf-submit">
+          <button type="submit" id="cfBtn" class="btn-primary">Send message &#x2192;</button>
+        </div>
+      </form>
+
+      <div id="cfSuccess" class="cf-success" aria-live="polite">
+        <svg width="40" height="40" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="20 6 9 17 4 12"/></svg>
+        <h3>Message sent</h3>
+        <p>Thanks for getting in touch. We'll reply within one working day.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<script>
+(function () {
+  var form    = document.getElementById('contactForm');
+  var success = document.getElementById('cfSuccess');
+  var btn     = document.getElementById('cfBtn');
+  if (!form) return;
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var name    = (form.querySelector('#c-name')    || {}).value || '';
+    var email   = (form.querySelector('#c-email')   || {}).value || '';
+    var phone   = (form.querySelector('#c-phone')   || {}).value || '';
+    var company = (form.querySelector('#c-company') || {}).value || '';
+    var message = (form.querySelector('#c-message') || {}).value || '';
+
+    // Validation
+    var valid = true;
+    [['#c-name', name], ['#c-email', email], ['#c-message', message]].forEach(function (pair) {
+      var el = form.querySelector(pair[0]);
+      if (!pair[1].trim()) { el.classList.add('error'); valid = false; }
+      else el.classList.remove('error');
+    });
+    if (!valid) return;
+
+    btn.disabled    = true;
+    btn.textContent = 'Sending…';
+
+    fetch('/api/notify', {
+      method:  'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ type: 'contact', name: name, email: email, phone: phone, company: company, message: message })
+    })
+    .then(function (r) {
+      if (r.ok) {
+        form.style.display = 'none';
+        success.style.display = 'block';
+        if (typeof gtag !== 'undefined') {
+          gtag('event', 'contact_form', { event_category: 'conversion', event_label: company || name });
+        }
+      } else {
+        throw new Error('Server error');
+      }
+    })
+    .catch(function () {
+      btn.disabled    = false;
+      btn.textContent = 'Send message →';
+      alert('Something went wrong. Please email CustomerService@2flow.ie or call 1800 532 532.');
+    });
+  });
+})();
+</script>
 
 <!-- FINAL CTA -->
 <section class="cta-section" aria-labelledby="cta-heading">
