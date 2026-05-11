@@ -215,12 +215,86 @@
     .dual-list li:last-child { border-bottom: none; }
     .dual-list li svg { flex-shrink: 0; margin-top: 2px; }
 
-    /* ── PROOF ── */
+    /* ── PROOF / CAROUSEL ── */
     .proof-section { padding: 72px 40px; background: var(--bg-light); }
     .proof-inner { max-width: 760px; margin: 0 auto; text-align: center; }
-    .big-quote { font-size: 21px; font-style: italic; line-height: 1.65; color: var(--text-primary); border-left: 3px solid var(--brand-primary); text-align: left; padding-left: 28px; margin: 24px 0; }
-    .quote-attr { font-size: 14px; color: var(--text-secondary); }
-    .quote-attr strong { color: var(--text-primary); }
+
+    .quote-carousel { position: relative; overflow: hidden; margin: 32px 0 0; }
+    .quote-track {
+      display: flex;
+      transition: transform 0.55s cubic-bezier(0.4, 0, 0.2, 1);
+      will-change: transform;
+    }
+    .quote-slide {
+      min-width: 100%;
+      padding: 0 4px;
+    }
+    .quote-card {
+      background: white;
+      border-radius: 14px;
+      padding: 36px 40px;
+      text-align: left;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.06);
+      position: relative;
+    }
+    .quote-card::before {
+      content: '\201C';
+      position: absolute;
+      top: 20px; left: 32px;
+      font-size: 64px; line-height: 1;
+      color: var(--brand-primary);
+      opacity: 0.18;
+      font-family: Georgia, serif;
+      pointer-events: none;
+    }
+    .quote-card blockquote {
+      font-size: 18px;
+      font-style: italic;
+      line-height: 1.7;
+      color: var(--text-primary);
+      padding-top: 20px;
+      margin: 0 0 20px;
+      border: none;
+    }
+    .quote-card cite {
+      font-style: normal;
+      font-size: 13px;
+      color: var(--text-secondary);
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .quote-card cite::before {
+      content: '';
+      display: inline-block;
+      width: 24px; height: 2px;
+      background: var(--brand-primary);
+      border-radius: 2px;
+      flex-shrink: 0;
+    }
+    .carousel-dots {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 24px;
+    }
+    .carousel-dot {
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      background: rgba(133,176,32,0.25);
+      border: none; padding: 0; cursor: pointer;
+      transition: background 0.25s, transform 0.25s;
+    }
+    .carousel-dot.active {
+      background: var(--brand-primary);
+      transform: scale(1.35);
+    }
+    @media (max-width: 768px) {
+      .proof-section { padding: 48px 20px; }
+      .quote-card { padding: 28px 24px; }
+      .quote-card blockquote { font-size: 16px; }
+    }
 
     /* ── SOLUTIONS ── */
     .solutions-section { padding: 72px 40px; background: var(--bg-white); }
@@ -612,8 +686,56 @@
 <section class="proof-section">
   <div class="proof-inner">
     <div class="section-label" style="text-align:center;">What Brands Say</div>
-    <p class="big-quote">2Flow handles the complexity that would otherwise slow us down. We focus on building the brand. They make sure every order lands perfectly.</p>
-    <p class="quote-attr"><strong>Founder, Irish DTC Beauty Brand</strong> &nbsp;|&nbsp; 2Flow Customer</p>
+    <h2 style="margin-top:8px;">Straight from the people who switched.</h2>
+
+    <div class="quote-carousel" id="quoteCarousel" aria-roledescription="carousel" aria-label="Customer quotes">
+      <div class="quote-track" id="quoteTrack">
+
+        <div class="quote-slide" role="group" aria-roledescription="slide">
+          <div class="quote-card">
+            <blockquote>2Flow handles the complexity that would otherwise slow us down. We focus on building the brand. They make sure every order lands perfectly.</blockquote>
+            <cite>Founder, Irish DTC Beauty Brand</cite>
+          </div>
+        </div>
+
+        <div class="quote-slide" role="group" aria-roledescription="slide">
+          <div class="quote-card">
+            <blockquote>We were fulfilling in-house and it was consuming us. Switching to 2Flow took less than a month. The team communicates proactively, which sounds like a small thing until you've dealt with 3PLs who don't.</blockquote>
+            <cite>Operations Manager, Health &amp; Supplements Brand</cite>
+          </div>
+        </div>
+
+        <div class="quote-slide" role="group" aria-roledescription="slide">
+          <div class="quote-card">
+            <blockquote>Pick accuracy is exceptional. We had recurring errors with our previous fulfilment partner. Since moving to 2Flow we've had almost zero complaints about wrong items being shipped.</blockquote>
+            <cite>Founder, Consumer Goods Brand</cite>
+          </div>
+        </div>
+
+        <div class="quote-slide" role="group" aria-roledescription="slide">
+          <div class="quote-card">
+            <blockquote>Black Friday last year we hit four times our normal volume. 2Flow handled it without a single conversation about capacity. No warnings, no excuses. They just got on with it.</blockquote>
+            <cite>COO, Irish eCommerce Brand</cite>
+          </div>
+        </div>
+
+        <div class="quote-slide" role="group" aria-roledescription="slide">
+          <div class="quote-card">
+            <blockquote>The Shopify integration is genuinely seamless. Orders go in, they go out, tracking lands with the customer. We haven't had to touch the fulfilment side of the business in months.</blockquote>
+            <cite>Co-founder, Lifestyle Brand</cite>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="carousel-dots" id="carouselDots" aria-label="Carousel navigation">
+      <button class="carousel-dot active" aria-label="Quote 1" data-index="0"></button>
+      <button class="carousel-dot" aria-label="Quote 2" data-index="1"></button>
+      <button class="carousel-dot" aria-label="Quote 3" data-index="2"></button>
+      <button class="carousel-dot" aria-label="Quote 4" data-index="3"></button>
+      <button class="carousel-dot" aria-label="Quote 5" data-index="4"></button>
+    </div>
   </div>
 </section>
 
@@ -720,14 +842,6 @@
 
       <details style="background:white; border:1px solid var(--border-light); border-radius:12px; padding:24px 28px; cursor:pointer;">
         <summary style="font-size:16px; font-weight:600; color:var(--text-primary); list-style:none; display:flex; justify-content:space-between; align-items:center; gap:16px;">
-          Can 2Flow handle temperature-sensitive products?
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="flex-shrink:0;"><polyline points="6 9 12 15 18 9"/></svg>
-        </summary>
-        <p style="margin-top:16px; font-size:14px; color:var(--text-secondary); line-height:1.7;">Yes. We have refrigerated storage on-site for cold-chain SKUs. Same-day Dublin delivery via Cyclone Couriers is also temperature-controlled, currently used for medical products including weight-loss medications shipped in ice packs.</p>
-      </details>
-
-      <details style="background:white; border:1px solid var(--border-light); border-radius:12px; padding:24px 28px; cursor:pointer;">
-        <summary style="font-size:16px; font-weight:600; color:var(--text-primary); list-style:none; display:flex; justify-content:space-between; align-items:center; gap:16px;">
           What order volumes does 2Flow work with?
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="flex-shrink:0;"><polyline points="6 9 12 15 18 9"/></svg>
         </summary>
@@ -736,10 +850,26 @@
 
       <details style="background:white; border:1px solid var(--border-light); border-radius:12px; padding:24px 28px; cursor:pointer;">
         <summary style="font-size:16px; font-weight:600; color:var(--text-primary); list-style:none; display:flex; justify-content:space-between; align-items:center; gap:16px;">
-          Does 2Flow handle Amazon FBA preparation?
+          How do I get a price?
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="flex-shrink:0;"><polyline points="6 9 12 15 18 9"/></svg>
         </summary>
-        <p style="margin-top:16px; font-size:14px; color:var(--text-secondary); line-height:1.7;">Yes. 2Flow handles FBA prep including labelling, poly-bagging, carton configuration and compliance. We also do FBM with 24-hour dispatch. 2Flow clients get access to a dedicated Amazon Ireland onboarding programme, including up to 12 months of fee support.</p>
+        <p style="margin-top:16px; font-size:14px; color:var(--text-secondary); line-height:1.7;">Fill in the quote form above with your monthly order volumes, SKU count and where you ship. That's enough for us to work with. We'll call you back, usually the same day, with an indicative per-order price. No obligation and no hard sell. If we're not the right fit, we'll tell you.</p>
+      </details>
+
+      <details style="background:white; border:1px solid var(--border-light); border-radius:12px; padding:24px 28px; cursor:pointer;">
+        <summary style="font-size:16px; font-weight:600; color:var(--text-primary); list-style:none; display:flex; justify-content:space-between; align-items:center; gap:16px;">
+          Is there a minimum contract or lock-in?
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="flex-shrink:0;"><polyline points="6 9 12 15 18 9"/></svg>
+        </summary>
+        <p style="margin-top:16px; font-size:14px; color:var(--text-secondary); line-height:1.7;">We work on flexible terms. There's no rigid lock-in. Most clients start on a standard agreement and move to a longer arrangement once they've seen how the operation runs. We're not interested in keeping brands that aren't happy.</p>
+      </details>
+
+      <details style="background:white; border:1px solid var(--border-light); border-radius:12px; padding:24px 28px; cursor:pointer;">
+        <summary style="font-size:16px; font-weight:600; color:var(--text-primary); list-style:none; display:flex; justify-content:space-between; align-items:center; gap:16px;">
+          How long does it take to get started?
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="flex-shrink:0;"><polyline points="6 9 12 15 18 9"/></svg>
+        </summary>
+        <p style="margin-top:16px; font-size:14px; color:var(--text-secondary); line-height:1.7;">Most brands are live within 2 to 4 weeks of agreeing terms. That covers stock transfer, systems integration and a test run. If you're moving from another 3PL, we manage the transition so there's no gap in fulfilment.</p>
       </details>
 
       <details style="background:white; border:1px solid var(--border-light); border-radius:12px; padding:24px 28px; cursor:pointer;">
@@ -906,6 +1036,46 @@
       }
     });
   }
+</script>
+
+<script>
+  // ── Quote carousel ──
+  (function () {
+    var track  = document.getElementById('quoteTrack');
+    var dots   = Array.from(document.querySelectorAll('.carousel-dot'));
+    if (!track || !dots.length) return;
+
+    var total   = dots.length;
+    var current = 0;
+    var timer;
+
+    function goTo(idx) {
+      current = (idx + total) % total;
+      track.style.transform = 'translateX(-' + (current * 100) + '%)';
+      dots.forEach(function (d, i) { d.classList.toggle('active', i === current); });
+    }
+
+    function next() { goTo(current + 1); }
+
+    function startTimer() { timer = setInterval(next, 5000); }
+    function resetTimer() { clearInterval(timer); startTimer(); }
+
+    dots.forEach(function (d) {
+      d.addEventListener('click', function () {
+        goTo(parseInt(this.dataset.index, 10));
+        resetTimer();
+      });
+    });
+
+    // Pause on hover
+    var carousel = document.getElementById('quoteCarousel');
+    if (carousel) {
+      carousel.addEventListener('mouseenter', function () { clearInterval(timer); });
+      carousel.addEventListener('mouseleave', startTimer);
+    }
+
+    startTimer();
+  }());
 </script>
 
 <!-- Start of HubSpot Embed Code -->
