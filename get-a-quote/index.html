@@ -747,8 +747,8 @@
         errEl.style.cssText = 'color:#e53e3e;font-size:13px;margin-top:10px;line-height:1.5;';
         btn.parentNode.insertBefore(errEl, btn.nextSibling);
       }
-      errEl.textContent = 'Submission error: ' + err.message
-        + ' - please email CustomerService@2flow.ie or call 1800 532 532.';
+      errEl.innerHTML = 'Submission error: ' + err.message
+        + ' - please visit our <a href="/contact/" style="color:#e53e3e;text-decoration:underline;">contact page</a> or call 1800 532 532.';
     });
   });
 })();
