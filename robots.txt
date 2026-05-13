@@ -35,6 +35,14 @@ Allow: /
 
 # LLMs.txt — machine-readable business summary for AI systems
 # https://2flow.ie/llms.txt
+# https://2flow.ie/llms-full.txt
+
+# Block training crawlers (scraping without attribution or compensation)
+User-agent: CCBot
+Disallow: /
+
+User-agent: ByteSpider
+Disallow: /
 
 # Block admin or private paths if added in future
 # Disallow: /admin/
