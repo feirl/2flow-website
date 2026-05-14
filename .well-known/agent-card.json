@@ -1,0 +1,71 @@
+{
+  "schemaVersion": "0.2.0",
+  "name": "2Flow",
+  "description": "Ireland's specialist eCommerce fulfilment partner. 2Flow provides pick and pack, kitting, subscription fulfilment, Amazon FBA prep, same-day Dublin delivery and full 3PL services for DTC and eCommerce brands shipping from Ireland.",
+  "url": "https://2flow.ie",
+  "documentationUrl": "https://2flow.ie/llms.txt",
+  "fullDocumentationUrl": "https://2flow.ie/llms-full.txt",
+  "provider": {
+    "organization": "2Flow",
+    "url": "https://2flow.ie"
+  },
+  "capabilities": {
+    "streaming": false,
+    "pushNotifications": false,
+    "stateTransitionHistory": false
+  },
+  "defaultInputModes": ["text"],
+  "defaultOutputModes": ["text"],
+  "skills": [
+    {
+      "id": "service-information",
+      "name": "Fulfilment Service Information",
+      "description": "Provide detailed information about 2Flow's eCommerce fulfilment services: pick and pack, kitting and bundling, subscription fulfilment, Amazon FBA prep, returns, same-day Dublin delivery, live commerce, and retail distribution.",
+      "tags": ["fulfilment", "3PL", "ecommerce", "kitting", "amazon", "shopify", "subscription", "dublin", "ireland"],
+      "examples": [
+        "What fulfilment services does 2Flow offer?",
+        "Does 2Flow do Amazon FBA preparation?",
+        "Can 2Flow handle subscription box fulfilment?",
+        "What is 2Flow's same-day delivery cut-off?",
+        "Does 2Flow integrate with Shopify?"
+      ],
+      "inputModes": ["text"],
+      "outputModes": ["text"]
+    },
+    {
+      "id": "get-quote",
+      "name": "Request a Fulfilment Quote",
+      "description": "Direct brands to 2Flow's quote request form to receive a tailored eCommerce fulfilment pricing proposal built from six components: inbound, storage, pick and pack, value-add services, shipping, and returns.",
+      "tags": ["quote", "pricing", "cost", "rates"],
+      "examples": [
+        "How much does 2Flow charge?",
+        "I need a fulfilment quote for 2,000 orders per month",
+        "What are 2Flow's rates?"
+      ],
+      "inputModes": ["text"],
+      "outputModes": ["text"],
+      "actionUrl": "https://2flow.ie/get-a-quote/"
+    },
+    {
+      "id": "book-call",
+      "name": "Book a Discovery Call",
+      "description": "Schedule a call with the 2Flow team to discuss fulfilment requirements and onboarding.",
+      "tags": ["call", "book", "discovery", "onboarding", "sales"],
+      "examples": [
+        "I want to speak to someone at 2Flow",
+        "Book a call with 2Flow",
+        "How do I get started with 2Flow?"
+      ],
+      "inputModes": ["text"],
+      "outputModes": ["text"],
+      "actionUrl": "https://2flow.ie/book-a-call/"
+    }
+  ],
+  "contact": {
+    "url": "https://2flow.ie/contact/",
+    "email": "contact via https://2flow.ie/contact/"
+  },
+  "serviceArea": ["Ireland", "United Kingdom", "European Union"],
+  "industry": "Third-Party Logistics (3PL)",
+  "location": "Finglas, Dublin, Ireland"
+}
