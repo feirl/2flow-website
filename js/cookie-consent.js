@@ -1,5 +1,5 @@
 /* ============================================================
-   2Flow, GDPR Cookie Consent
+   2Flow — GDPR Cookie Consent + Google Consent Mode v2
    Self-contained. No external libraries. No global pollution
    except window.twoflowOpenCookieModal.
    ============================================================ */
@@ -8,7 +8,7 @@
   'use strict';
 
   var STORAGE_KEY = '2flow_consent';
-  var VERSION     = '1.0.0';
+  var VERSION     = '2.0.0'; // bumped: v2 adds Google Consent Mode signals
 
   /* ── Storage ───────────────────────────────────────────── */
 
@@ -18,7 +18,7 @@
       if (!raw) return null;
       var parsed = JSON.parse(raw);
       if (parsed && parsed.version === VERSION) return parsed;
-      // Schema mismatch: discard stored consent
+      // Version mismatch (e.g. upgrading from v1): discard and re-prompt
       localStorage.removeItem(STORAGE_KEY);
       return null;
     } catch (e) {
@@ -40,6 +40,20 @@
     return payload;
   }
 
+  /* ── Google Consent Mode v2 signals ────────────────────── */
+
+  function updateGoogleConsent(consent) {
+    if (typeof window.gtag !== 'function') return;
+    var analytics   = !!(consent && consent.analytics);
+    var advertising = !!(consent && consent.advertising);
+    window.gtag('consent', 'update', {
+      'analytics_storage':  analytics   ? 'granted' : 'denied',
+      'ad_storage':         advertising ? 'granted' : 'denied',
+      'ad_user_data':       advertising ? 'granted' : 'denied',
+      'ad_personalization': advertising ? 'granted' : 'denied'
+    });
+  }
+
   /* ── Script activation ────────────────────────────────── */
 
   function activateScripts(consent) {
@@ -54,7 +68,6 @@
       if (s.getAttribute('data-consent-activated') === 'true') continue;
 
       var next = document.createElement('script');
-      // Copy all attributes except type
       for (var a = 0; a < s.attributes.length; a++) {
         var attr = s.attributes[a];
         if (attr.name === 'type') continue;
@@ -64,7 +77,6 @@
       if (!s.src && s.textContent) {
         next.text = s.textContent;
       }
-      // Mark original so we don't re-activate it
       s.setAttribute('data-consent-activated', 'true');
       s.parentNode.insertBefore(next, s.nextSibling);
     }
@@ -72,28 +84,17 @@
 
   /* ── UI controls ──────────────────────────────────────── */
 
-  function getEls() {
-    return {
-      banner:   document.getElementById('cc-banner'),
-      modal:    document.getElementById('cc-modal'),
-      toggleA:  document.getElementById('cc-toggle-analytics'),
-      toggleB:  document.getElementById('cc-toggle-advertising')
-    };
-  }
-
   function showBanner()  { var b = document.getElementById('cc-banner'); if (b) b.style.display = 'flex'; }
   function hideBanner()  { var b = document.getElementById('cc-banner'); if (b) b.style.display = 'none'; }
 
   function openModal() {
     var m = document.getElementById('cc-modal');
     if (!m) return;
-    // Pre-populate toggles from saved state (or defaults if first visit)
     var saved = loadConsent();
     var a = document.getElementById('cc-toggle-analytics');
     var b = document.getElementById('cc-toggle-advertising');
     if (a) a.checked = saved ? !!saved.analytics   : false;
     if (b) b.checked = saved ? !!saved.advertising : false;
-
     m.style.display = 'flex';
     document.body.style.overflow = 'hidden';
     m.setAttribute('aria-hidden', 'false');
@@ -109,7 +110,16 @@
 
   function acceptAll() {
     var consent = saveConsent(true, true);
+    updateGoogleConsent(consent);
     activateScripts(consent);
+    hideBanner();
+    closeModal();
+  }
+
+  function rejectAll() {
+    var consent = saveConsent(false, false);
+    updateGoogleConsent(consent);
+    // No scripts to activate — don't call activateScripts
     hideBanner();
     closeModal();
   }
@@ -118,6 +128,7 @@
     var a = document.getElementById('cc-toggle-analytics');
     var b = document.getElementById('cc-toggle-advertising');
     var consent = saveConsent(a && a.checked, b && b.checked);
+    updateGoogleConsent(consent);
     activateScripts(consent);
     hideBanner();
     closeModal();
@@ -131,17 +142,22 @@
       acceptBtns[i].addEventListener('click', acceptAll);
     }
 
+    var rejectBtns = document.querySelectorAll('[data-cc-action="reject-all"]');
+    for (var j = 0; j < rejectBtns.length; j++) {
+      rejectBtns[j].addEventListener('click', rejectAll);
+    }
+
     var manageBtns = document.querySelectorAll('[data-cc-action="manage"]');
-    for (var j = 0; j < manageBtns.length; j++) {
-      manageBtns[j].addEventListener('click', function (ev) {
+    for (var k = 0; k < manageBtns.length; k++) {
+      manageBtns[k].addEventListener('click', function (ev) {
         ev.preventDefault();
         openModal();
       });
     }
 
     var saveBtns = document.querySelectorAll('[data-cc-action="save"]');
-    for (var k = 0; k < saveBtns.length; k++) {
-      saveBtns[k].addEventListener('click', savePreferences);
+    for (var l = 0; l < saveBtns.length; l++) {
+      saveBtns[l].addEventListener('click', savePreferences);
     }
 
     var closeBtns = document.querySelectorAll('[data-cc-action="close"]');
@@ -149,7 +165,6 @@
       closeBtns[m].addEventListener('click', closeModal);
     }
 
-    // Click-outside to close
     var modal = document.getElementById('cc-modal');
     if (modal) {
       modal.addEventListener('click', function (ev) {
@@ -157,7 +172,6 @@
       });
     }
 
-    // Escape key
     document.addEventListener('keydown', function (ev) {
       if (ev.key === 'Escape' || ev.keyCode === 27) {
         var m = document.getElementById('cc-modal');
@@ -171,28 +185,28 @@
   function init() {
     var consent = loadConsent();
     if (consent) {
+      // Returning visitor: restore consent signals immediately
+      updateGoogleConsent(consent);
       activateScripts(consent);
       hideBanner();
     } else {
+      // First visit: banner stays visible, defaults remain denied
       showBanner();
     }
     bind();
   }
 
-  // Expose modal opener globally for footer "Change cookie preferences" link
   window.twoflowOpenCookieModal = openModal;
 
-  // Footer is injected dynamically, wait for DOM + give footer.js a tick
   function boot() {
-    // If banner isn't in DOM yet, poll briefly for footer.js injection
     var tries = 0;
-    var max = 40; // ~2 seconds
+    var max = 40;
     (function waitForBanner() {
       if (document.getElementById('cc-banner')) {
         init();
         return;
       }
-      if (++tries >= max) return; // give up silently
+      if (++tries >= max) return;
       setTimeout(waitForBanner, 50);
     })();
   }
