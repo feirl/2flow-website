@@ -275,7 +275,29 @@
     'ad_personalization': 'denied',
     'wait_for_update':    500
   });
+  gtag('set', 'url_passthrough', true);
+  gtag('set', 'ads_data_redaction', true);
 </script>
+<!-- Fast consent restore: reads localStorage before GT tag fires.
+     Returning visitors who already accepted get correct consent state
+     immediately — no dependency on footer.js or cookie-consent.js timing. -->
+<script>
+  (function () {
+    try {
+      var stored = localStorage.getItem('2flow_consent');
+      if (!stored) return;
+      var c = JSON.parse(stored);
+      if (!c || c.version !== '2.0.0') return;
+      gtag('consent', 'update', {
+        'analytics_storage':  c.analytics   ? 'granted' : 'denied',
+        'ad_storage':         c.advertising ? 'granted' : 'denied',
+        'ad_user_data':       c.advertising ? 'granted' : 'denied',
+        'ad_personalization': c.advertising ? 'granted' : 'denied'
+      });
+    } catch (e) {}
+  })();
+</script>
+
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=GT-MJM434ZF"></script>
 <script>
