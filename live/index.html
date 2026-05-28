@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2Flow Live</title>
+  <link rel="icon" href="/favicon.png" type="image/png">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body {
+      height: 100%;
+      background: #0d0d0d;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      color: #fff;
+    }
+    .wrap {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 24px 16px;
+    }
+    .logo {
+      margin-bottom: 24px;
+    }
+    .logo img {
+      height: 32px;
+      filter: brightness(0) invert(1);
+    }
+    .live-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      background: #e53935;
+      color: #fff;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 4px 12px;
+      border-radius: 99px;
+      margin-bottom: 18px;
+    }
+    .live-badge::before {
+      content: '';
+      width: 7px;
+      height: 7px;
+      background: #fff;
+      border-radius: 50%;
+      animation: pulse 1.4s ease-in-out infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.3; }
+    }
+    .player-wrap {
+      width: 100%;
+      max-width: 960px;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 8px 48px rgba(0,0,0,0.6);
+    }
+    .player-inner {
+      padding: 56.25% 0 0 0;
+      position: relative;
+    }
+    .player-inner iframe {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      border: 0;
+    }
+    .footer {
+      margin-top: 20px;
+      font-size: 12px;
+      color: rgba(255,255,255,0.35);
+    }
+    .footer a {
+      color: rgba(255,255,255,0.45);
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="logo">
+      <img src="/Images/2flow-logo.png" alt="2Flow" onerror="this.style.display='none'">
+    </div>
+    <div class="live-badge">Live</div>
+    <div class="player-wrap">
+      <div class="player-inner">
+        <iframe src="https://player.restream.io/?token=68f8b892b8b54d0aba692176bbf73703"
+          allow="autoplay" allowfullscreen frameborder="0"></iframe>
+      </div>
+    </div>
+    <p class="footer"><a href="https://2flow.ie">2flow.ie</a></p>
+  </div>
+</body>
+</html>
