@@ -24,7 +24,7 @@ module.exports = async function handler(req, res) {
       headers: { "Authorization": "Bearer " + key, "Content-Type": "application/json" },
       body: JSON.stringify({
         from: "2Flow Website <noreply@updates.2flow.ie>",
-        to:   ["brendan.hughes@2flow.ie", "eve.martin@2flow.ie", "joe.pleass@cyclone.ie"],
+        to:   ["brendan.hughes@2flow.ie", "eve.martin@2flow.ie", "joe.pleass@cyclone.ie", "steven.oconnell@2flow.ie"],
         reply_to: d.email || undefined,
         subject,
         html,
