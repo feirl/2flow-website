@@ -18,14 +18,13 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
       padding: 24px 16px;
     }
     .logo {
-      margin-bottom: 24px;
+      margin-bottom: 20px;
     }
     .logo img {
-      height: 32px;
+      height: 28px;
       filter: brightness(0) invert(1);
     }
     .live-badge {
@@ -54,9 +53,16 @@
       0%, 100% { opacity: 1; }
       50% { opacity: 0.3; }
     }
-    .player-wrap {
+    .stage {
       width: 100%;
-      max-width: 960px;
+      max-width: 1200px;
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+    }
+    .player-wrap {
+      flex: 1 1 0;
+      min-width: 0;
       border-radius: 8px;
       overflow: hidden;
       box-shadow: 0 8px 48px rgba(0,0,0,0.6);
@@ -71,6 +77,20 @@
       width: 100%; height: 100%;
       border: 0;
     }
+    .chat-wrap {
+      width: 320px;
+      flex-shrink: 0;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 8px 48px rgba(0,0,0,0.6);
+      background: #1a1a1a;
+    }
+    .chat-wrap iframe {
+      display: block;
+      width: 100%;
+      height: 520px;
+      border: 0;
+    }
     .footer {
       margin-top: 20px;
       font-size: 12px;
@@ -80,6 +100,11 @@
       color: rgba(255,255,255,0.45);
       text-decoration: none;
     }
+    @media (max-width: 900px) {
+      .stage { flex-direction: column; }
+      .chat-wrap { width: 100%; }
+      .chat-wrap iframe { height: 400px; }
+    }
   </style>
 </head>
 <body>
@@ -88,10 +113,16 @@
       <img src="/Images/2flow-logo.png" alt="2Flow" onerror="this.style.display='none'">
     </div>
     <div class="live-badge">Live</div>
-    <div class="player-wrap">
-      <div class="player-inner">
-        <iframe src="https://player.restream.io/?token=68f8b892b8b54d0aba692176bbf73703"
-          allow="autoplay" allowfullscreen frameborder="0"></iframe>
+    <div class="stage">
+      <div class="player-wrap">
+        <div class="player-inner">
+          <iframe src="https://player.restream.io/?token=f5d3ccf0a6bd4cc3992c773793a95ea1"
+            allow="autoplay" allowfullscreen frameborder="0"></iframe>
+        </div>
+      </div>
+      <div class="chat-wrap">
+        <iframe src="https://chat.restream.io/embed?token=df99ea46-44c8-49ad-aff9-a3a406c09b7a"
+          allowfullscreen></iframe>
       </div>
     </div>
     <p class="footer"><a href="https://2flow.ie">2flow.ie</a></p>
