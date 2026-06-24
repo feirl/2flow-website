@@ -126,6 +126,12 @@
       letter-spacing: 0.1em; color: var(--text-tertiary);
       margin-bottom: 20px;
     }
+    .story-logo-link {
+      display: inline-block; margin-bottom: 16px;
+      transition: opacity 0.15s ease;
+    }
+    .story-logo-link:hover { opacity: 0.7; }
+    .story-logo { display: block; height: 48px; width: auto; }
     .story-heading {
       font-size: clamp(22px, 2.4vw, 28px);
       font-weight: 700;
@@ -177,8 +183,11 @@
       font-size: 13px; font-weight: 700; color: var(--brand-primary);
       flex-shrink: 0;
     }
-    .story-quote-role { font-size: 11px; font-weight: 700; color: rgba(255,255,255,0.4); text-transform: uppercase; letter-spacing: 0.07em; }
+    .story-quote-name { font-size: 14px; font-weight: 700; color: #ffffff; line-height: 1.3; }
+    .story-quote-role { font-size: 11px; font-weight: 700; color: rgba(255,255,255,0.4); text-transform: uppercase; letter-spacing: 0.07em; margin-top: 2px; }
     .story-quote-brand { font-size: 11px; color: rgba(92,184,0,0.75); font-weight: 600; margin-top: 2px; }
+    .story-quote-brand a { color: inherit; text-decoration: none; }
+    .story-quote-brand a:hover { text-decoration: underline; }
 
     /* Outcome chip */
     .outcome-chip {
@@ -376,13 +385,16 @@
 
       <div class="story-text">
         <p class="story-tag">Story 01</p>
-        <p class="story-industry">Irish Health &amp; Wellness Brand &nbsp;·&nbsp; Founder</p>
+        <a href="https://probiotic.ie" target="_blank" rel="noopener" class="story-logo-link" aria-label="Visit Probiotic.ie (opens in a new tab)">
+          <img src="/Images/probiotic-ie-logo.png" alt="Probiotic.ie" class="story-logo" width="110" height="48" loading="lazy">
+        </a>
+        <p class="story-industry">Probiotic.ie &nbsp;·&nbsp; Health &amp; Supplements</p>
         <h2 class="story-heading" id="story1-heading">Other 3PLs said it wasn't possible.<br><em>2Flow made it work.</em></h2>
 
         <div class="story-acts">
           <div class="act">
             <p class="act-label">Before</p>
-            <p>The brand was scaling fast and needed a fulfilment partner who could handle a specific requirement: refrigerated storage for probiotic and supplement products. They went through the market. Most 3PLs either weren't set up for cold chain, or made it sound like a months-long undertaking to find out if they could accommodate it at all.</p>
+            <p>Probiotic.ie was scaling fast and needed a fulfilment partner who could handle a specific requirement: refrigerated storage for probiotic and supplement products. They went through the market. Most 3PLs either weren't set up for cold chain, or made it sound like a months-long undertaking to find out if they could accommodate it at all.</p>
           </div>
           <div class="act">
             <p class="act-label">The switch</p>
@@ -409,6 +421,14 @@
         </div>
         <div class="story-quote">
           <p class="story-quote-text">"I would never go backwards to packing boxes again. I'd recommend it to anyone selling physical goods."</p>
+          <div class="story-quote-meta">
+            <span class="story-quote-avatar" aria-hidden="true">DG</span>
+            <div>
+              <p class="story-quote-name">Darren Grant</p>
+              <p class="story-quote-role">Founder &amp; CEO</p>
+              <p class="story-quote-brand"><a href="https://probiotic.ie" target="_blank" rel="noopener">Probiotic.ie</a></p>
+            </div>
+          </div>
         </div>
       </div>
 
