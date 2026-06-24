@@ -188,6 +188,9 @@
     .story-quote-brand { font-size: 11px; color: rgba(92,184,0,0.75); font-weight: 600; margin-top: 2px; }
     .story-quote-brand a { color: inherit; text-decoration: none; }
     .story-quote-brand a:hover { text-decoration: underline; }
+    .story-quote-logo-link { display: inline-block; flex-shrink: 0; transition: opacity 0.15s ease; }
+    .story-quote-logo-link:hover { opacity: 0.7; }
+    .story-quote-logo { display: block; height: 38px; width: auto; filter: brightness(0) invert(1); }
 
     /* Outcome chip */
     .outcome-chip {
@@ -422,11 +425,12 @@
         <div class="story-quote">
           <p class="story-quote-text">"I would never go backwards to packing boxes again. I'd recommend it to anyone selling physical goods."</p>
           <div class="story-quote-meta">
-            <span class="story-quote-avatar" aria-hidden="true">DG</span>
+            <a href="https://probiotic.ie" target="_blank" rel="noopener" class="story-quote-logo-link" aria-label="Visit Probiotic.ie (opens in a new tab)">
+              <img src="/Images/probiotic-ie-logo.png" alt="Probiotic.ie" class="story-quote-logo" width="87" height="38" loading="lazy">
+            </a>
             <div>
               <p class="story-quote-name">Darren Grant</p>
               <p class="story-quote-role">Founder &amp; CEO</p>
-              <p class="story-quote-brand"><a href="https://probiotic.ie" target="_blank" rel="noopener">Probiotic.ie</a></p>
             </div>
           </div>
         </div>
