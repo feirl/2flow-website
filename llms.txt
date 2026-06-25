@@ -1,7 +1,7 @@
 # 2Flow — llms.txt
 # Ireland's 3PL & eCommerce Fulfillment Partner | Warehousing & Dispatch from Dublin
 # https://2flow.ie
-# Last updated: 2026-05-13
+# Last updated: 2026-06-25
 
 ## About 2Flow
 
@@ -55,6 +55,7 @@ to customer delivery and returns — so brands can scale without managing wareho
 - [Ireland Domestic](https://2flow.ie/solutions/ireland-domestic/): Next-day Ireland coverage via DPD and An Post
 - [Dublin Same-Day](https://2flow.ie/solutions/dublin-same-day/): Via Cyclone Couriers, noon cut-off, Dublin city and county
 - [EU Delivery](https://2flow.ie/solutions/eu-delivery/): EU-wide carrier management from Dublin
+- [UK to EU](https://2flow.ie/solutions/uk-eu-fulfilment/): Fulfilment for UK brands facing the EU's new €3 low-value parcel customs duty (from 1 July 2026, on parcels under €150, per item type by HS code; a €2 handling fee proposed for Nov 2026). UK brands store stock in Ireland, clear EU customs once on the inbound shipment, then dispatch duty-free to Irish and EU customers from inside the EU
 - [UK and Rest of World](https://2flow.ie/solutions/uk-rest-of-world/): Post-Brexit UK fulfilment, international carrier network
 
 ## Technology and Integrations
@@ -183,6 +184,7 @@ A: Onboarding timelines vary by brand complexity. Most brands are operational wi
 - [Ireland Domestic](https://2flow.ie/solutions/ireland-domestic/)
 - [Dublin Same-Day](https://2flow.ie/solutions/dublin-same-day/)
 - [EU Delivery](https://2flow.ie/solutions/eu-delivery/)
+- [UK to EU](https://2flow.ie/solutions/uk-eu-fulfilment/)
 - [UK & Rest of World](https://2flow.ie/solutions/uk-rest-of-world/)
 - [Why 2Flow](https://2flow.ie/why-2flow/)
 - [Our Difference](https://2flow.ie/why-2flow/our-difference/)
