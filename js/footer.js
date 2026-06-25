@@ -30,6 +30,7 @@
     { href: BASE + '/solutions/ireland-domestic/',        label: 'Ireland Domestic' },
     { href: BASE + '/solutions/dublin-same-day/',         label: 'Dublin Same-Day' },
     { href: BASE + '/solutions/eu-delivery/',             label: 'EU Delivery' },
+    { href: BASE + '/solutions/uk-eu-fulfilment/',        label: 'UK to EU' },
     { href: BASE + '/solutions/uk-rest-of-world/',        label: 'UK &amp; Rest of World' },
   ];
 

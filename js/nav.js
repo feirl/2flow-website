@@ -79,6 +79,7 @@
         { href: B + '/solutions/ireland-domestic/',   icon: 'mappin',  title: 'Ireland Domestic',       desc: 'Next-day island-wide from our Dublin hub' },
         { href: B + '/solutions/dublin-same-day/',    icon: 'sameday', title: 'Dublin Same-Day',        desc: 'Via Cyclone Couriers. Cut-off noon, delivered same afternoon' },
         { href: B + '/solutions/eu-delivery/',        icon: 'globe',   title: 'EU Delivery',            desc: 'Cross-border dispatch to all 27 EU countries, duty-paid options' },
+        { href: B + '/solutions/uk-eu-fulfilment/',   icon: 'globe',   title: 'UK to EU',               desc: 'Beat the new EU €3 parcel duty — ship from inside the EU' },
         { href: B + '/solutions/uk-rest-of-world/',   icon: 'globe',   title: 'UK &amp; Rest of World', desc: 'Post-Brexit UK fulfilment and international carriers' },
       ]
     }
@@ -106,6 +107,7 @@
         { href: B + '/solutions/ireland-domestic/',     icon: 'mappin',       title: 'Ireland Domestic',           desc: 'Next-day island-wide via DPD and An Post' },
         { href: B + '/solutions/dublin-same-day/',      icon: 'sameday',      title: 'Dublin Same-Day',            desc: 'Via Cyclone Couriers. Noon cut-off, same afternoon' },
         { href: B + '/solutions/eu-delivery/',          icon: 'globe',        title: 'EU Delivery',                desc: '27 destinations dispatched from Dublin' },
+        { href: B + '/solutions/uk-eu-fulfilment/',     icon: 'globe',        title: 'UK to EU',                   desc: 'Beat the new EU €3 parcel duty from Ireland' },
         { href: B + '/solutions/uk-rest-of-world/',     icon: 'globe',        title: 'UK &amp; Rest of World',     desc: 'Post-Brexit UK fulfilment, international carriers' },
       ]
     }
@@ -191,6 +193,7 @@
     '/solutions/ireland-domestic/',
     '/solutions/dublin-same-day/',
     '/solutions/eu-delivery/',
+    '/solutions/uk-eu-fulfilment/',
     '/solutions/uk-rest-of-world/'
   ];
   var inWhereWeDeliver = WHERE_WE_DELIVER_PATHS.some(function (p) { return path.indexOf(p) === 0; });
