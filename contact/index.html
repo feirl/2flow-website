@@ -390,8 +390,8 @@
         </div>
         <div class="cf-row">
           <div class="cf-group">
-            <label for="c-phone">Phone</label>
-            <input type="tel" id="c-phone" name="phone" placeholder="+353 1 xxx xxxx" autocomplete="tel">
+            <label for="c-phone">Phone *</label>
+            <input type="tel" id="c-phone" name="phone" placeholder="+353 1 xxx xxxx" autocomplete="tel" required>
           </div>
           <div class="cf-group">
             <label for="c-company">Company</label>
@@ -428,7 +428,7 @@
 
     // Validation
     var valid = true;
-    [['#c-name', name], ['#c-email', email], ['#c-message', message]].forEach(function (pair) {
+    [['#c-name', name], ['#c-email', email], ['#c-phone', phone], ['#c-message', message]].forEach(function (pair) {
       var el = form.querySelector(pair[0]);
       if (!pair[1].trim()) { el.classList.add('error'); valid = false; }
       else el.classList.remove('error');
