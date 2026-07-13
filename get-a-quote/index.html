@@ -261,6 +261,40 @@
       background-position: right 12px center;
       padding-right: 36px;
     }
+    /* ── Range sliders ── */
+    .slider-head { display: flex; align-items: baseline; justify-content: space-between; gap: 10px; }
+    .slider-val {
+      font-size: 15px; font-weight: 700; color: var(--brand-primary);
+      font-variant-numeric: tabular-nums; white-space: nowrap;
+    }
+    .form-slider {
+      -webkit-appearance: none; appearance: none;
+      width: 100%; height: 6px; border-radius: 99px;
+      background: #e4e7ec; outline: none; cursor: pointer;
+      margin: 12px 0 6px;
+    }
+    .form-slider::-webkit-slider-thumb {
+      -webkit-appearance: none; appearance: none;
+      width: 20px; height: 20px; border-radius: 50%;
+      background: var(--brand-primary); border: 3px solid #fff;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.25); cursor: pointer; margin-top: -7px;
+    }
+    .form-slider::-moz-range-thumb {
+      width: 20px; height: 20px; border-radius: 50%;
+      background: var(--brand-primary); border: 3px solid #fff;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.25); cursor: pointer;
+    }
+    .form-slider::-webkit-slider-runnable-track { height: 6px; border-radius: 99px; }
+    .form-slider::-moz-range-track { height: 6px; border-radius: 99px; }
+    .form-slider:focus-visible { box-shadow: 0 0 0 3px rgba(92,184,0,0.18); }
+    .slider-scale {
+      display: flex; justify-content: space-between;
+      font-size: 11px; color: var(--text-tertiary);
+    }
+    .slider-hint {
+      font-size: 12px; color: var(--text-tertiary);
+      line-height: 1.5; margin: -4px 0 16px;
+    }
     .form-textarea { resize: vertical; min-height: 90px; line-height: 1.6; }
 
     /* Checkbox group */
@@ -577,46 +611,42 @@
 
           <div class="form-row">
             <div class="form-group">
-              <label class="form-label" for="q-orders">Monthly orders <span class="req">*</span></label>
-              <select class="form-select" id="q-orders" name="monthly_order_volume" required>
-                <option value="" disabled selected>Select range</option>
-                <option value="Under 500">Under 500</option>
-                <option value="500 - 2,000">500 - 2,000</option>
-                <option value="2,000 - 5,000">2,000 - 5,000</option>
-                <option value="5,000 - 10,000">5,000 - 10,000</option>
-                <option value="10,000+">10,000+</option>
-              </select>
+              <div class="slider-head">
+                <label class="form-label" for="q-orders">Monthly orders <span class="req">*</span></label>
+                <output class="slider-val" id="q-orders-val" for="q-orders">500</output>
+              </div>
+              <input class="form-slider" type="range" id="q-orders" name="monthly_order_volume" min="0" max="10000" step="50" value="500">
+              <div class="slider-scale"><span>0</span><span>10,000+</span></div>
             </div>
             <div class="form-group">
-              <label class="form-label" for="q-skus">Number of SKUs <span class="req">*</span></label>
-              <select class="form-select" id="q-skus" name="sku_count" required>
-                <option value="" disabled selected>Select range</option>
-                <option value="1 - 10">1 - 10</option>
-                <option value="11 - 50">11 - 50</option>
-                <option value="50-100">50-100</option>
-                <option value="100-200">100-200</option>
-                <option value="200+">200+</option>
-              </select>
+              <div class="slider-head">
+                <label class="form-label" for="q-skus">Number of SKUs <span class="req">*</span></label>
+                <output class="slider-val" id="q-skus-val" for="q-skus">50</output>
+              </div>
+              <input class="form-slider" type="range" id="q-skus" name="sku_count" min="1" max="500" step="1" value="50">
+              <div class="slider-scale"><span>1</span><span>500+</span></div>
             </div>
           </div>
 
-          <div class="form-group">
-            <label class="form-label" for="q-pallets">Number of pallets (storage estimate) <span class="req">*</span></label>
-            <select class="form-select" id="q-pallets" name="pallets" required>
-              <option value="" disabled selected>Select range</option>
-              <option value="1 - 5">1 - 5</option>
-              <option value="5 - 10">6 - 10</option>
-              <option value="10 - 20">11 - 20</option>
-              <option value="20 - 40">21 - 40</option>
-              <option value="40+">41 - 50</option>
-              <option value="51-60">51 - 60</option>
-              <option value="61-70">61 - 70</option>
-              <option value="71-80">71 - 80</option>
-              <option value="81-90">81 - 90</option>
-              <option value="91-100">91 - 100</option>
-              <option value="100+">100+</option>
-            </select>
+          <div class="form-row">
+            <div class="form-group">
+              <div class="slider-head">
+                <label class="form-label" for="q-pallets">Pallets (storage estimate) <span class="req">*</span></label>
+                <output class="slider-val" id="q-pallets-val" for="q-pallets">10</output>
+              </div>
+              <input class="form-slider" type="range" id="q-pallets" name="pallets" min="1" max="100" step="1" value="10">
+              <div class="slider-scale"><span>1</span><span>100+</span></div>
+            </div>
+            <div class="form-group">
+              <div class="slider-head">
+                <label class="form-label" for="q-items">Avg. items per order <span class="req">*</span></label>
+                <output class="slider-val" id="q-items-val" for="q-items">3</output>
+              </div>
+              <input class="form-slider" type="range" id="q-items" name="avg_items_per_order" min="1" max="25" step="1" value="3">
+              <div class="slider-scale"><span>1</span><span>25+</span></div>
+            </div>
           </div>
+          <p class="slider-hint">Avg. items per order is how many individual items we pick and pack into a typical order (your average picks per parcel).</p>
 
           <div class="form-group">
             <label class="form-label" for="q-category">Product category <span class="req">*</span></label>
@@ -688,6 +718,25 @@
   var FORM_GUID  = 'c8e9218c-1704-49b6-bac5-9ae1fcc05a2e';
   var ENDPOINT   = 'https://api.hsforms.com/submissions/v3/integration/submit/' + PORTAL_ID + '/' + FORM_GUID;
 
+  // ── Range sliders: live readout + filled track ──
+  function sliderDisplay(el) {
+    var v = +el.value, max = +el.max;
+    return v.toLocaleString('en-US') + (v >= max ? '+' : '');
+  }
+  var SLIDERS = ['q-orders', 'q-skus', 'q-pallets', 'q-items'];
+  SLIDERS.forEach(function (id) {
+    var el = document.getElementById(id);
+    var out = document.getElementById(id + '-val');
+    if (!el) return;
+    function refresh() {
+      var pct = (el.value - el.min) / (el.max - el.min) * 100;
+      el.style.background = 'linear-gradient(90deg, var(--brand-primary) ' + pct + '%, #e4e7ec ' + pct + '%)';
+      if (out) out.textContent = sliderDisplay(el);
+    }
+    el.addEventListener('input', refresh);
+    refresh();
+  });
+
   form.addEventListener('submit', function (e) {
     e.preventDefault();
 
@@ -718,8 +767,15 @@
     var orders   = val('#q-orders');
     var skus     = val('#q-skus');
     var pallets  = val('#q-pallets');
+    var items    = val('#q-items');
     var category = val('#q-category');
     var timeline = val('#q-timeline');
+
+    // Display-formatted values for the internal notification email
+    var ordersD  = sliderDisplay(document.getElementById('q-orders'));
+    var skusD    = sliderDisplay(document.getElementById('q-skus'));
+    var palletsD = sliderDisplay(document.getElementById('q-pallets'));
+    var itemsD   = sliderDisplay(document.getElementById('q-items'));
 
     // Build the fields array — only submit confirmed standard HubSpot
     // contact properties. Custom quote fields will be added once custom
@@ -738,6 +794,7 @@
       { name: 'monthly_order_volume', value: orders },
       { name: 'sku_count',            value: skus },
       { name: 'number_of_pallets',    value: pallets },
+      { name: 'avg_items_per_order',  value: items },
       { name: 'product_category',     value: category },
       { name: 'fulfilment_timeline',  value: timeline }
     ];
@@ -771,7 +828,7 @@
               type: 'quote',
               firstname: firstname, lastname: lastname, company: company,
               website: website, email: email, phone: phone,
-              orders: orders, skus: skus, pallets: pallets,
+              orders: ordersD, skus: skusD, pallets: palletsD, items: itemsD,
               category: category, timeline: timeline
             })
           }).catch(function() {});

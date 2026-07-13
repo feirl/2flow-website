@@ -62,7 +62,8 @@ function quoteHtml(d) {
   var rows = row("Company", d.company) + row("Name", d.firstname + " " + d.lastname)
     + row("Email", d.email) + row("Phone", d.phone) + row("Website", d.website)
     + row("Monthly orders", d.orders) + row("SKU count", d.skus)
-    + row("Pallets / month", d.pallets) + row("Product category", d.category)
+    + row("Pallets (storage)", d.pallets) + row("Avg. items/order", d.items)
+    + row("Product category", d.category)
     + row("Timeline", d.timeline);
   return wrap("New Quote Request", "#0D1A2E", rows);
 }
