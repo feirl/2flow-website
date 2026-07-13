@@ -267,6 +267,7 @@
       font-size: 15px; font-weight: 700; color: var(--brand-primary);
       font-variant-numeric: tabular-nums; white-space: nowrap;
     }
+    .slider-val.slider-val-error { color: #e53e3e; }
     .form-slider {
       -webkit-appearance: none; appearance: none;
       width: 100%; height: 6px; border-radius: 99px;
@@ -613,18 +614,18 @@
             <div class="form-group">
               <div class="slider-head">
                 <label class="form-label" for="q-orders">Monthly orders <span class="req">*</span></label>
-                <output class="slider-val" id="q-orders-val" for="q-orders">500</output>
+                <output class="slider-val" id="q-orders-val" for="q-orders">0</output>
               </div>
-              <input class="form-slider" type="range" id="q-orders" name="monthly_order_volume" min="0" max="10000" step="50" value="500">
+              <input class="form-slider" type="range" id="q-orders" name="monthly_order_volume" min="0" max="10000" step="50" value="0">
               <div class="slider-scale"><span>0</span><span>10,000+</span></div>
             </div>
             <div class="form-group">
               <div class="slider-head">
                 <label class="form-label" for="q-skus">Number of SKUs <span class="req">*</span></label>
-                <output class="slider-val" id="q-skus-val" for="q-skus">50</output>
+                <output class="slider-val" id="q-skus-val" for="q-skus">0</output>
               </div>
-              <input class="form-slider" type="range" id="q-skus" name="sku_count" min="1" max="500" step="1" value="50">
-              <div class="slider-scale"><span>1</span><span>500+</span></div>
+              <input class="form-slider" type="range" id="q-skus" name="sku_count" min="0" max="500" step="1" value="0">
+              <div class="slider-scale"><span>0</span><span>500+</span></div>
             </div>
           </div>
 
@@ -632,21 +633,20 @@
             <div class="form-group">
               <div class="slider-head">
                 <label class="form-label" for="q-pallets">Pallets (storage) <span class="req">*</span></label>
-                <output class="slider-val" id="q-pallets-val" for="q-pallets">20</output>
+                <output class="slider-val" id="q-pallets-val" for="q-pallets">0</output>
               </div>
-              <input class="form-slider" type="range" id="q-pallets" name="pallets" min="0" max="500" step="5" value="20">
+              <input class="form-slider" type="range" id="q-pallets" name="pallets" min="0" max="500" step="5" value="0">
               <div class="slider-scale"><span>0</span><span>500+</span></div>
             </div>
             <div class="form-group">
               <div class="slider-head">
                 <label class="form-label" for="q-items">Avg. items per order <span class="req">*</span></label>
-                <output class="slider-val" id="q-items-val" for="q-items">3</output>
+                <output class="slider-val" id="q-items-val" for="q-items">0</output>
               </div>
-              <input class="form-slider" type="range" id="q-items" name="avg_items_per_order" min="1" max="25" step="1" value="3">
-              <div class="slider-scale"><span>1</span><span>25+</span></div>
+              <input class="form-slider" type="range" id="q-items" name="avg_items_per_order" min="0" max="25" step="1" value="0">
+              <div class="slider-scale"><span>0</span><span>25+</span></div>
             </div>
           </div>
-          <p class="slider-hint">Avg. items per order is how many individual items we pick and pack into a typical order (your average picks per parcel).</p>
 
           <div class="form-group">
             <label class="form-label" for="q-category">Product category <span class="req">*</span></label>
@@ -732,6 +732,7 @@
       var pct = (el.value - el.min) / (el.max - el.min) * 100;
       el.style.background = 'linear-gradient(90deg, var(--brand-primary) ' + pct + '%, #e4e7ec ' + pct + '%)';
       if (out) out.textContent = sliderDisplay(el);
+      if (+el.value > 0 && out) out.classList.remove('slider-val-error');
     }
     el.addEventListener('input', refresh);
     refresh();
@@ -750,6 +751,34 @@
     if (!valid) {
       form.querySelector('[style*="e53e3e"]').focus();
       return;
+    }
+
+    // Volume sliders must be moved off zero
+    var firstZero = null;
+    ['q-orders', 'q-skus', 'q-pallets', 'q-items'].forEach(function (id) {
+      var sEl = document.getElementById(id);
+      var out = document.getElementById(id + '-val');
+      if (sEl && +sEl.value <= 0) {
+        if (out) out.classList.add('slider-val-error');
+        if (!firstZero) firstZero = sEl;
+      } else if (out) {
+        out.classList.remove('slider-val-error');
+      }
+    });
+    var se = document.getElementById('submit-error');
+    if (firstZero) {
+      if (!se) {
+        se = document.createElement('p');
+        se.id = 'submit-error';
+        se.style.cssText = 'color:#e53e3e;font-size:13px;margin-top:10px;line-height:1.5;';
+        btn.parentNode.insertBefore(se, btn.nextSibling);
+      }
+      se.textContent = 'Please set all four volume sliders above 0 so we can size your quote.';
+      se.style.display = 'block';
+      firstZero.focus();
+      return;
+    } else if (se) {
+      se.style.display = 'none';
     }
 
     function val(id)  { return (form.querySelector(id) || {}).value || ''; }
