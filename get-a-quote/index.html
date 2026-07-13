@@ -667,7 +667,7 @@
 
           <div class="form-group">
             <label class="form-label" for="q-timeline">When do you want to be live? <span class="req">*</span></label>
-            <select class="form-select" id="q-timeline" name="fulfilment_timeline" required>
+            <select class="form-select" id="q-timeline" name="timeline" required>
               <option value="" disabled selected>Select timeline</option>
               <option value="As Soon As Possible">As Soon As Possible</option>
               <option value="1 - 3 Months">1 - 3 Months</option>
@@ -806,90 +806,36 @@
     var palletsD = sliderDisplay(document.getElementById('q-pallets'));
     var itemsD   = sliderDisplay(document.getElementById('q-items'));
 
-    // Build the fields array — only submit confirmed standard HubSpot
-    // contact properties. Custom quote fields will be added once custom
-    // properties are created in HubSpot (Settings → Properties).
-    var fields = [
-      { objectTypeId: '0-1', name: 'firstname',            value: firstname },
-      { objectTypeId: '0-1', name: 'lastname',             value: lastname },
-      { objectTypeId: '0-1', name: 'company',              value: company },
-      { objectTypeId: '0-1', name: 'website',              value: website },
-      { objectTypeId: '0-1', name: 'email',                value: email },
-      { objectTypeId: '0-1', name: 'phone',                value: phone },
-      { objectTypeId: '0-1', name: 'lifecyclestage',       value: 'lead' },
-      { objectTypeId: '0-1', name: 'hs_lead_status',       value: 'QUOTE_REQUEST' },
-      { objectTypeId: '0-1', name: 'hubspot_owner_id',      value: '90029287' },
-      { objectTypeId: '0-1', name: 'status',               value: 'Active' },
-      { name: 'orders_predicted',         value: orders },
-      { name: 'skus_predicted',           value: skus },
-      { name: 'pallets_predicted',        value: pallets },
-      { name: 'picks_per_order_predicted', value: items },
-      { name: 'product_category',     value: category },
-      { name: 'fulfilment_timeline',  value: timeline }
-    ];
-
-    var payload = {
-      fields: fields,
-      context: {
-        pageUri:  window.location.href,
-        pageName: 'Get A Quote'
-      }
-    };
-
     btn.disabled    = true;
     btn.textContent = 'Sending\u2026';
 
-    fetch(ENDPOINT, {
+    if (typeof gtag !== 'undefined') {
+      gtag('event', 'quote_request', { event_category: 'conversion', event_label: company });
+    }
+
+    // HubSpot capture: the on-page HubSpot tracking script collects this form
+    // (#quoteForm) by field name on submit \u2014 that is the single HubSpot form.
+    // Every input's name= is the exact contact-property internal name, so all
+    // fields map. We fire our own internal notification, then redirect; the
+    // short delay also lets the HubSpot collection beacon send first.
+    var redirected = false;
+    function done() {
+      if (redirected) return;
+      redirected = true;
+      window.location.href = '/get-a-quote/thank-you/';
+    }
+    setTimeout(done, 1500);
+    fetch('/api/notify', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(payload)
-    })
-    .then(function (r) {
-      return r.json().then(function (body) {
-        // Log full body always — HubSpot hides per-field errors inside 200 OK
-        console.log('HubSpot response (' + r.status + '):', JSON.stringify(body));
-        if (r.ok) {
-          // Fire internal notification (non-blocking)
-          fetch('/api/notify', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({
-              type: 'quote',
-              firstname: firstname, lastname: lastname, company: company,
-              website: website, email: email, phone: phone,
-              orders: ordersD, skus: skusD, pallets: palletsD, items: itemsD,
-              category: category, timeline: timeline
-            })
-          }).catch(function() {});
-
-          if (typeof gtag !== 'undefined') {
-            gtag('event', 'quote_request', { event_category: 'conversion', event_label: company });
-          }
-          window.location.href = '/get-a-quote/thank-you/';
-        } else {
-          // Surface the exact HubSpot error so we can diagnose it
-          var msg = (body.errors && body.errors[0] && body.errors[0].message)
-            || body.message || ('HTTP ' + r.status);
-          console.error('HubSpot API error:', JSON.stringify(body));
-          throw new Error(msg);
-        }
-      });
-    })
-    .catch(function (err) {
-      console.error('Quote submit error:', err.message);
-      btn.disabled    = false;
-      btn.textContent = 'Get my indicative quote \u2192';
-      // Show the actual error beneath the button for easy diagnosis
-      var errEl = document.getElementById('submit-error');
-      if (!errEl) {
-        errEl = document.createElement('p');
-        errEl.id = 'submit-error';
-        errEl.style.cssText = 'color:#e53e3e;font-size:13px;margin-top:10px;line-height:1.5;';
-        btn.parentNode.insertBefore(errEl, btn.nextSibling);
-      }
-      errEl.innerHTML = 'Submission error: ' + err.message
-        + ' - please visit our <a href="/contact/" style="color:#e53e3e;text-decoration:underline;">contact page</a> or call 1800 532 532.';
-    });
+      body: JSON.stringify({
+        type: 'quote',
+        firstname: firstname, lastname: lastname, company: company,
+        website: website, email: email, phone: phone,
+        orders: ordersD, skus: skusD, pallets: palletsD, items: itemsD,
+        category: category, timeline: timeline
+      })
+    }).catch(function () {}).then(done);
   });
 })();
 </script>
