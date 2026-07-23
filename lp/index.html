@@ -424,20 +424,6 @@
   <link rel="stylesheet" href="/css/site.css">
   <style>:root { --nav-height: 64px; }</style>
 
-  <!-- ANALYTICS & ADVERTISING. managed by cookie-consent.js.
-       GA4 Measurement ID: G-Z9GDV1BHWM. Google Ads: AW-11435482152.
-          These scripts are inert (type="text/plain") until the
-       user grants consent via the cookie banner / preferences modal. -->
-
-  <script type="text/plain" data-consent="analytics" async
-    src="https://www.googletagmanager.com/gtag/js?id=G-Z9GDV1BHWM"></script>
-  <script type="text/plain" data-consent="analytics">
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-Z9GDV1BHWM');
-  </script>
-
   <script type="text/plain" data-consent="advertising">
     _linkedin_partner_id = "10275401";
     window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
@@ -487,6 +473,14 @@
   })();
 </script>
 
+<!-- Google tag (gtag.js) — Consent Mode v2 Advanced: loads for all visitors,
+     cookieless pings when consent is denied, full measurement on consent -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Z9GDV1BHWM"></script>
+<script>
+  gtag('js', new Date());
+  gtag('config', 'G-Z9GDV1BHWM');
+  gtag('config', 'AW-11435482152');
+</script>
 </head>
 <body>
 
@@ -614,7 +608,6 @@
     </div>
   </div>
 </div>
-
 
 <!-- PROCESS: FROM PALLET TO UNBOXED -->
 <section class="process-strip">
