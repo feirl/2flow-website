@@ -70,7 +70,9 @@
     }
   </style>
   <link rel="stylesheet" href="/css/site.css">
-<!-- Google Consent Mode v2 — fires before any Google tag -->
+  <!-- Lemlist visitor tracking (B2B sales signals) — gated: loads only on advertising consent -->
+  <script type="text/plain" data-consent="advertising" src="https://app.lemlist.com/api/visitors/tracking?k=vyhm%2BElFX9J8Tl2ZaWOcosg8g8mQvwFadrHqLlLLfVc%3D&amp;t=tea_vYRXiaktWLsccaphf"></script>
+  <!-- Google Consent Mode v2 — fires before any Google tag -->
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -169,7 +171,7 @@
     </table>
 
     <h2>Third-party cookies</h2>
-    <p>Some cookies on our website are set by third parties. These include analytics services and our CRM provider. We do not control these cookies and they are governed by the privacy policies of the relevant third parties.</p>
+    <p>Some cookies and tracking scripts on our website are set by third parties. These include analytics, advertising and sales-signal services and our CRM provider. Advertising and marketing scripts load only after you accept the relevant cookies via our consent banner. We do not control these cookies and they are governed by the privacy policies of the relevant third parties.</p>
 
     <table class="cookie-table">
       <thead>
@@ -177,19 +179,29 @@
       </thead>
       <tbody>
         <tr>
-          <td><strong>Google Analytics</strong></td>
-          <td>Website traffic analysis, page performance and visitor behaviour. Data is anonymised and aggregated.</td>
+          <td><strong>Google Analytics (GA4)</strong></td>
+          <td>Website traffic analysis, page performance and visitor behaviour. Runs in Google Consent Mode: sends only cookieless, aggregated pings until you accept analytics cookies, then measures with cookies.</td>
           <td><a href="https://policies.google.com/privacy" rel="noopener nofollow">policies.google.com/privacy</a></td>
+        </tr>
+        <tr>
+          <td><strong>Google Ads</strong></td>
+          <td>Conversion tracking and remarketing for our Google Ads campaigns. Advertising cookies are set only after you accept advertising cookies.</td>
+          <td><a href="https://policies.google.com/privacy" rel="noopener nofollow">policies.google.com/privacy</a></td>
+        </tr>
+        <tr>
+          <td><strong>LinkedIn Insight Tag</strong></td>
+          <td>Conversion tracking, retargeting and campaign analytics for our LinkedIn advertising. Loads and sets cookies only after you accept advertising cookies.</td>
+          <td><a href="https://www.linkedin.com/legal/privacy-policy" rel="noopener nofollow">linkedin.com/legal/privacy-policy</a></td>
+        </tr>
+        <tr>
+          <td><strong>Lemlist</strong></td>
+          <td>Visitor identification for B2B sales signals. Recognises organisations visiting our website so our sales team can follow up. Loads only after you accept advertising and marketing cookies.</td>
+          <td><a href="https://www.lemlist.com/privacy-policy" rel="noopener nofollow">lemlist.com/privacy-policy</a></td>
         </tr>
         <tr>
           <td><strong>HubSpot</strong></td>
           <td>CRM and contact tracking. HubSpot sets cookies to identify returning visitors, track pages visited, and associate form submissions with a contact record. Data is stored on HubSpot's EU servers (EU1 region).</td>
           <td><a href="https://legal.hubspot.com/privacy-policy" rel="noopener nofollow">legal.hubspot.com/privacy-policy</a></td>
-        </tr>
-        <tr>
-          <td><strong>Cloudflare Turnstile</strong></td>
-          <td>Bot and spam protection on our quote form. Does not use cookies for advertising or tracking purposes.</td>
-          <td><a href="https://www.cloudflare.com/privacypolicy/" rel="noopener nofollow">cloudflare.com/privacypolicy</a></td>
         </tr>
       </tbody>
     </table>
