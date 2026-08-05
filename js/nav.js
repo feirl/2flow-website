@@ -59,7 +59,7 @@
         { href: B + '/deliver/kitting-bundling/',          icon: 'kitting',    title: 'Kitting &amp; Bundling',         desc: 'Gift sets, subscriptions, multi-SKU assembly' },
         { href: B + '/deliver/returns-refurbishment/',     icon: 'returns',    title: 'Returns &amp; Refurbishment',    desc: 'Fast, clean returns processing and restocking' },
         { href: B + '/deliver/finishing-personalisation/', icon: 'finishing',  title: 'Finishing &amp; Personalisation',desc: 'Engraving, inserts, gift messaging, branded packaging' },
-        { href: B + '/deliver/compliance-preparation/',    icon: 'compliance', title: 'Compliance Preparation',         desc: 'Regulated labelling, batch control, cold-chain handling' },
+        { href: B + '/deliver/compliance-preparation/',    icon: 'compliance', title: 'Compliance Preparation',         desc: 'Regulated labelling, batch control, FIFO stock rotation' },
       ]
     },
     {
@@ -91,7 +91,7 @@
       items: [
         { href: B + '/solutions/beauty-personal-care/',  icon: 'beauty',      title: 'Beauty &amp; Personal Care', desc: 'Subscription boxes, gift sets, branded unboxing' },
         { href: B + '/solutions/health-supplements/',    icon: 'health',      title: 'Health &amp; Supplements',   desc: 'Batch tracking, FIFO, compliance labelling' },
-        { href: B + '/solutions/medical-healthcare/',    icon: 'medical',     title: 'Medical &amp; Healthcare',   desc: 'Temperature-sensitive, regulated handling' },
+        { href: B + '/solutions/medical-healthcare/',    icon: 'medical',     title: 'Medical &amp; Healthcare',   desc: 'Regulated handling with full traceability' },
         { href: B + '/solutions/home-lifestyle/',        icon: 'homelife',    title: 'Home &amp; Lifestyle',       desc: 'Premium home goods, gifting, fragile items' },
         { href: B + '/solutions/consumer-electronics/',  icon: 'electronics', title: 'Consumer Electronics',       desc: 'High-value, anti-static, serial number tracking' },
         { href: B + '/solutions/office-electronics/',    icon: 'officeelec',  title: 'Office Electronics',         desc: 'B2B distribution, retail prep, DTC from one operation' },
