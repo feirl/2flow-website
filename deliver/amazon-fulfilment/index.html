@@ -180,6 +180,33 @@
       .related-grid { grid-template-columns: 1fr; }
       .cta-btns { flex-direction: column; align-items: center; }
     }
+    /* ── Amazon Ireland video ── */
+    .video-band { background: #0D1A2E; padding: 80px 40px; }
+    .video-band-inner { max-width: 1080px; margin: 0 auto; }
+    .video-band-header { max-width: 640px; margin-bottom: 40px; }
+    .video-band-header .section-label { color: rgba(92,184,0,0.9); }
+    .video-band-header h2 { color: white; }
+    .video-band-header p { font-size: 16px; color: rgba(255,255,255,0.65); line-height: 1.7; margin-top: 14px; }
+    .video-frame {
+      position: relative;
+      width: 100%;
+      max-width: 880px;
+      padding-top: 0;
+      border-radius: 16px;
+      overflow: hidden;
+      background: #000;
+      box-shadow: 0 32px 80px rgba(0,0,0,0.5);
+    }
+    .video-frame::before { content: ''; display: block; padding-top: 75%; /* 4:3 source */ }
+    .video-frame iframe {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      border: 0;
+    }
+    @media (max-width: 768px) {
+      .video-band { padding: 56px 20px; }
+    }
   </style>
   <link rel="stylesheet" href="/css/site.css">
 
@@ -302,6 +329,27 @@
       <span class="brand-name">Supplement brands</span>
       <span class="brand-name">Consumer goods</span>
       <span class="brand-name">Irish DTC sellers</span>
+    </div>
+  </div>
+</section>
+
+<!-- AMAZON IRELAND VIDEO -->
+<section class="video-band" aria-labelledby="video-heading">
+  <div class="video-band-inner">
+    <div class="video-band-header">
+      <p class="section-label">Straight from Amazon Ireland</p>
+      <h2 id="video-heading">The Amazon opportunity, in Amazon's own words</h2>
+      <p>The full webinar with Amazon Ireland, recorded June 2026: what Amazon.ie means for Irish brands, how the marketplace is growing, and how 2Flow customers can get selling on Amazon with FBA prep and FBM dispatch already handled.</p>
+    </div>
+    <div class="video-frame">
+      <iframe
+        src="https://player.vimeo.com/video/1216042985?badge=0&amp;autopause=0&amp;dnt=1&amp;player_id=0&amp;app_id=58479"
+        title="2Flow &amp; Amazon Ireland"
+        allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen
+        loading="lazy"
+      ></iframe>
     </div>
   </div>
 </section>
